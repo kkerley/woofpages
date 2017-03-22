@@ -4590,7 +4590,7 @@ select {
   .menu.nested {
     margin-left: 1rem; }
   .menu .active > a {
-    background: #4D9DE0;
+    background: #8a8a8a;
     color: #fefefe; }
   .menu.menu-bordered li {
     border: 1px solid #e6e6e6; }
@@ -4772,7 +4772,7 @@ select {
   content: '';
   border-bottom-width: 0;
   border-top-style: solid;
-  border-color: #4D9DE0 transparent transparent;
+  border-color: #555555 transparent transparent;
   right: 5px;
   margin-top: -3px; }
 
@@ -4804,7 +4804,7 @@ select {
   content: '';
   border-left-width: 0;
   border-right-style: solid;
-  border-color: transparent #4D9DE0 transparent transparent; }
+  border-color: transparent #555555 transparent transparent; }
 
 .dropdown.menu.vertical > li.opens-right > a::after {
   display: block;
@@ -4814,7 +4814,7 @@ select {
   content: '';
   border-right-width: 0;
   border-left-style: solid;
-  border-color: transparent transparent transparent #4D9DE0; }
+  border-color: transparent transparent transparent #555555; }
 
 @media print, screen and (min-width: 40em) {
   .dropdown.menu.medium-horizontal > li.opens-left > .is-dropdown-submenu {
@@ -4836,7 +4836,7 @@ select {
     content: '';
     border-bottom-width: 0;
     border-top-style: solid;
-    border-color: #4D9DE0 transparent transparent;
+    border-color: #555555 transparent transparent;
     right: 5px;
     margin-top: -3px; }
   .dropdown.menu.medium-vertical > li .is-dropdown-submenu {
@@ -4857,7 +4857,7 @@ select {
     content: '';
     border-left-width: 0;
     border-right-style: solid;
-    border-color: transparent #4D9DE0 transparent transparent; }
+    border-color: transparent #555555 transparent transparent; }
   .dropdown.menu.medium-vertical > li.opens-right > a::after {
     display: block;
     width: 0;
@@ -4866,7 +4866,7 @@ select {
     content: '';
     border-right-width: 0;
     border-left-style: solid;
-    border-color: transparent transparent transparent #4D9DE0; } }
+    border-color: transparent transparent transparent #555555; } }
 
 @media print, screen and (min-width: 64em) {
   .dropdown.menu.large-horizontal > li.opens-left > .is-dropdown-submenu {
@@ -4888,7 +4888,7 @@ select {
     content: '';
     border-bottom-width: 0;
     border-top-style: solid;
-    border-color: #4D9DE0 transparent transparent;
+    border-color: #555555 transparent transparent;
     right: 5px;
     margin-top: -3px; }
   .dropdown.menu.large-vertical > li .is-dropdown-submenu {
@@ -4909,7 +4909,7 @@ select {
     content: '';
     border-left-width: 0;
     border-right-style: solid;
-    border-color: transparent #4D9DE0 transparent transparent; }
+    border-color: transparent #555555 transparent transparent; }
   .dropdown.menu.large-vertical > li.opens-right > a::after {
     display: block;
     width: 0;
@@ -4918,7 +4918,7 @@ select {
     content: '';
     border-right-width: 0;
     border-left-style: solid;
-    border-color: transparent transparent transparent #4D9DE0; } }
+    border-color: transparent transparent transparent #555555; } }
 
 .dropdown.menu.align-right .is-dropdown-submenu.first-sub {
   top: 100%;
@@ -4966,7 +4966,7 @@ select {
     content: '';
     border-left-width: 0;
     border-right-style: solid;
-    border-color: transparent #4D9DE0 transparent transparent; }
+    border-color: transparent #555555 transparent transparent; }
   .is-dropdown-submenu .is-dropdown-submenu-parent.opens-right > a::after {
     display: block;
     width: 0;
@@ -4975,7 +4975,7 @@ select {
     content: '';
     border-right-width: 0;
     border-left-style: solid;
-    border-color: transparent transparent transparent #4D9DE0; }
+    border-color: transparent transparent transparent #555555; }
   .is-dropdown-submenu .is-dropdown-submenu {
     margin-top: -1px; }
   .is-dropdown-submenu > li {
@@ -7076,10 +7076,12 @@ a.thumbnail {
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
   width: 100%; }
-  .primary-nav .sticky-site-title {
+  .primary-nav .sticky-site-title,
+  .primary-nav .kk-off-canvas-trigger {
     line-height: 1;
     margin: 0; }
-    .primary-nav .sticky-site-title a {
+    .primary-nav .sticky-site-title a,
+    .primary-nav .kk-off-canvas-trigger a {
       padding: 0.9rem 1rem;
       font-size: 0.75rem;
       color: #555555;
@@ -7089,10 +7091,12 @@ a.thumbnail {
       outline: none;
       -webkit-transition: all .35s ease-in-out;
       transition: all .35s ease-in-out; }
-      .primary-nav .sticky-site-title a:hover {
+      .primary-nav .sticky-site-title a:hover,
+      .primary-nav .kk-off-canvas-trigger a:hover {
         background: rgba(10, 10, 10, 0.4);
         color: #fff; }
-      .primary-nav .sticky-site-title a:focus {
+      .primary-nav .sticky-site-title a:focus,
+      .primary-nav .kk-off-canvas-trigger a:focus {
         outline: none; }
   .primary-nav.is-stuck {
     -webkit-box-shadow: 0 3px 3px -3px #000;
@@ -7345,6 +7349,27 @@ body#tinymce {
       top: 0.5rem;
       right: 0.5rem;
       text-transform: uppercase; }
+    .card .card-image.Adopted .adoption-status {
+      display: none; }
+    .card .card-image.Adopted::before, .card .card-image.Adopted::after {
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 0.5rem;
+      right: 0.5rem;
+      content: ''; }
+    .card .card-image.Adopted::before {
+      color: #fff;
+      content: "\f05d";
+      font-family: 'FontAwesome';
+      padding: 0.125rem 0 0 1.25rem;
+      z-index: 10; }
+    .card .card-image.Adopted::after {
+      border-bottom: solid 20px transparent;
+      border-left: solid 20px transparent;
+      border-right: solid 20px #ED6A5A;
+      border-top: solid 20px #ED6A5A; }
   .card .card-content {
     border-radius: 1rem;
     display: -webkit-box;
@@ -7530,7 +7555,7 @@ body#tinymce {
       top: 3rem; }
 
 .wrapper--adoptions {
-  background-color: #87D68D;
+  background-color: #ED6A5A;
   color: #fff;
   margin: 2rem 0;
   padding: 1rem 2rem; }
@@ -8168,7 +8193,27 @@ body#tinymce {
     margin-bottom: 1rem; }
 
 .dog-featured-image {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  position: relative; }
+  .dog-featured-image.adopted::before, .dog-featured-image.adopted::after {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    content: ''; }
+  .dog-featured-image.adopted::before {
+    color: #fff;
+    content: "\f05d";
+    font-family: 'FontAwesome';
+    padding: 0.125rem 0 0 1.25rem;
+    z-index: 10; }
+  .dog-featured-image.adopted::after {
+    border-bottom: solid 20px transparent;
+    border-left: solid 20px transparent;
+    border-right: solid 20px #ED6A5A;
+    border-top: solid 20px #ED6A5A; }
 
 .personal-details {
   margin-top: 3rem; }

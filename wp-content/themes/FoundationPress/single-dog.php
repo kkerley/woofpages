@@ -87,7 +87,7 @@ get_header(); ?>
 	            <?php endif; ?>
 
 
-                <div class="dog-featured-image show-for-small-only">
+                <div class="dog-featured-image show-for-small-only<?php echo types_render_field('adoption-status') === 'Adopted' ? ' adopted' : '' ; ?>">
 		            <?php the_post_thumbnail('large'); ?>
                 </div>
             </header>
@@ -106,7 +106,7 @@ get_header(); ?>
 
                         <section class="wrapper--adoptions">
                             <div class="adoption--inner">
-                                <h3>Adopted!</h3>
+                                <h3><i class="fa fa-check-circle-o"></i> Adopted!</h3>
                                 <p><?php echo get_the_title($dog_id); ?> was adopted <?php echo types_render_field('date-of-adoption') ?> by <?php echo get_the_title($adoption_parents_id); ?>.</p>
                             </div>
                         </section>
@@ -184,8 +184,6 @@ get_header(); ?>
         <?php # do_action( 'foundationpress_post_after_comments' ); ?>
 
 
-
-
 		<?php if(!empty(types_render_field( "dog-image"))): ?>
             <div class="kk-modal dog--additional-photos">
                 <h4><i class="fa fa-picture-o"></i> Additional images of <?php the_title(); ?></h4>
@@ -203,8 +201,6 @@ get_header(); ?>
                 <i class="fa fa-times-circle kk-modal-trigger" data-target-modal="dog--additional-photos"></i>
             </div>
 		<?php endif; ?>
-
-
 
 
 	</article>

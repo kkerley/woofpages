@@ -23,7 +23,7 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
 		wp_nav_menu( array(
 			'container'      => false,
 			'menu_class'     => 'dropdown menu',
-			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu" data-dropdown-menu>%3$s</ul>',
+			'items_wrap'     => '<ul id="%1$s" class="%2$s desktop-menu align-right" data-dropdown-menu>%3$s</ul>',
 			'theme_location' => 'primary-navigation',
 			'depth'          => 3,
 			'fallback_cb'    => false,

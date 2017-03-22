@@ -40,6 +40,38 @@
 
 .dog-featured-image{
   margin-bottom: 1rem;
+  position: relative;
+
+  &.adopted{
+
+    &::before, &::after {
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 0;
+      right: 0;
+      content: '';
+    }
+    &::before {
+      //border-top: solid 20px #fff;
+      //border-right: solid 20px #fff;
+      //border-left: solid 20px transparent;
+      //border-bottom: solid 20px transparent;
+      color: #fff;
+      content: "\f05d";
+      font-family: 'FontAwesome';
+      padding: 0.125rem 0 0 1.25rem;
+      z-index: 10;
+    }
+    &::after {
+
+      border-bottom: solid 20px transparent;
+      border-left: solid 20px transparent;
+      border-right: solid 20px $warning-color;
+      border-top: solid 20px $warning-color;
+    }
+  }
 }
 
 .personal-details{

@@ -56,8 +56,8 @@
                     <p class="sticky-site-title"><a href="/"><?php echo $rescue_abbrev; ?></a></p>
 	                <?php foundationpress_top_bar_r(); ?>
 
-                    <div class="show-for-small-only">
-                        <i class="fa fa-bars"></i>
+                    <div class="kk-off-canvas-trigger show-for-small-only">
+                        <a href="#" data-toggle="mobile-menu"><i class="fa fa-bars"></i></a>
                     </div>
                 </div>
             </nav>

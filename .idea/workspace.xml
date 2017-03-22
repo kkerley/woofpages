@@ -15,71 +15,33 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="58" column="32" lean-forward="false" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="53" />
+              <folding>
+                <element signature="e#1581#1793#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/library/navigation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="41" column="83" lean-forward="false" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="single-dog.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/single-dog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-858">
-              <caret line="106" column="58" lean-forward="false" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_adoptions.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_adoptions.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="foundation.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/foundation.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="93" column="31" lean-forward="false" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_single-post.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/templates/_single-post.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="78" column="4" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wp-config.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="49" column="95" lean-forward="true" selection-start-line="49" selection-start-column="95" selection-end-line="49" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="front.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/page-templates/front.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="320">
+              <caret line="89" column="151" lean-forward="false" selection-start-line="89" selection-start-column="151" selection-end-line="89" selection-end-column="151" />
               <folding />
             </state>
           </provider>
@@ -88,60 +50,68 @@
       <file leaf-file-name="_header.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/modules/_header.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="335">
+              <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="woofpages_settings_panel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/library/woofpages/woofpages_settings_panel.php">
+      <file leaf-file-name="mobile-off-canvas.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/template-parts/mobile-off-canvas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3120">
-              <caret line="329" column="21" lean-forward="false" selection-start-line="329" selection-start-column="21" selection-end-line="329" selection-end-column="21" />
-              <folding>
-                <element signature="e#4212#4429#0#PHP" expanded="false" />
-                <element signature="e#4729#4976#0#PHP" expanded="false" />
-                <element signature="e#4980#5197#0#PHP" expanded="false" />
-                <element signature="e#5201#5421#0#PHP" expanded="false" />
-                <element signature="e#5425#5654#0#PHP" expanded="false" />
-                <element signature="e#5658#5904#0#PHP" expanded="false" />
-                <element signature="e#5908#6160#0#PHP" expanded="false" />
-                <element signature="e#6321#6526#0#PHP" expanded="false" />
-                <element signature="e#6560#6769#0#PHP" expanded="false" />
-                <element signature="e#6773#6979#0#PHP" expanded="false" />
-                <element signature="e#6983#7189#0#PHP" expanded="false" />
-                <element signature="e#7193#7402#0#PHP" expanded="false" />
-                <element signature="e#7406#7618#0#PHP" expanded="false" />
-                <element signature="e#7622#7834#0#PHP" expanded="false" />
-                <element signature="n#woofpages_social_facebook_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_social_twitter_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_social_youtube_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_social_linkedin_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_social_googleplus_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_social_pinterest_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_rescue_location_abbreviation_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_rescue_location_street_address_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_rescue_location_city_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_rescue_location_state_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_rescue_location_zip_code_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_rescue_location_primary_phone_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_rescue_location_primary_email_render#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_social_media_settings_section_callback#0;n#!!top" expanded="false" />
-                <element signature="n#woofpages_rescue_custom_logo_settings_section_callback#0;n#!!top" expanded="false" />
-                <marker date="1489989133000" expanded="true" signature="1000:1016" ph="Insert into Post... " />
-                <marker date="1489989133000" expanded="true" signature="2737:2836" ph="SELECT ID FR... wp_posts" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_cards.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/javascript/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_cards.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_cards.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+            <state relative-caret-position="702">
+              <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_single-post.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/templates/_single-post.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="44" column="2" lean-forward="true" selection-start-line="44" selection-start-column="2" selection-end-line="73" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_adoptions.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_adoptions.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/sidebar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -158,13 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Right Top Bar</find>
-      <find>$button</find>
-      <find>$input-bord</find>
-      <find>20. label</find>
-      <find>$global-radius:</find>
-      <find>featured-hero</find>
-      <find>woofpages_options_page</find>
       <find>woofpages_settings_section_callback</find>
       <find>$options</find>
       <find>woofpages_rescue_location_settings</find>
@@ -188,6 +151,13 @@
       <find>sites</find>
       <find>$queried_object_permalink</find>
       <find>Open Sans</find>
+      <find>active</find>
+      <find>current</find>
+      <find>6px</find>
+      <find>direct</find>
+      <find>sticky</find>
+      <find>featured</find>
+      <find>.dog-</find>
     </findStrings>
     <replaceStrings>
       <replace>Woofpages</replace>
@@ -201,13 +171,15 @@
       <replace>Montserrat</replace>
     </replaceStrings>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/page-templates/page-form-harvesting.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/library/navigation.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/components/foundation-sites/scss/components/_button.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_carousels.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_ads.scss" />
@@ -215,31 +187,34 @@
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/template-parts/featured-image.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_featured-image.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_forms.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/javascript/app.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_modals.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/library/woofpages/woofpress-uploads.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/library/woofpages/js/woofpress-uploads.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/library/enqueue-scripts.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/library/woofpages/js/woofpages-uploads.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/templates/_single-post.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/modules/_sidebar.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/templates/_front.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/template-parts/woofpages/_social_media_links.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/sidebar.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_buttons.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/header.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/library/woofpages/woofpages_settings_panel.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/modules/_header.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/page-templates/front.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/sidebar-child-menu/sidebar-child-menu.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_cards.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/global/_settings.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/single-dog.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/foundation.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_adoptions.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/global/_settings.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/library/navigation.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/library/custom-nav.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/template-parts/mobile-off-canvas.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/modules/_header.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/javascript/app.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/single-dog.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/sidebar.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_adoptions.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/templates/_single-post.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_cards.scss" />
       </list>
     </option>
   </component>
@@ -255,7 +230,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="58" />
-    <option name="y" value="23" />
+    <option name="y" value="116" />
     <option name="width" value="1862" />
     <option name="height" value="1131" />
   </component>
@@ -685,6 +660,36 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FoundationPress" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rescuedirectory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rescuedirectory" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -804,15 +809,15 @@
       <workItem from="1488808368349" duration="1041000" />
       <workItem from="1488929842966" duration="75732000" />
       <workItem from="1490056978229" duration="87000" />
-      <workItem from="1490057081544" duration="4596000" />
+      <workItem from="1490057081544" duration="8870000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81456000" />
+    <option name="totallyTimeSpent" value="85730000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="23" width="1862" height="1131" extended-state="0" />
+    <frame x="58" y="116" width="1862" height="1131" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23571429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -820,6 +825,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282002" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -830,7 +836,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903865" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -871,32 +876,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="81" lean-forward="true" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="81" />
-          <folding>
-            <element signature="e#1581#1793#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/single-dog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="126" column="45" lean-forward="false" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/page-templates/front.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/library/woofpages/woofpages_settings_panel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4935">
@@ -1025,14 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/library/navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/library/menu-walkers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1122,13 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/javascript/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/library/woofpages/js/woofpages-uploads.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
@@ -1170,16 +1134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="81" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="31" selection-end-column="81" />
-          <folding>
-            <element signature="e#1581#1793#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/templates/_front.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1188,9 +1142,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/template-parts/woofpages/_social_media_links.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="84" lean-forward="false" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/sidebar-child-menu/sidebar-child-menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="124" column="8" lean-forward="false" selection-start-line="124" selection-start-column="8" selection-end-line="212" selection-end-column="18" />
+          <folding>
+            <element signature="e#1275#1402#0#PHP" expanded="false" />
+            <element signature="e#1436#1711#0#PHP" expanded="false" />
+            <element signature="e#4099#4167#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/page-templates/front.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/foundation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="786">
+          <caret line="93" column="31" lean-forward="false" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/library/woofpages/woofpages_settings_panel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
+        <state relative-caret-position="15">
           <caret line="329" column="21" lean-forward="false" selection-start-line="329" selection-start-column="21" selection-end-line="329" selection-end-column="21" />
           <folding>
             <element signature="e#4212#4429#0#PHP" expanded="false" />
@@ -1228,110 +1234,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/global/_settings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="76" column="44" lean-forward="true" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/template-parts/mobile-top-bar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/template-parts/mobile-off-canvas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/library/custom-nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/modules/_header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="335">
+          <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/template-parts/woofpages/_social_media_links.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/library/navigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="84" lean-forward="false" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
+        <state relative-caret-position="525">
+          <caret line="41" column="83" lean-forward="false" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/sidebar.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="59" column="59" lean-forward="true" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/sidebar-child-menu/sidebar-child-menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="124" column="8" lean-forward="false" selection-start-line="124" selection-start-column="8" selection-end-line="212" selection-end-column="18" />
+        <state relative-caret-position="690">
+          <caret line="58" column="32" lean-forward="false" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="53" />
           <folding>
-            <element signature="e#1275#1402#0#PHP" expanded="false" />
-            <element signature="e#1436#1711#0#PHP" expanded="false" />
-            <element signature="e#4099#4167#0#PHP" expanded="false" />
+            <element signature="e#1581#1793#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_cards.scss">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/javascript/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/global/_settings.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="69" column="24" lean-forward="true" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/page-templates/front.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="405">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/single-dog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-858">
-          <caret line="106" column="58" lean-forward="false" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="58" />
+        <state relative-caret-position="320">
+          <caret line="89" column="151" lean-forward="false" selection-start-line="89" selection-start-column="151" selection-end-line="89" selection-end-column="151" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_adoptions.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/foundation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="93" column="31" lean-forward="false" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
+        <state relative-caret-position="75">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/templates/_single-post.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="78" column="4" lean-forward="false" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="402">
+          <caret line="44" column="2" lean-forward="true" selection-start-line="44" selection-start-column="2" selection-end-line="73" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_cards.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="49" column="95" lean-forward="true" selection-start-line="49" selection-start-column="95" selection-end-line="49" selection-end-column="95" />
+        <state relative-caret-position="702">
+          <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
           <folding />
         </state>
       </provider>
