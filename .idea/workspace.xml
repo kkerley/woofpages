@@ -80,8 +80,8 @@
       <file leaf-file-name="_cards.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_cards.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+            <state relative-caret-position="747">
+              <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -809,12 +809,12 @@
       <workItem from="1488808368349" duration="1041000" />
       <workItem from="1488929842966" duration="75732000" />
       <workItem from="1490056978229" duration="87000" />
-      <workItem from="1490057081544" duration="8870000" />
+      <workItem from="1490057081544" duration="8959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85730000" />
+    <option name="totallyTimeSpent" value="85819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="116" width="1862" height="1131" extended-state="0" />
@@ -1334,8 +1334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/FoundationPress/assets/scss/components/_cards.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="51" column="21" lean-forward="false" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        <state relative-caret-position="747">
+          <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
           <folding />
         </state>
       </provider>
