@@ -1,0 +1,47 @@
+.sidebar {
+  @include breakpoint(small) {
+    @include grid-column(12);
+  }
+
+  @include breakpoint(medium) {
+    @include grid-column(4);
+    .single-dog & {
+      @include grid-col-pos(-8);
+    }
+    margin-top: 1rem;
+  }
+
+  @include breakpoint(large) {
+    //@include grid-column(3);
+    //
+    //.single-dog & {
+    //  @include grid-col-pos(-9);
+    //}
+    margin-top: 1rem;
+  }
+
+  .wrapper--social-media-links{
+    border-top: 1px solid $light-gray;
+    margin-top: 1rem;
+    padding-top: 1rem;
+
+  }
+}
+
+.rescue-contact-info{
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  margin: 2rem 0;
+  padding: 1rem;
+
+  p{
+    padding-left: 1.25rem;
+    position: relative;
+
+    i.fa{
+      position: absolute;
+      left: 0;
+      top: 0.25rem;
+    }
+  }
+}

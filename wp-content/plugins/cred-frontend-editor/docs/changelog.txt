@@ -1,0 +1,9 @@
+== Changelog ==
+
+= refactoring (version number is yet to be determined) =
+
+* [cred-797] Change plugin directory structure to support the MVC pattern. Existing code moved to `library/toolset/cred`. Similar approach as with Types.
+* [cred-806] Remove support for embedded mode.
+* [cred-801] Start using the Toolset_Common_Autoloader for the new code.
+* [cred-805] Fix wpml-config.xml placement and setup the post type of CRED User Form as non-translatable.
+* [cred-802] Move CRED-specific code from the Toolset Common library to CRED.

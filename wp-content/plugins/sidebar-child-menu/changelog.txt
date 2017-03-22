@@ -1,0 +1,41 @@
+Plugin Name: Sidebar Child Menu
+Plugin URI:
+Description: A plugin that creates a sidebar menu of all child elements of the parent element
+Version: 0.2.3
+Author: Kyle Kerley
+Author URI: http://kkerley.com
+License: GPL2
+
+======================================================================
+
+
+Version 0.2.3 (2017/02/22)
+------------------------------
+- Added CSS to remove the list-style from this menu by default
+
+
+Version 0.2.2 (2017/02/12)
+------------------------------
+- Put the rest of the script inside of conditional that only runs if $scm_menu exists on the page
+- Removed a console.log() call
+
+
+Version 0.2.1 (2017/02/07)
+------------------------------
+- Fixed an incorrect call to compare the queried object with itself to determine if it's the current page, resulting in a false positive for the topmost item every time
+
+
+Version 0.2 (2017/02/06)
+------------------------------
+- Added a new checkbox to the widget to disable jQuery
+- Added a new data-disable-js attribute on the top-level ul
+- Added a new conditional around the plugin's jQuery script to run only if data-disable-js is != "on"
+- Changed the CSS to account for data-disable-js so that when disabled, child menus are not hidden since there'd be no way to expand them
+- Added a new checkbox to the widget to disable child menu indentation
+- Added a new data-disable-indentation attribute on the top-level ul
+- Changed the CSS to account for data-disable-indentation so that when disabled, child menus are not indented
+
+
+Version 0.1 (2017/02/01)
+------------------------------
+- Initial release

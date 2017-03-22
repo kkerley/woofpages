@@ -1,0 +1,27 @@
+.kk-modal{
+  background-color: rgba(#000, 0.9);
+  height: 100%;
+  position: fixed;
+  bottom: -2000px;
+  left: 0;
+  width: 100%;
+  transition: all 0.25s ease;
+  z-index: 10000;
+
+  &.is-showing{
+    bottom: 0;
+  }
+
+  .kk-modal-trigger{
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    .logged-in &{
+      top: 3rem;
+    }
+  }
+}

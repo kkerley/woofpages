@@ -1,0 +1,37 @@
+#featured-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  // height: rem-calc(100);
+  justify-content: center;
+  padding: 8rem 1rem;
+  position: relative;
+  text-align: center;
+
+  &::after{
+    content: '';
+    background-color: rgba(#000, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  h1, p, .wrapper--characteristics{
+    position: relative;
+    z-index: 2;
+  }
+
+  @include breakpoint(medium) {
+
+  }
+
+  @include breakpoint(xlarge) {
+    padding: 5rem 1rem;
+  }
+}

@@ -1,0 +1,84 @@
+.sites-button {
+  background: #FF6908;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
+  border-radius: 3px;
+  border: none;
+  margin-top: 2rem;
+}
+
+.button{
+  &.social-media{
+    background-color: #fff;
+    color: $darker-gray;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0.425em 0.5em;
+
+    //#utility &{
+    //
+    //}
+  }
+
+  &.facebook{
+    // background-color: $facebook-blue;
+
+    &:hover{
+      // background-color: darken($facebook-blue, 14%);
+      background-color: $facebook-blue;
+      color: #fff;
+    }
+  }
+
+  &.twitter{
+    // background-color: $twitter-blue;
+
+    &:hover{
+      // background-color: darken($twitter-blue, 14%);
+      background-color: $twitter-blue;
+      color: #fff;
+    }
+  }
+
+  &.linkedin{
+    // background-color: $linkedin-blue;
+
+    &:hover{
+      // background-color: darken($linkedin-blue, 14%);
+      background-color: $linkedin-blue;
+      color: #fff;
+    }
+  }
+
+  &.youtube{
+    // background-color: $youtube-red;
+
+    &:hover{
+      // background-color: darken($youtube-red, 14%);
+      background-color: $youtube-red;
+      color: #fff;
+    }
+  }
+
+  &.pinterest{
+    // background-color: $pinterest-red;
+
+    &:hover{
+      // background-color: darken($pinterest-red, 14%);
+      background-color: $pinterest-red;
+      color: #fff;
+    }
+  }
+
+  &.google-plus{
+    // background-color: $google-plus-red;
+
+    &:hover{
+      // background-color: darken($google-plus-red, 14%);
+      background-color: $google-plus-red;
+      color: #fff;
+    }
+  }
+}

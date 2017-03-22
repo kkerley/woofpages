@@ -1,0 +1,87 @@
+#single-post {
+  @include grid-row();
+  margin-top: 3rem;
+
+  .main-content {
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+
+    @include breakpoint(medium) {
+      @include grid-column(8);
+
+      .single-dog & {
+        @include grid-col-pos(4);
+      }
+    }
+
+    //@include breakpoint(large) {
+    //  @include grid-column(9);
+    //
+    //  .single-dog & {
+    //    @include grid-col-pos(3);
+    //  }
+    //}
+  }
+}
+
+.dog-intro{
+
+  header{
+    // margin-bottom: 1rem; // for use when the title, details, and characteristics are in the featured image
+    margin-bottom: 2rem;
+
+    p{
+      margin-bottom: 1rem;
+    }
+  }
+
+}
+
+.dog-featured-image{
+  margin-bottom: 1rem;
+}
+
+.personal-details{
+  margin-top: 3rem;
+
+  h4{
+    margin-top: 3rem;
+  }
+}
+
+.carousel--dog-detail-page_primary{
+  margin-bottom: 1rem;
+
+  .slick-prev,
+  .slick-next{
+
+    //&::before{
+      text-shadow: 1px 1px 6px #333;
+    //}
+  }
+
+  .slick-slide{
+    img{
+      display: block;
+      margin: 0 auto;
+      max-height: calc(100vh - 41px);
+      width: auto;
+    }
+  }
+}
+
+.wrapper--characteristics{
+  margin-bottom: 1rem;
+
+  .label{
+    // margin: 0.5rem 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover{
+      background-color: #fff;
+      color: $darker-gray;
+    }
+  }
+}

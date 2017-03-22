@@ -1,0 +1,271 @@
+// Page header
+#front-hero {
+  color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  position: relative;
+
+  &::after{
+    content: '';
+    background-color: rgba(#000, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .marketing {
+    @include grid-col-row();
+    margin: 3rem 0;
+    max-width: 62rem;
+    position: relative;
+    z-index: 3;
+
+    //@include breakpoint(small){
+    //  // padding: 1rem;
+    //}
+    //
+    //@include breakpoint(medium) {
+    //  margin-top: 3rem;
+    //  // padding: 3rem 1rem;
+    //}
+  }
+
+  @include breakpoint(small) {
+    // background: url('../images/brock-2.20.jpg') bottom center;
+    //background: url('../images/top_level_hero_alt_lrg.jpg') bottom center;
+    background-position: center center;
+    background-size: cover;
+    padding: rem-calc(65%) 0;
+    margin: 0 0 rem-calc(32);
+    height: auto;
+    position: relative;
+    text-align: left;
+  }
+
+  @include breakpoint(medium) {
+    // background: url('../images/brock-2.20_alt.jpg') bottom center;
+    // background: url('../images/top_level_hero_alt_sm.jpg') bottom center;
+    background-size: cover;
+    background-position: center center;
+    //height: rem-calc(685);
+    margin: 0 0 rem-calc(72);
+  }
+
+  #watch {
+    @include breakpoint(small) {
+      @include grid-column(7);
+      @include grid-column-position(-5);
+    }
+
+    @include breakpoint(medium) {
+      @include grid-column(12);
+      @include grid-column-position(0);
+    }
+
+    section {
+      display: inline;
+    }
+
+    a {
+      color: #B4C9D1;
+      cursor: pointer;
+      font-weight: 400;
+      margin-right: rem-calc(20);
+    }
+
+    a:hover {
+      color: #fff;
+    }
+
+    #stargazers {
+      :before {
+        content: "\f09b";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #B4C9D1;
+        margin-right: rem-calc(8);
+      }
+    }
+
+    #twitter {
+      :before {
+        content: "\f099";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #B4C9D1;
+        margin-right: rem-calc(8);
+      }
+    }
+
+  }
+
+  //.tagline {
+  //  @include breakpoint(small) {
+  //    @include grid-column(8);
+  //  }
+  //
+  //  @include breakpoint(medium) {
+  //    @include grid-column(8);
+  //    padding-top: 6rem;
+  //  }
+  //}
+
+  //h1 {
+  //  color: #fff;
+  //  font-weight: 500;
+  //
+  //  @include breakpoint(small) {
+  //    font-size: 2.2rem;
+  //  }
+  //
+  //  @include breakpoint(medium) {
+  //    font-size: 2.875rem;
+  //  }
+  //}
+  //
+  //h4 {
+  //  color: #fefefe;
+  //  font-weight: 300;
+  //  font-size: 1.3125rem;
+  //}
+
+  .download {
+    margin-top: rem-calc(20);
+  }
+}
+
+// Intro
+.intro {
+  @include grid-row();
+
+  .fp-intro {
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+
+    @include breakpoint(medium) {
+      @include grid-column(10);
+      @include grid-column-offset(1);
+
+      h2 {
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+
+      h4 {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: #777;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+// Section divider
+.section-divider {
+  @include grid-row();
+
+  hr {
+    @include grid-column(12);
+    @extend .dotted;
+    box-sizing: border-box;
+  }
+}
+
+
+// Benefits
+.benefits {
+  @include grid-row();
+  text-align: center;
+
+  header {
+    @include grid-column(12);
+
+    h2 {
+      font-weight: 300;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #777;
+    }
+  }
+
+  .semantic,
+  .responsive,
+  .customizable,
+  .professional {
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+
+    @include breakpoint(medium) {
+      @include grid-column(3);
+    }
+
+    img {
+      padding: 1.25rem;
+      margin: 1rem auto 0 auto;
+    }
+
+    h3 {
+      color: #0a0a0a;
+      font-weight: 300;
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 0.9375rem;
+    }
+  }
+
+  .why-foundation {
+    @include grid-row();
+    @include grid-column(12);
+    margin-top: 4rem;
+  }
+}
+
+.wrapper--latest-dogs{
+  margin-bottom: 2rem;
+
+  h2{
+    margin: 0 0 2rem;
+    padding: 0 0.9375rem;
+    text-align: center;
+  }
+}
+
+.wrapper--headline{
+  @include grid-col-row();
+}
+
+.latest-dogs--inner{
+  @include grid-col-row();
+  float: none !important;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  .latest-dogs{
+    @include grid-row();
+
+    .card{
+      @include grid-column(1 of 4, 0);
+      text-align: left;
+    }
+  }
+
+  .card{
+    max-width: 248px;
+    width: 100%;
+  }
+}

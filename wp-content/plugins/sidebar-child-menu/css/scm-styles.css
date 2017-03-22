@@ -1,0 +1,42 @@
+.scm-sidebar-child-menu{
+    list-style: none;
+}
+
+.scm-sidebar-child-menu li{
+    list-style: none;
+    position: relative;
+}
+
+scm-sidebar-child-menu li a{
+    display: block;
+    padding: 0.33333rem 1rem;
+}
+
+.scm-sidebar-child-menu li.parent-item a{
+    margin-right: 2rem;
+}
+
+.scm-sidebar-child-menu li.parent-item i.fa{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.scm-sidebar-child-menu .child-menu{
+    display: none;
+}
+
+.scm-sidebar-child-menu .parent-item.top-level > .child-menu,
+.scm-sidebar-child-menu .parent-item.current-page > .child-menu,
+.scm-sidebar-child-menu .active-trail > .child-menu{
+    display: block;
+}
+
+.scm-sidebar-child-menu[data-disable-js="on"] .child-menu{
+    display: block;
+}
+
+.scm-sidebar-child-menu[data-disable-indentation="on"] .child-menu{
+    margin-left: 0;
+}
