@@ -15,6 +15,7 @@
   // padding-bottom: $header-height + ($subnav-link-padding * 2 + $subnav-font-size - 0.15rem);
   text-align: center;
   transition: all 0.25s ease;
+  z-index: 100;
 
   @media screen and (max-width: 800px){
     padding-top: 0;
@@ -71,6 +72,11 @@
   text-align: center;
   transition: all .25s ease;
   width: 100%;
+
+  .dropdown.menu > li.opens-right > .is-dropdown-submenu{
+    left: auto;
+    right: 0;
+  }
 
   .sticky-site-title,
   .kk-off-canvas-trigger{
@@ -156,7 +162,7 @@
     }
 
     &.current-menu-item{
-      a{
+      > a{
         background: rgba($black, 0.55);
         color: #fff;
       }

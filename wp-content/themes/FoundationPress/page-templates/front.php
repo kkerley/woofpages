@@ -4,6 +4,19 @@ Template Name: Front
 */
 get_header(); ?>
 
+<?php
+    $featured_dogs_args = array(
+        'post_type'         => 'dog',
+        'orderby'           => 'date' ,
+        'order'             => 'DESC' ,
+        'posts_per_page'    => 5,
+        'meta_key'          => 'wpcf-featured',
+        'meta_value'        => 1
+    );
+
+    $featured_dogs_query = new WP_Query($featured_dogs_args);
+?>
+
 <header id="front-hero" role="banner" <?php echo !empty(types_render_field('mission-statement-background-image', array('raw' => true))) ? ' style="background-image: url(' . types_render_field('mission-statement-background-image', array('raw' => true)) . ');"' : ''; ?>>
 	<div class="marketing">
 		<div class="tagline">
@@ -31,31 +44,34 @@ get_header(); ?>
 	<div class="fp-intro">
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-			<div class="entry-content">
+			<div class="entry-content<?php echo $featured_dogs_query->post_count > 0 ? ' has-featured-dogs' : '' ?>">
 				<?php the_content(); ?>
 			</div>
-			<footer>
-				<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-				<p><?php the_tags(); ?></p>
-			</footer>
-			<?php do_action( 'foundationpress_page_before_comments' ); ?>
-			<?php comments_template(); ?>
-			<?php do_action( 'foundationpress_page_after_comments' ); ?>
+
+            <?php
+                if($featured_dogs_query->have_posts()): ?>
+                    <div class="featured-dogs">
+            <?php
+		            while($featured_dogs_query->have_posts()): $featured_dogs_query->the_post();
+            ?>
+                    <?php the_title(); ?>
+            <?php
+                    endwhile; ?>
+                </div>
+            <?php
+                endif;
+            wp_reset_postdata();
+            ?>
 		</div>
 	</div>
 </section>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
-    <div class="section-divider">
-        <hr />
-    </div>
-
 <?php
     $blog_id = get_current_blog_id();
     if($blog_id !== 1): // checking to make sure this isn't the top-level site
 ?>
-
         <section class="wrapper--latest-dogs">
             <div class="wrapper--headline">
                 <h2>Newest dogs at <?php bloginfo( 'name' ); ?></h2>
@@ -71,7 +87,6 @@ get_header(); ?>
                 </div>
             </div>
         </section>
-
 <?php
     else:
 ?>
@@ -106,5 +121,100 @@ get_header(); ?>
         <?php
     endif;
 ?>
+
+
+<?php
+    $announcements_args = array(
+	    'post_type'         => 'post' ,
+	    'orderby'           => 'date' ,
+	    'order'             => 'DESC' ,
+	    'posts_per_page'    => 1,
+	    'cat'               => '13',
+    );
+
+    $announcements_query = new WP_Query($announcements_args);
+
+    $posts_args = array(
+	    'post_type'         => 'post' ,
+	    'orderby'           => 'date' ,
+	    'order'             => 'DESC' ,
+	    'posts_per_page'    => 2,
+	    'cat'               => '-13',
+    );
+
+    $posts_query = new WP_Query($posts_args);
+?>
+
+    <section class="wrapper--announcements-and-posts">
+        <div class="announcements-and-posts">
+            <div class="announcements--outer">
+                <div class="wrapper--headline">
+                    <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Announcements</h3>
+                </div>
+                <div class="announcement--inner">
+                    <?php
+                        if($announcements_query->have_posts()):
+                            while($announcements_query->have_posts()): $announcements_query->the_post();
+                    ?>
+                        <div class="card vertical">
+                            <div class="card-image">
+                                <?php the_post_thumbnail('dog-square-400'); ?>
+                            </div>
+                            <div class="card-content">
+                                <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
+                                <p class="text-right"><a href="<?php the_permalink(); ?>">Continue reading <i class="fa fa-chevron-right"></i></a></p>
+                            </div>
+                        </div>
+                    <?php
+                            endwhile;
+                        else:
+                            echo '<p><em>No announcements at this time</em></p>';
+                        endif;
+
+                        wp_reset_postdata();
+                    ?>
+                </div>
+
+                <div class="wrapper--cta">
+                    <a href="/category/announcements/" class="button primary">All announcements <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <div class="posts--outer">
+                <div class="wrapper--headline">
+                    <h3><i class="fa fa-rss" aria-hidden="true"></i> Latest from our blog</h3>
+                </div>
+                <div class="posts--inner">
+		            <?php
+		            if($posts_query->have_posts()):
+			            while($posts_query->have_posts()): $posts_query->the_post();
+				            ?>
+                            <div class="card vertical">
+                                <div class="card-image">
+						            <?php the_post_thumbnail('dog-square-400'); ?>
+                                </div>
+                                <div class="card-content">
+                                    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                    <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
+                                    <p class="text-right"><a href="<?php the_permalink(); ?>">Continue reading <i class="fa fa-chevron-right"></i></a></p>
+                                </div>
+                            </div>
+				            <?php
+			            endwhile;
+		            else:
+			            echo '<p><em>No announcements at this time</em></p>';
+		            endif;
+
+		            wp_reset_postdata();
+		            ?>
+                </div>
+
+                <div class="wrapper--cta">
+                    <a href="/blog" class="button primary">All blog posts <i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <?php get_footer();

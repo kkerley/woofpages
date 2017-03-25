@@ -7,3 +7,23 @@
     margin: 0 auto;
   }
 }
+
+.sponsor{
+  display: block;
+
+  &.full-width{
+    .sponsor--inner{
+      @include grid-col-row();
+      margin-top: 1rem;
+    }
+  }
+}
+
+.sponsor--inner{
+  img{
+    display: block;
+    height: auto;
+    max-height: 120px;
+    width: 100%;
+  }
+}

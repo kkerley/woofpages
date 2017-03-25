@@ -10,13 +10,17 @@
 
 .button{
   &.social-media{
-    background-color: #fff;
+    background-color: transparent;
     color: $darker-gray;
     display: inline-block;
     font-size: 1.25rem;
     margin: 0;
+    outline: none;
     padding: 0.425em 0.5em;
 
+    &:focus{
+      outline: none;
+    }
     //#utility &{
     //
     //}

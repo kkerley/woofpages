@@ -1,6 +1,7 @@
 #single-post {
   @include grid-row();
-  margin-top: 3rem;
+  margin-top: 1rem;
+  // margin-bottom: 6rem;
 
   .main-content {
     @include breakpoint(small) {
@@ -22,6 +23,10 @@
     //    @include grid-col-pos(3);
     //  }
     //}
+  }
+
+  .entry-content{
+    margin-bottom: 4rem;
   }
 }
 
@@ -78,7 +83,7 @@
   margin-top: 3rem;
 
   h4{
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 }
 
@@ -107,8 +112,10 @@
   margin-bottom: 1rem;
 
   .label{
-    // margin: 0.5rem 0.25rem;
+    background-color: $primary-color;
+    color: #fff;
     cursor: pointer;
+    margin: 0.125rem 0;
     transition: all 0.2s ease;
 
     &:hover{
@@ -116,4 +123,10 @@
       color: $darker-gray;
     }
   }
+}
+
+.adoption-update{
+  border-bottom: 1px solid $light-gray;
+  margin: 2rem 0;
+  padding-bottom: 1rem;
 }

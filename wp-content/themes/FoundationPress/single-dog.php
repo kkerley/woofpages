@@ -10,12 +10,16 @@ get_header(); ?>
 
 <?php # get_template_part( 'template-parts/featured-image' ); ?>
 
+<article class="sponsor banner full-width">
+    <div class="sponsor--inner">
+        <img src="https://placehold.it/1024x120&amp;text=Banner Ad" alt="Banner Ad" height="120" width="1024">
+    </div>
+</article>
+
 <div id="single-post" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-
-
 
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
         <?php
@@ -29,7 +33,6 @@ get_header(); ?>
             );
 
             $adoptions_query = new WP_Query($adoption_args);
-
         ?>
 
         <section class="dog-intro">
@@ -50,7 +53,7 @@ get_header(); ?>
 			            $output .= '</a>';
 			            $count++;
 			            if($count < count($breeds)):
-				            $output .= ', ';
+				            $output .= ' / ';
 			            endif;
 		            endforeach;
 
@@ -58,9 +61,21 @@ get_header(); ?>
 		            echo $output;
 		            ?>
 
-		            <?php echo types_render_field('sex'); ?> |
-		            <?php echo types_render_field('age'); ?> year(s) old |
-                    <strong class="<?php echo types_render_field('adoption-status') === 'Available' ? 'available' : 'not-available' ; ?>"><?php echo types_render_field('adoption-status'); ?></strong>
+                    <?php if(!empty(types_render_field('sex'))): ?>
+	                    <?php echo types_render_field('sex'); ?>
+                    <?php endif; ?>
+
+	                <?php if(!empty(types_render_field('age'))): ?>
+                        | <?php echo types_render_field('age'); ?> year<?php echo (int)str_replace(' ', '', types_render_field('age')) > 1 ? 's' : ''; ?> old
+	                <?php endif; ?>
+
+	                <?php if(!empty(types_render_field('body-size'))): ?>
+                        | <?php echo types_render_field('body-size'); ?>
+	                <?php endif; ?>
+
+	                <?php if(!empty(types_render_field('weight'))): ?>
+                        | <?php echo types_render_field('weight'); ?> lbs
+	                <?php endif; ?>
                 </p>
 
 	            <?php if(count($characteristics) > 0): ?>
@@ -82,7 +97,7 @@ get_header(); ?>
                     </div>
 	            <?php endif; ?>
 
-	            <?php if(!empty(types_render_field('location'))): ?>
+	            <?php if(!empty(types_render_field('location')) && types_render_field('adoption-status') !== 'Adopted'): ?>
                     <p><em><i class="fa fa-globe"></i> Currently located in <?php echo types_render_field('location');?></em></p>
 	            <?php endif; ?>
 
@@ -99,12 +114,8 @@ get_header(); ?>
 	        if(count($adoptions_query) > 0 && types_render_field('adoption-status') === 'Adopted'):
 		        if($adoptions_query->have_posts()):
 			        while($adoptions_query->have_posts()): $adoptions_query->the_post();
-
-				        $adoption_parents_id = get_post_meta(get_the_ID(), '_wpcf_belongs_adoption-parent_id', true);
-
-				        ?>
-
-                        <section class="wrapper--adoptions">
+				        $adoption_parents_id = get_post_meta(get_the_ID(), '_wpcf_belongs_adoption-parent_id', true); ?>
+                        <section class="wrapper--adoptions adopted">
                             <div class="adoption--inner">
                                 <h3><i class="fa fa-check-circle-o"></i> Adopted!</h3>
                                 <p><?php echo get_the_title($dog_id); ?> was adopted <?php echo types_render_field('date-of-adoption') ?> by <?php echo get_the_title($adoption_parents_id); ?>.</p>
@@ -113,12 +124,42 @@ get_header(); ?>
 				        <?php
 			        endwhile;
 		        endif; // end of $adoption_query->have_posts()
+            elseif(types_render_field('adoption-status') === 'Pending Adoption'): ?>
+                <section class="wrapper--adoptions pending">
+                    <div class="adoption--inner">
+                        <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Adoption pending</h3>
+                        <p><?php echo get_the_title($dog_id); ?> is pending adoption but you can still <a href="#" class="jump-link" data-jump-to="single-dog-application">submit an application to adopt</a> in case this one falls through.</p>
+                    </div>
+                </section>
+            <?php
+            elseif(types_render_field('adoption-status') === 'Available'): ?>
+                <section class="wrapper--adoptions available">
+                    <div class="adoption--inner">
+                        <h3><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Available</h3>
+                        <p><?php echo get_the_title($dog_id); ?> is available to adopt and if you're interested, <a href="#" class="jump-link" data-jump-to="single-dog-application">submit an application below</a>!</p>
+                    </div>
+                </section>
+            <?php
+
 	        endif; // checking to see if $adoptions_query > 0 && adoption-status === 'Adopted'
 	        wp_reset_postdata();
 	        ?>
 
-            <?php the_content(); ?>
+            <?php if(types_render_field('adoption-status') === 'Adopted'): ?>
+                <div class="adoption-update">
+	                <?php
+	                $child_posts = types_child_posts('adoption');
+	                foreach ($child_posts as $child_post) {
+	                    $adoption_id = $child_post->ID;
 
+		                echo $child_post->post_content;
+	                }
+
+	                ?>
+                </div>
+            <?php endif; ?>
+
+            <?php the_content(); ?>
 
             <div class="personal-details">
                 <h3><?php the_title(); ?>'s personal details</h3>
@@ -134,8 +175,16 @@ get_header(); ?>
                     <p><i class="fa fa-map-marker" aria-hidden="true"></i> Microchipped</p>
                 <?php endif; ?>
 
+	            <?php if(types_render_field('current-with-routine-shots')): ?>
+                    <p><i class="fa fa-medkit" aria-hidden="true"></i> Current with routine shots</p>
+	            <?php endif; ?>
+
+	            <?php if(types_render_field('prefers-a-home-without')): ?>
+                    <p class="callout warning"><i class="fa fa-ban" aria-hidden="true"></i> Prefers a home without <?php echo types_render_field( 'prefers-a-home-without', array('separator' => ', ' )); ?></p>
+	            <?php endif; ?>
+
                 <?php if(!empty(types_render_field('medical-history'))): ?>
-                    <h4><i class="fa fa-medkit" aria-hidden="true"></i> Medical history</h4>
+                    <h4><i class="fa fa-hospital-o" aria-hidden="true"></i> Medical history</h4>
                     <?php echo types_render_field('medical-history', array('output'=> 'html')); ?>
                 <?php endif; ?>
 
@@ -156,33 +205,7 @@ get_header(); ?>
             </div>
             <?php # edit_post_link( __( 'Edit', 'foundationpress' ), '<hr /><span class="edit-link">', '</span>' ); ?>
 
-            <?php
-                if(types_render_field('adoption-status') === 'Available'):
-            ?>
-
-            <section class="form--adoption">
-                <div class="section-divider">
-                    <hr />
-                </div>
-
-                <h2>Interested in adopting <?php the_title(); ?>?</h2>
-                <p>First, ensure you've filled out the global adoption form because if you haven't, filling this form
-                    out below won't do anything. The global adoption can be found here <INSERT LINK HERE>. Once that is
-                    complete and submitted, apply to adopt <?php the_title(); ?> again.
-                </p>
-                <?php echo do_shortcode('[gravityform id="1" title="false" description="true"]'); ?>
-            </section>
-            <?php endif; ?>
         </div>
-<!--        <footer>-->
-            <?php # wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
-<!--            <p>--><?php //# the_tags(); ?><!--</p>-->
-<!--        </footer>-->
-        <?php # the_post_navigation(); ?>
-        <?php # do_action( 'foundationpress_post_before_comments' ); ?>
-        <?php # comments_template(); ?>
-        <?php # do_action( 'foundationpress_post_after_comments' ); ?>
-
 
 		<?php if(!empty(types_render_field( "dog-image"))): ?>
             <div class="kk-modal dog--additional-photos">
@@ -197,12 +220,9 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-
                 <i class="fa fa-times-circle kk-modal-trigger" data-target-modal="dog--additional-photos"></i>
             </div>
 		<?php endif; ?>
-
-
 	</article>
 <?php endwhile;?>
 
@@ -210,10 +230,30 @@ get_header(); ?>
 <?php get_sidebar(); ?>
 </div>
 
+<?php
+if(types_render_field('adoption-status') !== 'Adopted'):
+	?>
+    <section class="form--adoption">
+<!--        <div class="section-divider">-->
+<!--            <hr />-->
+<!--        </div>-->
+        <article class="sponsor banner full-width">
+            <div class="sponsor--inner">
+                <img src="https://placehold.it/1024x120&amp;text=Banner Ad" alt="Banner Ad" height="120" width="1024">
+            </div>
+        </article>
 
 
-
+        <div class="form--inner">
+            <h2 id="single-dog-application">Interested in adopting <?php the_title(); ?>?</h2>
+            <p>
+                First, ensure you've filled out the global adoption form because if you haven't, filling this form
+                out below won't do anything. The global adoption can be found here <INSERT LINK HERE>. Once that is
+                complete and submitted, apply to adopt <?php the_title(); ?> again.
+            </p>
+	        <?php echo do_shortcode('[gravityform id="1" title="false" description="true"]'); ?>
+        </div>
+    </section>
+<?php endif; ?>
 
 <?php get_footer();
-
-

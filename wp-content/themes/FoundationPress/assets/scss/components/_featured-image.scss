@@ -26,12 +26,4 @@
     position: relative;
     z-index: 2;
   }
-
-  @include breakpoint(medium) {
-
-  }
-
-  @include breakpoint(xlarge) {
-    padding: 5rem 1rem;
-  }
 }

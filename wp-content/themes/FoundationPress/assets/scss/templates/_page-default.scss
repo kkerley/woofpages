@@ -1,6 +1,6 @@
 #page {
   @include grid-row();
-  margin-top: 3rem;
+  padding-top: 3rem;
 
   .main-content {
     @include breakpoint(small) {
@@ -12,3 +12,9 @@
     }
   }
 }
+
+//.post-type-archive-dog{
+//  .container{
+//    background-color: lighten($primary-color, 28%);
+//  }
+//}

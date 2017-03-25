@@ -1,6 +1,17 @@
 .wrapper--adoptions{
-  background-color: $warning-color;
   color: #fff;
   margin: 2rem 0;
   padding: 1rem 2rem;
+
+  &.adopted{
+    background-color: $warning-color;
+  }
+
+  &.pending{
+    background-color: $alert-color;
+  }
+
+  &.available{
+    background-color: $success-color;
+  }
 }

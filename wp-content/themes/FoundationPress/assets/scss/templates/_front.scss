@@ -18,7 +18,7 @@
   }
   .marketing {
     @include grid-col-row();
-    margin: 3rem 0;
+    margin: 6rem 0;
     max-width: 62rem;
     position: relative;
     z-index: 3;
@@ -54,57 +54,57 @@
     margin: 0 0 rem-calc(72);
   }
 
-  #watch {
-    @include breakpoint(small) {
-      @include grid-column(7);
-      @include grid-column-position(-5);
-    }
-
-    @include breakpoint(medium) {
-      @include grid-column(12);
-      @include grid-column-position(0);
-    }
-
-    section {
-      display: inline;
-    }
-
-    a {
-      color: #B4C9D1;
-      cursor: pointer;
-      font-weight: 400;
-      margin-right: rem-calc(20);
-    }
-
-    a:hover {
-      color: #fff;
-    }
-
-    #stargazers {
-      :before {
-        content: "\f09b";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
-      }
-    }
-
-    #twitter {
-      :before {
-        content: "\f099";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        color: #B4C9D1;
-        margin-right: rem-calc(8);
-      }
-    }
-
-  }
+  //#watch {
+  //  @include breakpoint(small) {
+  //    @include grid-column(7);
+  //    @include grid-column-position(-5);
+  //  }
+  //
+  //  @include breakpoint(medium) {
+  //    @include grid-column(12);
+  //    @include grid-column-position(0);
+  //  }
+  //
+  //  section {
+  //    display: inline;
+  //  }
+  //
+  //  a {
+  //    color: #B4C9D1;
+  //    cursor: pointer;
+  //    font-weight: 400;
+  //    margin-right: rem-calc(20);
+  //  }
+  //
+  //  a:hover {
+  //    color: #fff;
+  //  }
+  //
+  //  #stargazers {
+  //    :before {
+  //      content: "\f09b";
+  //      font-family: FontAwesome;
+  //      font-style: normal;
+  //      font-weight: normal;
+  //      text-decoration: inherit;
+  //      color: #B4C9D1;
+  //      margin-right: rem-calc(8);
+  //    }
+  //  }
+  //
+  //  #twitter {
+  //    :before {
+  //      content: "\f099";
+  //      font-family: FontAwesome;
+  //      font-style: normal;
+  //      font-weight: normal;
+  //      text-decoration: inherit;
+  //      color: #B4C9D1;
+  //      margin-right: rem-calc(8);
+  //    }
+  //  }
+  //
+  //}
 
   //.tagline {
   //  @include breakpoint(small) {
@@ -136,9 +136,9 @@
   //  font-size: 1.3125rem;
   //}
 
-  .download {
-    margin-top: rem-calc(20);
-  }
+  //.download {
+  //  margin-top: rem-calc(20);
+  //}
 }
 
 // Intro
@@ -182,61 +182,63 @@
 
 
 // Benefits
-.benefits {
-  @include grid-row();
-  text-align: center;
-
-  header {
-    @include grid-column(12);
-
-    h2 {
-      font-weight: 300;
-    }
-
-    h4 {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      color: #777;
-    }
-  }
-
-  .semantic,
-  .responsive,
-  .customizable,
-  .professional {
-    @include breakpoint(small) {
-      @include grid-column(12);
-    }
-
-    @include breakpoint(medium) {
-      @include grid-column(3);
-    }
-
-    img {
-      padding: 1.25rem;
-      margin: 1rem auto 0 auto;
-    }
-
-    h3 {
-      color: #0a0a0a;
-      font-weight: 300;
-      font-size: 1.75rem;
-    }
-
-    p {
-      font-size: 0.9375rem;
-    }
-  }
-
-  .why-foundation {
-    @include grid-row();
-    @include grid-column(12);
-    margin-top: 4rem;
-  }
-}
+//.benefits {
+//  @include grid-row();
+//  text-align: center;
+//
+//  header {
+//    @include grid-column(12);
+//
+//    h2 {
+//      font-weight: 300;
+//    }
+//
+//    h4 {
+//      font-size: 1.125rem;
+//      line-height: 1.6;
+//      color: #777;
+//    }
+//  }
+//
+//  .semantic,
+//  .responsive,
+//  .customizable,
+//  .professional {
+//    @include breakpoint(small) {
+//      @include grid-column(12);
+//    }
+//
+//    @include breakpoint(medium) {
+//      @include grid-column(3);
+//    }
+//
+//    img {
+//      padding: 1.25rem;
+//      margin: 1rem auto 0 auto;
+//    }
+//
+//    h3 {
+//      color: #0a0a0a;
+//      font-weight: 300;
+//      font-size: 1.75rem;
+//    }
+//
+//    p {
+//      font-size: 0.9375rem;
+//    }
+//  }
+//
+//  .why-foundation {
+//    @include grid-row();
+//    @include grid-column(12);
+//    margin-top: 4rem;
+//  }
+//}
 
 .wrapper--latest-dogs{
-  margin-bottom: 2rem;
+  background-color: lighten($primary-color, 28%);
+  margin: 4rem 0 0;
+  padding: 2rem 0;
 
   h2{
     margin: 0 0 2rem;
@@ -257,15 +259,60 @@
 
   .latest-dogs{
     @include grid-row();
+    margin-bottom: 2rem;
 
     .card{
-      @include grid-column(1 of 4, 0);
+      // @include grid-column(1 of 4, 0);
       text-align: left;
     }
   }
 
   .card{
-    max-width: 248px;
+    // max-width: 248px;
     width: 100%;
+  }
+}
+
+.wrapper--announcements-and-posts{
+  // background-color: #e7e7e7;
+  background-color: #efefef;
+  padding: 6rem 0;
+}
+
+.announcements-and-posts{
+  @include grid-col-row();
+  display: flex;
+  flex-flow: row nowrap;
+  float: none;
+}
+
+.announcements--outer{
+  margin-right: 1rem;
+  width: calc(100% / 3 - 1rem);
+
+  .card{
+    width: 100%;
+  }
+}
+
+.posts--outer {
+  margin-left: 1rem;
+  width: calc(100% / 3 * 2 - 1rem);
+}
+
+.posts--inner{
+  display: flex;
+  flex-flow: row nowrap;
+
+  .card{
+    width: calc(50% - 1rem);
+
+    &:first-of-type{
+      margin-right: 1rem;
+    }
+
+    &:last-of-type{
+      margin-left: 1rem;
+    }
   }
 }
