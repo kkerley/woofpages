@@ -96,6 +96,7 @@ WPViews.CTListingScreen = function( $ ) {
 	*/
 	
 	$( document ).on( 'change keyup input cut paste', '.js-wpv-new-content-template-name', function( e ) {
+        $( '.js-wpv-new-content-template-name' ).removeClass( 'toolset-shortcode-gui-invalid-attr js-toolset-shortcode-gui-invalid-attr' );
 		$( '#js-wpv-create-ct-form-dialog .toolset-alert' ).remove();
 		if ( $(this).val() === "" ) {
 			disablePrimaryButton( $( '.js-wpv-create-new-template' ) );
@@ -234,6 +235,7 @@ WPViews.CTListingScreen = function( $ ) {
 			data: data,
 			success: function( response ){
 				if( ! response.success ) {
+                    $( '.js-wpv-new-content-template-name' ).addClass( 'toolset-shortcode-gui-invalid-attr js-toolset-shortcode-gui-invalid-attr' );
 					thiz_message_container
 						.wpvToolsetMessage({
 							text: response.data.message,

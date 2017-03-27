@@ -5,7 +5,7 @@ Plugin URI: http://wp-types.com/?utm_source=viewsplugin&utm_campaign=views&utm_m
 Description: When you need to create lists of items, Views is the solution. Views will query the content from the database, iterate through it and let you display it with flair. You can also enable pagination, search, filtering and sorting by site visitors.
 Author: OnTheGoSystems
 Author URI: http://www.onthegosystems.com
-Version: 2.3.0
+Version: 2.3.1
 */
 
 
@@ -22,7 +22,7 @@ if ( defined( 'WPV_VERSION' ) ) {
 	return;
 }
 
-define( 'WPV_VERSION', '2.3.0' );
+define( 'WPV_VERSION', '2.3.1' );
 
 /**
 * Set constants

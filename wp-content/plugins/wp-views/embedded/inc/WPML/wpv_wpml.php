@@ -1512,6 +1512,7 @@ class WPV_WPML_Integration_Embedded {
 	 * @param atts array
 	 *
 	 * @since 2.3.0
+	 * @since 2.3.1 Register "label_asc_for_{field-slug] and label_desc_for_{field-slug} attribute values.
 	 */
 	
 	public function wpv_fake_wpv_sorting_shortcode_to_icl_register_string( $atts ) {
@@ -1525,12 +1526,27 @@ class WPV_WPML_Integration_Embedded {
 			array()
 		);
 		
+		$atts_to_names_for_labels = array(
+			'label_for_'		=> 'sorting_control_for_',
+			'label_asc_for_'	=> 'sorting_control_asc_for_',
+			'label_desc_for_'	=> 'sorting_control_desc_for_'
+		);
+		
 		foreach ( $atts as $att_key => $att_value ) {
-			if ( strpos( $att_key, 'label_for_' ) === 0 ) {
-				$att_meta_key = substr( $att_key, 10 );
-				$name = 'sorting_control_for_' . $att_key;
-				icl_register_string( $this->_context, $name, $att_value );
+			
+			foreach ( $atts_to_names_for_labels as $att_for_label => $name_for_label ) {
+				
+				if ( strpos( $att_key, $att_for_label ) === 0 ) {
+				
+					$att_meta_key = substr( $att_key, strlen( $att_for_label ) );
+					$name = $name_for_label . $att_meta_key;
+					icl_register_string( $this->_context, $name, $att_value );
+					break;
+					
+				}
+				
 			}
+			
 		}
 		
 	}

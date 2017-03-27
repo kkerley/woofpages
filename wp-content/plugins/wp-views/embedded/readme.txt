@@ -13,6 +13,16 @@ You're done!
 
 = Changelog =
 
+v. 2.3.1
+	- Improved the frontend sorting controls so sorting options can force a sorting direction.
+	- Improved the frontend sorting controls so sorting options can force sorting direction labels.
+	- Improved the usability of pagination controls as nav links by providing some canonical classnames to the HTML structure.
+	- Fixed an issue that produced a console error after interacting with a View added dynamically to a page.
+	- Fixed an issue that excluded some post classes from the [wpv-post-class] shortcode output when performing AJAX operations.
+	- Fixed an issue where posts belonging to a deleted custom post type are among suggestions in WP Views Filter widget search.
+	- Fixed an issue where a broken View edit link appears, when the selected View is trashed or deleted.
+	- Fixed an issue on conditional output shortcodes when evaluating a missing field value for a parent post.
+
 v. 2.3.0, AKA Wowbagger
 	- Added frontend sorting controls for Views and WordPress Archives.
 	- Added the capability of automatic detection of the native Customizer in the Views Framework integration.

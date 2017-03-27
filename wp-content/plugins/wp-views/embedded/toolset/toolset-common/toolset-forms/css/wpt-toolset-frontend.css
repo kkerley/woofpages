@@ -201,6 +201,12 @@ img.ui-datepicker-trigger, img.ui-datepicker-readonly
 }
 .wpt-repctl {
     margin-top: 5px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 10px;
+}
+
+.wpt-repctl:hover {
+    background-color: #ededed;
 }
 /* STRANGE */
 #ui-datepicker-div {
@@ -295,33 +301,6 @@ img.wpt-credfile-preview-upload {
     width: 10px;
 }
 
-/* Autocomplete */
-.wpt-suggest-taxonomy-term {
-    position: absolute;
-    display: none;
-    min-width: 100px;
-    outline: solid #ccc 1px;
-    padding: 0px;
-    background-color: Window;
-    overflow: hidden;
-}
-
-.wpt-suggest-taxonomy-term li {
-    margin: 0px;
-    padding: 2px 5px;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    font: menu;
-    font-size: 12px;
-    overflow: hidden;
-}
-
-.wpt-suggest-taxonomy-term-select {
-    background-color: Highlight;
-    color: HighlightText;
-}
-
 .wpt-modal {
     display:    none;
     position:   fixed;
@@ -340,4 +319,12 @@ body.wpt-loading {
 
 body.wpt-loading .wpt-modal {
     display: block;
+}
+
+.js-wpt-credfile-undo{
+    margin-bottom: 5px;
+}
+
+.wpt-repdelete{
+    margin-top: 5px;
 }

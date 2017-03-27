@@ -485,7 +485,7 @@ class WP_Views_plugin extends WP_Views {
                 )
             );
             if( $already_exists ) {
-                die( __( 'A WordPress Archive with that name already exists. Please use another name.', 'wpv-views' ) );
+                die( __( 'Another item already uses this name. Please use another name.', 'wpv-views' ) );
             }
 			
 			if ( empty( $name ) ) {
@@ -740,11 +740,18 @@ class WP_Views_plugin extends WP_Views {
         global $WPV_settings;
 		if ( $WPV_settings->wpv_show_edit_view_link == 1 ){
 			if ($this->current_view) {
-				$view_link = '<a href="'. admin_url() .'admin.php?page=views-editor&view_id='. $this->current_view .'" title="'.__('Edit view', 'wpv-views').'">'.__('Edit view', 'wpv-views').' "'.get_the_title($this->current_view).'"</a>';
-				$view_link = apply_filters( 'wpv_edit_view_link', $view_link );
-				if ( isset( $view_link ) && !empty( $view_link ) ) {
-					$link = $link . ' ' . $view_link;
-				}
+                $view_post = get_post( $this->current_view );
+                if (
+                    $view_post
+                    && 'publish' == $view_post->post_status
+                    && 'view' == $view_post->post_type
+                ) {
+                    $view_link = '<a href="' . admin_url() . 'admin.php?page=views-editor&view_id=' . $this->current_view . '" title="' . __('Edit view', 'wpv-views') . '">' . __('Edit view', 'wpv-views') . ' "' . get_the_title($this->current_view) . '"</a>';
+                    $view_link = apply_filters('wpv_edit_view_link', $view_link);
+                    if (isset($view_link) && !empty($view_link)) {
+                        $link = $link . ' ' . $view_link;
+                    }
+                }
 			}
 		}
 		return $link;
@@ -785,7 +792,7 @@ class WP_Views_plugin extends WP_Views {
                 $help = '<p>'.__("Use <strong>Views</strong> to load content from the database and display it anyway you choose.",'wpv-views').'</p>';
                 $help .= '<p>'.__("This page lists the <strong>Views</strong> in your site. You have contextual actions to ‘duplicate’ and ‘delete’ Views. You can also perform bulk actions.", 'wpv-views').'</p>';
                 $help .= '<p>'.__("Click on a <strong>Views</strong> name to edit it or create new Views.", 'wpv-views').'</p>';
-                $help .= '<p><a href="http://wp-types.com/documentation/user-guides/views/?utm_source=viewsplugin&utm_campaign=views&utm_medium=views-listing-header&utm_term=Views online help" target="_blank">'.__("Views online help", 'wpv-views') .'</a></p>';
+                $help .= '<p><a href="https://wp-types.com/documentation/getting-started-with-toolset/adding-lists-of-contents/?utm_source=viewsplugin&utm_campaign=views&utm_medium=views-listing-header&utm_term=Views online help" target="_blank">'.__("Views online help", 'wpv-views') .'</a></p>';
 				$screen->add_help_tab(
 					array(
 						'id'		=> 'views-help',
@@ -806,7 +813,7 @@ class WP_Views_plugin extends WP_Views {
                 $help .= '<li>'.__("If needed, enable pagination and front-end filters", 'wpv-views').'</li>';
                 $help .= '<li>'.__("Design the output for the View by inserting fields and styling with HTML", 'wpv-views').'</li></ol>';
                 $help .= '<p>'.__("When you are done, remember to add the <strong>View</strong> to your content. You can do that by inserting the <strong>View</strong> as a shortcode to content or displaying it as a widget.",'wpv-views').'</p>';
-                $help .= '<p><a href="http://wp-types.com/documentation/user-guides/views/?utm_source=viewsplugin&utm_campaign=views&utm_medium=view-editor&utm_term=Views online help" target="_blank">'.__("Views online help", 'wpv-views') .'</a></p>';
+                $help .= '<p><a href="https://wp-types.com/documentation/getting-started-with-toolset/adding-lists-of-contents/?utm_source=viewsplugin&utm_campaign=views&utm_medium=view-editor&utm_term=Views online help" target="_blank">'.__("Views online help", 'wpv-views') .'</a></p>';
                 $screen->add_help_tab(
 					array(
 						'id'		=> 'views-help',
@@ -1002,21 +1009,31 @@ class WP_Views_plugin extends WP_Views {
 			'dialog_sorting'							=> array(
 															'title'		=> __( 'Insert controls for frontend sorting', 'wpv-views' ),
 															'insert'	=> __( 'Insert controls', 'wpv-views' ),
+															'option_row'	=> '<tr class="wpv-editable-list-item js-wpv-frontend-sorting-orderby-options-list-item">'
+																				. '<td>%%orderby_sortable%%</td>'
+																				. '<td>%%orderby_options_select%%%%orderby_as%%</td>'
+																				. '<td>%%orderby_set_order%%</td>'
+																				. '<td>%%orderby_label%%</td>'
+																				. '<td>%%orderby_delete%%</td>'
+																			. '</tr>',
 															'labels'	=> array(
-																			'sort_by'		=> sprintf(
-																								__( 'Sort by %1$s %2$s with the label %3$s', 'wpv-views' ),
-																								'%%orderby_options_select%%',
-																								'%%orderby_as%%',
-																								'%%orderby_label%%'
-																							),
 																			'sort_as_native'	=> __( 'as a native custom field', 'wpv-views' ),
 																			'sort_as_string'	=> __( 'as a string', 'wpv-views' ),
 																			'sort_as_number'	=> __( 'as a number', 'wpv-views' ),
+																			'sort_order'		=> __( 'Labels for the sorting direction control:', 'wpv-views' ),
 																			'ascending'		=> __( 'Ascending', 'wpv-views' ),
-																			'descending'	=> __( 'Descending', 'wpv-views' )
+																			'descending'	=> __( 'Descending', 'wpv-views' ),
+																			'direction_asc'		=> __( 'ascending', 'wpv-views' ),
+																			'direction_desc'	=> __( 'descending', 'wpv-views' ),
+																			'asc_alphabet'		=> __( 'A to Z', 'wpv-views' ),
+																			'desc_alphabet'		=> __( 'Z to A', 'wpv-views' ),
+																			'asc_time'			=> __( 'Older first', 'wpv-views' ),
+																			'desc_time'			=> __( 'Newer first', 'wpv-views' )
 																		),
 															'warnings'	=> array(
 																			'unsupported_field'	=> __( 'This field will not appear in the sorting options because its name includes characters that we don’t support.', 'wpv-views' ),
+																			'missing_options'	=> __( 'You need to add at least one valid sorting option', 'wpv-views' ),
+																			'first_row'			=> __( 'The first mandatory sorting option is synchronized with the current stored sorting settings. Any change that you do to it will be pushed to the Ordering section.', 'wpv-views' )
 																		),
 														),			
 			'pointer'									=> array(
@@ -1255,7 +1272,7 @@ class WP_Views_plugin extends WP_Views {
 			'dialog_delete_action'								=> __( 'Delete', 'wpv-views' ),
 			'dialog_change_usage_dialog_title'					=> __( 'Change how this WordPress Archive is used', 'wpv-views' ),
 			'dialog_change_usage_action'						=> __( 'Change usage', 'wpv-views' ),
-			'dialog_create_wpa_for_archive_loop_dialog_title'	=> __( 'Create a WordPress Archive for an archive loop', 'wpv-views' ),
+			'dialog_create_wpa_for_archive_loop_dialog_title'	=> __( 'Add a new WordPress Archive', 'wpv-views' ),
 			'dialog_create_wpa_for_archive_loop_action'			=> __( 'Create WordPress Archive', 'wpv-views' ),
 			'dialog_change_wpa_for_archive_loop_dialog_title'	=> __( 'Use another WordPress Archive for this archive loop', 'wpv-views' ),
 			'dialog_change_wpa_for_archive_loop_action'			=> __( 'Assign', 'wpv-views' ),

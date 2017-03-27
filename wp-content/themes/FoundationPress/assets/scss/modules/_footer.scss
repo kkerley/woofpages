@@ -2,8 +2,12 @@
   background-color: $light-gray;
   max-width: 100%;
   width: 100%;
-  margin: 0 auto;
+  margin: 4rem auto 0;
   border-top: 1px solid #ccc;
+
+  .home &{
+    margin-top: 0;
+  }
 
 
   #footer {

@@ -1,4 +1,6 @@
 .sidebar {
+  // margin-bottom: 4rem;
+
   @include breakpoint(small) {
     @include grid-column(12);
   }

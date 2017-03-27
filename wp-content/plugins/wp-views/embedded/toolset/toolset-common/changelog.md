@@ -1,19 +1,16 @@
 # Toolset Common Library
 
-# 2.3
+# 2.3.1
 
- - Various fixes and adjustments for CRED 1.8.6
+- Improved the styling for CRED file-related fields.
+- Fixed some compatibility issues with PHP 7.1
+- Fixed taxonomy suggestions on CRED forms.
 
-## 2.3-Beta3
+# 2.3.0
 
- - Adds callback methods for wpPointer object onOpen and onClose
-
-## 2.3-Beta2
-
+- Various fixes and adjustments for CRED 1.8.6
+- Adds callback methods for wpPointer object onOpen and onClose
 - Allows user to ask Toolset to load Bootstrap library for them, or alternatively set the Bootstrap version they are using on their own
-
-## 2.3.0
-
 - layouts-1239: Added Toolset_Admin_Notice_Layouts_Help
 - Extend the post objects relationships management with two actions to gather data on demand.
 - Only include the jQuery datepicker stylesheet on demand when the current page contains a datepicker from Toolset.

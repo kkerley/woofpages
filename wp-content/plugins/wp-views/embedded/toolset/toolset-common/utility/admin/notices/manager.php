@@ -262,6 +262,7 @@ class Toolset_Admin_Notices_Manager {
         }
 
         $user_settings = get_user_meta( $user_id, self::ID, true );
+	    $user_settings = empty( $user_settings ) ? array() : $user_settings;
 	    $user_settings[ self::OPTION_FIELD_DISMISSED_NOTICE ][ $notice_id ] = true;
 	    update_user_meta( $user_id, self::ID, $user_settings );
     }

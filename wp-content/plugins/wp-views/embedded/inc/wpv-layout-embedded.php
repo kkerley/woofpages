@@ -64,7 +64,7 @@ $WPV_Layout_Embedded = new WPV_Layout_Embedded();
 add_shortcode('wpv-heading', 'wpv_header_shortcode');
 function wpv_header_shortcode( $atts, $value ) {
     extract(
-        shortcode_atts( array(
+        $atts = shortcode_atts( array(
             'name' => '',
             'style' => '',
             'class' => ''

@@ -7079,8 +7079,10 @@ a.thumbnail {
   background-color: #e6e6e6;
   max-width: 100%;
   width: 100%;
-  margin: 0 auto;
+  margin: 4rem auto 0;
   border-top: 1px solid #ccc; }
+  .home #footer-container {
+    margin-top: 0; }
   #footer-container #footer {
     max-width: 64rem;
     margin-right: auto;
@@ -7219,6 +7221,12 @@ body#tinymce {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
+  @media screen and (max-width: 39.9375em) {
+    .card {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap; } }
   .card .card-image {
     position: relative; }
     .card .card-image img {
@@ -7290,7 +7298,7 @@ body#tinymce {
         display: inline-block;
         font-size: 0.9rem;
         margin: 0.25rem;
-        padding: 0.125rem 0.5rem;
+        padding: 0.33333rem 0.5rem;
         -webkit-transition: all 0.2s ease;
         transition: all 0.2s ease; }
         .card .card-content .wrapper--characteristics a:hover {
@@ -7310,9 +7318,11 @@ body#tinymce {
       float: right;
       margin: 0.5rem 0.5rem 0; }
   .card.dog .card-content p {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem; }
+    margin-bottom: 0.5rem; }
+    .card.dog .card-content p:last-of-type {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ddd; }
 
 .available {
   color: #38a541; }
@@ -7586,6 +7596,26 @@ body#tinymce {
     float: left;
     padding-right: 0.625rem;
     padding-left: 0.625rem; }
+    .intro .fp-intro > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap; }
+    .intro .fp-intro .entry-content.has-featured-dogs {
+      margin-right: 1rem;
+      width: calc(100% / 3 * 2 - 3rem); }
+    .intro .fp-intro .featured-dogs {
+      padding: 0 1.5rem;
+      width: calc(100% / 3 + 1rem); }
+      .intro .fp-intro .featured-dogs .card {
+        width: 100%; }
+        .intro .fp-intro .featured-dogs .card h4 {
+          margin-bottom: 0.5rem; }
+    .intro .fp-intro .featured-dogs--inner .slick-arrow::before {
+      color: #333; }
     @media print, screen and (min-width: 40em) {
       .intro .fp-intro {
         padding-right: 0.9375rem;
@@ -7703,8 +7733,22 @@ body#tinymce {
       content: ' '; }
     .latest-dogs--inner .latest-dogs::after {
       clear: both; }
+    .latest-dogs--inner .latest-dogs .js-wpv-view-layout {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap; }
     .latest-dogs--inner .latest-dogs .card {
+      max-width: calc(341.3333px - 1rem);
+      margin-bottom: 1rem;
       text-align: left; }
+      .latest-dogs--inner .latest-dogs .card:nth-of-type(2n) {
+        margin-left: 0.5rem; }
+      .latest-dogs--inner .latest-dogs .card:nth-of-type(2n+1) {
+        margin-right: 0.5rem; }
   .latest-dogs--inner .card {
     width: 100%; }
 
@@ -8028,8 +8072,6 @@ body#tinymce {
         .single-dog #single-post .main-content {
           position: relative;
           left: 33.33333%; } }
-  #single-post .entry-content {
-    margin-bottom: 4rem; }
 
 .dog-intro header {
   margin-bottom: 2rem; }
@@ -8090,8 +8132,11 @@ body#tinymce {
 
 .adoption-update {
   border-bottom: 1px solid #e6e6e6;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem;
   padding-bottom: 1rem; }
+
+.taxonomy-slug {
+  text-transform: capitalize; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #963484; }

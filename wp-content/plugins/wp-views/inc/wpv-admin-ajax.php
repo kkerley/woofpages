@@ -605,7 +605,7 @@ function wp_ajax_wpv_wp_archive_create_new_callback() {
 	);
 	if ( $existing ) {
 		$data = array(
-			'message' => __( 'Another item with that same name already exists. Please try another name.', 'wpv-views' )
+			'message' => __( 'Another item already uses this name. Please use another name.', 'wpv-views' )
 		);
 		wp_send_json_error( $data );
 	}
@@ -662,7 +662,7 @@ function wp_ajax_wpv_create_wpa_for_archive_loop_callback() {
 	);
 	if ( $existing ) {
 		$data = array(
-			'message'	=> __( 'A WordPress Archive with that name already exists. Please use another name.', 'wpv-views' )
+			'message'	=> __( 'Another item already uses this name. Please use another name.', 'wpv-views' )
 		);
 		wp_send_json_error( $data );
 	}
@@ -928,7 +928,7 @@ function wpv_archive_bulk_delete_render_popup_callback() {
 			$view_meta = unserialize( $wpa->meta );
 			if (
 				isset( $view_meta['view-query-mode'] )
-				&& $view_meta['view-query-mode'] == 'archive'
+				&& in_array( $view_meta['view-query-mode'], array( 'archive', 'layouts-loop' ) )
 			) {
 				$wpa_ids[] = $wpa;
 			}

@@ -33,11 +33,11 @@
         $rescue_abbrev      = $woofpages_options['woofpages_rescue_location_abbreviation'] ? $woofpages_options['woofpages_rescue_location_abbreviation'] : get_bloginfo( 'name' );
     ?>
 
-    <header id="utility">
-        <div class="utility--inner">
-            <?php include 'template-parts/woofpages/_social_media_links.php'; ?>
-        </div>
-    </header>
+<!--    <header id="utility">-->
+<!--        <div class="utility--inner">-->
+<!--            --><?php //include 'template-parts/woofpages/_social_media_links.php'; ?>
+<!--        </div>-->
+<!--    </header>-->
 
     <header class="header<?php echo $rescue_logo ? ' with-logo' : '' ?>">
         <h2 class="headline"><?php bloginfo( 'name' ); ?>  <small><?php bloginfo( 'description' ); ?></small></h2>

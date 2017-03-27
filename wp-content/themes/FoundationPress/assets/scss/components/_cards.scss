@@ -4,6 +4,10 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
 
+  @include breakpoint(small only){
+    flex-flow: column nowrap;
+  }
+
   .card-image{
     position: relative;
 
@@ -120,7 +124,7 @@
         display: inline-block;
         font-size: 0.9rem;
         margin: 0.25rem;
-        padding: 0.125rem 0.5rem;
+        padding: 0.33333rem 0.5rem;
         transition: all 0.2s ease;
 
         &:hover{
@@ -153,9 +157,13 @@
   &.dog{
     .card-content{
       p{
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
+        margin-bottom: 0.5rem;
+
+        &:last-of-type{
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid #ddd;
+        }
       }
     }
   }

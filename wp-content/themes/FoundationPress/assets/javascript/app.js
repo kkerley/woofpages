@@ -1,6 +1,14 @@
 jQuery(document).ready(function($){
     var $root = $('html, body');
 
+    $('.featured-dogs--inner').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+
+    });
+
    $('.carousel--dog-detail-page_primary').slick({
        arrows: true,
        infinite: true,

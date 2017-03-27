@@ -1257,17 +1257,17 @@ function wpv_suggest_form_targets() {
 	$values_to_prepare = array();
 	$title_q = '%' . wpv_esc_like( $_REQUEST['q'] ) . '%';
 	$values_to_prepare[] = $title_q;
-	$exclude_post_type_slugs_where = '';
-	$excluded_post_type_slugs = array();
-	$excluded_post_type_slugs = apply_filters( 'wpv_admin_exclude_post_type_slugs', $excluded_post_type_slugs );
-	if ( count( $excluded_post_type_slugs ) > 0 ) {
-		$excluded_post_type_slugs_count = count( $excluded_post_type_slugs );
-		$excluded_post_type_slugs_placeholders = array_fill( 0, $excluded_post_type_slugs_count, '%s' );
-		$excluded_post_type_slugs_flat = implode( ",", $excluded_post_type_slugs_placeholders );
-		foreach ( $excluded_post_type_slugs as $excluded_post_type_slugs_item ) {
-			$values_to_prepare[] = $excluded_post_type_slugs_item;
+	$included_post_type_slugs_where = '';
+    $included_post_type_slugs = array();
+    $included_post_type_slugs = apply_filters( 'wpv_admin_include_post_type_slugs', $included_post_type_slugs );
+	if ( count( $included_post_type_slugs ) > 0 ) {
+        $included_post_type_slugs_count = count( $included_post_type_slugs );
+		$included_post_type_slugs_placeholders = array_fill( 0, $included_post_type_slugs_count, '%s' );
+		$included_post_type_slugs_flat = implode( ",", $included_post_type_slugs_placeholders );
+		foreach ( $included_post_type_slugs as $included_post_type_slugs_item ) {
+			$values_to_prepare[] = $included_post_type_slugs_item;
 		}
-		$exclude_post_type_slugs_where = "AND post_type NOT IN ({$excluded_post_type_slugs_flat})";
+		$included_post_type_slugs_where = "AND post_type IN ({$included_post_type_slugs_flat})";
 	}
 	if ( isset( $sitepress ) && function_exists( 'icl_object_id' ) ) {
 		$current_lang_code = $sitepress->get_current_language();
@@ -1280,7 +1280,7 @@ function wpv_suggest_form_targets() {
             SELECT ID, post_title
             FROM {$wpdb->posts} {$trans_join}
             WHERE post_title LIKE '%s'
-			{$exclude_post_type_slugs_where}
+			{$included_post_type_slugs_where}
 			AND post_status='publish' 
 			{$trans_where}
             ORDER BY post_title ASC

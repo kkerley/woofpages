@@ -26,9 +26,17 @@
   }
 
   .entry-content{
-    margin-bottom: 4rem;
+    // margin-bottom: 4rem;
   }
 }
+
+.tax-characteristic,
+.tax-breed{
+  .main-content{
+    // margin-bottom: 4rem;
+  }
+}
+
 
 .dog-intro{
 
@@ -127,6 +135,10 @@
 
 .adoption-update{
   border-bottom: 1px solid $light-gray;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem;
   padding-bottom: 1rem;
+}
+
+.taxonomy-slug{
+  text-transform: capitalize;
 }

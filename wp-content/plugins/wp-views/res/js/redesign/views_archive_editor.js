@@ -49,7 +49,7 @@ WPViews.EditScreenEditors = function( $ ) {
 		 *
 		 * @since 2.3.0
 		 */
-		Toolset.hooks.addAction( 'wpv-action-wpv-edit-screen-init-codemirror-auxiliar-editor', self.init_codemirror_auxiliar_editor );
+		Toolset.hooks.addAction( 'wpv-action-wpv-edit-screen-init-codemirror-auxiliar-editor', self.init_codemirror_auxiliar_editor, 10, 2 );
 		
 		/**
 		 * Delete a Codemirror editor.
@@ -64,21 +64,21 @@ WPViews.EditScreenEditors = function( $ ) {
 	
 	self.init_main_editors = function() {
 		
-		self.init_codemirror_editor('wpv_filter_meta_html_content');
-		self.init_codemirror_auxiliar_editor('wpv_filter_meta_html_css');
-		self.init_codemirror_auxiliar_editor('wpv_filter_meta_html_js');
+		self.init_codemirror_editor( 'wpv_filter_meta_html_content' );
+		self.init_codemirror_auxiliar_editor( 'wpv_filter_meta_html_css', 'css' );
+		self.init_codemirror_auxiliar_editor( 'wpv_filter_meta_html_js', 'javascript' );
 		
-		self.init_codemirror_editor('wpv_layout_meta_html_content');
-		self.init_codemirror_auxiliar_editor('wpv_layout_meta_html_css');
-		self.init_codemirror_auxiliar_editor('wpv_layout_meta_html_js');
+		self.init_codemirror_editor( 'wpv_layout_meta_html_content' );
+		self.init_codemirror_auxiliar_editor( 'wpv_layout_meta_html_css', 'css' );
+		self.init_codemirror_auxiliar_editor( 'wpv_layout_meta_html_js', 'javascript' );
 		
-		self.init_codemirror_editor('wpv_content');
+		self.init_codemirror_editor( 'wpv_content' );
 		
 		_.defer( function() {
 			// CSS Components compatibility
-			Toolset.hooks.doAction('toolset_text_editor_CodeMirror_init', 'wpv_filter_meta_html_content');
-			Toolset.hooks.doAction('toolset_text_editor_CodeMirror_init', 'wpv_layout_meta_html_content');
-			Toolset.hooks.doAction('toolset_text_editor_CodeMirror_init', 'wpv_content');
+			Toolset.hooks.doAction( 'toolset_text_editor_CodeMirror_init', 'wpv_filter_meta_html_content' );
+			Toolset.hooks.doAction( 'toolset_text_editor_CodeMirror_init', 'wpv_layout_meta_html_content' );
+			Toolset.hooks.doAction( 'toolset_text_editor_CodeMirror_init', 'wpv_content' );
 		});
 		
 		return self;
@@ -117,10 +117,12 @@ WPViews.EditScreenEditors = function( $ ) {
 	 * @since 2.3.0
 	 */
 	
-	self.init_codemirror_auxiliar_editor = function( editor_id ) {
+	self.init_codemirror_auxiliar_editor = function( editor_id, mode ) {
+		
+		mode = ( typeof mode === "undefined" ) ? "myshortcodes" : mode;
 		
 		// Instantiate Codemirror
-		WPV_Toolset.CodeMirror_instance[ editor_id ]		= icl_editor.codemirror( editor_id, true );
+		WPV_Toolset.CodeMirror_instance[ editor_id ]		= icl_editor.codemirror( editor_id, true, mode );
 		// Cache the editor value
 		WPV_Toolset.CodeMirror_instance_value[ editor_id ]	= WPV_Toolset.CodeMirror_instance[ editor_id ].getValue();
 		
@@ -513,8 +515,8 @@ WPViews.WPAEditScreen = function( $ ) {
 	* Does not include editors
 	*
 	* @since 2.1
+	* @since 2.3.1 Add a "sorting" element to the model.
 	*/
-	
 	self.init_model = function() {
 		self.model['.js-wpv-title']						= $( '.js-title' ).val();
 		self.model['.js-wpv-description']				= $( '.js-wpv-description' ).val();
@@ -522,6 +524,17 @@ WPViews.WPAEditScreen = function( $ ) {
 		self.model['js-wpv-query-type']					= 'posts';
 		
 		self.model['.js-wpv-layout-settings-extra-js']	= $( '.js-wpv-layout-settings-extra-js' ).val();
+		
+		self.model['sorting']							= {
+															posts:		{
+																orderby:			$( 'select.js-wpv-posts-orderby' ).val(),
+																orderby_as:			$( 'select.js-wpv-posts-orderby-as' ).val(),
+																order:				$( 'select.js-wpv-posts-order' ).val(),
+																orderby_secondary:	$( 'select.js-wpv-posts-orderby-second' ).val(),
+																order_secondary:	$( 'select.js-wpv-posts-order-second' ).val()
+															}
+														};
+		
 		return self;
 	};
 	
@@ -845,13 +858,17 @@ WPViews.WPAEditScreen = function( $ ) {
 	 *
 	 * @since 2.3.0
 	 */
-	
 	self.cache = {
 		'sorting_options': {
 			posts:		{}
 		}
 	};
 	
+	/**
+	 * Init cached structures.
+	 *
+	 * @since 2.3.0 Add cache for sorting options, used in several interfaces.
+	 */
 	self.init_cache = function() {
 		
 		/**
@@ -1701,6 +1718,15 @@ WPViews.WPAEditScreen = function( $ ) {
 			success: function( response ) {
 				if ( response.success ) {
 					$('.js-screen-options').find('.toolset-alert').remove();
+					self.model.sorting = {
+						posts:		{
+							orderby:			data.orderby,
+							orderby_as:			data.orderby_as,
+							order:				data.order,
+							orderby_secondary:	data.orderby_second,
+							order_secondary:	data.order_second
+						}
+					};
 					$( document ).trigger( 'js_event_wpv_save_section_sorting_completed' );
 				} else {
 					Toolset.hooks.doAction( 'wpv-action-wpv-edit-screen-manage-ajax-fail', { data: response.data, container: messages_container} );
@@ -1860,15 +1886,19 @@ WPViews.WPAEditScreen = function( $ ) {
 	// ---------------------------------
 	
 	/**
-	 * Cache sorting controls:
-	 * - orderby option row
-	 * - whether inserting the controls demands a new line
+	 * Cache sorting controls new row.
+	 *
+	 * @since 2.3.0
 	 */
-	
 	self.sorting_orderby_options_row = {
 		posts:		''
 	};
 	
+	/**
+	 * Flag to decide whether we need a new line when inserting sorting controls.
+	 *
+	 * @since 2.3.0
+	 */
 	self.sorting_insert_newline = false;
 	
 	/**
@@ -1877,13 +1907,23 @@ WPViews.WPAEditScreen = function( $ ) {
 	 * @since 2.3.0
 	 */
 	
-	$( '.js-wpv-frontend-sorting-orderby-options-list' ).sortable({
+	$( '.js-wpv-frontend-sorting-orderby-options-list tbody' ).sortable({
 		handle: ".js-wpv-frontend-sorting-orderby-options-list-item-move",
 		axis: 'y',
-		containment: ".js-wpv-frontend-sorting-orderby-options-list",
-		items: "> li",
-		helper: 'clone',
-		tolerance: "pointer"
+		containment: ".js-wpv-frontend-sorting-orderby-options-list tbody",
+		items: "> tr",
+		helper: function( e, ui ) {
+			// Fix the collapse of the dragged row width
+			// https://paulund.co.uk/fixed-width-sortable-tables
+			ui.children().each( function() {
+				$( this ).width( $( this ).width() );
+			});
+			return ui;
+		},
+		tolerance: "pointer",
+		update: function( event, ui ) {
+			self.update_sorting_controls_management();
+		}
 	});
 	
 	/**
@@ -1896,7 +1936,7 @@ WPViews.WPAEditScreen = function( $ ) {
 		$( '#js-wpv-frontend-sorting-orderby-options-type, #js-wpv-frontend-sorting-order-options-type' ).val( 'select' ).trigger( 'change' );
 		$( '#js-wpv-frontend-sorting-orderby-list-style, #js-wpv-frontend-sorting-order-list-style' ).val( 'default' ).trigger( 'change' );
 		$( '.js-wpv-frontend-sorting-orderby-options-list-item-dropdown.js-wpv-toolset_selec2-inited' ).toolset_select2( 'destroy' );
-		$( '.js-wpv-frontend-sorting-orderby-options-list li' ).remove();
+		$( '.js-wpv-frontend-sorting-orderby-options-list tbody tr' ).remove();
 		$( '#js-wpv-frontend-sorting-order-enable' ).prop( 'checked', false ).trigger( 'change' );
 		$( '.js-wpv-frontend-sorting-order-options, .js-wpv-frontend-sorting-orderby-type-list-extra, .js-wpv-frontend-sorting-order-type-list-extra' ).hide();
 		$( '.js-wpv-frontend-sorting-order-options-label-asc' ).val( wpv_editor_strings.dialog_sorting.labels.ascending );
@@ -1929,19 +1969,24 @@ WPViews.WPAEditScreen = function( $ ) {
 	});
 	
 	self.add_sorting_dialog_orderby_option = function() {		
-		var current_query_type = self.get_view_query_type(),
-			orderby_control = '',
-			orderby_as_control = '',
-			orderby_label_control = '';
+		var current_query_type			= self.get_view_query_type(),
+			orderby_control				= '',
+			orderby_as_control			= '',
+			orderby_label_control		= '',
+			orderby_set_order_control	= '';
 		
 		if ( self.sorting_orderby_options_row[ current_query_type ] == '' ) {
 			
-			// Basic list item structure
-			self.sorting_orderby_options_row[ current_query_type ] = '<li class="wpv-editable-list-item js-wpv-frontend-sorting-orderby-options-list-item">';
-			self.sorting_orderby_options_row[ current_query_type ] += '<i class="icon-move fa fa-arrows wpv-editable-list-item-move js-wpv-frontend-sorting-orderby-options-list-item-move"></i>';
-			self.sorting_orderby_options_row[ current_query_type ] += wpv_editor_strings.dialog_sorting.labels.sort_by;
-			self.sorting_orderby_options_row[ current_query_type ] += '<button class="button-secondary wpv-editable-list-item-delete js-wpv-frontend-sorting-orderby-options-list-item-delete"><i class="icon-remove fa fa-times"></i></button>';
-			self.sorting_orderby_options_row[ current_query_type ] += '</li>';
+			self.sorting_orderby_options_row[ current_query_type ] = wpv_editor_strings.dialog_sorting.option_row;
+			
+			self.sorting_orderby_options_row[ current_query_type ] = self.sorting_orderby_options_row[ current_query_type ]
+				.replace( '%%orderby_sortable%%', '<i class="icon-move fa fa-arrows wpv-editable-list-item-move js-wpv-frontend-sorting-orderby-options-list-item-move"></i>' );
+			self.sorting_orderby_options_row[ current_query_type ] = self.sorting_orderby_options_row[ current_query_type ]
+				.replace( 
+					'%%orderby_delete%%', 
+					'<button class="button button-secondary button-small wpv-editable-list-item-delete js-wpv-frontend-sorting-orderby-options-list-item-delete"><i class="icon-remove fa fa-times"></i></button>' 
+					+ '<button class="button buton-secondary button-smal wpv-editable-list-item-default-info js-wpv-frontend-sorting-orderby-options-list-item-default-info" style="display:none"><i class="fa fa-question-circle"></i></button>'
+				);
 			
 			// Orderby select dropdown per query type
 			orderby_control = '<select class="js-wpv-frontend-sorting-orderby-options-list-item-dropdown">';
@@ -1949,7 +1994,13 @@ WPViews.WPAEditScreen = function( $ ) {
 				//item.value, = key item.title, item.type
 				if ( /^[a-zA-Z0-9\-\_]+$/.test( item.value ) ) {
 					orderby_control += '<option value="' + item.value + '" data-type="' + item.type + '">' + item.title + '</option>';
-				} else if ( item.value.indexOf( '"' ) > -1 ) {
+				}
+				/*
+				// In Views 2.3.0 we offered those excluded postmeta values, with a warning.
+				// In views 2.3.1 we are removing them.
+				// Leavind this as a trace to follow in case it is needed.
+				// @until 2.5.0
+				else if ( item.value.indexOf( '"' ) > -1 ) {
 					orderby_control += '<option value="" data-type="excluded:quote">' + item.title + '</option>';
 				} else if ( item.value.indexOf( "'" ) > -1 ) {
 					orderby_control += '<option value="" data-type="excluded:squote">' + item.title + '</option>';
@@ -1958,6 +2009,7 @@ WPViews.WPAEditScreen = function( $ ) {
 				} else {
 					orderby_control += '<option value="" data-type="excluded:format">' + item.title + '</option>';
 				}
+				*/
 			});
 			orderby_control += '</select>';
 			
@@ -1969,7 +2021,18 @@ WPViews.WPAEditScreen = function( $ ) {
 			orderby_as_control += '</select>';
 			
 			// Orderby label input
-			orderby_label_control += '<input type="text" class="js-wpv-frontend-sorting-orderby-options-list-item-label" style="vertical-align: middle;" value="" />';
+			orderby_label_control += '<input type="text" class="js-wpv-frontend-sorting-orderby-options-list-item-label" value="" />';
+			orderby_label_control += '<div class="js-wpv-frontend-sorting-orderby-options-list-item-label-direction" style="display:none;border-top: 1px solid #ccc; margin-top: 5px; padding: 3px 0;">';
+			orderby_label_control += '<span style="display:block;">' + wpv_editor_strings.dialog_sorting.labels.sort_order + '</span>';
+			orderby_label_control += '<label style="display:block"><em>Ascending:</em> <input type="text" class="js-wpv-frontend-sorting-orderby-options-list-item-label-asc" value="" /></label>';
+			orderby_label_control += '<label style="display:block"><em>Descending:</em> <input type="text" class="js-wpv-frontend-sorting-orderby-options-list-item-label-desc" value="" /></label>';
+			orderby_label_control += '</div>';
+			
+			// Orderby set order select dropdown
+			orderby_set_order_control += '<select class="js-wpv-frontend-sorting-orderby-options-list-item-force-order">';
+			orderby_set_order_control += '<option value="ASC">' + wpv_editor_strings.dialog_sorting.labels.direction_asc + '</option>';
+			orderby_set_order_control += '<option value="DESC">' + wpv_editor_strings.dialog_sorting.labels.direction_desc + '</option>';
+			orderby_set_order_control += '</select>';
 			
 			// Replace placeholders per query type
 			self.sorting_orderby_options_row[ current_query_type ] = self.sorting_orderby_options_row[ current_query_type ]
@@ -1978,16 +2041,28 @@ WPViews.WPAEditScreen = function( $ ) {
 				.replace( '%%orderby_as%%', orderby_as_control );
 			self.sorting_orderby_options_row[ current_query_type ] = self.sorting_orderby_options_row[ current_query_type ]
 				.replace( '%%orderby_label%%', orderby_label_control );
+			self.sorting_orderby_options_row[ current_query_type ] = self.sorting_orderby_options_row[ current_query_type ]
+				.replace( '%%orderby_set_order%%', orderby_set_order_control );
 			
 		}
 		
-		$( '.js-wpv-frontend-sorting-orderby-options-list' ).append( self.sorting_orderby_options_row[ current_query_type ] );
+		orderby_new_row = $( self.sorting_orderby_options_row[ current_query_type ] );
 		
-		var orderby_option_select = $( '.js-wpv-frontend-sorting-orderby-options-list li:last-child .js-wpv-frontend-sorting-orderby-options-list-item-dropdown' ),
+		if ( $( '#js-wpv-frontend-sorting-order-enable' ).prop( 'checked' ) ) {
+			orderby_new_row
+				.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label-direction' )
+					.show();
+		}
+		
+		self.update_sorting_controls_row_labels( orderby_new_row );
+		
+		$( '.js-wpv-frontend-sorting-orderby-options-list tbody' ).append( orderby_new_row );
+		
+		var orderby_option_select = $( '.js-wpv-frontend-sorting-orderby-options-list tbody tr.js-wpv-frontend-sorting-orderby-options-list-item:last-child .js-wpv-frontend-sorting-orderby-options-list-item-dropdown' ),
 			orderby_option_selected_value = orderby_option_select.val();
 			
 		if ( _.has( self.cache['sorting_options'][ current_query_type ], orderby_option_selected_value ) ) {
-			$( '.js-wpv-frontend-sorting-orderby-options-list li:last-child .js-wpv-frontend-sorting-orderby-options-list-item-label' )
+			$( '.js-wpv-frontend-sorting-orderby-options-list tbody tr.js-wpv-frontend-sorting-orderby-options-list-item:last-child .js-wpv-frontend-sorting-orderby-options-list-item-label' )
 				.val( self.cache['sorting_options'][ current_query_type ][ orderby_option_selected_value ].title );
 		}
 		
@@ -2004,11 +2079,14 @@ WPViews.WPAEditScreen = function( $ ) {
 				.$dropdown
 					.addClass( 'toolset_select2-dropdown-in-dialog' );
 		
-		$( '.js-wpv-frontend-sorting-orderby-options-list' ).sortable( 'refresh' );
+		$( '.js-wpv-frontend-sorting-orderby-options-list tbody' ).sortable( 'refresh' );
 		
 		self
+			.update_sorting_controls_management()
 			.update_sorting_controls_visibility()
 			.update_sorting_controls_preview();
+		
+		return self;
 		
 	};
 	
@@ -2026,8 +2104,9 @@ WPViews.WPAEditScreen = function( $ ) {
 		setTimeout( function () {
 			delete_item.fadeOut( 'fast', function() {
 				$( this ).remove();
-				$( '.js-wpv-frontend-sorting-orderby-options-list' ).sortable( 'refresh' );
+				$( '.js-wpv-frontend-sorting-orderby-options-list tbody' ).sortable( 'refresh' );
 				self
+					.update_sorting_controls_management()
 					.update_sorting_controls_visibility()
 					.update_sorting_controls_preview();
 			});
@@ -2035,28 +2114,96 @@ WPViews.WPAEditScreen = function( $ ) {
 	});
 	
 	/**
-	 * Manage changes in the frontend sorting orderby select dropdowns.
+	 * Display an informtional overlay when clicking the question icon on the first frontend sorting options row.
 	 *
-	 * When selecting a meta field not supported, a .toolset-alert message will be appended to the option row.
-	 * Otherwise, we will update the option label and maybe offer the orderby_as option.
-	 *
-	 * @since 2.3.0
+	 * @since 2.3.1
 	 */
 	
-	$( document ).on( 'change', '.js-wpv-frontend-sorting-orderby-options-list-item-dropdown', function() {
-		
-		var item_dropdown = $( this ),
-			item = item_dropdown.closest( '.js-wpv-frontend-sorting-orderby-options-list-item' ),
+	$( document ).on( 'click', '.js-wpv-frontend-sorting-orderby-options-list-item-default-info', function() {
+		var table_overlay = '<tr class="wpv-editable-list-item-default-info-overlay toolset-alert toolset-alert-info js-wpv-editable-list-item-default-info-overlay">';
+		table_overlay += '<td colspan="5">';
+		table_overlay += '<p>' + wpv_editor_strings.dialog_sorting.warnings.first_row + '</p>';
+		table_overlay += '<span class="button button-primary button-small wpv-editable-list-item-default-info-close js-wpv-editable-list-item-default-info-close">';
+		table_overlay += '<i class="icon-remove fa fa-times"></i>';
+		table_overlay += '</span>';
+		table_overlay += '</td>';
+		table_overlay += '</tr>';
+		$( '.js-wpv-frontend-sorting-orderby-options-list tbody' ).prepend( table_overlay );
+	});
+	
+	/**
+	 * Close the informtional overlay for the first frontend sorting options row.
+	 *
+	 * @since 2.3.1
+	 */
+	
+	$( document ).on( 'click', '.js-wpv-editable-list-item-default-info-close', function() {
+		$( '.wpv-editable-list-item-default-info-overlay' ).remove();
+	});
+	
+	/**
+	 * Map sorting values (and field types when sorting by meta values) to labels for ascending/descending directions.
+	 *
+	 * @since 2.3.1
+	 */
+	self.sorting_controls_row_labels_map = {
+		// Field types
+		'date': {
+			'asc':	wpv_editor_strings.dialog_sorting.labels.asc_time,
+			'desc':	wpv_editor_strings.dialog_sorting.labels.desc_time
+		},
+		'numeric': {
+			'asc':	wpv_editor_strings.dialog_sorting.labels.ascending,
+			'desc':	wpv_editor_strings.dialog_sorting.labels.descending
+		},
+		// Post fields
+		'post_date': {
+			'asc':	wpv_editor_strings.dialog_sorting.labels.asc_time,
+			'desc':	wpv_editor_strings.dialog_sorting.labels.desc_time
+		},
+		'post_title': {
+			'asc':	wpv_editor_strings.dialog_sorting.labels.asc_alphabet,
+			'desc':	wpv_editor_strings.dialog_sorting.labels.desc_alphabet
+		},
+		'post_author': {
+			'asc':	wpv_editor_strings.dialog_sorting.labels.asc_alphabet,
+			'desc':	wpv_editor_strings.dialog_sorting.labels.desc_alphabet
+		},
+		'post_type': {
+			'asc':	wpv_editor_strings.dialog_sorting.labels.asc_alphabet,
+			'desc':	wpv_editor_strings.dialog_sorting.labels.desc_alphabet
+		},
+		'modified': {
+			'asc':	wpv_editor_strings.dialog_sorting.labels.asc_time,
+			'desc':	wpv_editor_strings.dialog_sorting.labels.desc_time
+		},
+		// Default
+		'default': {
+			'asc':	wpv_editor_strings.dialog_sorting.labels.ascending,
+			'desc':	wpv_editor_strings.dialog_sorting.labels.descending
+		}
+	};
+	
+	/**
+	 * Apply different sorting directions labels depending on the sorting option selected.
+	 *
+	 * @since 2.3.1
+	 */
+	self.update_sorting_controls_row_labels = function( item ) {
+		var item_dropdown = item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-dropdown' ),
 			item_dropdown_selected = item_dropdown.find( ':selected' ),
 			item_dropdown_selected_value = item_dropdown.val(),
 			item_dropdown_selected_type = item_dropdown_selected.data( 'type' ),
+			item_dropdown_selected_labels = {},
 			current_query_type = self.get_view_query_type();
 		
+		// Remove orphan warning signs
 		item
 			.removeClass( 'wpv-editable-list-item-warning' )
 			.find( '.toolset-alert' )
 				.remove();
 		
+		// Return early if the selected field is excluded:
 		if ( 
 			item_dropdown_selected_value == '' 
 			&& 'excluded:' == item_dropdown_selected_type.substr( 0, 9 )
@@ -2083,12 +2230,15 @@ WPViews.WPAEditScreen = function( $ ) {
 			
 		}
 		
+		// Fill the label input
 		if ( _.has( self.cache['sorting_options'][ current_query_type ], item_dropdown_selected_value ) ) {
 			item
 				.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label' )
 					.val( self.cache['sorting_options'][ current_query_type ][ item_dropdown_selected_value ].title );
 		}
 		
+		// Fill the directions label inputs
+		// Fill the orderby_as selector
 		if (
 			'field-' == item_dropdown_selected_value.substr( 0, 6 ) 
 			|| 'taxonomy-field-' == item_dropdown_selected_value.substr( 0, 15 ) 
@@ -2096,6 +2246,11 @@ WPViews.WPAEditScreen = function( $ ) {
 		) {
 			switch( item_dropdown_selected_type ) {
 				case 'date':
+					item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-as' )
+						.val( 'NUMERIC' )
+						.prop( 'disabled', true )
+						.show();
+					break;
 				case 'numeric':
 					item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-as' )
 						.val( 'NUMERIC' )
@@ -2115,14 +2270,42 @@ WPViews.WPAEditScreen = function( $ ) {
 						.show();
 					break;
 			}
+			item_dropdown_selected_labels = _.has( self.sorting_controls_row_labels_map, item_dropdown_selected_type ) ? self.sorting_controls_row_labels_map[ item_dropdown_selected_type ] : self.sorting_controls_row_labels_map[ 'default' ];
+			item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label-asc' )
+				.val( item_dropdown_selected_labels.asc );
+			item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label-desc' )
+				.val( item_dropdown_selected_labels.desc );
 		} else {
 			item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-as' )
 				.val( '' )
 				.prop( 'disabled', false )
 				.hide();
+			item_dropdown_selected_labels = _.has( self.sorting_controls_row_labels_map, item_dropdown_selected_value ) ? self.sorting_controls_row_labels_map[ item_dropdown_selected_value ] : self.sorting_controls_row_labels_map[ 'default' ];
+			item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label-asc' )
+				.val( item_dropdown_selected_labels.asc );
+			item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label-desc' )
+				.val( item_dropdown_selected_labels.desc );
 		}
 		
-		self.update_sorting_controls_preview();
+		return self;
+	};
+	
+	/**
+	 * Manage changes in the frontend sorting orderby select dropdowns.
+	 *
+	 * When selecting a meta field not supported, a .toolset-alert message will be appended to the option row.
+	 * Otherwise, we will update the option label and maybe offer the orderby_as option.
+	 *
+	 * @since 2.3.0
+	 */
+	
+	$( document ).on( 'change', '.js-wpv-frontend-sorting-orderby-options-list-item-dropdown', function() {
+		
+		var item_dropdown = $( this ),
+			item = item_dropdown.closest( '.js-wpv-frontend-sorting-orderby-options-list-item' );
+		
+		self.update_sorting_controls_row_labels( item )
+			.update_sorting_controls_preview();// Mabe this one is not needed...
 		
 	});
 	
@@ -2135,9 +2318,9 @@ WPViews.WPAEditScreen = function( $ ) {
 	$( document ).on( 'change', '#js-wpv-frontend-sorting-order-enable', function() {
 		var sorting_order_enable = $( this );
 		if ( sorting_order_enable.prop( 'checked' ) ) {
-			$( '.js-wpv-frontend-sorting-order-options' ).slideDown( 'fast' );
+			$( '.js-wpv-frontend-sorting-order-options, .js-wpv-frontend-sorting-orderby-options-list-item-label-direction' ).fadeIn( 'fast' );
 		} else {
-			$( '.js-wpv-frontend-sorting-order-options' ).slideUp( 'fast' );
+			$( '.js-wpv-frontend-sorting-order-options, .js-wpv-frontend-sorting-orderby-options-list-item-label-direction' ).fadeOut( 'fast' );
 		}
 		
 		self.update_sorting_controls_preview();
@@ -2165,7 +2348,7 @@ WPViews.WPAEditScreen = function( $ ) {
 	 */
 	
 	self.update_sorting_controls_visibility = function() {
-		var orderby_count = $( '.js-wpv-frontend-sorting-orderby-options-list > li' ).length;
+		var orderby_count = $( '.js-wpv-frontend-sorting-orderby-options-list tbody tr.js-wpv-frontend-sorting-orderby-options-list-item' ).length;
 		if ( orderby_count > 0 ) {
 			var orderby_type = $( '#js-wpv-frontend-sorting-orderby-options-type' ).val(),
 				order_type = $( '#js-wpv-frontend-sorting-order-options-type' ).val();
@@ -2175,6 +2358,37 @@ WPViews.WPAEditScreen = function( $ ) {
 			$( '.js-wpv-frontend-sorting-order-type-' + order_type + '-extra' ).show();
 		} else {
 			$( '.js-wpv-frontend-sorting-orderby-options-enabled' ).hide();
+		}
+		return self;
+	};
+	
+	/**
+	 * Handle the clssname and visibility of delete/info buttons on frontend sorting controls rows.
+	 *
+	 * @since 2.3.1
+	 */
+	
+	self.update_sorting_controls_management = function() {
+		var orderby_options = $( '.js-wpv-frontend-sorting-orderby-options-list tbody tr.js-wpv-frontend-sorting-orderby-options-list-item' );
+		if ( orderby_options.length > 0 ) {
+			// Update handles for actions
+			var orderby_first = orderby_options.first(),
+				orderby_else = orderby_options.not( ':first' );
+			orderby_first
+				.find( '.js-wpv-frontend-sorting-orderby-options-list-item-delete' )
+					.hide();
+			orderby_first
+				.find( '.js-wpv-frontend-sorting-orderby-options-list-item-default-info' )
+					.show();
+			orderby_else
+				.find( '.js-wpv-frontend-sorting-orderby-options-list-item-delete' )
+					.show();
+			orderby_else
+				.find( '.js-wpv-frontend-sorting-orderby-options-list-item-default-info' )
+					.hide();
+			// Update classname for default option
+			orderby_options.removeClass( 'wpv-editable-list-item-default' );
+			orderby_first.addClass( 'wpv-editable-list-item-default' );
 		}
 		return self;
 	};
@@ -2190,7 +2404,7 @@ WPViews.WPAEditScreen = function( $ ) {
 	self.update_sorting_controls_preview = function() {
 		
 		var orderby_type = $( '#js-wpv-frontend-sorting-orderby-options-type' ).val(),
-			orderby_count = $( '.js-wpv-frontend-sorting-orderby-options-list > li' ).length,
+			orderby_count = $( '.js-wpv-frontend-sorting-orderby-options-list tbody tr.js-wpv-frontend-sorting-orderby-options-list-item' ).length,
 			order_type = $( '#js-wpv-frontend-sorting-order-options-type' ).val(),
 			order_enable = $( '#js-wpv-frontend-sorting-order-enable' ).prop( 'checked' );
 		
@@ -2289,9 +2503,9 @@ WPViews.WPAEditScreen = function( $ ) {
 			end_cursor,
 			sorting_marker;
 		
-		if ( $( '.js-wpv-frontend-sorting-orderby-options-list li' ).length == 0 ) {
+		if ( ! self.validate_sorting_controls() ) {
 			$( '#js-wpv-frontend-sorting-dialog .wpv-shortcode-gui-content-wrapper' )
-				.append( '<p class="toolset-alert toolset-alert-error js-wpv-frontend-sorting-orderby-options-list-empty">Insert at least one!</p>' );
+				.append( '<p class="toolset-alert toolset-alert-error js-wpv-frontend-sorting-orderby-options-list-empty">' + wpv_editor_strings.dialog_sorting.warnings.missing_options + '</p>' );
 			setTimeout( function() {
 				$( '.js-wpv-frontend-sorting-orderby-options-list-empty' )
 					.fadeOut( 'fast', function() {
@@ -2313,6 +2527,7 @@ WPViews.WPAEditScreen = function( $ ) {
 			WPV_Toolset.CodeMirror_instance[ window.wpcfActiveEditor ].replaceRange( shortcode, current_cursor, current_cursor );
 			end_cursor = WPV_Toolset.CodeMirror_instance[ window.wpcfActiveEditor ].getCursor( true );
 			sorting_marker = WPV_Toolset.CodeMirror_instance[ window.wpcfActiveEditor ].markText( current_cursor, end_cursor, self.codemirror_highlight_options );
+			self.force_sorting_controls_to_settings();
 			self.sorting_dialog.dialog( 'close' );
 			WPV_Toolset.CodeMirror_instance[ window.wpcfActiveEditor ].focus();
 			setTimeout( function() {
@@ -2323,9 +2538,40 @@ WPViews.WPAEditScreen = function( $ ) {
 	};
 	
 	/**
+	 * Validate sorting controls against empty or non supported values, to block the shortcode generation.
+	 *
+	 * @since 2.3.1
+	 */
+	self.validate_sorting_controls = function() {
+		var options_counter				= $( '.js-wpv-frontend-sorting-orderby-options-list tbody tr.js-wpv-frontend-sorting-orderby-options-list-item' ).length,
+			rejected_options_counter	= 0,
+			is_valid					= true;
+		if ( options_counter == 0 ) {
+			is_valid = false;
+			return is_valid;
+		} else {
+			$.each( $( '.js-wpv-frontend-sorting-orderby-options-list .js-wpv-frontend-sorting-orderby-options-list-item-dropdown' ), function() {
+				var orderby_item = $( this ),
+					orderby_item_value = orderby_item.val(),
+					orderby_item_type = orderby_item.find( ':selected' ).data( 'type' );
+				if ( 
+					orderby_item_value == '' 
+					|| 'excluded:' == orderby_item_type.substr( 0, 9 )
+				) {
+					rejected_options_counter++;
+				}
+			});
+			is_valid = ( options_counter > rejected_options_counter );
+			return is_valid;
+		}
+		return is_valid;
+	};
+	
+	/**
 	 * Get the frontend sorting shortcodes given the dialog settings.
 	 *
 	 * @since 2.3.0
+	 * @since 2.3.1 Add the ability to force a sorting direction to each sorting option.
 	 */
 	
 	self.get_sorting_shortcode = function() {
@@ -2336,8 +2582,13 @@ WPViews.WPAEditScreen = function( $ ) {
 			orderby_item_label = '',
 			orderby_options = [],
 			orderby_options_labels = '',
+			order_options_labels = '',
 			orderby_as_numeric = [],
-			order =
+			orderby_force_direction_value = '',
+			orderby_force_direction = {
+				ASC: [],
+				DESC: []
+			};
 		
 		// Orderby shortcode
 		
@@ -2345,16 +2596,28 @@ WPViews.WPAEditScreen = function( $ ) {
 		
 		output += ' type="' + $( '#js-wpv-frontend-sorting-orderby-options-type' ).val() + '"';
 		
-		$.each( $( '.js-wpv-frontend-sorting-orderby-options-list li' ), function() {
+		$.each( $( '.js-wpv-frontend-sorting-orderby-options-list tbody tr.js-wpv-frontend-sorting-orderby-options-list-item' ), function() {
 			orderby_item = $( this );
 			if ( orderby_item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-dropdown' ).val() != '' ) {
 				orderby_item_option = orderby_item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-dropdown' ).val();
 				if ( _.indexOf( orderby_options, orderby_item_option ) == -1 ) {
 					orderby_item_label = self.sanitize_arbitrary_shortcode_value( orderby_item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label' ).val() );
 					orderby_options.push( orderby_item_option );
+					
 					orderby_options_labels += ' label_for_' + orderby_item_option + '="' + orderby_item_label + '"';
+					if ( orderby_item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label-asc' ).val() != '' ) {
+						order_options_labels += ' label_asc_for_' + orderby_item_option + '="' + self.sanitize_arbitrary_shortcode_value( orderby_item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label-asc' ).val() ) + '"';
+					}
+					if ( orderby_item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label-desc' ).val() != '' ) {
+						order_options_labels += ' label_desc_for_' + orderby_item_option + '="' + self.sanitize_arbitrary_shortcode_value( orderby_item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-label-desc' ).val() ) + '"';
+					}
+					
 					if ( orderby_item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-as' ).val() == 'NUMERIC' ) {
 						orderby_as_numeric.push( orderby_item_option );
+					}
+					orderby_force_direction_value = orderby_item.find( '.js-wpv-frontend-sorting-orderby-options-list-item-force-order' ).val();
+					if ( '' != orderby_force_direction_value ) {
+						orderby_force_direction[ orderby_force_direction_value ].push( orderby_item_option );
 					}
 				}
 			}
@@ -2364,6 +2627,12 @@ WPViews.WPAEditScreen = function( $ ) {
 			output += orderby_options_labels;
 			if ( orderby_as_numeric.length > 0 ) {
 				output += ' orderby_as_numeric_for="' + orderby_as_numeric.join( ',' ) + '"';
+			}
+			if ( orderby_force_direction.ASC.length > 0 ) {
+				output += ' orderby_ascending_for="' + orderby_force_direction.ASC.join( ',' ) + '"';
+			}
+			if ( orderby_force_direction.DESC.length > 0 ) {
+				output += ' orderby_descending_for="' + orderby_force_direction.DESC.join( ',' ) + '"';
 			}
 		}
 		if ( 'list' == $( '#js-wpv-frontend-sorting-orderby-options-type' ).val() ) {
@@ -2388,6 +2657,9 @@ WPViews.WPAEditScreen = function( $ ) {
 			if ( $( '.js-wpv-frontend-sorting-order-options-label-desc' ).val() != '' ) {
 				output += ' label_for_desc="' + self.sanitize_arbitrary_shortcode_value( $( '.js-wpv-frontend-sorting-order-options-label-desc' ).val() ) + '"';
 			}
+			
+			output += order_options_labels;
+			
 			if ( 'list' == $( '#js-wpv-frontend-sorting-order-options-type' ).val() ) {
 				output += ' list_style="' + $( '#js-wpv-frontend-sorting-order-list-style' ).val() + '"';
 			}
@@ -2398,6 +2670,106 @@ WPViews.WPAEditScreen = function( $ ) {
 		
 		return output;
 	}
+	
+	/**
+	 * Set the first frontend sorting controls row values from the View stored settings.
+	 *
+	 * @since 2.3.1
+	 */
+	
+	self.force_sorting_controls_from_settings = function() {
+		var orderby_options = $( '.js-wpv-frontend-sorting-orderby-options-list tbody tr.js-wpv-frontend-sorting-orderby-options-list-item' );
+		if ( orderby_options.length > 0 ) {
+			// Update handles for actions
+			var orderby_first = orderby_options.first();
+			orderby_first
+				.find( '.js-wpv-frontend-sorting-orderby-options-list-item-dropdown' )
+					.val( self.model.sorting.posts.orderby )
+					.trigger( 'change' );
+			orderby_first
+				.find( '.js-wpv-frontend-sorting-orderby-options-list-item-as' )
+					.val( self.model.sorting.posts.orderby_as )
+					.trigger( 'change' );
+			orderby_first
+				.find( '.js-wpv-frontend-sorting-orderby-options-list-item-force-order' )
+					.val( self.model.sorting.posts.order )
+					.trigger( 'change' );
+		}
+		// Set the order control order based on the settings value
+		switch ( self.model.sorting.posts.order ) {
+			case 'ASC':
+				$( '.js-wpv-frontend-sorting-order-options-order' ).val( 'asc,desc' );
+				break;
+			case 'DESC':
+				$( '.js-wpv-frontend-sorting-order-options-order' ).val( 'desc,asc' );
+				break;
+		}
+		return self;
+	};
+	
+	/**
+	 * Populate a first frontend sorting controls row with the View stored settings.
+	 *
+	 * @since 2.3.1
+	 */
+	
+	self.populate_sorting_dialog_options = function() {
+		self
+			// Add a first sorting control
+			.add_sorting_dialog_orderby_option()
+			// Set the settings stored in the "Ordering" section
+			.force_sorting_controls_from_settings();
+			
+	};
+	
+	/**
+	 * Force the settings form the first row of the frontend sorting controls to the stored View settings.
+	 *
+	 * @since 2.3.1
+	 */
+	
+	self.force_sorting_controls_to_settings = function() {
+		var orderby_options = $( '.js-wpv-frontend-sorting-orderby-options-list tbody tr.js-wpv-frontend-sorting-orderby-options-list-item' );
+		if ( orderby_options.length > 0 ) {
+			// Update handles for actions
+			var orderby_first = orderby_options.first(),
+				orderby_to_force = orderby_first
+					.find( '.js-wpv-frontend-sorting-orderby-options-list-item-dropdown' )
+						.val(),
+				orderby_as_to_force = orderby_first
+					.find( '.js-wpv-frontend-sorting-orderby-options-list-item-as' )
+						.val(),
+				order_to_force = orderby_first
+					.find( '.js-wpv-frontend-sorting-orderby-options-list-item-force-order' )
+						.val();
+				if ( orderby_to_force != self.model.sorting.posts.orderby ) {
+					$( 'select.js-wpv-posts-orderby' )
+						.val( orderby_to_force )
+						.trigger( 'change' );
+				}
+				if ( order_to_force != self.model.sorting.posts.order ) {
+					$( 'select.js-wpv-posts-order' )
+						.val( order_to_force )
+						.trigger( 'change' );
+				}
+				// Note that the orderby_as value alwas needs to be forced, 
+				// since otherwise orderby Types fields would force their own values on the View settings.
+				if (
+					'field-' == orderby_to_force.substr( 0, 6 ) 
+					|| 'taxonomy-field-' == orderby_to_force.substr( 0, 15 ) 
+					|| 'user-field-' == orderby_to_force.substr( 0, 11 ) 
+				) {
+					$( 'select.js-wpv-posts-orderby-as' )
+						.val( orderby_as_to_force )
+						.trigger( 'change' );
+				} else {
+					$( 'select.js-wpv-posts-orderby-as' )
+						.val( '' )
+						.trigger( 'change' );
+				}
+		}
+		return self;
+	};
 	
 	/**
 	 * Open the frontend sorting controlos dialog.
@@ -3573,7 +3945,10 @@ WPViews.WPAEditScreen = function( $ ) {
 				width:				'resolve',
 				dropdownAutoWidth:	true 
 			}
-		);
+		)
+		.data( 'toolset_select2' )
+				.$dropdown
+					.addClass( 'toolset_select2-dropdown-in-setting' );
 		// Admin menu link target
 		$( '#adminmenu li.current a' ).attr( 'href', $( '#adminmenu li.current a' ).attr( 'href' ) + '&view_id=' + self.view_id );
 	};
@@ -3689,6 +4064,7 @@ WPViews.WPAEditScreen = function( $ ) {
 			},
 			open:		function( event, ui ) {
 				$( 'body' ).addClass( 'modal-open' );
+				self.populate_sorting_dialog_options();
 			},
 			close:		function( event, ui ) {
 				$( 'body' ).removeClass( 'modal-open' );

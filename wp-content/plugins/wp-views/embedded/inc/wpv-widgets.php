@@ -42,7 +42,12 @@ class WPV_Widget extends WP_Widget {
             ) 
         );
         $title = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
-		if ( $instance['view'] ) {
+        $view_post = get_post( $instance['view'] );
+        if (
+            $view_post
+            && 'publish' == $view_post->post_status
+            && 'view' == $view_post->post_type
+        ) {
 			$WP_Views->set_widget_view_id( $instance['view'] );
 			echo $before_widget;
 			if ( $title ) {
@@ -157,7 +162,13 @@ class WPV_Widget_filter extends WP_Widget {
 				'target_id' => false
             ) 
         );
-		if ( $instance['view'] && $instance['target_id'] ) {
+        $view_post = get_post( $instance['view'] );
+        if (
+            $view_post
+            && 'publish' == $view_post->post_status
+            && 'view' == $view_post->post_type
+            && $instance['target_id']
+        ) {
 			$WP_Views->set_widget_view_id( $instance['view'] );
 			$title = apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base );
 			echo $before_widget;

@@ -141,6 +141,8 @@ class WP_Views {
 		add_filter( 'wpv_admin_exclude_tax_slugs', 'wpv_admin_exclude_tax_slugs' );
 		// Exclude some post types from different pieces of the GUI
 		add_filter( 'wpv_admin_exclude_post_type_slugs', 'wpv_admin_exclude_post_type_slugs' );
+        // Include some post types from different pieces of the GUI
+        add_filter( 'wpv_admin_include_post_type_slugs', 'wpv_admin_include_post_type_slugs' );
 	}
 	
 	/**
@@ -4154,8 +4156,8 @@ function wpv_views_plugin_plugin_row_meta( $plugin_meta, $plugin_file, $plugin_d
 	if ( $plugin_file == $this_plugin ) {
 		$plugin_meta[] = sprintf(
 				'<a href="%s" target="_blank">%s</a>',
-				'https://wp-types.com/version/views-2-3/?utm_source=viewsplugin&utm_campaign=views&utm_medium=release-notes-plugin-row&utm_term=Views 2.3.0 release notes',
-				__( 'Views 2.3.0 release notes', 'wpv-views' ) 
+				'https://wp-types.com/version/views-2-3-1/?utm_source=viewsplugin&utm_campaign=views&utm_medium=release-notes-plugin-row&utm_term=Views 2.3.1 release notes',
+				__( 'Views 2.3.1 release notes', 'wpv-views' ) 
 			);
 	}
 	return $plugin_meta;
@@ -4268,6 +4270,34 @@ function wpv_admin_exclude_post_type_slugs( $exclude_post_type_slugs ) {
 		$exclude_post_type_slugs[] = 'revision';
 	}
 	return $exclude_post_type_slugs;
+}
+
+/**
+ * wpv_admin_include_post_type_slugs
+ *
+ * Applied in the filter wpv_admin_include_post_type_slugs, returns an array of post type slugs that are included in some database calls.
+ *
+ * @param $include_post_type_slugs (array) The slugs to be included.
+ *
+ * @return array $include_post_type_slugs
+ *
+ * @since 2.3.1
+ */
+
+function wpv_admin_include_post_type_slugs( $include_post_type_slugs ) {
+    // Include al non-public post types
+    $include_args = array(
+        'public'   => true
+    );
+    $include_output = 'names';
+    $include_post_types = get_post_types( $include_args, $include_output );
+    foreach ( $include_post_types as $include_p_t ) {
+        if ( ! in_array( $include_p_t, $include_post_type_slugs ) ) {
+            $include_post_type_slugs[] = $include_p_t;
+        }
+    }
+
+    return $include_post_type_slugs;
 }
 
 /**

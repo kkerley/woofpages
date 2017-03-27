@@ -53,99 +53,55 @@
     //height: rem-calc(685);
     margin: 0 0 rem-calc(72);
   }
-
-  //#watch {
-  //  @include breakpoint(small) {
-  //    @include grid-column(7);
-  //    @include grid-column-position(-5);
-  //  }
-  //
-  //  @include breakpoint(medium) {
-  //    @include grid-column(12);
-  //    @include grid-column-position(0);
-  //  }
-  //
-  //  section {
-  //    display: inline;
-  //  }
-  //
-  //  a {
-  //    color: #B4C9D1;
-  //    cursor: pointer;
-  //    font-weight: 400;
-  //    margin-right: rem-calc(20);
-  //  }
-  //
-  //  a:hover {
-  //    color: #fff;
-  //  }
-  //
-  //  #stargazers {
-  //    :before {
-  //      content: "\f09b";
-  //      font-family: FontAwesome;
-  //      font-style: normal;
-  //      font-weight: normal;
-  //      text-decoration: inherit;
-  //      color: #B4C9D1;
-  //      margin-right: rem-calc(8);
-  //    }
-  //  }
-  //
-  //  #twitter {
-  //    :before {
-  //      content: "\f099";
-  //      font-family: FontAwesome;
-  //      font-style: normal;
-  //      font-weight: normal;
-  //      text-decoration: inherit;
-  //      color: #B4C9D1;
-  //      margin-right: rem-calc(8);
-  //    }
-  //  }
-  //
-  //}
-
-  //.tagline {
-  //  @include breakpoint(small) {
-  //    @include grid-column(8);
-  //  }
-  //
-  //  @include breakpoint(medium) {
-  //    @include grid-column(8);
-  //    padding-top: 6rem;
-  //  }
-  //}
-
-  //h1 {
-  //  color: #fff;
-  //  font-weight: 500;
-  //
-  //  @include breakpoint(small) {
-  //    font-size: 2.2rem;
-  //  }
-  //
-  //  @include breakpoint(medium) {
-  //    font-size: 2.875rem;
-  //  }
-  //}
-  //
-  //h4 {
-  //  color: #fefefe;
-  //  font-weight: 300;
-  //  font-size: 1.3125rem;
-  //}
-
-  //.download {
-  //  margin-top: rem-calc(20);
-  //}
 }
 
 // Intro
 .intro {
   @include grid-row();
 
-  .fp-intro {
+  .fp-intro{
+    > div{
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .entry-content.has-featured-dogs{
+      margin-right: 1rem;
+      width: calc(100% / 3 * 2 - 3rem);
+    }
+
+    .featured-dogs{
+      padding: 0 1.5rem;
+      width: calc(100% / 3 + 1rem);
+
+      .card{
+        //max-width: 100%;
+        width: 100%;
+
+        h4{
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    .featured-dogs--inner{
+      .slick-arrow{
+        &::before{
+          color: #333;
+        }
+      }
+
+      //.slick-prev{
+      //  left: -20px;
+      //}
+      //
+      //.slick-next{
+      //  right: -20px;
+      //}
+    }
+
+
+
     @include breakpoint(small) {
       @include grid-column(12);
     }
@@ -181,59 +137,7 @@
 }
 
 
-// Benefits
-//.benefits {
-//  @include grid-row();
-//  text-align: center;
-//
-//  header {
-//    @include grid-column(12);
-//
-//    h2 {
-//      font-weight: 300;
-//    }
-//
-//    h4 {
-//      font-size: 1.125rem;
-//      line-height: 1.6;
-//      color: #777;
-//    }
-//  }
-//
-//  .semantic,
-//  .responsive,
-//  .customizable,
-//  .professional {
-//    @include breakpoint(small) {
-//      @include grid-column(12);
-//    }
-//
-//    @include breakpoint(medium) {
-//      @include grid-column(3);
-//    }
-//
-//    img {
-//      padding: 1.25rem;
-//      margin: 1rem auto 0 auto;
-//    }
-//
-//    h3 {
-//      color: #0a0a0a;
-//      font-weight: 300;
-//      font-size: 1.75rem;
-//    }
-//
-//    p {
-//      font-size: 0.9375rem;
-//    }
-//  }
-//
-//  .why-foundation {
-//    @include grid-row();
-//    @include grid-column(12);
-//    margin-top: 4rem;
-//  }
-//}
+
 
 .wrapper--latest-dogs{
   background-color: lighten($primary-color, 28%);
@@ -261,9 +165,24 @@
     @include grid-row();
     margin-bottom: 2rem;
 
-    .card{
+    .js-wpv-view-layout{
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .card {
       // @include grid-column(1 of 4, 0);
+      max-width: calc(341.3333px - 1rem);
+      margin-bottom: 1rem;
       text-align: left;
+
+      &:nth-of-type(2n) {
+        margin-left: 0.5rem;
+      }
+
+      &:nth-of-type(2n+1) {
+        margin-right: 0.5rem;
+      }
     }
   }
 

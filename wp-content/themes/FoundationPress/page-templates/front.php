@@ -10,8 +10,19 @@ get_header(); ?>
         'orderby'           => 'date' ,
         'order'             => 'DESC' ,
         'posts_per_page'    => 5,
-        'meta_key'          => 'wpcf-featured',
-        'meta_value'        => 1
+        'meta_query'        => array(
+            'relation'      => 'AND',
+            array(
+	            'key'       => 'wpcf-featured',
+	            'value'     => 1,
+            ),
+
+            array(
+	            'key'       => 'wpcf-adoption-status',
+	            'value'     => "Available",
+            )
+        )
+
     );
 
     $featured_dogs_query = new WP_Query($featured_dogs_args);
@@ -51,12 +62,84 @@ get_header(); ?>
             <?php
                 if($featured_dogs_query->have_posts()): ?>
                     <div class="featured-dogs">
-            <?php
-		            while($featured_dogs_query->have_posts()): $featured_dogs_query->the_post();
-            ?>
-                    <?php the_title(); ?>
-            <?php
-                    endwhile; ?>
+                        <h3><i class="fa fa-certificate" aria-hidden="true"></i> Featured</h3>
+                        <div class="featured-dogs--inner">
+                    <?php
+                        while($featured_dogs_query->have_posts()): $featured_dogs_query->the_post();
+	                        $breeds = get_the_terms(get_the_ID(), 'breed');
+	                        $characteristics = get_the_terms(get_the_ID(), 'characteristic');
+                    ?>
+
+                            <article class="card dog vertical">
+                                <div class="card-image">
+                                    <?php the_post_thumbnail('dog-square-400') ?>
+                                </div>
+
+                                <div class="card-content">
+                                    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                    <p>
+                                        <?php
+                                        $output = "";
+                                        $count = 0;
+
+                                        foreach($breeds as $breed):
+	                                        $output .= '<a href="' . get_term_link($breed->slug, 'breed') . '">';
+	                                        $output .= $breed->name;
+	                                        $output .= '</a>';
+	                                        $count++;
+	                                        if($count < count($breeds)):
+		                                        $output .= ' / ';
+	                                        endif;
+                                        endforeach;
+
+                                        echo $output;
+                                        ?>
+                                        <br />
+	                                    <?php if(!empty(types_render_field('sex'))): ?>
+		                                    <?php echo types_render_field('sex'); ?>
+	                                    <?php endif; ?>
+
+	                                    <?php if(!empty(types_render_field('age'))): ?>
+                                            <?php echo types_render_field('age'); ?> year<?php echo (int)str_replace(' ', '', types_render_field('age')) > 1 ? 's' : ''; ?> old
+	                                    <?php endif; ?>
+                                        <br />
+	                                    <?php if(!empty(types_render_field('body-size'))): ?>
+                                            <?php echo types_render_field('body-size'); ?>
+	                                    <?php endif; ?>
+
+	                                    <?php if(!empty(types_render_field('weight'))): ?>
+                                            <?php echo types_render_field('weight'); ?> lbs
+	                                    <?php endif; ?>
+
+	                                    <?php if(types_render_field('prefers-a-home-without')): ?>
+                                            <br />Prefers a home without <?php echo types_render_field( 'prefers-a-home-without', array('separator' => ', ' )); ?>
+                                        <?php endif; ?>
+                                    </p>
+
+                                    <div class="wrapper--characteristics">
+		                                <?php
+		                                $char_output = "";
+
+		                                foreach($characteristics as $characteristic):
+			                                $char_output .= '<a href="' . get_term_link($characteristic->slug, 'characteristic') . '" class="label primary">';
+			                                $char_output .= $characteristic->name;
+			                                $char_output .= '</a> ';
+
+		                                endforeach;
+
+		                                echo $char_output;
+		                                ?>
+                                    </div>
+
+                                    <div class="wrapper--cta">
+                                        <a href="<?php the_permalink(); ?>" class="button success expanded"><i class="fa fa-info-circle"></i> Meet <?php the_title(); ?></a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <?php
+                        endwhile; ?>
+                    </div>
                 </div>
             <?php
                 endif;

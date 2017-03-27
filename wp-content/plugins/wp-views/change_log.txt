@@ -1,3 +1,20 @@
+Toolset Views 2.3.1
+	- Improved the frontend sorting controls so sorting options can force a sorting direction.
+	- Improved the frontend sorting controls so sorting options can force sorting direction labels.
+	- Improved the frontend sorting controls so the first option is always in sync with the stored Views sorting settings.
+	- Improved the usability of pagination controls as nav links by providing some canonical classnames to the HTML structure.
+	- Fixed an inconsistency in the error styling of the name input field when creating a Content Template with a name that already exists.
+	- Fixed an inconsistency in the button state when an error occurs while creating a new View and a new WordPress Archive.
+	- Fixed an issue where the state of the help boxes in the Views and WordPress Archives edit page closed by the X icon was not saved.
+	- Fixed an issue with the "Empty trash" button in WordPress Archives that wasn't deleting WordPress Archives that were created through a WordPress Archive Layout cell.
+	- Fixed an issue that produced a console error after interacting with a View added dynamically to a page.
+	- Fixed an issue that excluded some post classes from the [wpv-post-class] shortcode output when performing AJAX operations.
+	- Fixed an issue where posts belonging to a deleted custom post type are among suggestions in WP Views Filter widget search.
+	- Fixed an issue where a broken View edit link appears, when the selected View is trashed or deleted.
+	- Fixed an issue on conditional output shortcodes when evaluating a missing field value for a parent post.
+	- Fixed a PHP Warning when using the [wpv-heading] shortcode without using the optional attribute "name".
+	- Fixed the syntax highlighting on CSS and JavaScript editors, by forcing the right language mode.
+
 Toolset Views 2.3.0, AKA Wowbagger
 	- Added frontend sorting controls for Views and WordPress Archives.
 	- Added the capability of automatic detection of the native Customizer in the Views Framework integration.

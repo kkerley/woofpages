@@ -19,6 +19,13 @@ get_header(); ?>
 
 <div id="page" role="main">
 	<article class="main-content">
+    <?php
+        $queried_object = get_queried_object();
+    ?>
+        <?php if($queried_object->taxonomy === 'breed' || $queried_object->taxonomy === 'characteristic'): ?>
+            <h1><span class="taxonomy-slug"><?php echo $queried_object->taxonomy; ?></span>: <?php echo $queried_object->name; ?></h1>
+	    <?php endif; ?>
+
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>

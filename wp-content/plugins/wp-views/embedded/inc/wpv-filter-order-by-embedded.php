@@ -663,14 +663,15 @@ class WPV_Sorting_Embedded {
 		$selector = '';
 		$list_width = 0;
 		
-		$selector .= '<span class="wpv-sort-list-dropdown wpv-sort-list-orderby-dropdown wpv-sort-list-dropdown-style-'. esc_attr( $current_style ) . ' js-wpv-sort-list-dropdown" style="width:%%LISTWIDTH%%;">';
+		$selector .= '<span class="wpv-sort-list-dropdown wpv-sort-list-orderby-dropdown wpv-sort-list-dropdown-style-'. esc_attr( $current_style ) . ' js-wpv-sort-list-dropdown js-wpv-sort-list-orderby-dropdown" style="width:%%LISTWIDTH%%;" data-viewnumber="' . esc_attr( $view_hash ) . '">';
 			$selector .= '<span class="wpv-sort-list js-wpv-sort-list">';
 				$selector .= '<span class="wpv-sort-list-item wpv-sort-list-orderby-item wpv-sort-list-current js-wpv-sort-list-item" style="width:%%LISTWIDTH%%;">';
 					$selector .= '<a'
 						. ' href="#"'
 						. ' class="wpv-sort-list-anchor js-wpv-sort-list-orderby"'
 						. ' data-orderby="' . esc_attr( $current_orderby ) . '"'
-						. ' data-orderbyas="' .  esc_attr( $sorting_args_options[ $current_orderby ]['type']  ) . '"'
+						. ' data-orderbyas="' . esc_attr( $sorting_args_options[ $current_orderby ]['type'] ) . '"'
+						. ' data-forceorder="' . esc_attr( $sorting_args_options[ $current_orderby ]['order'] ) . '"'
 						. ' data-viewnumber="' . esc_attr( $view_hash ) . '">';
 						$selector .= '<span>'
 							. esc_html( $sorting_args_options[ $current_orderby ]['label'] )
@@ -687,6 +688,7 @@ class WPV_Sorting_Embedded {
 								. ' class="wpv-sort-list-anchor js-wpv-sort-list-orderby"'
 								. ' data-orderby="' . esc_attr( $option_candidate ) . '"'
 								. ' data-orderbyas="' . esc_attr( $option_data['type'] ) . '"'
+								. ' data-forceorder="' . esc_attr( $option_data['order'] ) . '"'
 								. ' data-viewnumber="' . esc_attr( $view_hash ) . '">';
 								$selector .= '<span>'
 									. esc_html( $option_data['label'] )
@@ -727,15 +729,18 @@ class WPV_Sorting_Embedded {
 			$sorting_args['options'] = array(
 				'date'	=> array(
 					'label'	=> __( 'Post date', 'wpv-views' ),
-					'type'	=> ''
+					'type'	=> '',
+					'order'	=> ''
 				),
 				'title'	=> array(
 					'label'	=> __( 'Post title', 'wpv-views' ),
-					'type'	=> ''
+					'type'	=> '',
+					'order'	=> ''
 				),
 				'ID'	=> array(
 					'label'	=> __( 'Post ID', 'wpv-views' ),
-					'type'	=> ''
+					'type'	=> '',
+					'order'	=> ''
 				)
 			);
 		}
@@ -782,10 +787,19 @@ class WPV_Sorting_Embedded {
 			);
 		}
 		
+		$sorting_args['extra']['labels'] = isset( $sorting_args['extra']['labels'] ) 
+			? $sorting_args['extra']['labels'] 
+			: '{}';
+		
 		$selector = '';
 		$list_width = 0;
 		
-		$selector .= '<span class="wpv-sort-list-dropdown wpv-sort-list-order-dropdown wpv-sort-list-dropdown-style-'. esc_attr( $current_style ) . ' js-wpv-sort-list-dropdown" style="width:%%LISTWIDTH%%;">';
+		$selector .= '<span'
+			. ' class="wpv-sort-list-dropdown wpv-sort-list-order-dropdown wpv-sort-list-dropdown-style-'. esc_attr( $current_style ) . ' js-wpv-sort-list-dropdown js-wpv-sort-list-order-dropdown"'
+			. ' style="width:%%LISTWIDTH%%;"'
+			. ' data-viewnumber="' . esc_attr( $view_hash ) . '"'
+			. ' data-labels="' . $sorting_args['extra']['labels'] . '"'
+			. '>';
 			$selector .= '<span class="wpv-sort-list js-wpv-sort-list">';
 				$selector .= '<span class="wpv-sort-list-item wpv-sort-list-order-item wpv-sort-list-current js-wpv-sort-list-item" style="width:%%LISTWIDTH%%;">';
 					$selector .= '<a'
@@ -819,6 +833,8 @@ class WPV_Sorting_Embedded {
 				}
 			$selector .= '</span>';
 		$selector .= '</span>';
+		
+		$list_width = ( $list_width < 10 ) ? $list_width + 1 : $list_width;
 		
 		$selector = str_replace( '%%LISTWIDTH%%', $list_width . 'em', $selector );
 		
@@ -890,7 +906,8 @@ class WPV_Sorting_Embedded {
 		$view_name			= get_post_field( 'post_name', $view_id );
 		$sorting_settings	= apply_filters( 'wpv_filter_wpv_get_sorting_settings', array() );
 		
-		$current_orderby = $sorting_settings['orderby'];
+		$current_orderby	= $sorting_settings['orderby'];
+		$current_order		= strtolower( $sorting_settings['order'] );
 		
 		// Note that $current_orderby can come from a shortcode 'orderby' attribute, and that means that 
 		// the value will not be normalized hence can be repeated: we need to reverse normalize it.
@@ -921,6 +938,18 @@ class WPV_Sorting_Embedded {
 			$orderby_as_numeric = array_map( 'trim', $orderby_as_numeric );
 		}
 		
+		$orderby_ascending = array();
+		if ( isset( $atts['orderby_ascending_for'] ) ) {
+			$orderby_ascending = explode( ',', $atts['orderby_ascending_for'] );
+			$orderby_ascending = array_map( 'trim', $orderby_ascending );
+		}
+		
+		$orderby_descending = array();
+		if ( isset( $atts['orderby_descending_for'] ) ) {
+			$orderby_descending = explode( ',', $atts['orderby_descending_for'] );
+			$orderby_descending = array_map( 'trim', $orderby_descending );
+		}
+		
 		switch ( $atts['type'] ) {
 			case 'select':
 				$return .= '<select'
@@ -933,10 +962,16 @@ class WPV_Sorting_Embedded {
 					$orderby_candidate_label = $this->craft_sorting_setting_label( $orderby_candidate, $atts, $view_name );
 					$orderby_candidate_orderbyas = in_array( $orderby_candidate, $orderby_as_numeric ) ? 'numeric' : '';
 					
+					$orderby_candidate_order = '';
+					$orderby_candidate_order = in_array( $orderby_candidate, $orderby_ascending ) ? 'asc' : $orderby_candidate_order;
+					$orderby_candidate_order = in_array( $orderby_candidate, $orderby_descending ) ? 'desc' : $orderby_candidate_order;
+					$orderby_candidate_order = empty( $orderby_candidate_order ) ? $current_order : $orderby_candidate_order;
+					
 					$return .= '<option'
 						. ' value="' . esc_attr( $orderby_candidate ) . '"'
 						. ' ' . selected( $orderby_candidate, $current_orderby, false ) 
 						. ' data-orderbyas="' . $orderby_candidate_orderbyas . '"'
+						. ' data-forceorder="' . $orderby_candidate_order . '"'
 						. '>';
 					$return .= $orderby_candidate_label;
 					$return .= '</option>';
@@ -948,6 +983,11 @@ class WPV_Sorting_Embedded {
 					$orderby_candidate_label = $this->craft_sorting_setting_label( $orderby_candidate, $atts, $view_name );
 					$orderby_candidate_orderbyas = in_array( $orderby_candidate, $orderby_as_numeric ) ? 'numeric' : '';
 					
+					$orderby_candidate_order = '';
+					$orderby_candidate_order = in_array( $orderby_candidate, $orderby_ascending ) ? 'asc' : $orderby_candidate_order;
+					$orderby_candidate_order = in_array( $orderby_candidate, $orderby_descending ) ? 'desc' : $orderby_candidate_order;
+					$orderby_candidate_order = empty( $orderby_candidate_order ) ? $current_order : $orderby_candidate_order;
+					
 					$return .= '<label class="wpv-sort-control-radio-label wpv-sort-control-orderby-radio-label">';
 					$return .= '<input'
 						. ' type="radio"'
@@ -957,6 +997,7 @@ class WPV_Sorting_Embedded {
 						. ' ' . checked( $current_orderby, $orderby_candidate, false ) 
 						. ' data-viewnumber="' . esc_attr( $view_hash ) . '"'
 						. ' data-orderbyas="' . $orderby_candidate_orderbyas . '"'
+						. ' data-forceorder="' . $orderby_candidate_order . '"'
 						. ' autocomplete="off"'
 						. ' />';
 					$return .= $orderby_candidate_label;
@@ -969,9 +1010,15 @@ class WPV_Sorting_Embedded {
 					$orderby_candidate_label = $this->craft_sorting_setting_label( $orderby_candidate, $atts, $view_name );
 					$orderby_candidate_orderbyas = in_array( $orderby_candidate, $orderby_as_numeric ) ? 'numeric' : '';
 					
+					$orderby_candidate_order = '';
+					$orderby_candidate_order = in_array( $orderby_candidate, $orderby_ascending ) ? 'asc' : $orderby_candidate_order;
+					$orderby_candidate_order = in_array( $orderby_candidate, $orderby_descending ) ? 'desc' : $orderby_candidate_order;
+					$orderby_candidate_order = empty( $orderby_candidate_order ) ? $current_order : $orderby_candidate_order;
+					
 					$orderby_options_for_lists[ $orderby_candidate ] = array(
 						'label'	=> $orderby_candidate_label,
-						'type'	=> in_array( $orderby_candidate, $orderby_as_numeric ) ? 'numeric' : ''
+						'type'	=> in_array( $orderby_candidate, $orderby_as_numeric ) ? 'numeric' : '',
+						'order'	=> $orderby_candidate_order
 					);
 				}
 				
@@ -995,21 +1042,24 @@ class WPV_Sorting_Embedded {
 	 *     $options			String. Comma separated list of options to include, Defaults to 'asc,desc'.
 	 *     $label_for_asc	String. Label for the 'asc' option. Defaults to Ascending.
 	 *     $label_for_desc	String. Label for the 'desc' option. Defaults to Descending.
+	 *     $label_asc_for_	String. Label for the 'asc' option for a specific sorting field.
+	 *     $label_desc_for_	String. Label for the 'desc' option for a specific sorting field.
 	 *
 	 * @since 2.3.0
+	 * @since 2.3.1 Added specific asc/desc options for each of the sorting fields.
 	 */
 	
 	function wpv_shortcode_wpv_sort_order( $atts ) {
 
-		$atts = shortcode_atts( 
+		$atts = wp_parse_args( 
+			$atts ,
 			array(
 				'type'				=> 'select',
 				'options'			=> 'asc,desc',
 				'label_for_asc'		=> __( 'Ascending', 'wpv-views' ),
 				'label_for_desc'	=> __( 'Descending', 'wpv-views' ),
 				'list_style'		=> 'default'
-			),
-			$atts 
+			)
 		);
 		
 		$return = '';
@@ -1020,7 +1070,8 @@ class WPV_Sorting_Embedded {
 		$view_name			= get_post_field( 'post_name', $view_id );
 		$sorting_settings	= apply_filters( 'wpv_filter_wpv_get_sorting_settings', array() );
 		
-		$current_order = strtolower( $sorting_settings['order'] );
+		$current_orderby	= strtolower( $sorting_settings['orderby'] );
+		$current_order		= strtolower( $sorting_settings['order'] );
 		
 		$order_options = explode( ',', $atts['options'] );
 		$order_options = array_map( 'trim', $order_options );
@@ -1031,11 +1082,21 @@ class WPV_Sorting_Embedded {
 			return;
 		}
 		
+		$order_extra_labels = $this->craft_sorting_setting_direction_labels( $atts, $view_name );
+		
 		switch ( $atts['type'] ) {
 			case 'select':
-				$return .= '<select name="wpv_sort_order" class="wpv-sort-control-select wpv-sort-control-order js-wpv-sort-control-order" data-viewnumber="' . esc_attr( $view_hash ) . '" autocomplete="off">';
+				$return .= '<select'
+					. ' name="wpv_sort_order"'
+					. ' class="wpv-sort-control-select wpv-sort-control-order js-wpv-sort-control-order"'
+					. ' data-viewnumber="' . esc_attr( $view_hash ) . '"'
+					. ' data-labels="' . esc_attr( wp_json_encode( $order_extra_labels ) ) . '"'
+					. ' autocomplete="off"'
+					. '>';
 				foreach ( $order_options as $order_candidate ) {
-					$order_candidate_label = $this->craft_sorting_setting_label( $order_candidate, $atts, $view_name );
+					$order_candidate_label = ( isset( $order_extra_labels[ $current_orderby ] ) && isset( $order_extra_labels[ $current_orderby ][ $order_candidate ] ) ) 
+						? $order_extra_labels[ $current_orderby ][ $order_candidate ] 
+						: $order_extra_labels[ 'default' ][ $order_candidate ];
 					
 					$return .= '<option value="' . esc_attr( $order_candidate ) . '" ' . selected( $order_candidate, $current_order, false ) . '>';
 					$return .= $order_candidate_label;
@@ -1045,10 +1106,21 @@ class WPV_Sorting_Embedded {
 				break;
 			case 'radio':
 				foreach ( $order_options as $order_candidate ) {
-					$order_candidate_label = $this->craft_sorting_setting_label( $order_candidate, $atts, $view_name );
+					$order_candidate_label = ( isset( $order_extra_labels[ $current_orderby ] ) && isset( $order_extra_labels[ $current_orderby ][ $order_candidate ] ) ) 
+						? $order_extra_labels[ $current_orderby ][ $order_candidate ] 
+						: $order_extra_labels[ 'default' ][ $order_candidate ];
 					
 					$return .= '<label class="wpv-sort-control-radio-label wpv-sort-control-order-radio-label">';
-					$return .= '<input type="radio" name="wpv_sort_order" class="wpv-sort-control-radio wpv-sort-control-order js-wpv-sort-control-order" value="' . esc_attr( $order_candidate ) . '" ' . checked( $current_order, $order_candidate, false ) . ' data-viewnumber="' . esc_attr( $view_hash ) . '" autocomplete="off" />';
+					$return .= '<input'
+						. ' type="radio"'
+						. ' name="wpv_sort_order"'
+						. ' class="wpv-sort-control-radio wpv-sort-control-order js-wpv-sort-control-order"'
+						. ' value="' . esc_attr( $order_candidate ) . '"'
+						. ' ' . checked( $current_order, $order_candidate, false ) 
+						. ' data-viewnumber="' . esc_attr( $view_hash ) . '"'
+						. ' data-labels="' . esc_attr( wp_json_encode( $order_extra_labels ) ) . '"'
+						. ' autocomplete="off"'
+						. ' />';
 					$return .= $order_candidate_label;
 					$return .= '</label>';
 				}
@@ -1056,7 +1128,9 @@ class WPV_Sorting_Embedded {
 			case 'list':
 				$order_options_for_lists = array();
 				foreach ( $order_options as $order_candidate ) {
-					$order_candidate_label = $this->craft_sorting_setting_label( $order_candidate, $atts, $view_name );
+					$order_candidate_label = ( isset( $order_extra_labels[ $current_orderby ] ) && isset( $order_extra_labels[ $current_orderby ][ $order_candidate ] ) ) 
+						? $order_extra_labels[ $current_orderby ][ $order_candidate ] 
+						: $order_extra_labels[ 'default' ][ $order_candidate ];
 					
 					$order_options_for_lists[ $order_candidate ] = array(
 						'label'	=> $order_candidate_label
@@ -1065,7 +1139,10 @@ class WPV_Sorting_Embedded {
 				
 				$order_list_args = array(
 					'options'	=> $order_options_for_lists,
-					'style'		=> isset( $atts['list_style'] ) ? $atts['list_style'] : 'default'
+					'style'		=> isset( $atts['list_style'] ) ? $atts['list_style'] : 'default',
+					'extra'		=> array(
+										'labels' => esc_attr( wp_json_encode( $order_extra_labels ) )
+									)
 					
 				);
 				
@@ -1217,7 +1294,7 @@ class WPV_Sorting_Embedded {
 	/**
 	 * Normalize the possible values of the $orderby and $orderby_second settings for taxonomy Views.
 	 *
-	 * As $orderby and $orderby_second can take several values and aliases when sorting terms, 
+	 * As $orderby can take several values and aliases when sorting terms, 
 	 * they are transformed here into something that get_terms can understand.
 	 *
 	 * @param string $orderby
@@ -1248,6 +1325,19 @@ class WPV_Sorting_Embedded {
 		return $orderby;
 	}
 	
+	/**
+	 * Normalize the possible values of the $orderby and $orderby_second settings for user Views.
+	 *
+	 * As $orderby can take several values and aliases when sorting terms, 
+	 * they are transformed here into something that WP_User_Query can understand.
+	 *
+	 * @param string $orderby
+	 *
+	 * @return string
+	 *
+	 * @since 2.3.0
+	 */
+	 
 	static function normalize_user_orderby_value( $orderby ) {
 		
 		switch ( $orderby ) {
@@ -1279,6 +1369,15 @@ class WPV_Sorting_Embedded {
 		
 		return $orderby;
 	}
+	
+	/**
+	 * Get the View sorting settings, after being modified by all available sources:
+	 * - from the View settings.
+	 * - from the View shortcode attributs.
+	 * - from the URL parameters.
+	 *
+	 * @since 2.3.0
+	 */
 	
 	function get_sorting_settings( $sorting_settings = array(), $view_id = null ) {
 		
@@ -1733,6 +1832,67 @@ class WPV_Sorting_Embedded {
 		);
 		
 		return $sorting_label;
+		
+	}
+	
+	/**
+	 * Compose a JSON object with all the frontend sorting direction option labels, 
+	 * coming from the relevant shortcode attributes, grouped by sorting field, 
+	 * and make sure it gets properly translated with WPML.
+	 *
+	 * @param $atts					array	The array of attributes passed to the relevant shortcode.
+	 * @param $view_name			string	The current View slug, used in the WPML ST context value.
+	 *
+	 * @since 2.3.1
+	 */
+	
+	function craft_sorting_setting_direction_labels( $atts = array(), $view_name = '' ) {
+		
+		$labels = array(
+			'default' => array(
+				'asc'	=> $this->craft_sorting_setting_label( 'asc', $atts, $view_name ), 
+				'desc'	=> $this->craft_sorting_setting_label( 'desc', $atts, $view_name )
+			)
+		);
+		
+		$labels_and_names_for_directions = array(
+			'asc'	=> array(
+				'label'	=> 'label_asc_for_',
+				'name'	=> 'sorting_control_asc_for_'
+			),
+			'desc'	=> array(
+				'label'	=> 'label_desc_for_',
+				'name'	=> 'sorting_control_desc_for_'
+			)
+		);
+		
+		foreach ( $atts as $attribute_key => $attribute_value ) {
+			
+			foreach ( $labels_and_names_for_directions as $direction => $direction_data ) {
+				
+				if ( strpos( $attribute_key, $direction_data['label'] ) === 0 ) {
+				
+					$orderby_key = substr( $attribute_key, strlen( $direction_data['label'] ) );
+					
+					$labels[ $orderby_key ] = ( isset( $labels[ $orderby_key ] ) ) ? $labels[ $orderby_key ] : array();
+					$attribute_value = apply_filters( 'wpv_filter_wpv_deccode_arbitrary_shortcode_value', $attribute_value );
+					
+					$labels[ $orderby_key ][ $direction ] = wpv_translate( 
+						$direction_data['name'] . $orderby_key,// name
+						$attribute_value,// string
+						false,// register
+						'View ' . $view_name// context
+					);
+					
+					break;
+					
+				}
+				
+			}
+			
+		}
+		
+		return $labels;
 		
 	}
 	

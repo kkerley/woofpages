@@ -732,6 +732,12 @@ class WPV_Pagination_Embedded {
 	* @param anchor_title
 	*
 	* @since 1.11
+	*
+	* @todo Bring in sync with the paginate_links methos, to have a single, shaed mechanism for Views an WPAs:
+	*     - apply the classname wpv-pagination-nav-links-item-current to the current list item.
+	*         (mind the wpv_page_current classnme)
+	*     - apply the classname wpv-pagination-link-current to the current anchor.
+	*         (mind there is nor a equivalent yet)
 	*/
 	
 	function wpv_pager_nav_links_callback( $atts ) {
@@ -768,20 +774,23 @@ class WPV_Pagination_Embedded {
 			return '';
 		}
 		
+		$ul_class_array = array( 'wpv-pagination-nav-links-container', 'js-wpv-pagination-nav-links-container' );
 		if ( ! empty( $ul_class ) ) {
-			$ul_class = ' class="' . esc_attr( $ul_class ) . '"';
+			$ul_class_array = array_merge( $ul_class_array, array_map( 'esc_attr', explode( ' ', $ul_class ) ) );
 		}
-		$li_class_array = array();
-		if ( ! empty( $li_class ) ) {
-			$li_class_array = array_map( 'esc_attr', explode( ' ', $li_class ) );
-		}
-		$li_class_string = ( empty( $li_class_array ) ) ? '' : ' class="' . implode( ' ', $li_class_array ) . '"';
+		$ul_class_array = array_values( $ul_class_array );
 		
+		$li_class_array = array( 'wpv-pagination-nav-links-item', 'js-wpv-pagination-nav-links-item' );
+		if ( ! empty( $li_class ) ) {
+			$li_class_array = array_merge( $li_class_array, array_map( 'esc_attr', explode( ' ', $li_class ) ) );
+		}
+		$li_class_array = array_values( $li_class_array );
+			
 		$step = ( $step === false ) ? $step : intval( $step );
 		$reach = ( $reach === false ) ? $reach : intval( $reach );
 		$needs_ellipsis = true;
 		
-		$return .= '<ul' . $ul_class . '>';
+		$return .= '<ul class="' . implode( ' ', $ul_class_array ) . '">';
                 
 		for ( $i = 1; $i < $max_page + 1; $i++ ) {
 			$is_visible = false;
@@ -840,6 +849,7 @@ class WPV_Pagination_Embedded {
 				
 				if ( $i == $page ) {
 					$li_current_class_array[] = 'wpv_page_current';
+					$li_current_class_array[] = 'wpv-pagination-nav-links-item-current';
 					if ( $current_type == 'text' ) {
 						$li_current_content = '<span'
 						. ' class="wpv-filter-pagination-link"'
@@ -855,7 +865,7 @@ class WPV_Pagination_Embedded {
 					. '</li>';
 			} else if ( $needs_ellipsis ) {
 				$needs_ellipsis = false;
-				$return  .= '<li' . $li_class_string . '>' 
+				$return  .= '<li class="' . implode( ' ', $li_class_array ) . '">' 
 					. '<span class="wpv_page_ellipsis">' . $ellipsis . '</span>'
 					. '</li>';
 			}
@@ -1087,8 +1097,11 @@ class WPV_Pagination_Embedded {
 			'anchor_text'		=> $anchor_text,
 			'anchor_title'		=> $anchor_title,
 			
-			'li_class_force'	=> '',
+			'ul_class_force'	=> 'wpv-archive-pagination-nav-links-container js-wpv-archive-pagination-nav-links-container',
+			'li_class_force'	=> 'wpv-archive-pagination-nav-links-item js-wpv-archive-pagination-nav-links-item',
+			'li_class_current'	=> 'wpv-archive-pagination-nav-links-item-current',
 			'a_class_force'		=> 'wpv-archive-pagination-link js-wpv-archive-pagination-link',
+			'a_class_current'	=> 'wpv-archive-pagination-link-current',
 			'span_class_force'	=> 'wpv-archive-pagination-link wpv-archive-pagination-link-current',
 			'ellipsis_class_force' => 'wpv-archive-pagination-link wpv-archive-pagination-link-ellipsis'
 		);
@@ -1735,9 +1748,12 @@ class WPV_Pagination_Embedded {
 	*     
 	*     @type array  $remove_args        An array of query args to remove. Default false.
 	*     @type string $ul_class           The list class attribute value. Default empty.
+	*     @type string $ul_class_force     The list class attribute value that needs to be forced. Defaults to "wpv-archive-pagination-nav-links-container js-wpv-archive-pagination-nav-links-container".
 	*     @type string $li_class           The list item class attribute value. Default empty.
-	*     @type string $li_class_force     The list item class attribute value that needs to be forced. Default empty.
+	*     @type string $li_class_force     The list item class attribute value that needs to be forced. Defaults to "wpv-archive-pagination-nav-links-item js-wpv-archive-pagination-nav-links-item".
+	*     @type string $li_class_current   The list item class attribute value that needs to be set for the current item. Defaults to "wpv-archive-pagination-nav-links-item-current".
 	*     @type string $a_class_force      The link class attribute value that needs to be forced. Default empty.
+	*     @type string $a_class_current    The link class attribute value that needs to be set for the current item. Default empty.
 	*     @type string $span_class_force   The span class attribute value that needs to be forced. Default empty.
 	*     @type string $current_type       The type of output for the current page item. Possible values are 'text' and 'link'. Default is 'text'.
 	*     @type string $anchor_text	       The anchor for each page link. Default is '%%PAGE%%.
@@ -1750,7 +1766,8 @@ class WPV_Pagination_Embedded {
 	*
 	* @todo Track changes from paginate_links on wp-includes/general-template.php although this has not been changed since 2.1
 	* @todo	Extend the URL generation so we can use it on Views too.
-	* @todo Use the get_pagination_permalink_data filter here to generate paginatio links on a shared way too. By now we are passign add_args and remove_args data.
+	* @todo Use the get_pagination_permalink_data filter here to generate pagination links on a shared way too. By now we are passign add_args and remove_args data.
+	* @todo Document the default values for WPAs in wpv_pager_archive_nav_links_callback instead, as this will be source agnostic.
 	*
 	* @since 2.1
 	*/
@@ -1794,9 +1811,12 @@ class WPV_Pagination_Embedded {
 			
 			'remove_args'			=> array(),
 			'ul_class'				=> '',
+			'ul_class_force'		=> '',
 			'li_class'				=> '',
 			'li_class_force'		=> '',
+			'li_class_current'		=> '',
 			'a_class_force'			=> '',
+			'a_class_current'		=> '',
 			'span_class_force'		=> '',
 			'ellipsis_class_force'	=> '',
 			'current_type'			=> 'text',
@@ -1816,7 +1836,14 @@ class WPV_Pagination_Embedded {
 		
 		$view_unique_hash = $args['viewnumber'];
 		
-		$ul_class_array = ( empty( $args['ul_class'] ) ) ? array() : array( esc_attr( $args['ul_class'] ) );
+		$ul_class_array = array();
+		if ( ! empty( $args['ul_class_force'] ) ) {
+			$ul_class_array = array_map( 'esc_attr', explode( ' ', $args['ul_class_force'] ) );
+		}
+		if ( ! empty( $args['ul_class'] ) ) {
+			$ul_class_array = array_merge( $ul_class_array, array_map( 'esc_attr', explode( ' ', $args['ul_class'] ) ) );
+		}
+		$ul_class_array = array_values( $ul_class_array );
 		
 		$li_class_array = array();
 		if ( ! empty( $args['li_class_force'] ) ) {
@@ -1831,6 +1858,8 @@ class WPV_Pagination_Embedded {
 		if ( ! empty( $args['a_class_force'] ) ) {
 			$a_class_array = array_map( 'esc_attr', explode( ' ', $args['a_class_force'] ) );
 		}
+		$a_class_array_current = $a_class_array;
+		$a_class_array_current[] = $args['a_class_current'];
 		
 		$span_class_array = array();
 		if ( ! empty( $args['span_class_force'] ) ) {
@@ -1876,9 +1905,18 @@ class WPV_Pagination_Embedded {
 		}
 		$add_args		= $args['add_args'];
 		$remove_args	= $args['remove_args'];
-		$r = '';
-		$page_links = array();
-		$dots = false;
+		$r				= '';
+		$page_links		= array();
+		$dots			= false;
+		
+		$link_prefix = '';
+		$link_prefix_current = '';
+		$link_suffix = '';
+		if ( 'list' == $args['type'] ) {
+			$link_prefix = "<li class='" . implode( ' ', $li_class_array ) . "'>";
+			$link_prefix_current = "<li class='" . implode( ' ', $li_class_array ) . " " . $args['li_class_current'] . "'>";
+			$link_suffix = "</li>";
+		}
 		
 		if ( 'none' != $args['prev_next'] ) {
 			switch ( $args['prev_next'] ) {
@@ -1905,16 +1943,24 @@ class WPV_Pagination_Embedded {
 						 *
 						 * @param string $link The paginated link URL.
 						 */
-						$page_links[] = '<a'
+						$page_links[] = $link_prefix
+							. '<a'
 							. ' class="wpv-archive-pagination-links-prev-link js-wpv-archive-pagination-links-prev-link"'
 							. ' data-viewnumber="' . esc_attr( $view_unique_hash ) . '"'
 							. ' data-page="' . esc_attr( $current - 1 ) . '"'
 							. ' href="' . esc_url( apply_filters( 'wpv_filter_pager_nav_links_url', $link ) ) . '"'
 							. '>' 
 							. $args['prev_text'] 
-							. '</a>';
+							. '</a>'
+							. $link_suffix;
 					} else if ( 'force' == $args['prev_next'] ) {
-						$page_links[] = '<span class="wpv-archive-pagination-links-prev-link wpv-archive-pagination-links-prev-link-first">' . $args['prev_text'] . '</span>';
+						$page_links[] = $link_prefix_current
+							. '<span'
+							. ' class="wpv-archive-pagination-links-prev-link wpv-archive-pagination-links-prev-link-first"'
+							. '>' 
+							. $args['prev_text'] 
+							. '</span>'
+							. $link_suffix;
 					}
 					break;
 			}
@@ -1925,7 +1971,13 @@ class WPV_Pagination_Embedded {
 				&& 'text' == $args['current_type']
 			) {
 				$anchor_text_n = str_replace( '%%PAGE%%', $n, $args['anchor_text'] );
-				$page_links[] = "<span class='" . implode( ' ', $span_class_array ) . "'>" . $anchor_text_n . "</span>";
+				$page_links[] = $link_prefix_current
+					. "<span"
+					. " class='" . implode( ' ', $span_class_array ) . "'"
+					. ">" 
+					. $anchor_text_n 
+					. "</span>"
+					. $link_suffix;
 				$dots = true;
 			} else {
 				if ( 
@@ -1955,13 +2007,33 @@ class WPV_Pagination_Embedded {
 					
 					$anchor_text_n	= str_replace( '%%PAGE%%', $n, $args['anchor_text'] );
 					$anchor_title_n	= str_replace( '%%PAGE%%', $n, $args['anchor_title'] );
-					$page_links[] = "<a class='" . implode( ' ', $a_class_array ) . "' data-page='" . esc_attr( $n ) . "' title='" . esc_attr( $anchor_title_n ) . "' data-viewnumber='" . esc_attr( $view_unique_hash ) . "' href='" . esc_url( apply_filters( 'wpv_filter_pager_nav_links_url', $link ) ) . "'>" . $anchor_text_n . "</a>";
+					
+					$link_prefix_n = ( $n == $current ) ? $link_prefix_current : $link_prefix;
+					$a_class_array_n = ( $n == $current ) ? $a_class_array_current : $a_class_array;
+					
+					$page_links[] = $link_prefix_n
+						. "<a"
+						. " class='" . implode( ' ', $a_class_array_n ) . "'"
+						. " data-page='" . esc_attr( $n ) . "'"
+						. " title='" . esc_attr( $anchor_title_n ) . "'"
+						. " data-viewnumber='" . esc_attr( $view_unique_hash ) . "'"
+						. " href='" . esc_url( apply_filters( 'wpv_filter_pager_nav_links_url', $link ) ) . "'"
+						. ">" 
+						. $anchor_text_n 
+						. "</a>"
+						. $link_suffix;
 					$dots = true;
 				} elseif ( 
 					$dots 
 					&& ! $args['show_all'] 
 				) {
-					$page_links[] = '<span class="' . implode( ' ', $ellipsis_class_array ) . '">' . $args['ellipsis'] . '</span>';
+					$page_links[] = $link_prefix
+						. '<span'
+						. ' class="' . implode( ' ', $ellipsis_class_array ) . '"'
+						. '>' 
+						. $args['ellipsis'] 
+						. '</span>'
+						. $link_suffix;
 					$dots = false;
 				}
 			}
@@ -1987,16 +2059,24 @@ class WPV_Pagination_Embedded {
 						}
 						$link .= $args['add_fragment'];
 
-						$page_links[] = '<a'
+						$page_links[] = $link_prefix
+							. '<a'
 							. ' class="wpv-archive-pagination-links-next-link js-wpv-archive-pagination-links-next-link"'
 							. ' data-viewnumber="' . esc_attr( $view_unique_hash ) . '"'
 							. ' data-page="' . esc_attr( $current + 1 ) . '"'
 							. ' href="' . esc_url( apply_filters( 'wpv_filter_pager_nav_links_url', $link ) ) . '"'
 							. '>' 
 							. $args['next_text'] 
-							. '</a>';
+							. '</a>'
+							. $link_suffix;
 					} else if ( 'force' == $args['prev_next'] ) {
-						$page_links[] = '<span class="wpv-archive-pagination-links-next-link wpv-archive-pagination-links-next-link-last">' . $args['next_text'] . '</span>';
+						$page_links[] = $link_prefix_current
+							. '<span'
+							. ' class="wpv-archive-pagination-links-next-link wpv-archive-pagination-links-next-link-last"'
+							. '>' 
+							. $args['next_text'] 
+							. '</span>'
+							. $link_suffix;
 					}
 					break;
 			}
@@ -2004,12 +2084,12 @@ class WPV_Pagination_Embedded {
 		switch ( $args['type'] ) {
 			case 'list' :
 				$r .= "<ul class='" . implode( ' ', $ul_class_array ) . "'>\n\t";
-				$r .= '<li>' . join("</li>\n\t<li>", $page_links) . '</li>';
+				$r .= implode( "\n\t", $page_links );
 				$r .= "\n</ul>\n";
 				break;
 
 			default :
-				$r = join("\n", $page_links);
+				$r = implode( "\n", $page_links );
 				break;
 		}
 		return $r;

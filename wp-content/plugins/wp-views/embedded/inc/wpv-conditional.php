@@ -771,7 +771,6 @@ class WPV_Views_Conditional {
 		if ( strpos( $condition, ".id(" ) !== false ) {
 			preg_match_all( "/[$]\(([^\)]+)\)\.id\(([^\)]+)\)/Uim", $condition, $matches );
 			if ( count( $matches[0] ) > 0 ){
-				global $WP_Views;
 				for( $i = 0; $i < count( $matches[0] ); $i++ ){
 					$parent_name = '$' . str_replace( array( '"', "'" ), '', $matches[2][ $i ] );
 					$field_name = str_replace( array( '"', "'" ), '', $matches[1][ $i ] );
@@ -789,11 +788,13 @@ class WPV_Views_Conditional {
 
 					$temp_condition = $matches[0][ $i ];
 					$data = WPToolset_Types::getCustomConditional( $temp_condition, '', WPToolset_Types::getConditionalValues( $post_id ) );
-					if ( isset( $data['values'][ $field_name ] ) ){
+					if ( isset( $data['values'][ $field_name ] ) ) {
 						if ( is_string( $data['values'][ $field_name ] ) ){
 							$data['values'][ $field_name ] = "'" . $data['values'][ $field_name ] . "'";
 						}
 						$condition = str_replace( $temp_condition, $data['values'][ $field_name ], $condition );
+					} else {
+						$condition = str_replace( $temp_condition, "''", $condition );
 					}
 				}
 			}

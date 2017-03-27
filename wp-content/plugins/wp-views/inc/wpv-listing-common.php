@@ -786,7 +786,7 @@ function wpv_render_wpa_listing_dialog_templates_arrangeby_usage() {
 	
 	<div class="popup-window-container"> <!-- placeholder for static colorbox popups -->
 		<div id="js-wpv-create-wpa-for-archive-loop-dialog" class="toolset-shortcode-gui-dialog-container wpv-shortcode-gui-dialog-container">
-			<div class="wpv-dialog wpv-shortcode-gui-content-wrapper">
+			<div class="wpv-dialog wpv-shortcode-gui-content-wrapper js-wpv-dialog-wpa-manager">
 				<p>
 					<label for="wpv-create-wpa-for-archive-loop-title"><?php 
 					echo sprintf(

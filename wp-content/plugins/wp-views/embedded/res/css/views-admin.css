@@ -101,6 +101,7 @@
 
 	.wpv-mightlong-list li,
 	.wpv-setting-module-manager .modman-inline-module-manager-inner p {
+		min-height: 24px;
 		min-width:45%;
 		float:left;
 		padding-right:4%;
@@ -297,7 +298,7 @@
 	
 	.wpv-controls-with-preview-container .wpv-controls-with-preview-container-preview {
 		display: table-cell;
-		width: 30%;
+		width: 25%;
 		background-color: #f6f6f6;
 	}
 	
@@ -329,33 +330,75 @@
 		vertical-align: bottom;
 	}
 	
-
-.wpv-editable-list {
-	
+.wpv-editable-list-wrapper {
+	position: relative;
 }
+	
+.wpv-editable-list {
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+	.wpv-editable-list thead,
+	.wpv-editable-list tfoot {
+		
+	}
+	
+	.wpv-editable-list th.wpv-collapsed-width {
+		width: 1px;
+	}
 
 	.wpv-editable-list .wpv-editable-list-item {
 		position: relative;
-		padding: 5px 45px 5px 5px;
-		border: solid 1px transparent;
+		border-collapse: separate;
 		background: #fafafa;
-		transition: background-color 1s, border-color 1s linear;
+		transition: background-color 1s;
 	}
+	
+	.wpv-editable-list .wpv-editable-list-item.ui-sortable-helper {
+		display: table-row !important;
+	}
+	
+		.wpv-editable-list .wpv-editable-list-item td {
+			padding: 5px;
+			vertical-align: baseline;
+		}
 	
 	.wpv-editable-list .wpv-editable-list-item:nth-child(2n) {
 		background: #f3f3f3;
 	}
 	
+	.wpv-editable-list .wpv-editable-list-item.wpv-editable-list-item-default {
+		background: #d9edf7;
+		box-shadow: inset 0 0 0 2px #bce8f1;
+	}
+	
 	.wpv-editable-list .wpv-editable-list-item.wpv-editable-list-item-warning {
-		border-color: #fbeed5;
 		background-color: #fcf8e3;
 	}
 	
 	.wpv-editable-list .wpv-editable-list-item.wpv-editable-list-item-deleted {
 		color: red;
-		border-color: red;
 		background-color: #f99;
 	}
+	
+	.wpv-editable-list .wpv-editable-list-item-default-info-overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0;
+		padding-top: 30px;
+		z-index: 10000;
+	}
+	
+		.wpv-editable-list .wpv-editable-list-item-default-info-overlay .wpv-editable-list-item-default-info-close {
+			position: absolute;
+			top: -1px;
+			right: -1px;
+		}
 	
 	.wpv-editable-list .wpv-editable-list-item-move {
 		cursor: move;
@@ -365,14 +408,12 @@
 		padding: 3px;
 	}
 	
-	.wpv-editable-list .wpv-editable-list-item-delete {
-		position: absolute;
-		top: 5px;
-		right: 5px;
-	}
-	
 	.wpv-editable-list .wpv-editable-list-item-delete:hover i {
 		color: red;
+	}
+	
+	.wpv-editable-list .wpv-editable-list-item-default-info:hover i {
+		color: green;
 	}
 	
 .wpv-editable-list-item-add {
@@ -2565,6 +2606,11 @@ html[dir='rtl'] .wpv-itembox-header .wpv-code-editor-toggler {
 
 .wpv-setting .toolset_select2-container {
 	z-index: 998;
+}
+
+.toolset_page_views-editor .toolset_select2-container--open.toolset_select2-dropdown-in-setting, 
+.toolset_page_view-archives-editor .toolset_select2-container--open.toolset_select2-dropdown-in-setting {
+	z-index: 99;
 }
 
 .toolset_page_views-editor .toolset_select2-container--open.toolset_select2-dropdown-in-dialog, 

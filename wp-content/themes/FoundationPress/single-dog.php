@@ -38,8 +38,8 @@ get_header(); ?>
         <section class="dog-intro">
             <header>
 	            <?php
-	            $breeds = get_terms('breed', array('hide_empty' => true));
-	            $characteristics = get_terms('characteristic', array('hide_empty' => true));
+	            $breeds = get_the_terms(get_the_ID(), 'breed');
+	            $characteristics = get_the_terms(get_the_ID(), 'characteristic');
 	            ?>
                 <h1 class="entry-title"><?php the_title(); ?></h1>
                 <p>
@@ -114,13 +114,27 @@ get_header(); ?>
 	        if(count($adoptions_query) > 0 && types_render_field('adoption-status') === 'Adopted'):
 		        if($adoptions_query->have_posts()):
 			        while($adoptions_query->have_posts()): $adoptions_query->the_post();
-				        $adoption_parents_id = get_post_meta(get_the_ID(), '_wpcf_belongs_adoption-parent_id', true); ?>
+				        $adoption_parents_id = get_post_meta(get_the_ID(), '_wpcf_belongs_adoption-parent_id', true);
+				        $adoption_videos = get_post_meta(get_the_ID(), 'wpcf-video');
+                        $adoption_photos = get_post_meta(get_the_ID(), 'wpcf-after-adoption-photo');
+                ?>
                         <section class="wrapper--adoptions adopted">
                             <div class="adoption--inner">
                                 <h3><i class="fa fa-check-circle-o"></i> Adopted!</h3>
                                 <p><?php echo get_the_title($dog_id); ?> was adopted <?php echo types_render_field('date-of-adoption') ?> by <?php echo get_the_title($adoption_parents_id); ?>.</p>
                             </div>
                         </section>
+
+                        <section class="adoption-update">
+                            <?php the_content(); ?>
+
+                            <?php if(sizeof($adoption_videos > 0)):
+	                            foreach($adoption_videos as $video):
+		                            echo $video;
+	                            endforeach;
+                            endif; ?>
+                        </section>
+
 				        <?php
 			        endwhile;
 		        endif; // end of $adoption_query->have_posts()
@@ -145,19 +159,6 @@ get_header(); ?>
 	        wp_reset_postdata();
 	        ?>
 
-            <?php if(types_render_field('adoption-status') === 'Adopted'): ?>
-                <div class="adoption-update">
-	                <?php
-	                $child_posts = types_child_posts('adoption');
-	                foreach ($child_posts as $child_post) {
-	                    $adoption_id = $child_post->ID;
-
-		                echo $child_post->post_content;
-	                }
-
-	                ?>
-                </div>
-            <?php endif; ?>
 
             <?php the_content(); ?>
 
@@ -212,7 +213,19 @@ get_header(); ?>
                 <h4><i class="fa fa-picture-o"></i> Additional images of <?php the_title(); ?></h4>
                 <div class="carousel--wrapper">
                     <div id="carousel--dog-detail-page_primary" class="carousel--dog-detail-page_primary">
-                        <div class="image">
+	                    <?php
+	                    if(sizeof($adoption_photos) > 0):
+		                    foreach($adoption_photos as $photo):
+			                    ?>
+                                <div class="img">
+                                    <img src="<?php echo $photo; ?>" />
+                                </div>
+
+			                    <?php
+		                    endforeach;
+	                    endif;
+	                    ?>
+                        <div class="img">
                             <?php the_post_thumbnail('dog-carousel-primary'); ?>
                         </div>
                         <div class="img">

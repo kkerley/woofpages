@@ -311,14 +311,14 @@ abstract class WPV_View_Base extends WPV_Post_Object_Wrapper {
                     );
                     break;
                 case 'post_title':
-                    $exception_message = __( 'Another item with that title already exists. Please use another title.', 'wpv-views' );
+                    $exception_message = __( 'Another item already uses this name . Please use another name.', 'wpv-views' );
                     break;
                 case 'both':
-                    $exception_message = __( 'Another item already uses this title value as it\'s title and slug. Please use another title.', 'wpv-views' );
+                    $exception_message = __( 'Another item already uses this name and slug. Please use another name.', 'wpv-views' );
                     break;
                 default:
                     // Should never happen
-                    $exception_message = __( 'Another item with that slug or title already exists. Please use another title.', 'wpv-views' );
+                    $exception_message = __( 'Another item with that slug or name already exists. Please use another name.', 'wpv-views' );
                     break;
             }
             //$exception_message = print_r( $collision_data, true );

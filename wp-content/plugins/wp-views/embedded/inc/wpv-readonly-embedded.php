@@ -142,7 +142,7 @@ function views_embedded_html() {
 			<div class="js-show-toolset-message"
 					data-close="false"
 					data-tutorial-button-text="<?php echo esc_attr( __('Learn how to display Views','wpv-views') ) ?>" 
-					data-tutorial-button-url="http://wp-types.com/documentation/user-guides/views/?utm_source=viewsplugin&utm_campaign=views&utm_medium=embedded-view-readonly-info&utm_term=Want to see this in action?#2.5">
+					data-tutorial-button-url="https://wp-types.com/documentation/getting-started-with-toolset/adding-lists-of-contents/?utm_source=viewsplugin&utm_campaign=views&utm_medium=embedded-view-readonly-info&utm_term=Want to see this in action?">
 				<h2><?php _e( 'Want to see this in action?','wpv-views' ) ?></h2>
 			</div>
 		</div>

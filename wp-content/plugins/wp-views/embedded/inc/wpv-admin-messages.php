@@ -683,18 +683,19 @@ function wpv_get_view_ct_slider_introduction_data() {
 
 function wpv_display_view_howto_help_box() {
 	$general = array(
-		'text'			=> '<h3>' . __( 'How to display this View', 'wpfv-views' ) . '</h3>' 
+		'text'			=> '<h3>' . __( 'How to display this View', 'wpv-views' ) . '</h3>' 
 						. '<p>' . __('You can display this View inside content or as a widget.', 'wpv-views') . '</p><p>'
 						. __('To display inside content (post, page, custom type), edit that content.', 'wpv-views') . WPV_MESSAGE_SPACE_CHAR
 						. __( 'You will find the <strong>Views</strong> button.', 'wpv-views' ) . WPV_MESSAGE_SPACE_CHAR
 						. __( 'Click on it and locate this View to insert it anywhere you want inside the content.', 'wpv-views' ) . '</p><p>'
 						. sprintf( __('To display as a widget, go to <a href="%s">Appearance -> Widgets</a> and select the <strong>WP Views</strong> widget.', 'wpv-views'), admin_url( 'widgets.php' ) ) . '</p><p>'
 						. '</p>',
-		'classname'		=> 'js-display-view-howto js-for-view-purpose-all js-for-view-purpose-pagination js-for-view-purpose-slider js-for-view-purpose-full'
+		'classname'		=> 'js-display-view-howto js-for-view-purpose-all js-for-view-purpose-pagination js-for-view-purpose-slider js-for-view-purpose-full',
+        'close' => false
 	);
 	wpv_toolset_help_box( $general );
 	$parametric = array(
-		'text'			=> '<h3>' . __( 'How to display this Custom Search View', 'wpfv-views' ) . '</h3>' 
+		'text'			=> '<h3>' . __( 'How to display this Custom Search View', 'wpv-views' ) . '</h3>' 
 						. '<p>' . __( 'This View contains a search form and results list.', 'wpv-views' ) . WPV_MESSAGE_SPACE_CHAR
 						. __( 'You can display them together, on one page, or have the search in one page and the results on another page.', 'wpv-views' ) . '</p><p>'
 						. __('Start with the location where you want the search form to appear.', 'wpv-views') . WPV_MESSAGE_SPACE_CHAR
@@ -2431,10 +2432,50 @@ function render_shared_dialogs( $args, $dismissed_dialogs ) {
 				<div class="wpv-controls-with-preview-container">
 					<div class="wpv-controls-with-preview-container-controls">
 						<h3><?php _e( 'Sorting options for visitors', 'wpv-views' ); ?></h3>
-						<div class="js-wpv-frontend-sorting-orderby-options-wrapper" style="overflow:hidden;padding-bottom:5px;">
-							<ul class="wpv-editable-list js-wpv-frontend-sorting-orderby-options-list">
-								<!-- This gets populated in JS -->
-							</ul>
+						<div class="wpv-editable-list-wrapper js-wpv-frontend-sorting-orderby-options-wrapper" style="overflow:hidden;padding-bottom:5px;">
+							<table class="wpv-editable-list js-wpv-frontend-sorting-orderby-options-list">
+								<thead>
+									<tr>
+										<th class="wpv-collapsed-width js-wpv-frontend-sorting-orderby-options-list-column-sortable">
+										
+										</th>
+										<th class="js-wpv-frontend-sorting-orderby-options-list-column-field">
+											<?php echo esc_html( 'Field to order by', 'wpv-views' ); ?>
+										</th>
+										<th class="js-wpv-frontend-sorting-orderby-options-list-column-direction">
+											<?php echo esc_html( 'Default direction', 'wpv-views' ); ?>
+										</th>
+										<th class="js-wpv-frontend-sorting-orderby-options-list-column-label">
+											<?php echo esc_html( 'Option labels', 'wpv-views' ); ?>
+										</th>
+										<th class="wpv-collapsed-width js-wpv-frontend-sorting-orderby-options-list-column-remove">
+										
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- This gets populated in JS -->
+								</tbody>
+								<tfoot>
+									<tr>
+										<th class="js-wpv-frontend-sorting-orderby-options-list-column-sortable">
+										
+										</th>
+										<th class="js-wpv-frontend-sorting-orderby-options-list-column-field">
+											<?php echo esc_html( 'Field to order by', 'wpv-views' ); ?>
+										</th>
+										<th class="js-wpv-frontend-sorting-orderby-options-list-column-direction">
+											<?php echo esc_html( 'Default direction', 'wpv-views' ); ?>
+										</th>
+										<th class="js-wpv-frontend-sorting-orderby-options-list-column-label">
+											<?php echo esc_html( 'Option labels', 'wpv-views' ); ?>
+										</th>
+										<th class="js-wpv-frontend-sorting-orderby-options-list-column-remove">
+										
+										</th>
+									</tr>
+								</tfoot>
+							</table>
 							<button class="button-secondary wpv-editable-list-item-add js-wpv-frontend-sorting-orderby-options-add">
 								<?php 
 								echo sprintf(
@@ -2445,14 +2486,14 @@ function render_shared_dialogs( $args, $dismissed_dialogs ) {
 							</button>
 						</div>
 						<div class="js-wpv-frontend-sorting-orderby-options-enabled" style="display:none">
-							<?php _e( 'Show these options as:', 'wpv-views' ); ?>
+							<?php _e( 'Show these options', 'wpv-views' ); ?>
 							<select id="js-wpv-frontend-sorting-orderby-options-type" class="js-wpv-frontend-sorting-orderby-options-type">
-								<option value="select"><?php _e( 'A dropdown select', 'wpv-views' ); ?></option>
-								<option value="list"><?php _e( 'A dropdown list', 'wpv-views' ); ?></option>
-								<option value="radio"><?php _e( 'A set of radio options', 'wpv-views' ); ?></option>
+								<option value="select"><?php _e( 'as a dropdown select', 'wpv-views' ); ?></option>
+								<option value="list"><?php _e( 'as a dropdown list', 'wpv-views' ); ?></option>
+								<option value="radio"><?php _e( 'as a set of radio options', 'wpv-views' ); ?></option>
 							<select>
 							<span class="js-wpv-frontend-sorting-orderby-type-extra js-wpv-frontend-sorting-orderby-type-list-extra" style="display:none">
-								<?php _e( 'using the style:', 'wpv-views' ); ?>
+								<?php _e( 'using the style', 'wpv-views' ); ?>
 								<select id="js-wpv-frontend-sorting-orderby-list-style" autocomplete="off">
 								<?php
 								foreach ( $list_style_options as $style_option_key => $style_option_data ) {
@@ -2466,39 +2507,37 @@ function render_shared_dialogs( $args, $dismissed_dialogs ) {
 							<p>
 								<input type="checkbox" class="js-wpv-frontend-sorting-order-enable" id="js-wpv-frontend-sorting-order-enable" name="wpv-frontend-sorting-order-enable" />
 								<label for="js-wpv-frontend-sorting-order-enable"><?php _e( 'Allow to modify the sorting direction', 'wpv-views' ); ?></label>
-							</p>
-							<div class="js-wpv-frontend-sorting-order-options" style="display:none;margin-left:25px;">
-								<label><?php _e( 'Show these options as:', 'wpv-views' ); ?></label>
-								<select id="js-wpv-frontend-sorting-order-options-type" class="js-wpv-frontend-sorting-order-options-type">
-									<option value="select"><?php _e( 'A dropdown select', 'wpv-views' ); ?></option>
-									<option value="list"><?php _e( 'A dropdown list', 'wpv-views' ); ?></option>
-									<option value="radio"><?php _e( 'A set of radio options', 'wpv-views' ); ?></option>
-								<select>
-								<span class="js-wpv-frontend-sorting-order-type-extra js-wpv-frontend-sorting-order-type-list-extra" style="display:none">
-									<?php _e( 'using the style:', 'wpv-views' ); ?>
-									<select id="js-wpv-frontend-sorting-order-list-style" autocomplete="off">
-									<?php
-									foreach ( $list_style_options as $style_option_key => $style_option_data ) {
-									?>
-										<option value="<?php echo esc_attr( $style_option_key ); ?>"><?php echo isset( $style_option_data['label'] ) ? esc_html( $style_option_data['label'] ) : esc_html( $style_option_key ); ?></option>
-									<?php
-									}
-									?>
-									</select>
+								<span class="js-wpv-frontend-sorting-order-options" style="display:none;">
+									<select id="js-wpv-frontend-sorting-order-options-type" class="js-wpv-frontend-sorting-order-options-type">
+										<option value="select"><?php _e( 'as a dropdown select', 'wpv-views' ); ?></option>
+										<option value="list"><?php _e( 'as a dropdown list', 'wpv-views' ); ?></option>
+										<option value="radio"><?php _e( 'as a set of radio options', 'wpv-views' ); ?></option>
+									<select>
+									<span class="js-wpv-frontend-sorting-order-type-extra js-wpv-frontend-sorting-order-type-list-extra" style="display:none">
+										<?php _e( 'using the style', 'wpv-views' ); ?>
+										<select id="js-wpv-frontend-sorting-order-list-style" autocomplete="off">
+										<?php
+										foreach ( $list_style_options as $style_option_key => $style_option_data ) {
+										?>
+											<option value="<?php echo esc_attr( $style_option_key ); ?>"><?php echo isset( $style_option_data['label'] ) ? esc_html( $style_option_data['label'] ) : esc_html( $style_option_key ); ?></option>
+										<?php
+										}
+										?>
+										</select>
+									</span>
+									<select id="wpv-frontend-sorting-order-options-order" class="js-wpv-frontend-sorting-order-options-order" style="display:none">
+										<option value="asc,desc"><?php _e( 'Ascending, Descending', 'wpv-views' ); ?></option>
+										<option value="desc,asc"><?php _e( 'Descending, Ascending', 'wpv-views' ); ?></option>
+									<select>
+									<span style="display:none">
+									<label for="js-wpv-frontend-sorting-order-options-label-asc"><?php _e( 'Label for the "ascending" option', 'wpv-views' ); ?></label>
+									<input type="text" id="js-wpv-frontend-sorting-order-options-label-asc" class="regular-text js-wpv-frontend-sorting-order-options-label-asc" value="<?php echo esc_attr( __( 'Ascending', 'wpv-views' ) ); ?>" />
+									<br />
+									<label for="js-wpv-frontend-sorting-order-options-label-desc"><?php _e( 'Label for the "descending" option', 'wpv-views' ); ?></label>
+									<input type="text" id="js-wpv-frontend-sorting-order-options-label-desc" class="regular-text js-wpv-frontend-sorting-order-options-label-desc" value="<?php echo esc_attr( __( 'Descending', 'wpv-views' ) ); ?>" />
+									</span>
 								</span>
-								<br />
-								<label><?php _e( 'Controls order:', 'wpv-views' ); ?></label>
-								<select id="wpv-frontend-sorting-order-options-order" class="js-wpv-frontend-sorting-order-options-order">
-									<option value="asc,desc"><?php _e( 'Ascending, Descending', 'wpv-views' ); ?></option>
-									<option value="desc,asc"><?php _e( 'Descending, Ascending', 'wpv-views' ); ?></option>
-								<select>
-								<br />
-								<label for="js-wpv-frontend-sorting-order-options-label-asc"><?php _e( 'Label for the "ascending" option', 'wpv-views' ); ?></label>
-								<input type="text" id="js-wpv-frontend-sorting-order-options-label-asc" class="regular-text js-wpv-frontend-sorting-order-options-label-asc" value="<?php echo esc_attr( __( 'Ascending', 'wpv-views' ) ); ?>" />
-								<br />
-								<label for="js-wpv-frontend-sorting-order-options-label-desc"><?php _e( 'Label for the "descending" option', 'wpv-views' ); ?></label>
-								<input type="text" id="js-wpv-frontend-sorting-order-options-label-desc" class="regular-text js-wpv-frontend-sorting-order-options-label-desc" value="<?php echo esc_attr( __( 'Descending', 'wpv-views' ) ); ?>" />
-							</div>
+							</p>
 						</div>
 					</div>
 					<div class="wpv-controls-with-preview-container-preview">

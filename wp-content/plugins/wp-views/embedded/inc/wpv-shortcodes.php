@@ -3916,8 +3916,14 @@ function wpv_shortcodes_get_wpv_post_status_data() {
 			'add'  => ''
 		), $atts )
 	);
+	
+	// get_post_class handles the escaping of the additional classnames.
+	// We need to force the $post->post_type classname as it is added in the frontend 
+	// but in AJAX it is not included as it is considered backend.
+	
+	$add .= ' ' . $post->post_type;
 
-	$post_classes = get_post_class( $add ); // it handles the escaping of the $add classnames
+	$post_classes = get_post_class( $add );
 	$out = implode( ' ', $post_classes );
 
 	apply_filters('wpv_shortcode_debug','wpv-post-class', json_encode($atts), '', 'Data received from get_post_class()', $out);

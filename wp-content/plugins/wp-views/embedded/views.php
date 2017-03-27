@@ -12,7 +12,7 @@ if ( defined( 'WPV_VERSION' ) ) {
     return; 
 }
 
-define( 'WPV_VERSION', '2.3.0' );
+define( 'WPV_VERSION', '2.3.1' );
 
 /**
 * Set constants
