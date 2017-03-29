@@ -119,8 +119,8 @@
       width: calc(100% + 0.5rem);
 
       a{
-        background-color: $medium-gray;
-        color: $black;
+        background-color: $secondary-color;
+        color: #fff;
         display: inline-block;
         font-size: 0.9rem;
         margin: 0.25rem;
@@ -128,8 +128,8 @@
         transition: all 0.2s ease;
 
         &:hover{
-          background-color: $dark-gray;
-          color: #fff;
+          background-color: darken(#fff, 5%);
+          color: $dark-gray;
         }
       }
     }

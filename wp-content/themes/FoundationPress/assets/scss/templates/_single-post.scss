@@ -120,14 +120,14 @@
   margin-bottom: 1rem;
 
   .label{
-    background-color: $primary-color;
+    background-color: $secondary-color;
     color: #fff;
     cursor: pointer;
     margin: 0.125rem 0;
     transition: all 0.2s ease;
 
     &:hover{
-      background-color: #fff;
+      background-color: darken(#fff, 5%);
       color: $darker-gray;
     }
   }

@@ -205,6 +205,13 @@ get_header(); ?>
     endif;
 ?>
 
+<section class="wrapper--events">
+    <div class="events--inner">
+        <?php echo do_shortcode('[next_event]'); ?>
+    </div>
+
+</section>
+
 
 <?php
     $announcements_args = array(

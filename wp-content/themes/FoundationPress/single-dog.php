@@ -86,7 +86,7 @@ get_header(); ?>
 			            $char_output = "";
 
 			            foreach($characteristics as $characteristic):
-				            $char_output .= '<a href="' . get_term_link($characteristic->slug, 'characteristic') . '" class="label alert">';
+				            $char_output .= '<a href="' . get_term_link($characteristic->slug, 'characteristic') . '" class="label secondary">';
 				            $char_output .= $characteristic->name;
 				            $char_output .= '</a> ';
 

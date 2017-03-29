@@ -18,7 +18,7 @@
             </div>
 
 	        <?php if(!empty(types_render_field( "dog-image"))): ?>
-                <a href="#" class="button expanded secondary kk-modal-trigger hide-for-small-only" data-target-modal="dog--additional-photos"><i class="fa fa-picture-o"></i> More photos</a>
+                <a href="#" class="button expanded primary kk-modal-trigger hide-for-small-only" data-target-modal="dog--additional-photos"><i class="fa fa-picture-o"></i> More photos</a>
             <?php endif; ?>
 
 

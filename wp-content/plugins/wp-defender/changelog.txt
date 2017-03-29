@@ -1,0 +1,138 @@
+Plugin Name: WP Defender
+Author: Hoang Ngo, Aaron Edwards
+Tested up to: 4.6.1
+
+Change Log:
+
+1.3 - 2017-03-06
+
+- Added: Endpoint API so HUB can work with Defender natively through WPMU DEV Dashboard plugin
+- Some other minor enhancements/fixes
+
+1.2 - 2017-02-27
+
+- Added: New Hardening Rule (PHP version)
+- Improvement: Audit Logging now allows date range selection.
+- Improvement: IP Lockouts now allow IP ranges in whitelist/blacklist.
+- Improvement: IP Lockouts now can import/export whitelist/backlist.
+- Fixed: IP Lockouts email notification text on permanent IP ban.
+
+1.1.6.1 - 2017-21-02
+- Fixed: Cache issue causing multiple requests to API endpoint when scanning suspicious files.
+
+1.1.6 - 2017-13-02
+----------------------------------------------------------------------
+- Fixed: Collapse Menu button shows bigger font and in all caps
+- Fixed: Missing strings in translation (.pot) file
+- Fixed: Audit logging reports not using correct timezone.
+- Fixed: DB prefix replacing all instances of “wp” if it's used multiple times (ie wp_mytable_wp_subtext)
+- Fixed: Auto ban users who log in with the “admin" username not working.
+- Some other minor enhancements/fixes
+
+1.1.5 - 2017-11-01
+----------------------------------------------------------------------
+- Added: IP Lockouts. Defender can now protect your login area from brute force attacks, monitor 404 errors and automatically lockout any unwanted behavior. It can also permanently ban specific IP addresses and receive email notifications when lockouts occur.
+- Fixed: Minor bug fixes and improvements.
+
+1.1.4.1 - 2016-31-10
+----------------------------------------------------------------------
+- Fixed: Fatal error when PHP extension sockets is not enabled
+
+1.1.4 - 2016-31-10
+----------------------------------------------------------------------
+- Improvement: Audit logging now detects file changes in WordPress core.
+- Fixed: Updating via WordPress core now syncs better with the Hub.
+- Fixed: Some compatibility fixes for PHP 5.2.
+
+1.1.3 - 2016-20-09
+----------------------------------------------------------------------
+- Improvement: Audit Logging now ajax based.
+- Fixed: minor bug fixes & some UI/UX improvements
+
+1.1.2 - 2016-24-08
+----------------------------------------------------------------------
+- Improvement: Switched the User dropdown in Audit Logging to load results via AJAX to increase initial load performance.
+- Improvement: Scan results now pre-load information so that you can action fixes faster.
+- Fixed: Removed cronjob events from being tracked in Audit Logging.
+- Fixed: The Audit Logging filter box now stays visible if no results are returned.
+- Fixed: Other small bug fixes and improvements.
+
+1.1.1 - 2016-08-08
+----------------------------------------------------------------------
+- Added: A warning indicator in WP Admin sidebar to let you know how many security issues are outstanding.
+- Added: The ability to choose to only receive email reports when there are issues with your website.
+- Fixed: Minor bug fixes & improvements
+
+1.1 - 2016-25-07
+----------------------------------------------------------------------
+- New feature: Audit logging
+- New plugin icon
+- Vulnerability plugins/theme scan result can be ignored
+- Some other minor enhancements/fixes
+
+1.0.8 - 2016-20-05
+----------------------------------------------------------------------
+- Improve Core Integrity Scan.
+- Improve caching method
+
+1.0.7 - 2016-17-05
+----------------------------------------------------------------------
+- Improved: Scan schedule.
+- Fix: issue with W3 Total Cache Object Cache
+
+1.0.6 - 2016-13-05
+----------------------------------------------------------------------
+- Fix: Defender data doesn't sync with HUB correctly
+- Fix: Email report doesn't send properly
+- Some other minor enhancements/fixes
+
+1.0.5 - 2016-28-04
+----------------------------------------------------------------------
+- Added: Option to choose reminder period for Hardener rule "Update old security keys"
+- Improved: Compatibility with Windows server
+- Improved: Optimized resource usage when scanning
+
+- Fix: issue with memcached
+- Other minor enhancements/fixes
+
+1.0.4 - 2016-06-04
+----------------------------------------------------------------------
+- Improve scan engine, reduce false positives
+- Improve uninstallation method
+- Add the ability to ignore hardener rules.
+- Improve the performance impact on the site.
+
+- Fix scans sticking at 100% in some cases
+- Fix compatibility issues with IIS
+- Some other minor enhancements/fixes
+
+1.0.3 - 2016-22-03
+----------------------------------------------------------------------
+- Optimize scanning
+- Preventing performance issue with some hosts
+
+- Fix false blacklist detection in local environment
+- Some other minor enhancements/fixes
+
+1.0.2 - 2016-15-03
+----------------------------------------------------------------------
+- Applied ajax inline updates for plugins/themes
+- One click Prevent PHP execution
+- One click Prevent Information Disclosure
+- Add detail page for core integrity issue, and automate resolution
+
+- Fix scan stability with limited memory
+- Some other minor enhancements/fixes
+
+1.0.1 - 2016-03-03
+----------------------------------------------------------------------
+- Scanning can auto detect if user is active on scanning page to work based on ajax, or leave to enable background scan
+- Improve condition checking for Prevent Information Disclosure module
+- Improve condition checking for Prevent PHP execution module
+
+1.0 - 2016-01-03
+----------------------------------------------------------------------
+- First release
+
+
+520716-1490663676-ai

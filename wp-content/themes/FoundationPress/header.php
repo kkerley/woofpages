@@ -40,16 +40,7 @@
 <!--    </header>-->
 
     <header class="header<?php echo $rescue_logo ? ' with-logo' : '' ?>">
-        <h2 class="headline"><?php bloginfo( 'name' ); ?>  <small><?php bloginfo( 'description' ); ?></small></h2>
 
-        <?php
-            if($rescue_logo): ?>
-            <div class="uploaded-logo">
-                <img src="<?php echo $rescue_logo ?>" alt="<?php echo get_bloginfo( 'name' ) ?>" />
-            </div>
-        <?php
-            endif;
-        ?>
 	    <div class="wrapper--primary-nav" data-sticky-container>
             <nav class="primary-nav" data-sticky data-top-anchor="main_container">
                 <div class="primary-nav--inner">
@@ -63,6 +54,18 @@
             </nav>
         </div>
 
+        <div class="wrapper--site-title">
+            <h2 class="headline"><?php bloginfo( 'name' ); ?>  <small><?php bloginfo( 'description' ); ?></small></h2>
+
+	        <?php
+	        if($rescue_logo): ?>
+                <div class="uploaded-logo">
+                    <img src="<?php echo $rescue_logo ?>" alt="<?php echo get_bloginfo( 'name' ) ?>" />
+                </div>
+		        <?php
+	        endif;
+	        ?>
+        </div>
 
 	    <?php # if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
 		    <?php # get_template_part( 'template-parts/mobile-top-bar' ); ?>

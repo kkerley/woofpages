@@ -102,12 +102,12 @@
 @import "templates/page-full-width";
 @import "templates/single-post";
 
-h1, h2, h3, h4, h5, h6{
-  a{
-    color: $secondary-color;
-
-    &:hover{
-      color: scale-color($secondary-color, $lightness: -14%);
-    }
-  }
-}
+//h1, h2, h3, h4, h5, h6{
+//  a{
+//    color: $secondary-color;
+//
+//    &:hover{
+//      color: scale-color($secondary-color, $lightness: -14%);
+//    }
+//  }
+//}

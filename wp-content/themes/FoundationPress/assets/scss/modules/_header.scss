@@ -54,7 +54,8 @@
 
     .uploaded-logo{
       @include grid-col-row();
-      text-align: left;
+      @include clearfix;
+      float: none !important;
 
       img{
         display: block;
@@ -67,7 +68,7 @@
 }
 
 .primary-nav{
-  background: darken(#fff, 3%);
+  background-color: #fff;
   // background: $secondary-color;
   text-align: center;
   transition: all .25s ease;
@@ -106,6 +107,7 @@
   }
 
   &.is-stuck{
+    background: darken(#fff, 3%);
     box-shadow: 0 3px 3px -3px #000;
     margin-top: 0 !important;
 
