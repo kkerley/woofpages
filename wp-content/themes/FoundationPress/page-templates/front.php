@@ -207,9 +207,9 @@ get_header(); ?>
 
 <section class="wrapper--events">
     <div class="events--inner">
-        <?php echo do_shortcode('[next_event]'); ?>
+	    <?php the_widget('Eab_CalendarUpcoming_Widget'); ?>
+        <?php echo do_shortcode('[eab_archive limit="1"]'); ?>
     </div>
-
 </section>
 
 

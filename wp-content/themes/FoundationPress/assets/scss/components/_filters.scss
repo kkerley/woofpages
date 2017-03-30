@@ -1,6 +1,8 @@
 .wrapper--filters{
-  // border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid $light-gray;
+  margin: 0 0 4rem;
+
   .filters--inner{
-    margin: 2rem 0 4rem;
+    margin: 2rem 0 0;
   }
 }

@@ -1,0 +1,19 @@
+.post-type-archive-dog{
+  .js-wpv-view-layout{
+
+    display: flex;
+    flex-flow: row wrap;
+
+    .card{
+      max-width: calc(50% - 0.5rem);
+
+      &:nth-of-type(2n+1){
+        margin-right: 0.5rem;
+      }
+
+      &:nth-of-type(2n){
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

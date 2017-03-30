@@ -193,6 +193,10 @@ final class GdbcAjaxController
 		if(!isset($_POST['ajaxRequestNonce']))
 			return false;
 
+		if(!MchGdbcWpUtils::isAdminLoggedIn())
+			return false;
+		
+		
 		return check_ajax_referer(self::AJAX_NONCE_VALUE, 'ajaxRequestNonce', false);
 	}
 }

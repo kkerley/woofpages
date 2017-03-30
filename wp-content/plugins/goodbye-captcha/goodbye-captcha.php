@@ -10,7 +10,7 @@
  * Plugin Name: WPBruiser
  * Plugin URI: http://www.wpbruiser.com
  * Description: An extremely powerful anti-spam plugin that blocks spambots without annoying captcha images.
- * Version: 3.1.4
+ * Version: 3.1.5
  * Author: Mihai Chelaru
  * Author URI: http://www.wpbruiser.com
  * Text Domain: wp-bruiser
@@ -23,7 +23,7 @@ if(!class_exists('GoodByeCaptcha', false))
 {
 	class GoodByeCaptcha
 	{
-		CONST PLUGIN_VERSION    = '3.1.4';
+		CONST PLUGIN_VERSION    = '3.1.5';
 		CONST PLUGIN_SLUG       = 'wp-bruiser';
 		CONST PLUGIN_NAME       = 'WPBruiser';
 		CONST PLUGIN_SITE_URL   = 'http://www.wpbruiser.com';

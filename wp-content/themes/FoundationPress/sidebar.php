@@ -27,8 +27,6 @@
         <img src="https://placehold.it/400x200&text=Ad" alt="Ad" height="200" width="400">
     </div>
 
-
-
 	<?php do_action( 'foundationpress_before_sidebar' ); ?>
 	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
 	<?php do_action( 'foundationpress_after_sidebar' ); ?>

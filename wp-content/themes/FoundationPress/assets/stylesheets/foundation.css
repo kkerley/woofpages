@@ -4389,7 +4389,7 @@ select {
 
 .card {
   margin-bottom: 1rem;
-  border: 1px solid #cacaca;
+  border: 1px solid #e6e6e6;
   border-radius: 0;
   background: #fefefe;
   -webkit-box-shadow: none;
@@ -7524,8 +7524,11 @@ body#tinymce {
   .wrapper--adoptions.available {
     background-color: #87D68D; }
 
-.wrapper--filters .filters--inner {
-  margin: 2rem 0 4rem; }
+.wrapper--filters {
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0 0 4rem; }
+  .wrapper--filters .filters--inner {
+    margin: 2rem 0 0; }
 
 #front-hero {
   color: #fff;
@@ -7818,108 +7821,20 @@ body#tinymce {
     .posts--inner .card:last-of-type {
       margin-left: 1rem; }
 
-#kitchen-sink {
-  max-width: 64rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 3rem; }
-  #kitchen-sink::before, #kitchen-sink::after {
-    display: table;
-    content: ' '; }
-  #kitchen-sink::after {
-    clear: both; }
-  #kitchen-sink header {
-    width: 100%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem; }
-    @media print, screen and (min-width: 40em) {
-      #kitchen-sink header {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-    #kitchen-sink header:last-child:not(:first-child) {
-      float: right; }
-    #kitchen-sink header .lead {
-      font-size: 125%;
-      line-height: 1.6; }
-  #kitchen-sink #components {
-    width: 100%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem; }
-    #kitchen-sink #components hr {
-      margin: 3rem 0; }
-    @media print, screen and (min-width: 40em) {
-      #kitchen-sink #components {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-    #kitchen-sink #components:last-child:not(:first-child) {
-      float: right; }
-    @media print, screen and (min-width: 64em) {
-      #kitchen-sink #components {
-        width: 75%;
-        float: left;
-        padding-right: 0.625rem;
-        padding-left: 0.625rem; } }
-  @media print, screen and (min-width: 64em) and (min-width: 40em) {
-    #kitchen-sink #components {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-    @media print, screen and (min-width: 64em) {
-        #kitchen-sink #components:last-child:not(:first-child) {
-          float: right; } }
-  #kitchen-sink #kitchen-sink-nav {
-    display: none; }
-    @media print, screen and (min-width: 64em) {
-      #kitchen-sink #kitchen-sink-nav {
-        width: 25%;
-        float: left;
-        padding-right: 0.625rem;
-        padding-left: 0.625rem;
-        display: block;
-        float: right; } }
-  @media print, screen and (min-width: 64em) and (min-width: 40em) {
-    #kitchen-sink #kitchen-sink-nav {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-    @media print, screen and (min-width: 64em) {
-        #kitchen-sink #kitchen-sink-nav:last-child:not(:first-child) {
-          float: right; }
-        #kitchen-sink #kitchen-sink-nav .docs-sub-menu {
-          font-size: 0.85rem;
-          margin-top: 1rem; }
-        #kitchen-sink #kitchen-sink-nav .docs-menu-title {
-          text-transform: uppercase;
-          font-size: 0.75rem;
-          color: #999;
-          font-weight: bold;
-          line-height: 1;
-          padding-left: 0.9rem;
-          margin-bottom: 0.5rem;
-          border-top: 1px solid #e9e9e9;
-          margin-top: 1rem;
-          padding-top: 1.5rem; }
-        #kitchen-sink #kitchen-sink-nav .docs-toc {
-          width: 100%;
-          padding-left: 4rem;
-          padding-right: 1rem; }
-        #kitchen-sink #kitchen-sink-nav .docs-toc .active {
-          background: #2199e8;
-          color: white; }
-        #kitchen-sink #kitchen-sink-nav .docs-toc .docs-sub-menu:first-child .docs-menu-title {
-          margin-top: 0;
-          border-top: 0;
-          padding-top: 0; } }
-  #kitchen-sink .row.display {
-    background: #eee;
-    font-size: 11px;
-    margin-bottom: 10px;
-    line-height: 2rem;
-    border: solid 1px #c6c6c6;
-    margin-left: 0 !important;
-    margin-right: 0 !important; }
-    #kitchen-sink .row.display .columns:nth-child(2), #kitchen-sink .row.display .columns.small-centered, #kitchen-sink .row.display .columns.large-centered {
-      background: #e1e1e1; }
+.post-type-archive-dog .js-wpv-view-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+  .post-type-archive-dog .js-wpv-view-layout .card {
+    max-width: calc(50% - 0.5rem); }
+    .post-type-archive-dog .js-wpv-view-layout .card:nth-of-type(2n+1) {
+      margin-right: 0.5rem; }
+    .post-type-archive-dog .js-wpv-view-layout .card:nth-of-type(2n) {
+      margin-left: 0.5rem; }
 
 #page {
   max-width: 64rem;
