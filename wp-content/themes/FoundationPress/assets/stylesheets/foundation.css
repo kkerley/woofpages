@@ -7821,6 +7821,51 @@ body#tinymce {
     .posts--inner .card:last-of-type {
       margin-left: 1rem; }
 
+.wrapper--events {
+  padding: 4rem 0; }
+  .wrapper--events .events--inner {
+    max-width: 64rem;
+    margin-right: auto;
+    margin-left: auto; }
+    .wrapper--events .events--inner::before, .wrapper--events .events--inner::after {
+      display: table;
+      content: ' '; }
+    .wrapper--events .events--inner::after {
+      clear: both; }
+  .wrapper--events .events--title {
+    width: 100%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      .wrapper--events .events--title {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .wrapper--events .events--title:last-child:not(:first-child) {
+      float: right; }
+  .wrapper--events .events--calendar {
+    width: 66.66667%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      .wrapper--events .events--calendar {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .wrapper--events .events--calendar:last-child:not(:first-child) {
+      float: right; }
+  .wrapper--events .events--upcoming {
+    width: 33.33333%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    @media print, screen and (min-width: 40em) {
+      .wrapper--events .events--upcoming {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .wrapper--events .events--upcoming:last-child:not(:first-child) {
+      float: right; }
+
 .post-type-archive-dog .js-wpv-view-layout {
   display: -webkit-box;
   display: -ms-flexbox;

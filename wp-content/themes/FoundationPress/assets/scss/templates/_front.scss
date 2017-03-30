@@ -235,3 +235,23 @@
     }
   }
 }
+
+.wrapper--events{
+  padding: 4rem 0;
+
+  .events--inner{
+    @include grid-row();
+  }
+
+  .events--title{
+    @include grid-col(12);
+  }
+
+  .events--calendar{
+    @include grid-col(8);
+  }
+
+  .events--upcoming{
+    @include grid-col(4);
+  }
+}

@@ -3775,3 +3775,868 @@
 [30-Mar-2017 13:12:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
 [30-Mar-2017 13:12:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
 [30-Mar-2017 13:12:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:14:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:14:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:14:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:15:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:15:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:15:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:16:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:16:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:16:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:17:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:17:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:17:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:18:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:18:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:18:55 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:18 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:18 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:18 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:21 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:21 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:21 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:34 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:34 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:34 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:35 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:35 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:35 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:35 UTC] [2017-03-30 07:19:35] - WPHB API: Sending request to https://premium.wpmudev.org/api/uptime/v1/stats/week/?domain=http://rescuedirectory.dev/
+[30-Mar-2017 13:19:35 UTC] [2017-03-30 07:19:35] - WPHB API: Arguments:
+[30-Mar-2017 13:19:35 UTC] [2017-03-30 07:19:35] - Array
+(
+    [headers] => Array
+        (
+            [Authorization] => Basic 06ba547ee937f48f77df14989c648630a3f8a299
+        )
+
+    [sslverify] => 
+    [method] => GET
+    [timeout] => 20
+)
+
+[30-Mar-2017 13:19:35 UTC] [2017-03-30 07:19:35] - WPHB API: Response:
+[30-Mar-2017 13:19:35 UTC] [2017-03-30 07:19:35] - Array
+(
+    [headers] => Requests_Utility_CaseInsensitiveDictionary Object
+        (
+            [data:protected] => Array
+                (
+                    [date] => Thu, 30 Mar 2017 13:19:35 GMT
+                    [content-type] => application/json; charset=UTF-8
+                    [set-cookie] => Array
+                        (
+                            [0] => __cfduid=d8269d80356c25523a8dc759194392ad21490879975; expires=Fri, 30-Mar-18 13:19:35 GMT; path=/; domain=.wpmudev.org; HttpOnly
+                            [1] => VN=1; expires=Fri, 30-Mar-2018 13:19:35 GMT; Max-Age=31536000; path=/
+                            [2] => VNS=1; path=/
+                            [3] => abv=b; expires=Thu, 30-Mar-2017 13:17:55 GMT; Max-Age=-100; path=/
+                        )
+
+                    [x-robots-tag] => noindex
+                    [link] => <https://premium.wpmudev.org/api/>; rel="https://api.w.org/"
+                    [x-content-type-options] => nosniff
+                    [access-control-expose-headers] => X-WP-Total, X-WP-TotalPages
+                    [access-control-allow-headers] => Authorization, Content-Type
+                    [allow] => GET
+                    [server] => cloudflare-nginx
+                    [cf-ray] => 347b5c85fafa4fc3-DEN
+                )
+
+        )
+
+    [body] => {"code":"api_error","message":"The Uptime service is currently down for maintenance. We are working hard on building an awesome new service with higher reliability and new features, check back soon!","data":{"status":410}}
+    [response] => Array
+        (
+            [code] => 410
+            [message] => Gone
+        )
+
+    [cookies] => Array
+        (
+            [0] => WP_Http_Cookie Object
+                (
+                    [name] => __cfduid
+                    [value] => d8269d80356c25523a8dc759194392ad21490879975
+                    [expires] => 1522415975
+                    [path] => /
+                    [domain] => wpmudev.org
+                )
+
+            [1] => WP_Http_Cookie Object
+                (
+                    [name] => VN
+                    [value] => 1
+                    [expires] => 1522415975
+                    [path] => /
+                    [domain] => premium.wpmudev.org
+                )
+
+            [2] => WP_Http_Cookie Object
+                (
+                    [name] => VNS
+                    [value] => 1
+                    [expires] => 
+                    [path] => /
+                    [domain] => premium.wpmudev.org
+                )
+
+            [3] => WP_Http_Cookie Object
+                (
+                    [name] => abv
+                    [value] => b
+                    [expires] => 1490879875
+                    [path] => /
+                    [domain] => premium.wpmudev.org
+                )
+
+        )
+
+    [filename] => 
+    [http_response] => WP_HTTP_Requests_Response Object
+        (
+            [response:protected] => Requests_Response Object
+                (
+                    [body] => {"code":"api_error","message":"The Uptime service is currently down for maintenance. We are working hard on building an awesome new service with higher reliability and new features, check back soon!","data":{"status":410}}
+                    [raw] => HTTP/1.1 410 Gone
+Date: Thu, 30 Mar 2017 13:19:35 GMT
+Content-Type: application/json; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+Set-Cookie: __cfduid=d8269d80356c25523a8dc759194392ad21490879975; expires=Fri, 30-Mar-18 13:19:35 GMT; path=/; domain=.wpmudev.org; HttpOnly
+Set-Cookie: VN=1; expires=Fri, 30-Mar-2018 13:19:35 GMT; Max-Age=31536000; path=/
+Set-Cookie: VNS=1; path=/
+Set-Cookie: abv=b; expires=Thu, 30-Mar-2017 13:17:55 GMT; Max-Age=-100; path=/
+X-Robots-Tag: noindex
+Link: <https://premium.wpmudev.org/api/>; rel="https://api.w.org/"
+X-Content-Type-Options: nosniff
+Access-Control-Expose-Headers: X-WP-Total, X-WP-TotalPages
+Access-Control-Allow-Headers: Authorization, Content-Type
+Allow: GET
+Server: cloudflare-nginx
+CF-RAY: 347b5c85fafa4fc3-DEN
+
+{"code":"api_error","message":"The Uptime service is currently down for maintenance. We are working hard on building an awesome new service with higher reliability and new features, check back soon!","data":{"status":410}}
+                    [headers] => Requests_Response_Headers Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Array
+                                        (
+                                            [0] => Thu, 30 Mar 2017 13:19:35 GMT
+                                        )
+
+                                    [content-type] => Array
+                                        (
+                                            [0] => application/json; charset=UTF-8
+                                        )
+
+                                    [set-cookie] => Array
+                                        (
+                                            [0] => __cfduid=d8269d80356c25523a8dc759194392ad21490879975; expires=Fri, 30-Mar-18 13:19:35 GMT; path=/; domain=.wpmudev.org; HttpOnly
+                                            [1] => VN=1; expires=Fri, 30-Mar-2018 13:19:35 GMT; Max-Age=31536000; path=/
+                                            [2] => VNS=1; path=/
+                                            [3] => abv=b; expires=Thu, 30-Mar-2017 13:17:55 GMT; Max-Age=-100; path=/
+                                        )
+
+                                    [x-robots-tag] => Array
+                                        (
+                                            [0] => noindex
+                                        )
+
+                                    [link] => Array
+                                        (
+                                            [0] => <https://premium.wpmudev.org/api/>; rel="https://api.w.org/"
+                                        )
+
+                                    [x-content-type-options] => Array
+                                        (
+                                            [0] => nosniff
+                                        )
+
+                                    [access-control-expose-headers] => Array
+                                        (
+                                            [0] => X-WP-Total, X-WP-TotalPages
+                                        )
+
+                                    [access-control-allow-headers] => Array
+                                        (
+                                            [0] => Authorization, Content-Type
+                                        )
+
+                                    [allow] => Array
+                                        (
+                                            [0] => GET
+                                        )
+
+                                    [server] => Array
+                                        (
+                                            [0] => cloudflare-nginx
+                                        )
+
+                                    [cf-ray] => Array
+                                        (
+                                            [0] => 347b5c85fafa4fc3-DEN
+                                        )
+
+                                )
+
+                        )
+
+                    [status_code] => 410
+                    [protocol_version] => 1.1
+                    [success] => 
+                    [redirects] => 0
+                    [url] => https://premium.wpmudev.org/api/uptime/v1/stats/week/?domain=http://rescuedirectory.dev/
+                    [history] => Array
+                        (
+                        )
+
+                    [cookies] => Requests_Cookie_Jar Object
+                        (
+                            [cookies:protected] => Array
+                                (
+                                    [__cfduid] => Requests_Cookie Object
+                                        (
+                                            [name] => __cfduid
+                                            [value] => d8269d80356c25523a8dc759194392ad21490879975
+                                            [attributes] => Requests_Utility_CaseInsensitiveDictionary Object
+                                                (
+                                                    [data:protected] => Array
+                                                        (
+                                                            [expires] => 1522415975
+                                                            [path] => /
+                                                            [domain] => wpmudev.org
+                                                            [httponly] => 1
+                                                        )
+
+                                                )
+
+                                            [flags] => Array
+                                                (
+                                                    [creation] => 1490879975
+                                                    [last-access] => 1490879975
+                                                    [persistent] => 
+                                                    [host-only] => 
+                                                )
+
+                                            [reference_time] => 1490879975
+                                        )
+
+                                    [VN] => Requests_Cookie Object
+                                        (
+                                            [name] => VN
+                                            [value] => 1
+                                            [attributes] => Requests_Utility_CaseInsensitiveDictionary Object
+                                                (
+                                                    [data:protected] => Array
+                                                        (
+                                                            [expires] => 1522415975
+                                                            [max-age] => 1522415975
+                                                            [path] => /
+                                                            [domain] => premium.wpmudev.org
+                                                        )
+
+                                                )
+
+                                            [flags] => Array
+                                                (
+                                                    [creation] => 1490879975
+                                                    [last-access] => 1490879975
+                                                    [persistent] => 
+                                                    [host-only] => 1
+                                                )
+
+                                            [reference_time] => 1490879975
+                                        )
+
+                                    [VNS] => Requests_Cookie Object
+                                        (
+                                            [name] => VNS
+                                            [value] => 1
+                                            [attributes] => Requests_Utility_CaseInsensitiveDictionary Object
+                                                (
+                                                    [data:protected] => Array
+                                                        (
+                                                            [path] => /
+                                                            [domain] => premium.wpmudev.org
+                                                        )
+
+                                                )
+
+                                            [flags] => Array
+                                                (
+                                                    [creation] => 1490879975
+                                                    [last-access] => 1490879975
+                                                    [persistent] => 
+                                                    [host-only] => 1
+                                                )
+
+                                            [reference_time] => 1490879975
+                                        )
+
+                                    [abv] => Requests_Cookie Object
+                                        (
+                                            [name] => abv
+                                            [value] => b
+                                            [attributes] => Requests_Utility_CaseInsensitiveDictionary Object
+                                                (
+                                                    [data:protected] => Array
+                                                        (
+                                                            [expires] => 1490879875
+                                                            [max-age] => 0
+                                                            [path] => /
+                                                            [domain] => premium.wpmudev.org
+                                                        )
+
+                                                )
+
+                                            [flags] => Array
+                                                (
+                                                    [creation] => 1490879975
+                                                    [last-access] => 1490879975
+                                                    [persistent] => 
+                                                    [host-only] => 1
+                                                )
+
+                                            [reference_time] => 1490879975
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [filename:protected] => 
+            [data] => 
+            [headers] => 
+            [status] => 
+        )
+
+)
+
+[30-Mar-2017 13:19:35 UTC] [2017-03-30 07:19:35] - WPHB API: Sending request to https://premium.wpmudev.org/api/performance/v1/site/check/
+[30-Mar-2017 13:19:35 UTC] [2017-03-30 07:19:35] - WPHB API: Arguments:
+[30-Mar-2017 13:19:35 UTC] [2017-03-30 07:19:35] - Array
+(
+    [headers] => Array
+        (
+            [Authorization] => Basic 06ba547ee937f48f77df14989c648630a3f8a299
+        )
+
+    [sslverify] => 
+    [method] => POST
+    [timeout] => 0.1
+    [blocking] => 
+)
+
+[30-Mar-2017 13:19:36 UTC] [2017-03-30 07:19:36] - WPHB API: Response:
+[30-Mar-2017 13:19:36 UTC] [2017-03-30 07:19:36] - Array
+(
+    [headers] => Array
+        (
+        )
+
+    [body] => 
+    [response] => Array
+        (
+            [code] => 
+            [message] => 
+        )
+
+    [cookies] => Array
+        (
+        )
+
+    [http_response] => 
+)
+
+[30-Mar-2017 13:19:37 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:37 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:37 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:38 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:38 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:38 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:40 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:40 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:40 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:49 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:49 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:49 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:50 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:50 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:50 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:51 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:51 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:51 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:51 UTC] [2017-03-30 07:19:51] - WPHB API: Sending request to https://premium.wpmudev.org/api/performance/v1/site/result/latest/?domain=http://rescuedirectory.dev/
+[30-Mar-2017 13:19:51 UTC] [2017-03-30 07:19:51] - WPHB API: Arguments:
+[30-Mar-2017 13:19:51 UTC] [2017-03-30 07:19:51] - Array
+(
+    [headers] => Array
+        (
+            [Authorization] => Basic 06ba547ee937f48f77df14989c648630a3f8a299
+        )
+
+    [sslverify] => 
+    [method] => GET
+    [timeout] => 15
+)
+
+[30-Mar-2017 13:19:52 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:52 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:52 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:52 UTC] [2017-03-30 07:19:52] - WPHB API: Response:
+[30-Mar-2017 13:19:52 UTC] [2017-03-30 07:19:52] - Array
+(
+    [headers] => Requests_Utility_CaseInsensitiveDictionary Object
+        (
+            [data:protected] => Array
+                (
+                    [date] => Thu, 30 Mar 2017 13:19:52 GMT
+                    [content-type] => application/json; charset=UTF-8
+                    [set-cookie] => Array
+                        (
+                            [0] => __cfduid=d5eeab39fefe1851d24268cfce1e4af5b1490879991; expires=Fri, 30-Mar-18 13:19:51 GMT; path=/; domain=.wpmudev.org; HttpOnly
+                            [1] => VN=1; expires=Fri, 30-Mar-2018 13:19:52 GMT; Max-Age=31536000; path=/
+                            [2] => VNS=1; path=/
+                            [3] => abv=b; expires=Thu, 30-Mar-2017 13:18:12 GMT; Max-Age=-100; path=/
+                        )
+
+                    [x-robots-tag] => noindex
+                    [link] => <https://premium.wpmudev.org/api/>; rel="https://api.w.org/"
+                    [x-content-type-options] => Array
+                        (
+                            [0] => nosniff
+                            [1] => nosniff
+                        )
+
+                    [access-control-expose-headers] => X-WP-Total, X-WP-TotalPages
+                    [access-control-allow-headers] => Authorization, Content-Type
+                    [allow] => GET
+                    [content-security-policy] => default-src https: data: wss: blob: 'unsafe-eval' 'unsafe-inline'
+                    [strict-transport-security] => max-age=31536000
+                    [x-xss-protection] => 1; mode=block
+                    [server] => cloudflare-nginx
+                    [cf-ray] => 347b5cede821500b-DEN
+                    [content-encoding] => gzip
+                )
+
+        )
+
+    [body] => {"code":20,"message":"Internal Server Error","data":{"google_error_msg":[{"message":"The IP address for the host rescuedirectory.dev is part of a special or private range. If you can load the page, it may only be accessible inside your local network. Please ensure that the URL can be accessed from the public Internet."}]},"error":true}
+    [response] => Array
+        (
+            [code] => 200
+            [message] => OK
+        )
+
+    [cookies] => Array
+        (
+            [0] => WP_Http_Cookie Object
+                (
+                    [name] => __cfduid
+                    [value] => d5eeab39fefe1851d24268cfce1e4af5b1490879991
+                    [expires] => 1522415991
+                    [path] => /
+                    [domain] => wpmudev.org
+                )
+
+            [1] => WP_Http_Cookie Object
+                (
+                    [name] => VN
+                    [value] => 1
+                    [expires] => 1522415992
+                    [path] => /
+                    [domain] => premium.wpmudev.org
+                )
+
+            [2] => WP_Http_Cookie Object
+                (
+                    [name] => VNS
+                    [value] => 1
+                    [expires] => 
+                    [path] => /
+                    [domain] => premium.wpmudev.org
+                )
+
+            [3] => WP_Http_Cookie Object
+                (
+                    [name] => abv
+                    [value] => b
+                    [expires] => 1490879892
+                    [path] => /
+                    [domain] => premium.wpmudev.org
+                )
+
+        )
+
+    [filename] => 
+    [http_response] => WP_HTTP_Requests_Response Object
+        (
+            [response:protected] => Requests_Response Object
+                (
+                    [body] => {"code":20,"message":"Internal Server Error","data":{"google_error_msg":[{"message":"The IP address for the host rescuedirectory.dev is part of a special or private range. If you can load the page, it may only be accessible inside your local network. Please ensure that the URL can be accessed from the public Internet."}]},"error":true}
+                    [raw] => HTTP/1.1 200 OK
+Date: Thu, 30 Mar 2017 13:19:52 GMT
+Content-Type: application/json; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+Set-Cookie: __cfduid=d5eeab39fefe1851d24268cfce1e4af5b1490879991; expires=Fri, 30-Mar-18 13:19:51 GMT; path=/; domain=.wpmudev.org; HttpOnly
+Set-Cookie: VN=1; expires=Fri, 30-Mar-2018 13:19:52 GMT; Max-Age=31536000; path=/
+Set-Cookie: VNS=1; path=/
+Set-Cookie: abv=b; expires=Thu, 30-Mar-2017 13:18:12 GMT; Max-Age=-100; path=/
+X-Robots-Tag: noindex
+Link: <https://premium.wpmudev.org/api/>; rel="https://api.w.org/"
+X-Content-Type-Options: nosniff
+Access-Control-Expose-Headers: X-WP-Total, X-WP-TotalPages
+Access-Control-Allow-Headers: Authorization, Content-Type
+Allow: GET
+Content-Security-Policy: default-src https: data: wss: blob: 'unsafe-eval' 'unsafe-inline'
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Server: cloudflare-nginx
+CF-RAY: 347b5cede821500b-DEN
+Content-Encoding: gzip
+
+{"code":20,"message":"Internal Server Error","data":{"google_error_msg":[{"message":"The IP address for the host rescuedirectory.dev is part of a special or private range. If you can load the page, it may only be accessible inside your local network. Please ensure that the URL can be accessed from the public Internet."}]},"error":true}
+                    [headers] => Requests_Response_Headers Object
+                        (
+                            [data:protected] => Array
+                                (
+                                    [date] => Array
+                                        (
+                                            [0] => Thu, 30 Mar 2017 13:19:52 GMT
+                                        )
+
+                                    [content-type] => Array
+                                        (
+                                            [0] => application/json; charset=UTF-8
+                                        )
+
+                                    [set-cookie] => Array
+                                        (
+                                            [0] => __cfduid=d5eeab39fefe1851d24268cfce1e4af5b1490879991; expires=Fri, 30-Mar-18 13:19:51 GMT; path=/; domain=.wpmudev.org; HttpOnly
+                                            [1] => VN=1; expires=Fri, 30-Mar-2018 13:19:52 GMT; Max-Age=31536000; path=/
+                                            [2] => VNS=1; path=/
+                                            [3] => abv=b; expires=Thu, 30-Mar-2017 13:18:12 GMT; Max-Age=-100; path=/
+                                        )
+
+                                    [x-robots-tag] => Array
+                                        (
+                                            [0] => noindex
+                                        )
+
+                                    [link] => Array
+                                        (
+                                            [0] => <https://premium.wpmudev.org/api/>; rel="https://api.w.org/"
+                                        )
+
+                                    [x-content-type-options] => Array
+                                        (
+                                            [0] => nosniff
+                                            [1] => nosniff
+                                        )
+
+                                    [access-control-expose-headers] => Array
+                                        (
+                                            [0] => X-WP-Total, X-WP-TotalPages
+                                        )
+
+                                    [access-control-allow-headers] => Array
+                                        (
+                                            [0] => Authorization, Content-Type
+                                        )
+
+                                    [allow] => Array
+                                        (
+                                            [0] => GET
+                                        )
+
+                                    [content-security-policy] => Array
+                                        (
+                                            [0] => default-src https: data: wss: blob: 'unsafe-eval' 'unsafe-inline'
+                                        )
+
+                                    [strict-transport-security] => Array
+                                        (
+                                            [0] => max-age=31536000
+                                        )
+
+                                    [x-xss-protection] => Array
+                                        (
+                                            [0] => 1; mode=block
+                                        )
+
+                                    [server] => Array
+                                        (
+                                            [0] => cloudflare-nginx
+                                        )
+
+                                    [cf-ray] => Array
+                                        (
+                                            [0] => 347b5cede821500b-DEN
+                                        )
+
+                                    [content-encoding] => Array
+                                        (
+                                            [0] => gzip
+                                        )
+
+                                )
+
+                        )
+
+                    [status_code] => 200
+                    [protocol_version] => 1.1
+                    [success] => 1
+                    [redirects] => 0
+                    [url] => https://premium.wpmudev.org/api/performance/v1/site/result/latest/?domain=http://rescuedirectory.dev/
+                    [history] => Array
+                        (
+                        )
+
+                    [cookies] => Requests_Cookie_Jar Object
+                        (
+                            [cookies:protected] => Array
+                                (
+                                    [__cfduid] => Requests_Cookie Object
+                                        (
+                                            [name] => __cfduid
+                                            [value] => d5eeab39fefe1851d24268cfce1e4af5b1490879991
+                                            [attributes] => Requests_Utility_CaseInsensitiveDictionary Object
+                                                (
+                                                    [data:protected] => Array
+                                                        (
+                                                            [expires] => 1522415991
+                                                            [path] => /
+                                                            [domain] => wpmudev.org
+                                                            [httponly] => 1
+                                                        )
+
+                                                )
+
+                                            [flags] => Array
+                                                (
+                                                    [creation] => 1490879992
+                                                    [last-access] => 1490879992
+                                                    [persistent] => 
+                                                    [host-only] => 
+                                                )
+
+                                            [reference_time] => 1490879992
+                                        )
+
+                                    [VN] => Requests_Cookie Object
+                                        (
+                                            [name] => VN
+                                            [value] => 1
+                                            [attributes] => Requests_Utility_CaseInsensitiveDictionary Object
+                                                (
+                                                    [data:protected] => Array
+                                                        (
+                                                            [expires] => 1522415992
+                                                            [max-age] => 1522415992
+                                                            [path] => /
+                                                            [domain] => premium.wpmudev.org
+                                                        )
+
+                                                )
+
+                                            [flags] => Array
+                                                (
+                                                    [creation] => 1490879992
+                                                    [last-access] => 1490879992
+                                                    [persistent] => 
+                                                    [host-only] => 1
+                                                )
+
+                                            [reference_time] => 1490879992
+                                        )
+
+                                    [VNS] => Requests_Cookie Object
+                                        (
+                                            [name] => VNS
+                                            [value] => 1
+                                            [attributes] => Requests_Utility_CaseInsensitiveDictionary Object
+                                                (
+                                                    [data:protected] => Array
+                                                        (
+                                                            [path] => /
+                                                            [domain] => premium.wpmudev.org
+                                                        )
+
+                                                )
+
+                                            [flags] => Array
+                                                (
+                                                    [creation] => 1490879992
+                                                    [last-access] => 1490879992
+                                                    [persistent] => 
+                                                    [host-only] => 1
+                                                )
+
+                                            [reference_time] => 1490879992
+                                        )
+
+                                    [abv] => Requests_Cookie Object
+                                        (
+                                            [name] => abv
+                                            [value] => b
+                                            [attributes] => Requests_Utility_CaseInsensitiveDictionary Object
+                                                (
+                                                    [data:protected] => Array
+                                                        (
+                                                            [expires] => 1490879892
+                                                            [max-age] => 0
+                                                            [path] => /
+                                                            [domain] => premium.wpmudev.org
+                                                        )
+
+                                                )
+
+                                            [flags] => Array
+                                                (
+                                                    [creation] => 1490879992
+                                                    [last-access] => 1490879992
+                                                    [persistent] => 
+                                                    [host-only] => 1
+                                                )
+
+                                            [reference_time] => 1490879992
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [filename:protected] => 
+            [data] => 
+            [headers] => 
+            [status] => 
+        )
+
+)
+
+[30-Mar-2017 13:19:56 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:56 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:56 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:58 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:58 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:19:58 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:20:08 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:20:08 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:20:08 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:20:10 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:20:10 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:20:10 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:21:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:21:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:21:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:23:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:23:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:23:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:25:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:25:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:25:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:27:12 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:27:12 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:27:12 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:29:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:29:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:29:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:31:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:31:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:31:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:32:21 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:32:21 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:32:21 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:33:44 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:33:44 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:33:44 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:34:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:34:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:34:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:35:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:35:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:35:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:36:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:36:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:36:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:37:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:37:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:37:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:38:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:38:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:38:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:39:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:39:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:39:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:41:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:41:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:41:42 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:08 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:08 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:08 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:14 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:14 UTC] PHP Notice:  Undefined index: title in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/plugins/events-and-bookings/lib/widgets/UpcomingCalendar_Widget.class.php on line 89
+[30-Mar-2017 13:42:14 UTC] PHP Notice:  Undefined index: network in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/plugins/events-and-bookings/lib/widgets/UpcomingCalendar_Widget.class.php on line 90
+[30-Mar-2017 13:42:14 UTC] PHP Notice:  Use of undefined constant Y - assumed 'Y' in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/themes/FoundationPress/footer.php on line 54
+[30-Mar-2017 13:42:31 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:31 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:31 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:31 UTC] PHP Notice:  Undefined index: network in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/plugins/events-and-bookings/lib/widgets/UpcomingCalendar_Widget.class.php on line 170
+[30-Mar-2017 13:42:43 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:43 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:42:43 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:43:09 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:43:09 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:43:09 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:44:45 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:44:45 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:44:45 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:45:10 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:45:10 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:45:10 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:46:45 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:46:45 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:46:45 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:47:10 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:47:10 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:47:10 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:48:46 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:48:46 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:48:46 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:48:46 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:48:46 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:48:46 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:49:11 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:49:11 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:49:11 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:49:12 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:49:12 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:49:12 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:50:47 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:50:47 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:50:47 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:51:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:51:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:51:13 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:55:58 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:55:58 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:55:58 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:55:59 UTC] PHP Notice:  Undefined index: title in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/plugins/events-and-bookings/lib/widgets/UpcomingCalendar_Widget.class.php on line 89
+[30-Mar-2017 13:55:59 UTC] PHP Notice:  Undefined index: network in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/plugins/events-and-bookings/lib/widgets/UpcomingCalendar_Widget.class.php on line 90
+[30-Mar-2017 13:55:59 UTC] PHP Notice:  Use of undefined constant Y - assumed 'Y' in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/themes/FoundationPress/footer.php on line 54
+[30-Mar-2017 13:58:43 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategories is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:58:43 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCategorySites is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:58:43 UTC] PHP Notice:  The called constructor method for WP_Widget in Bcat_WidgetCloud is <strong>deprecated</strong> since version 4.3.0! Use <pre>__construct()</pre> instead. in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-includes/functions.php on line 3892
+[30-Mar-2017 13:58:43 UTC] PHP Notice:  Undefined index: title in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/plugins/events-and-bookings/lib/widgets/UpcomingCalendar_Widget.class.php on line 89
+[30-Mar-2017 13:58:43 UTC] PHP Notice:  Undefined index: network in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/plugins/events-and-bookings/lib/widgets/UpcomingCalendar_Widget.class.php on line 90
+[30-Mar-2017 13:58:43 UTC] PHP Notice:  Use of undefined constant Y - assumed 'Y' in /Users/kkerley/Documents/www/sites/rescuedirectory/wp-content/themes/FoundationPress/footer.php on line 54
