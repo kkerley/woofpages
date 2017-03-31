@@ -75,4 +75,10 @@
 
 
 	<section class="container" id="main_container">
-		<?php do_action( 'foundationpress_after_header' );
+		<?php do_action( 'foundationpress_after_header' ); ?>
+
+        <section class="wrapper--breadcrumbs">
+            <div class="breadcrumbs--inner">
+	            <?php bcn_display($return = false, $linked = true, $reverse = false); ?>
+            </div>
+        </section>

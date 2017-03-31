@@ -106,14 +106,18 @@
     }
   }
 
+  .sticky-site-title{
+    display: none;
+  }
+
   &.is-stuck{
     background: darken(#fff, 3%);
     box-shadow: 0 3px 3px -3px #000;
     margin-top: 0 !important;
 
-    //.sticky-site-title{
-    //  display: block;
-    //}
+    .sticky-site-title{
+      display: block;
+    }
 
     .logged-in &{
       margin-top: 2rem !important;
@@ -230,5 +234,17 @@
     a{
       font-size: 0.9rem;
     }
+  }
+}
+
+.wrapper--breadcrumbs{
+  .breadcrumbs--inner{
+    @include grid-col-row();
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .home &{
+    display: none;
   }
 }

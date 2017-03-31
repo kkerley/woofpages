@@ -28,26 +28,7 @@ get_header(); ?>
     $featured_dogs_query = new WP_Query($featured_dogs_args);
 ?>
 
-<header id="front-hero" role="banner" <?php echo !empty(types_render_field('mission-statement-background-image', array('raw' => true))) ? ' style="background-image: url(' . types_render_field('mission-statement-background-image', array('raw' => true)) . ');"' : ''; ?>>
-	<div class="marketing">
-		<div class="tagline">
-			<h1><?php echo types_render_field( 'mission-statement-headline' ); ?></h1>
-			<?php echo types_render_field( 'mission-statement-content' ); ?>
-            <?php if(!empty(types_render_field('mission-statement-cta-url'))): ?>
-			<a role="button" class="primary large button sites-button" href="<?php echo types_render_field('mission-statement-cta-url'); ?>"><?php echo types_render_field('mission-statement-cta-text') ?></a>
-            <?php endif; ?>
-		</div>
 
-<!--		<div id="watch">-->
-<!--			<section id="stargazers">-->
-<!--				<a href="https://github.com/olefredrik/foundationpress">1.5k stargazers</a>-->
-<!--			</section>-->
-<!--			<section id="twitter">-->
-<!--				<a href="https://twitter.com/olefredrik">@olefredrik</a>-->
-<!--			</section>-->
-<!--		</div>-->
-	</div>
-</header>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
@@ -151,6 +132,28 @@ get_header(); ?>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
+
+    <header id="front-hero" role="banner" <?php echo !empty(types_render_field('mission-statement-background-image', array('raw' => true))) ? ' style="background-image: url(' . types_render_field('mission-statement-background-image', array('raw' => true)) . ');"' : ''; ?>>
+        <div class="marketing">
+            <div class="tagline">
+                <h1><?php echo types_render_field( 'mission-statement-headline' ); ?></h1>
+				<?php echo types_render_field( 'mission-statement-content' ); ?>
+				<?php if(!empty(types_render_field('mission-statement-cta-url'))): ?>
+                    <a role="button" class="primary large button sites-button" href="<?php echo types_render_field('mission-statement-cta-url'); ?>"><?php echo types_render_field('mission-statement-cta-text') ?></a>
+				<?php endif; ?>
+            </div>
+
+            <!--		<div id="watch">-->
+            <!--			<section id="stargazers">-->
+            <!--				<a href="https://github.com/olefredrik/foundationpress">1.5k stargazers</a>-->
+            <!--			</section>-->
+            <!--			<section id="twitter">-->
+            <!--				<a href="https://twitter.com/olefredrik">@olefredrik</a>-->
+            <!--			</section>-->
+            <!--		</div>-->
+        </div>
+    </header>
+
 <?php
     $blog_id = get_current_blog_id();
     if($blog_id !== 1): // checking to make sure this isn't the top-level site
@@ -207,7 +210,7 @@ get_header(); ?>
 
 <section class="wrapper--events">
     <div class="events--inner">
-        <div class="events--title">
+        <div class="wrapper--headline">
             <h2><i class="fa fa-calendar"></i> Upcoming events</h2>
         </div>
         <div class="events--calendar">

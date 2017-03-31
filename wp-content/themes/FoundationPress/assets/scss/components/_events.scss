@@ -1,0 +1,13 @@
+.single-incsub_event{
+  #wpmudevevents-wrapper {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .wpmudevevents-contentmeta{
+    background-color: lighten($alert-color, 10%);
+    border-radius: .5rem;
+    margin: 2rem 0;
+    padding: 1rem;
+  }
+} // end of .single-incsub_event
+
