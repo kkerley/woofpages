@@ -6880,11 +6880,11 @@ a.thumbnail {
     float: none; }
 
 .header {
+  background: #555555;
   -webkit-background-size: cover;
           background-size: cover;
   overflow: visible;
   position: relative;
-  padding-top: 2.5rem;
   text-align: center;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -6892,9 +6892,13 @@ a.thumbnail {
   @media screen and (max-width: 800px) {
     .header {
       padding-top: 0; } }
+  .header .wrapper--site-title {
+    padding: 2rem 0; }
   .header .headline {
-    color: #555555;
-    margin-bottom: 2.5rem; }
+    color: #fff; }
+    .header .headline a, .header .headline a:hover, .header .headline a:visited {
+      color: #fff;
+      text-decoration: none; }
     @media screen and (max-width: 800px) {
       .header .headline {
         line-height: 2;
@@ -6905,43 +6909,43 @@ a.thumbnail {
           margin-bottom: 3rem; } }
     .header .headline small {
       color: #cacaca; }
-  .header.with-logo {
-    padding-top: 0; }
-    .header.with-logo h2 {
-      position: absolute;
-      left: -9999px; }
-    .header.with-logo .uploaded-logo {
-      max-width: 64rem;
-      margin-right: auto;
-      margin-left: auto;
-      width: 100%;
-      float: left;
-      padding-right: 0.625rem;
-      padding-left: 0.625rem;
-      float: none !important; }
-      .header.with-logo .uploaded-logo::before, .header.with-logo .uploaded-logo::after {
-        display: table;
-        content: ' '; }
-      .header.with-logo .uploaded-logo::after {
-        clear: both; }
-      @media print, screen and (min-width: 40em) {
-        .header.with-logo .uploaded-logo {
-          padding-right: 0.9375rem;
-          padding-left: 0.9375rem; } }
-      .header.with-logo .uploaded-logo:last-child:not(:first-child) {
-        float: right; }
-      .header.with-logo .uploaded-logo, .header.with-logo .uploaded-logo:last-child {
-        float: none; }
-      .header.with-logo .uploaded-logo::before, .header.with-logo .uploaded-logo::after {
-        display: table;
-        content: ' '; }
-      .header.with-logo .uploaded-logo::after {
-        clear: both; }
-      .header.with-logo .uploaded-logo img {
-        display: block;
-        margin: 0;
-        max-width: 100%;
-        width: 100%; }
+  .header.with-logo .wrapper--site-title {
+    padding: 0; }
+  .header.with-logo h2 {
+    position: absolute;
+    left: -9999px; }
+  .header.with-logo .uploaded-logo {
+    max-width: 64rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    float: none !important; }
+    .header.with-logo .uploaded-logo::before, .header.with-logo .uploaded-logo::after {
+      display: table;
+      content: ' '; }
+    .header.with-logo .uploaded-logo::after {
+      clear: both; }
+    @media print, screen and (min-width: 40em) {
+      .header.with-logo .uploaded-logo {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    .header.with-logo .uploaded-logo:last-child:not(:first-child) {
+      float: right; }
+    .header.with-logo .uploaded-logo, .header.with-logo .uploaded-logo:last-child {
+      float: none; }
+    .header.with-logo .uploaded-logo::before, .header.with-logo .uploaded-logo::after {
+      display: table;
+      content: ' '; }
+    .header.with-logo .uploaded-logo::after {
+      clear: both; }
+    .header.with-logo .uploaded-logo img {
+      display: block;
+      margin: 0;
+      max-width: 100%;
+      width: 100%; }
 
 .primary-nav {
   background-color: #fff;
@@ -7344,7 +7348,7 @@ body#tinymce {
           color: #8a8a8a; }
     .card .card-content .button {
       margin-bottom: 0; }
-  .card.vertical {
+  .vertical .card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -7352,7 +7356,7 @@ body#tinymce {
     max-width: 400px;
     overflow: hidden;
     width: 50%; }
-    .card.vertical .card-image img {
+    .vertical .card .card-image img {
       float: right;
       margin: 0.5rem 0.5rem 0; }
   .card.dog .card-content p {
@@ -7364,6 +7368,21 @@ body#tinymce {
 
 .available {
   color: #38a541; }
+
+.wrapper--dogs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+  .wrapper--dogs .card {
+    width: calc(50% - 0.5rem); }
+    .wrapper--dogs .card:nth-of-type(2n) {
+      margin-left: 0.5rem; }
+    .wrapper--dogs .card:nth-of-type(2n+1) {
+      margin-right: 0.5rem; }
 
 #featured-hero {
   -webkit-background-size: cover;
@@ -7548,6 +7567,8 @@ body#tinymce {
   color: #fff;
   margin: 2rem 0;
   padding: 1rem 2rem; }
+  .wrapper--adoptions p {
+    font-size: 1.2rem; }
   .wrapper--adoptions.adopted {
     background-color: #ED6A5A; }
   .wrapper--adoptions.pending {
@@ -7897,7 +7918,9 @@ body#tinymce {
     .wrapper--events .events--upcoming:last-child:not(:first-child) {
       float: right; }
 
-.post-type-archive-dog .js-wpv-view-layout {
+.post-type-archive-dog .js-wpv-view-layout,
+.tax-breed .js-wpv-view-layout,
+.tax-characteristic .js-wpv-view-layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7905,11 +7928,17 @@ body#tinymce {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
-  .post-type-archive-dog .js-wpv-view-layout .card {
+  .post-type-archive-dog .js-wpv-view-layout .card,
+  .tax-breed .js-wpv-view-layout .card,
+  .tax-characteristic .js-wpv-view-layout .card {
     max-width: calc(50% - 0.5rem); }
-    .post-type-archive-dog .js-wpv-view-layout .card:nth-of-type(2n+1) {
+    .post-type-archive-dog .js-wpv-view-layout .card:nth-of-type(2n+1),
+    .tax-breed .js-wpv-view-layout .card:nth-of-type(2n+1),
+    .tax-characteristic .js-wpv-view-layout .card:nth-of-type(2n+1) {
       margin-right: 0.5rem; }
-    .post-type-archive-dog .js-wpv-view-layout .card:nth-of-type(2n) {
+    .post-type-archive-dog .js-wpv-view-layout .card:nth-of-type(2n),
+    .tax-breed .js-wpv-view-layout .card:nth-of-type(2n),
+    .tax-characteristic .js-wpv-view-layout .card:nth-of-type(2n) {
       margin-left: 0.5rem; }
 
 #page {
@@ -8071,6 +8100,9 @@ body#tinymce {
           position: relative;
           left: 33.33333%; } }
 
+.single-dog .main-content .callout.warning {
+  margin: 2rem 0; }
+
 .dog-intro header {
   margin-bottom: 2rem; }
   .dog-intro header p {
@@ -8100,6 +8132,7 @@ body#tinymce {
     border-top: solid 20px #ED6A5A; }
 
 .personal-details {
+  margin-bottom: 4rem;
   margin-top: 3rem; }
   .personal-details h4 {
     margin-top: 4rem; }

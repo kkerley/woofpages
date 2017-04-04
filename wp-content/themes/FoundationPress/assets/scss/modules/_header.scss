@@ -6,12 +6,13 @@
   padding: 0.25rem 0 0.5rem;
 }
 
-.header {
-  // background: $secondary-color;
+.header{
+  background: $darker-gray;
   background-size: cover;
   overflow: visible;
   position: relative;
-  padding-top: 2.5rem;
+
+  // padding-bottom: 20rem;
   // padding-bottom: $header-height + ($subnav-link-padding * 2 + $subnav-font-size - 0.15rem);
   text-align: center;
   transition: all 0.25s ease;
@@ -21,10 +22,19 @@
     padding-top: 0;
   }
 
+  .wrapper--site-title{
+    padding: 2rem 0;
+  }
+
   .headline {
-    color: $darker-gray;
-    // color: #fff;
-    margin-bottom: 2.5rem;
+    // color: $darker-gray;
+    color: #fff;
+    // margin-bottom: 2.5rem;
+
+    a, a:hover, a:visited{
+      color: #fff;
+      text-decoration: none;
+    }
 
     @media screen and (max-width: 800px){
       //font-size: 2.5rem;
@@ -45,7 +55,10 @@
   }
 
   &.with-logo{
-    padding-top: 0;
+
+    .wrapper--site-title{
+      padding: 0;
+    }
 
     h2{
       position: absolute;

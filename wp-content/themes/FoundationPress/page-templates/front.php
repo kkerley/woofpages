@@ -7,9 +7,11 @@ get_header(); ?>
 <?php
     $featured_dogs_args = array(
         'post_type'         => 'dog',
+        'post_status'       => 'publish',
+        'posts_per_page'    => 5,
         'orderby'           => 'date' ,
         'order'             => 'DESC' ,
-        'posts_per_page'    => 5,
+        'numberposts'       =>  5,
         'meta_query'        => array(
             'relation'      => 'AND',
             array(
@@ -252,7 +254,7 @@ get_header(); ?>
                 <div class="wrapper--headline">
                     <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Announcements</h3>
                 </div>
-                <div class="announcement--inner">
+                <div class="announcement--inner vertical">
                     <?php
                         if($announcements_query->have_posts()):
                             while($announcements_query->have_posts()): $announcements_query->the_post();
@@ -286,12 +288,12 @@ get_header(); ?>
                 <div class="wrapper--headline">
                     <h3><i class="fa fa-rss" aria-hidden="true"></i> Latest from our blog</h3>
                 </div>
-                <div class="posts--inner">
+                <div class="posts--inner vertical">
 		            <?php
 		            if($posts_query->have_posts()):
 			            while($posts_query->have_posts()): $posts_query->the_post();
 				            ?>
-                            <div class="card vertical">
+                            <div class="card">
                                 <div class="card-image">
 						            <?php the_post_thumbnail('dog-square-400'); ?>
                                 </div>
@@ -304,7 +306,7 @@ get_header(); ?>
 				            <?php
 			            endwhile;
 		            else:
-			            echo '<p><em>No announcements at this time</em></p>';
+			            echo '<p><em>No blog posts at this time</em></p>';
 		            endif;
 
 		            wp_reset_postdata();

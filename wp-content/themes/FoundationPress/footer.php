@@ -51,7 +51,7 @@
 
             <footer id="copyright">
                 <div class="copyright--inner">
-                    <p>&copy; <?php echo date(Y); ?> <?php bloginfo('name'); ?>, part of the <a href="http://www.woofpages.net">Woof Pages Network</a>.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>, part of the <a href="http://www.woofpages.net">Woof Pages Network</a>.</p>
                 </div>
             </footer>
 		</div>

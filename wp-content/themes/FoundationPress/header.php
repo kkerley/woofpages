@@ -55,12 +55,12 @@
         </div>
 
         <div class="wrapper--site-title">
-            <h2 class="headline"><?php bloginfo( 'name' ); ?>  <small><?php bloginfo( 'description' ); ?></small></h2>
+            <h2 class="headline"><a href="/"><?php bloginfo( 'name' ); ?></a></h2>
 
 	        <?php
 	        if($rescue_logo): ?>
                 <div class="uploaded-logo">
-                    <img src="<?php echo $rescue_logo ?>" alt="<?php echo get_bloginfo( 'name' ) ?>" />
+                    <a href="/"><img src="<?php echo $rescue_logo ?>" alt="<?php echo get_bloginfo( 'name' ) ?>" /></a>
                 </div>
 		        <?php
 	        endif;
@@ -77,8 +77,8 @@
 	<section class="container" id="main_container">
 		<?php do_action( 'foundationpress_after_header' ); ?>
 
-        <section class="wrapper--breadcrumbs">
-            <div class="breadcrumbs--inner">
-	            <?php bcn_display($return = false, $linked = true, $reverse = false); ?>
-            </div>
-        </section>
+<!--        <section class="wrapper--breadcrumbs">-->
+<!--            <div class="breadcrumbs--inner">-->
+<!--	            --><?php //bcn_display($return = false, $linked = true, $reverse = false); ?>
+<!--            </div>-->
+<!--        </section>-->

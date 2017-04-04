@@ -333,7 +333,7 @@ function woofpages_rescue_custom_logo_render(){
 <!--	--><?php //if ( '' != $options['woofpages_rescue_custom_logo'] ): ?>
 <!--		<input id="delete_logo_button" name="woofpages_settings[woofpages_delete_logo]" type="submit" class="button" value="--><?php //_e( 'Delete Logo', 'wordpress' ); ?><!--" />-->
 <!--	--><?php //endif; ?>
-	<span class="description"><?php _e('Upload an image or choose one from the Media Library for the logo/banner.', 'wordpress' ); ?></span>
+	<span class="description"><?php _e('Upload an image or choose one from the Media Library for the logo/banner. To remove, simply highlight the text in the field to the left, delete it, and save.', 'wordpress' ); ?></span>
 
 <?php
 }

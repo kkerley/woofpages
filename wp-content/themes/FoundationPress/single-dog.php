@@ -38,28 +38,12 @@ get_header(); ?>
         <section class="dog-intro">
             <header>
 	            <?php
-	            $breeds = get_the_terms(get_the_ID(), 'breed');
-	            $characteristics = get_the_terms(get_the_ID(), 'characteristic');
+	            // $breeds = get_the_terms(get_the_ID(), 'breed');
+	            // $characteristics = get_the_terms(get_the_ID(), 'characteristic');
 	            ?>
                 <h1 class="entry-title"><?php the_title(); ?></h1>
                 <p>
-		            <?php
-		            $output = "";
-		            $count = 0;
-
-		            foreach($breeds as $breed):
-			            $output .= '<a href="' . get_term_link($breed->slug, 'breed') . '">';
-			            $output .= $breed->name;
-			            $output .= '</a>';
-			            $count++;
-			            if($count < count($breeds)):
-				            $output .= ' / ';
-			            endif;
-		            endforeach;
-
-		            $output .= " | ";
-		            echo $output;
-		            ?>
+		            <?php echo woofpages_current_dog_breeds(get_the_ID()); ?>
 
                     <?php if(!empty(types_render_field('sex'))): ?>
 	                    <?php echo types_render_field('sex'); ?>
@@ -78,24 +62,9 @@ get_header(); ?>
 	                <?php endif; ?>
                 </p>
 
-	            <?php if(count($characteristics) > 0): ?>
-                    <!--                    <h4><i class="fa fa-list"></i> Characteristics</h4>-->
-
-                    <div class="wrapper--characteristics">
-			            <?php
-			            $char_output = "";
-
-			            foreach($characteristics as $characteristic):
-				            $char_output .= '<a href="' . get_term_link($characteristic->slug, 'characteristic') . '" class="label secondary">';
-				            $char_output .= $characteristic->name;
-				            $char_output .= '</a> ';
-
-			            endforeach;
-
-			            echo $char_output;
-			            ?>
-                    </div>
-	            <?php endif; ?>
+                <div class="wrapper--characteristics">
+                    <?php echo woofpages_current_dog_characteristics(get_the_ID()); ?>
+                </div>
 
 	            <?php if(!empty(types_render_field('location')) && types_render_field('adoption-status') !== 'Adopted'): ?>
                     <p><em><i class="fa fa-globe"></i> Currently located in <?php echo types_render_field('location');?></em></p>

@@ -9,9 +9,8 @@
 ?>
 <aside class="sidebar">
     <?php
-        $queried_obj = get_queried_object();
 
-        if($queried_obj->post_type === 'dog'):
+        if(is_singular('dog')):
     ?>
             <div class="dog-featured-image hide-for-small-only<?php echo types_render_field('adoption-status') === 'Adopted' ? ' adopted' : '' ; ?>">
 		        <?php the_post_thumbnail('large'); ?>

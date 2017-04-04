@@ -30,6 +30,14 @@
   }
 }
 
+.single-dog{
+  .main-content{
+    .callout.warning{
+      margin: 2rem 0;
+    }
+  }
+}
+
 .tax-characteristic,
 .tax-breed{
   .main-content{
@@ -88,6 +96,7 @@
 }
 
 .personal-details{
+  margin-bottom: 4rem;
   margin-top: 3rem;
 
   h4{
@@ -142,3 +151,10 @@
 .taxonomy-slug{
   text-transform: capitalize;
 }
+
+//#page{
+//  background-color: #fff;
+//  margin-top: -18rem;
+//  position: relative;
+//  z-index: 100;
+//}

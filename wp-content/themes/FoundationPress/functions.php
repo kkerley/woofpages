@@ -75,11 +75,11 @@ if ( ! function_exists('write_log')) {
 
 $blog_id = get_current_blog_id();
 if($blog_id !== 1) { // checking to make sure this isn't the top-level site
-	add_action( 'gform_after_submission_1', 'find_master_adoption_application', 10, 2 );
+	add_action( 'gform_after_submission_1', 'woofpages_find_master_adoption_application', 10, 2 );
 }
 
 // attempting to get a form based on an email address
-function find_master_adoption_application($entry, $form){
+function woofpages_find_master_adoption_application($entry, $form){
 
 	// Site-specific adoption form is ID 1
 	$subsite_adoption_app_email = $entry['2']; // 'email' is field 2
@@ -101,4 +101,60 @@ function find_master_adoption_application($entry, $form){
 	write_log($entries);
 
 	restore_current_blog();
+}
+
+// Modifying the loop for the dog archive page to remove adopted and special needs dogs
+function woofpages_remove_adopted_and_special_needs_dogs($query){
+	if( !is_admin() && is_post_type_archive( 'dog' ) ){
+		$meta_query = array(
+			'relation'      => 'OR',
+			array(
+				'key'       => 'wpcf-adoption-status',
+				'value'     => 'Available',
+				'compare'   => '='
+			),
+			array(
+				'key'       => 'wpcf-adoption-status',
+				'value'     => 'Pending Adoption',
+				'compare'   => '='
+			)
+		);
+		$query->set('posts_per_page', -1);
+		$query->set('meta_query', $meta_query);
+	}
+}
+add_action( 'pre_get_posts', 'woofpages_remove_adopted_and_special_needs_dogs', 1 );
+
+// Custom taxonomy list output
+function woofpages_current_dog_breeds($dog_id){
+	$output = "";
+	$count = 0;
+	$breeds = get_the_terms($dog_id, 'breed');
+
+	foreach($breeds as $breed):
+		$output .= '<a href="' . get_term_link($breed->slug, 'breed') . '">';
+		$output .= $breed->name;
+		$output .= '</a>';
+		$count++;
+		if($count < count($breeds)):
+			$output .= ' / ';
+		endif;
+	endforeach;
+
+	$output .= " | ";
+	return $output;
+}
+
+function woofpages_current_dog_characteristics($dog_id){
+	$characteristics = get_the_terms(get_the_ID(), 'characteristic');
+	$char_output = "";
+
+	foreach($characteristics as $characteristic):
+		$char_output .= '<a href="' . get_term_link($characteristic->slug, 'characteristic') . '" class="label secondary">';
+		$char_output .= $characteristic->name;
+		$char_output .= '</a> ';
+
+	endforeach;
+
+	return $char_output;
 }
