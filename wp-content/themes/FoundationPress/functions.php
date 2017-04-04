@@ -105,7 +105,7 @@ function woofpages_find_master_adoption_application($entry, $form){
 
 // Modifying the loop for the dog archive page to remove adopted and special needs dogs
 function woofpages_remove_adopted_and_special_needs_dogs($query){
-	if( !is_admin() && is_post_type_archive( 'dog' ) ){
+	if( !is_admin() && is_post_type_archive( 'dog' ) && $query->is_main_query() ){
 		$meta_query = array(
 			'relation'      => 'OR',
 			array(

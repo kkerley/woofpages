@@ -1,1 +1,4 @@
 wp-config.php
+
+*.log
+.idea/*

@@ -7117,11 +7117,11 @@ a.thumbnail {
   display: none; }
 
 #footer-container {
-  background-color: #e6e6e6;
+  background-color: #333;
+  color: #ccc;
   max-width: 100%;
   width: 100%;
-  margin: 4rem auto 0;
-  border-top: 1px solid #ccc; }
+  margin: 4rem auto 0; }
   .home #footer-container,
   .single-dog #footer-container {
     margin-top: 0; }
@@ -7253,6 +7253,8 @@ body#tinymce {
   color: #fff; }
 
 .card {
+  background-color: #f2f2f2;
+  border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
