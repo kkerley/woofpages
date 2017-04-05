@@ -15,6 +15,7 @@
   }
 
   .card-image{
+    overflow: hidden;
     position: relative;
 
     img{
@@ -69,6 +70,7 @@
     }
   }
 
+  // .slide-up-content,
   .card-content{
     border-radius: 1rem;
     display: flex;
@@ -147,6 +149,21 @@
       margin-bottom: 0;
     }
   }
+
+  //.slide-up-content{
+  //  background-color: rgba(#fff, 0.9);
+  //  border-radius: 0;
+  //  position: absolute;
+  //  height: 100%;
+  //  width: 100%;
+  //  left: 0;
+  //  bottom: -100%;
+  //  transition: all 0.25s ease;
+  //}
+  //
+  //.anim--slide-up{
+  //  bottom: 0;
+  //}
 
   .vertical &{
     flex-flow: column nowrap;

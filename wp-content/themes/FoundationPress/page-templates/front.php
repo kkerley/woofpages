@@ -32,77 +32,56 @@ get_header(); ?>
 
 
 
+
+<header id="front-hero" role="banner" <?php echo !empty(types_render_field('mission-statement-background-image', array('raw' => true))) ? ' style="background-image: url(' . types_render_field('mission-statement-background-image', array('raw' => true)) . ');"' : ''; ?>>
+    <div class="marketing">
+        <div class="tagline">
+            <h1><?php echo types_render_field( 'mission-statement-headline' ); ?></h1>
+            <?php echo types_render_field( 'mission-statement-content' ); ?>
+            <?php if(!empty(types_render_field('mission-statement-cta-url'))): ?>
+                <a role="button" class="primary large button sites-button" href="<?php echo types_render_field('mission-statement-cta-url'); ?>"><?php echo types_render_field('mission-statement-cta-text') ?></a>
+            <?php endif; ?>
+        </div>
+    </div>
+</header>
+
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-<section class="intro" role="main">
-	<div class="fp-intro">
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-			<div class="entry-content<?php echo $featured_dogs_query->post_count > 0 ? ' has-featured-dogs' : '' ?>">
-				<?php the_content(); ?>
-			</div>
-
-            <?php
-                if($featured_dogs_query->have_posts()): ?>
-                    <div class="featured-dogs">
-                        <h3><i class="fa fa-certificate" aria-hidden="true"></i> Featured</h3>
-                        <div class="featured-dogs--inner vertical">
-                    <?php
-                        while($featured_dogs_query->have_posts()): $featured_dogs_query->the_post();
-	                        # $breeds = get_the_terms(get_the_ID(), 'breed');
-	                        # $characteristics = get_the_terms(get_the_ID(), 'characteristic');
-                    ?>
-
-	                        <?php get_template_part( 'template-parts/woofpages/_card_dog'); ?>
-
-                            <?php
-                        endwhile; ?>
-                    </div>
+    <section class="intro" role="main">
+        <div class="fp-intro">
+            <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+				<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
+                <div class="entry-content">
+					<?php the_content(); ?>
                 </div>
-            <?php
-                endif;
-            wp_reset_postdata();
-            ?>
-		</div>
-	</div>
-</section>
+            </div>
+        </div>
+    </section>
 <?php endwhile;?>
 <?php do_action( 'foundationpress_after_content' ); ?>
-
-
-    <header id="front-hero" role="banner" <?php echo !empty(types_render_field('mission-statement-background-image', array('raw' => true))) ? ' style="background-image: url(' . types_render_field('mission-statement-background-image', array('raw' => true)) . ');"' : ''; ?>>
-        <div class="marketing">
-            <div class="tagline">
-                <h1><?php echo types_render_field( 'mission-statement-headline' ); ?></h1>
-				<?php echo types_render_field( 'mission-statement-content' ); ?>
-				<?php if(!empty(types_render_field('mission-statement-cta-url'))): ?>
-                    <a role="button" class="primary large button sites-button" href="<?php echo types_render_field('mission-statement-cta-url'); ?>"><?php echo types_render_field('mission-statement-cta-text') ?></a>
-				<?php endif; ?>
-            </div>
-
-            <!--		<div id="watch">-->
-            <!--			<section id="stargazers">-->
-            <!--				<a href="https://github.com/olefredrik/foundationpress">1.5k stargazers</a>-->
-            <!--			</section>-->
-            <!--			<section id="twitter">-->
-            <!--				<a href="https://twitter.com/olefredrik">@olefredrik</a>-->
-            <!--			</section>-->
-            <!--		</div>-->
-        </div>
-    </header>
 
 <?php
     $blog_id = get_current_blog_id();
     if($blog_id !== 1): // checking to make sure this isn't the top-level site
+	    if($featured_dogs_query->have_posts()):
 ?>
         <section class="wrapper--latest-dogs">
             <div class="wrapper--headline">
-                <h2>Newest dogs at <?php bloginfo( 'name' ); ?></h2>
+                <h2>Featured dogs</h2>
             </div>
 
             <div class="latest-dogs--inner">
-	            <div class="latest-dogs">
-		            <?php echo do_shortcode('[wpv-view name="latest-dogs"]'); ?>
+	            <div class="latest-dogs vertical">
+		            <?php
+		            while($featured_dogs_query->have_posts()): $featured_dogs_query->the_post();
+			            # $breeds = get_the_terms(get_the_ID(), 'breed');
+			            # $characteristics = get_the_terms(get_the_ID(), 'characteristic');
+			            ?>
+
+			            <?php get_template_part( 'template-parts/woofpages/_card_dog'); ?>
+
+			            <?php
+		            endwhile; ?>
                 </div>
 
                 <div class="wrapper--headline">
@@ -110,6 +89,10 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+        <?php
+            endif; // if $featured_dogs->have_posts()
+	        wp_reset_postdata();
+        ?>
 <?php
     else:
 ?>

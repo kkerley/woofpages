@@ -111,7 +111,7 @@ get_header(); ?>
                 <section class="wrapper--adoptions pending">
                     <div class="adoption--inner">
                         <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Adoption pending</h3>
-                        <p><?php echo get_the_title($dog_id); ?> is pending adoption but you can still <a href="#" class="jump-link" data-jump-to="single-dog-application">submit an application to adopt</a> in case this one falls through.</p>
+                        <p><?php echo get_the_title($dog_id); ?> is pending adoption but you can still <a href="#" class="jump-link single-dog-page-application" data-jump-to="single-dog-application">submit an application to adopt</a> in case this one falls through.</p>
                     </div>
                 </section>
             <?php
@@ -119,7 +119,7 @@ get_header(); ?>
                 <section class="wrapper--adoptions available">
                     <div class="adoption--inner">
                         <h3><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Available</h3>
-                        <p><?php echo get_the_title($dog_id); ?> is available to adopt and if you're interested, <a href="#" class="jump-link" data-jump-to="single-dog-application">submit an application below</a>!</p>
+                        <p><?php echo get_the_title($dog_id); ?> is available to adopt and if you're interested, <a href="#" class="jump-link single-dog-page-application" data-jump-to="single-dog-application">submit an application below</a>!</p>
                     </div>
                 </section>
             <?php

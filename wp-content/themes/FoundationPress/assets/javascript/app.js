@@ -21,9 +21,15 @@ jQuery(document).ready(function($){
       e.preventDefault();
       var jumpTarget = $(this).data('jump-to');
 
-       $root.animate({
-           scrollTop: $('#' + jumpTarget ).offset().top - 41
-       }, 500);
+       if($(this).hasClass('single-dog-page-application')){
+           $root.animate({
+               scrollTop: $('#' + jumpTarget ).offset().top - 270
+           }, 500);
+       } else{
+           $root.animate({
+               scrollTop: $('#' + jumpTarget ).offset().top - 41
+           }, 500);
+       }
    });
 
    $('.kk-modal-trigger').on('click', function(){
@@ -33,4 +39,16 @@ jQuery(document).ready(function($){
        $(modalToOpen).toggleClass('is-showing');
    });
 
+   // $('.card.dog').hover(function(){
+   //    var $this = $(this);
+   //    $this.find('.slide-up-content').addClass('anim--slide-up');
+   // }, function(){
+   //     var $this = $(this);
+   //     $this.find('.slide-up-content').removeClass('anim--slide-up');
+   // });
+   //
+   //  $('.card.dog .card-image').on('touchstart', function(){
+   //      var $this = $(this);
+   //      $this.closest('.card.dog').find('.slide-up-content').addClass('anim--slide-up');
+   //  });
 });

@@ -33,16 +33,9 @@
         $rescue_abbrev      = $woofpages_options['woofpages_rescue_location_abbreviation'] ? $woofpages_options['woofpages_rescue_location_abbreviation'] : get_bloginfo( 'name' );
     ?>
 
-<!--    <header id="utility">-->
-<!--        <div class="utility--inner">-->
-<!--            --><?php //include 'template-parts/woofpages/_social_media_links.php'; ?>
-<!--        </div>-->
-<!--    </header>-->
-
     <header class="header<?php echo $rescue_logo ? ' with-logo' : '' ?>">
-
 	    <div class="wrapper--primary-nav" data-sticky-container>
-            <nav class="primary-nav" data-sticky data-top-anchor="main_container">
+            <nav class="primary-nav" data-sticky data-top-anchor="main_container" data-options="stickyOn: small">
                 <div class="primary-nav--inner">
                     <p class="sticky-site-title"><a href="/"><?php echo $rescue_abbrev; ?></a></p>
 	                <?php foundationpress_top_bar_r(); ?>

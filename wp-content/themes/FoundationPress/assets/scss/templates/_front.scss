@@ -19,9 +19,12 @@
   .marketing {
     @include grid-col-row();
     margin: 6rem 0;
-    max-width: 62rem;
     position: relative;
     z-index: 3;
+
+    @include breakpoint(small only){
+      margin: 0;
+    }
 
     //@include breakpoint(small){
     //  // padding: 1rem;
@@ -56,6 +59,10 @@
     margin: 0;
   }
 }
+.entry-content.has-featured-dogs{
+  margin-right: 1rem;
+  width: calc(100% / 3 * 2 - 3rem);
+}
 
 // Intro
 .intro {
@@ -68,42 +75,6 @@
       display: flex;
       flex-flow: row nowrap;
     }
-
-    .entry-content.has-featured-dogs{
-      margin-right: 1rem;
-      width: calc(100% / 3 * 2 - 3rem);
-    }
-
-    .featured-dogs{
-      padding: 0 1.5rem;
-      width: calc(100% / 3 + 1rem);
-
-      .card{
-        //max-width: 100%;
-        width: 100%;
-
-        h4{
-          margin-bottom: 0.5rem;
-        }
-      }
-    }
-
-    .featured-dogs--inner{
-      .slick-arrow{
-        &::before{
-          color: #333;
-        }
-      }
-
-      //.slick-prev{
-      //  left: -20px;
-      //}
-      //
-      //.slick-next{
-      //  right: -20px;
-      //}
-    }
-
 
 
     @include breakpoint(small) {
@@ -140,9 +111,6 @@
   }
 }
 
-
-
-
 .wrapper--latest-dogs{
   background-color: lighten($primary-color, 28%);
   margin: 0;
@@ -166,26 +134,31 @@
   text-align: center;
 
   .latest-dogs{
-    @include grid-row();
+    display: flex;
+    flex-flow: row nowrap;
     margin-bottom: 2rem;
 
-    .js-wpv-view-layout{
-      display: flex;
-      flex-flow: row nowrap;
+    @include breakpoint(small only){
+      flex-flow: column nowrap;
     }
 
-    .card {
+    .card{
       // @include grid-column(1 of 4, 0);
       max-width: calc(341.3333px - 1rem);
       margin-bottom: 1rem;
       text-align: left;
 
-      &:nth-of-type(2n) {
+      &:nth-of-type(2n){
         margin-left: 0.5rem;
       }
 
       &:nth-of-type(2n+1) {
         margin-right: 0.5rem;
+      }
+
+      @include breakpoint(small only){
+        margin: 0 0 1rem !important;
+        max-width: 100%;
       }
     }
   }
@@ -200,6 +173,10 @@
   // background-color: #e7e7e7;
   background-color: #efefef;
   padding: 6rem 0;
+
+  @include breakpoint(small only){
+    padding: 3rem 0;
+  }
 }
 
 .announcements-and-posts{
@@ -207,6 +184,10 @@
   display: flex;
   flex-flow: row nowrap;
   float: none;
+
+  @include breakpoint(small only){
+    flex-flow: column nowrap;
+  }
 }
 
 .announcements--outer{
@@ -216,16 +197,30 @@
   .card{
     width: 100%;
   }
+
+  @include breakpoint(small only){
+    margin: 0 0 1rem;
+    width: 100%;
+  }
 }
 
 .posts--outer {
   margin-left: 1rem;
   width: calc(100% / 3 * 2 - 1rem);
+
+  @include breakpoint(small only){
+    margin: 0 0 1rem;
+    width: 100%;
+  }
 }
 
 .posts--inner{
   display: flex;
   flex-flow: row nowrap;
+
+  @include breakpoint(small only){
+    flex-flow: column nowrap;
+  }
 
   .card{
     width: calc(50% - 1rem);
@@ -237,11 +232,20 @@
     &:last-of-type{
       margin-left: 1rem;
     }
+
+    @include breakpoint(small only){
+      margin: 0 0 1rem !important;
+      width: 100%;
+    }
   }
 }
 
 .wrapper--events{
   padding: 4rem 0;
+
+  @include breakpoint(small only){
+    padding: 2rem 0;
+  }
 
   .events--inner{
     @include grid-row();
@@ -253,9 +257,17 @@
 
   .events--calendar{
     @include grid-col(8);
+
+    @include breakpoint(small only){
+      @include grid-col(12);
+    }
   }
 
   .events--upcoming{
     @include grid-col(4);
+
+    @include breakpoint(small only){
+      @include grid-col(12);
+    }
   }
 }
