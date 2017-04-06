@@ -41,23 +41,26 @@
 	                <?php foundationpress_top_bar_r(); ?>
 
                     <div class="kk-off-canvas-trigger show-for-small-only">
-                        <a href="#" data-toggle="mobile-menu"><i class="fa fa-bars"></i></a>
+                        <span data-toggle="mobile-menu"><i class="fa fa-bars"></i></span>
                     </div>
                 </div>
             </nav>
         </div>
 
         <div class="wrapper--site-title">
-            <h2 class="headline"><a href="/"><?php bloginfo( 'name' ); ?></a></h2>
+            <div class="site-title--inner">
 
-	        <?php
-	        if($rescue_logo): ?>
-                <div class="uploaded-logo">
-                    <a href="/"><img src="<?php echo $rescue_logo ?>" alt="<?php echo get_bloginfo( 'name' ) ?>" /></a>
-                </div>
-		        <?php
-	        endif;
-	        ?>
+                <h2 class="headline"><a href="/"><?php bloginfo( 'name' ); ?></a></h2>
+
+                <?php
+                if($rescue_logo): ?>
+                    <div class="uploaded-logo">
+                        <a href="/"><img src="<?php echo $rescue_logo ?>" alt="<?php echo get_bloginfo( 'name' ) ?>" /></a>
+                    </div>
+                    <?php
+                endif;
+                ?>
+            </div>
         </div>
 
 	    <?php # if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>

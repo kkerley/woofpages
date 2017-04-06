@@ -10,10 +10,6 @@
     box-shadow: none;
   }
 
-  @include breakpoint(small only){
-    flex-flow: column nowrap;
-  }
-
   .card-image{
     overflow: hidden;
     position: relative;
@@ -177,6 +173,14 @@
         //margin: 0.5rem 0.5rem 0;
       }
     }
+
+    .card-content{
+      flex: 2 1 auto;
+    }
+
+    .wrapper--cta{
+      margin: auto 0 0;
+    }
   }
 
   &.dog{
@@ -198,7 +202,8 @@
   color: darken($success-color, 25%)
 }
 
-.wrapper--dogs{
+.wrapper--dogs,
+.wrapper--volunteers{
   display: flex;
   flex-flow: row wrap;
 
@@ -211,6 +216,15 @@
 
     &:nth-of-type(2n+1){
       margin-right: 0.5rem;
+    }
+  }
+
+  @include breakpoint(small only){
+    .card{
+      flex-flow: column nowrap;
+      margin: 0 0 2rem !important;
+      max-width: 100%;
+      width: 100%;
     }
   }
 }

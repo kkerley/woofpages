@@ -99,6 +99,7 @@ function woofpages_find_master_adoption_application($entry, $form){
 
 	$entries = GFAPI::get_entries(1, $search_criteria); // $form should probably be replaced with 1 here to ensure that it's checking the top-level Adoption Application
 	write_log($entries);
+	return $entries;
 
 	restore_current_blog();
 }

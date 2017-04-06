@@ -12,7 +12,7 @@
   }
 
 
-  #footer {
+  #footer{
     @include grid-row();
     padding: rem-calc(30) 0;
     display: flex;
@@ -24,12 +24,27 @@
       padding: 0;
     }
   }
+
+  .wrapper--social-media-links{
+    padding: 0 1rem;
+
+    @include breakpoint(small only){
+      border-top: 1px solid #ccc;
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+  }
 }
 
 
 #copyright{
   background-color: $black;
   padding: 1rem 0;
+
+  @include breakpoint(small only){
+    padding: 1rem;
+    text-align: center;
+  }
 
   .copyright--inner{
     color: #fff;

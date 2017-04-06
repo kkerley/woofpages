@@ -3,24 +3,32 @@
   color: #fff;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
 
-  &::after{
-    content: '';
-    background-color: rgba(#000, 0.5);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-  }
+  //&::after{
+  //  content: '';
+  //  background-color: rgba(#000, 0.5);
+  //  position: absolute;
+  //  top: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  left: 0;
+  //  z-index: 2;
+  //}
   .marketing {
-    @include grid-col-row();
-    margin: 6rem 0;
+    // @include grid-col-row();
+    background-color: rgba(#000, 0.8);
+    width: 45%;
+    margin: 6rem 1rem;
+    padding: 2rem;
     position: relative;
     z-index: 3;
+
+    @media screen and (max-width: 1024px){
+      margin: 3rem 1rem;
+      width: 100%;
+    }
 
     @include breakpoint(small only){
       margin: 0;
@@ -258,13 +266,19 @@
   .events--calendar{
     @include grid-col(8);
 
-    @include breakpoint(small only){
+    @media screen and (max-width: 900px){
       @include grid-col(12);
+      margin-bottom: 2rem;
     }
   }
 
   .events--upcoming{
     @include grid-col(4);
+
+    @media screen and (max-width: 900px){
+      @include grid-col(8);
+      float: left !important;
+    }
 
     @include breakpoint(small only){
       @include grid-col(12);

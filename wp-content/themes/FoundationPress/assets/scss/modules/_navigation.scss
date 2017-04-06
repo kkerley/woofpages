@@ -15,9 +15,9 @@
 
     a {
       color: $white;
-      font-weight: 600;
-      font-size: rem-calc(18);
-      opacity: .75;
+      // font-weight: 600;
+      font-size: 1rem;
+      // opacity: .75;
     }
 
     .is-accordion-submenu-parent > a::after {
@@ -42,7 +42,14 @@
 
     > li{
       > a{
-        position: relative; }
+        position: relative;
+      }
+    }
+  }
+
+  .logged-in &{
+    > ul.menu {
+      padding-top: 3rem;
     }
   }
 }

@@ -10,11 +10,7 @@ get_header(); ?>
 
 <?php # get_template_part( 'template-parts/featured-image' ); ?>
 
-<article class="sponsor banner full-width">
-    <div class="sponsor--inner">
-        <img src="https://placehold.it/1024x120&amp;text=Banner Ad" alt="Banner Ad" height="120" width="1024">
-    </div>
-</article>
+<?php get_template_part( 'template-parts/woofpages/_sponsor_full_width' ); ?>
 
 <div id="single-post" role="main">
 
@@ -216,15 +212,7 @@ get_header(); ?>
 if(types_render_field('adoption-status') !== 'Adopted'):
 	?>
     <section class="form--adoption">
-<!--        <div class="section-divider">-->
-<!--            <hr />-->
-<!--        </div>-->
-        <article class="sponsor banner full-width">
-            <div class="sponsor--inner">
-                <img src="https://placehold.it/1024x120&amp;text=Banner Ad" alt="Banner Ad" height="120" width="1024">
-            </div>
-        </article>
-
+	    <?php get_template_part( 'template-parts/woofpages/_sponsor_full_width' ); ?>
 
         <div class="form--inner">
             <h2 id="single-dog-application">Interested in adopting <?php the_title(); ?>?</h2>

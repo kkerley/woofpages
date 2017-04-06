@@ -14,7 +14,7 @@
 		<div id="footer-container">
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-                <article class="large-4">
+                <article class="large-4 small-12 columns">
 	                <?php
 	                $woofpages_options  = get_option('woofpages_settings');
 	                $street_address     = $woofpages_options['woofpages_rescue_location_street_address'];
@@ -42,7 +42,7 @@
 	                <?php endif; ?>
                 </article>
 
-                <article class="large-4">
+                <article class="large-4 small-12 columns">
 	                <?php include 'template-parts/woofpages/_social_media_links.php'; ?>
                 </article>
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>

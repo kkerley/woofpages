@@ -17,7 +17,7 @@ get_header(); ?>
       <?php do_action( 'foundationpress_page_before_entry_content' ); ?>
       <div class="entry-content">
 
-          <pre><?php find_master_adoption_application('kkerley@topfloortech.com', 1); ?></pre>
+          <pre><?php var_dump(woofpages_find_master_adoption_application('kyle.l.kerley@gmail.com', 1)); ?></pre>
           <?php the_content(); ?>
       </div>
       <footer>
