@@ -9,22 +9,22 @@
 		<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
         <p><?php echo get_the_date(); ?></p>
 
-		<p><?php echo woofpages_current_dog_breeds(get_the_ID()); ?>
+        <p><?php echo woofpages_current_dog_breeds(get_the_ID()); ?>
 
 			<?php if(!empty(types_render_field('sex'))): ?>
-				<?php echo types_render_field('sex'); ?>
+                <span class="dog-sex"><?php echo types_render_field('sex'); ?></span>
 			<?php endif; ?>
 
 			<?php if(!empty(types_render_field('age'))): ?>
-				| <?php echo types_render_field('age'); ?> year<?php echo (int)str_replace(' ', '', types_render_field('age')) > 1 ? 's' : ''; ?> old
+				| <span class="dog-age"><?php echo types_render_field('age'); ?> year<?php echo (int)str_replace(' ', '', types_render_field('age')) > 1 ? 's' : ''; ?> old</span>
 			<?php endif; ?>
 
 			<?php if(!empty(types_render_field('body-size'))): ?>
-				| <?php echo types_render_field('body-size'); ?>
+				| <span class="dog-body-size"><?php echo types_render_field('body-size'); ?></span>
 			<?php endif; ?>
 
 			<?php if(!empty(types_render_field('weight'))): ?>
-				| <?php echo types_render_field('weight'); ?> lbs
+				| <span class="dog-weight"><?php echo types_render_field('weight'); ?> lbs</span>
 			<?php endif; ?>
 		</p>
 

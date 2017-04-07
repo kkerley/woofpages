@@ -135,7 +135,7 @@ function woofpages_current_dog_breeds($dog_id){
 	$breeds = get_the_terms($dog_id, 'breed');
 
 	foreach($breeds as $breed):
-		$output .= '<a href="' . get_term_link($breed->slug, 'breed') . '">';
+		$output .= '<a href="' . get_term_link($breed->slug, 'breed') . '" class="dog-breed">';
 		$output .= $breed->name;
 		$output .= '</a>';
 		$count++;
@@ -153,7 +153,7 @@ function woofpages_current_dog_characteristics($dog_id){
 	$char_output = "";
 
 	foreach($characteristics as $characteristic):
-		$char_output .= '<a href="' . get_term_link($characteristic->slug, 'characteristic') . '" class="label secondary">';
+		$char_output .= '<a href="' . get_term_link($characteristic->slug, 'characteristic') . '" class="label secondary dog-characteristic">';
 		$char_output .= $characteristic->name;
 		$char_output .= '</a> ';
 

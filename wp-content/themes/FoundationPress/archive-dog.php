@@ -21,14 +21,23 @@ get_header(); ?>
 		<article class="main-content">
 			<header>
 				<h1>Dogs available for adoption</h1>
+
+
+                <div id="search-controls">
+                    <input class="search-field" />
+                    <span class="sort" data-sort="dog-age">Sort by age</span>
+                    <span class="sort" data-sort="dog-weight">Sort by weight</span>
+                </div>
 			</header>
 
 			<?php if ( have_posts() ) : ?>
-				<div class="wrapper--dogs vertical">
+				<div class="wrapper--dogs vertical" id="dog-list">
+
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'template-parts/woofpages/_card_dog'); ?>
 					<?php endwhile; ?>
+
 				</div>
 			<?php else : ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>

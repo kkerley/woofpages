@@ -39,16 +39,17 @@ jQuery(document).ready(function($){
        $(modalToOpen).toggleClass('is-showing');
    });
 
-   // $('.card.dog').hover(function(){
-   //    var $this = $(this);
-   //    $this.find('.slide-up-content').addClass('anim--slide-up');
-   // }, function(){
-   //     var $this = $(this);
-   //     $this.find('.slide-up-content').removeClass('anim--slide-up');
-   // });
-   //
-   //  $('.card.dog .card-image').on('touchstart', function(){
-   //      var $this = $(this);
-   //      $this.closest('.card.dog').find('.slide-up-content').addClass('anim--slide-up');
-   //  });
+   // List.js filtering
+   var dogOptions = {
+       valueName: ['dog-age', 'dog-body-size', 'dog-breed', 'dog-characteristic', 'dog-sex', 'dog-weight']
+   };
+
+   var dogList = new List('dog-list', dogOptions);
+
+   $('#search-field').on('keyup', function(){
+       var searchString = $(this).val();
+       dogList.search(searchString);
+   });
+   // end of List.js filtering
+
 });
