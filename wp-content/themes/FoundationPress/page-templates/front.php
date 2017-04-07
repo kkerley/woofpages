@@ -30,9 +30,6 @@ get_header(); ?>
     $featured_dogs_query = new WP_Query($featured_dogs_args);
 ?>
 
-
-
-
 <header id="front-hero" role="banner" <?php echo !empty(types_render_field('mission-statement-background-image', array('raw' => true))) ? ' style="background-image: url(' . types_render_field('mission-statement-background-image', array('raw' => true)) . ');"' : ''; ?>>
     <div class="marketing">
         <div class="tagline">
@@ -176,18 +173,7 @@ get_header(); ?>
                     <?php
                         if($announcements_query->have_posts()):
                             while($announcements_query->have_posts()): $announcements_query->the_post();
-                    ?>
-                        <div class="card vertical">
-                            <div class="card-image">
-                                <?php the_post_thumbnail('dog-square-400'); ?>
-                            </div>
-                            <div class="card-content">
-                                <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                                <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
-                                <p class="text-right"><a href="<?php the_permalink(); ?>">Continue reading <i class="fa fa-chevron-right"></i></a></p>
-                            </div>
-                        </div>
-                    <?php
+	                            get_template_part( 'template-parts/woofpages/_card_post_page' );
                             endwhile;
                         else:
                             echo '<p><em>No announcements at this time</em></p>';
@@ -210,18 +196,7 @@ get_header(); ?>
 		            <?php
 		            if($posts_query->have_posts()):
 			            while($posts_query->have_posts()): $posts_query->the_post();
-				            ?>
-                            <div class="card">
-                                <div class="card-image">
-						            <?php the_post_thumbnail('dog-square-400'); ?>
-                                </div>
-                                <div class="card-content">
-                                    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-                                    <p><?php echo wp_trim_words( get_the_content(), 40, '...' ); ?></p>
-                                    <p class="text-right"><a href="<?php the_permalink(); ?>">Continue reading <i class="fa fa-chevron-right"></i></a></p>
-                                </div>
-                            </div>
-				            <?php
+				             get_template_part( 'template-parts/woofpages/_card_post_page' );
 			            endwhile;
 		            else:
 			            echo '<p><em>No blog posts at this time</em></p>';

@@ -20,7 +20,12 @@ get_header(); ?>
 	<div id="page" role="main">
 		<article class="main-content">
 			<header>
-				<h1>Dogs available for adoption</h1>
+				<?php
+				    $queried_object = get_queried_object();
+				?>
+                <h2>Characteristic</h2>
+                <h1><?php echo $queried_object->name; ?></h1>
+
 			</header>
 
 			<?php if ( have_posts() ) : ?>

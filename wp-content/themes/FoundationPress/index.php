@@ -16,12 +16,17 @@
 get_header(); ?>
 
 <div id="page" role="main">
-	<article class="main-content">
+
+	<article class="main-content wrapper--dogs vertical">
+        <header>
+            <h1>Blog</h1>
+            <p>The latest news and stories from <?php bloginfo('title'); ?>.</p>
+        </header>
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+			<?php get_template_part( 'template-parts/woofpages/_card_post_page' ); ?>
 		<?php endwhile; ?>
 
 		<?php else : ?>

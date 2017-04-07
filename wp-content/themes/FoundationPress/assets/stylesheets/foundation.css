@@ -8190,13 +8190,40 @@ body#tinymce {
   height: auto;
   position: relative;
   text-align: left; }
-  #front-hero .marketing {
+  #front-hero .tagline {
     background-color: rgba(0, 0, 0, 0.8);
-    width: 45%;
     margin: 6rem 1rem;
     padding: 2rem;
     position: relative;
     z-index: 3; }
+  #front-hero .marketing {
+    max-width: 64rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem; }
+    #front-hero .marketing::before, #front-hero .marketing::after {
+      display: table;
+      content: ' ';
+      -webkit-flex-basis: 0;
+          -ms-flex-preferred-size: 0;
+              flex-basis: 0;
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; }
+    #front-hero .marketing::after {
+      clear: both; }
+    @media print, screen and (min-width: 40em) {
+      #front-hero .marketing {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    #front-hero .marketing:last-child:not(:first-child) {
+      float: right; }
+    #front-hero .marketing, #front-hero .marketing:last-child {
+      float: none; }
     @media screen and (max-width: 1024px) {
       #front-hero .marketing {
         margin: 3rem 1rem;
@@ -8617,6 +8644,27 @@ body#tinymce {
     .tax-breed .js-wpv-view-layout .card:nth-of-type(2n),
     .tax-characteristic .js-wpv-view-layout .card:nth-of-type(2n) {
       margin-left: 0.5rem; }
+
+#page header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 2rem; }
+
+.page-template-special-needs-dogs #page header,
+.post-type-archive-incsub_event #page header {
+  border-bottom: none;
+  margin-bottom: 0; }
+
+.tax-breed #page h1,
+.tax-characteristic #page h1 {
+  line-height: 1.3;
+  margin: 0 0 1rem; }
+
+.tax-breed #page h2,
+.tax-characteristic #page h2 {
+  color: #777;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 0; }
 
 #page {
   max-width: 64rem;

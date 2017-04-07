@@ -19,3 +19,35 @@
     }
   }
 }
+
+#page{
+  header{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2rem;
+  }
+
+  .page-template-special-needs-dogs &,
+  .post-type-archive-incsub_event &{
+    header{
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tax-breed,
+.tax-characteristic{
+  #page{
+    h1{
+      line-height: 1.3;
+      margin: 0 0 1rem;
+    }
+
+    h2{
+      color: #777;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      margin: 0;
+    }
+  }
+}

@@ -7,6 +7,7 @@
 
 	<div class="card-content">
 		<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+        <p><?php echo get_the_date(); ?></p>
 
 		<p><?php echo woofpages_current_dog_breeds(get_the_ID()); ?>
 

@@ -16,14 +16,18 @@
   //  left: 0;
   //  z-index: 2;
   //}
-  .marketing {
-    // @include grid-col-row();
+
+  .tagline{
+
     background-color: rgba(#000, 0.8);
-    width: 45%;
     margin: 6rem 1rem;
     padding: 2rem;
     position: relative;
     z-index: 3;
+  }
+
+  .marketing {
+    @include grid-col-row();
 
     @media screen and (max-width: 1024px){
       margin: 3rem 1rem;
