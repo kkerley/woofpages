@@ -26,8 +26,7 @@
     margin-bottom: 2rem;
   }
 
-  .page-template-special-needs-dogs &,
-  .post-type-archive-incsub_event &{
+  .page-template-special-needs-dogs &{
     header{
       border-bottom: none;
       margin-bottom: 0;
@@ -48,6 +47,32 @@
       font-size: 1.5rem;
       line-height: 1.3;
       margin: 0;
+    }
+  }
+}
+
+.post-type-archive-incsub_event{
+
+  .event{
+    margin-bottom: 2rem;
+
+    &:last-of-type{
+
+      hr{
+        display: none !important;
+      }
+    }
+  }
+
+  .wpmudevevents-date,
+  .wpmudevevents-location,
+  .wpmudevevents-list .wpmudevevents-buttons{
+    float: none;
+  }
+
+  .wpmudevevents-viewevent{
+    @media screen and (max-width: 767px){
+      display: none;
     }
   }
 }

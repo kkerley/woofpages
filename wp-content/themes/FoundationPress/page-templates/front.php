@@ -135,6 +135,7 @@ get_header(); ?>
         </div>
 
         <div class="events--upcoming">
+            <h4>Next Event</h4>
 	        <?php echo do_shortcode('[eab_archive limit="1"]'); ?>
         </div>
     </div>

@@ -8166,6 +8166,53 @@ body#tinymce {
   margin: 2rem 0;
   padding: 1rem; }
 
+.events--upcoming > h4 {
+  color: #777;
+  border-bottom: 1px solid #dedede; }
+
+.events--upcoming .eab-event-body hr {
+  display: none; }
+
+.events--upcoming .eab-event-body .wpmudevevents-date,
+.events--upcoming .eab-event-body .wpmudevevents-location,
+.events--upcoming .eab-event-body .wpmudevevents-buttons {
+  float: none;
+  margin-top: 1rem; }
+
+.eab-upcoming_calendar_widget .today {
+  background-color: #4D9DE0;
+  color: #fff; }
+
+.eab-upcoming_calendar_widget .eab-has_events {
+  background-color: #fcf4d3; }
+  .eab-upcoming_calendar_widget .eab-has_events.today {
+    background-color: #87D68D; }
+    .eab-upcoming_calendar_widget .eab-has_events.today a {
+      color: #fff;
+      text-decoration: underline; }
+
+.eab-upcoming_calendar_widget tbody tr:last-of-type td {
+  background-color: #666666; }
+  .eab-upcoming_calendar_widget tbody tr:last-of-type td a {
+    color: #fff;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .eab-upcoming_calendar_widget tbody tr:last-of-type td a:hover {
+      text-decoration: underline; }
+
+#wpmudevevents-upcoming_calendar_widget-shelf .wpmudevevents-upcoming_calendar_widget-event {
+  background-color: #F7DD72;
+  border-radius: 1rem;
+  display: block;
+  color: #555;
+  padding: 1rem 2rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  #wpmudevevents-upcoming_calendar_widget-shelf .wpmudevevents-upcoming_calendar_widget-event:hover {
+    background-color: #fae9a2;
+    color: #222;
+    text-decoration: underline; }
+
 #front-hero {
   color: #fff;
   display: -webkit-box;
@@ -8649,8 +8696,7 @@ body#tinymce {
   border-bottom: 1px solid #ccc;
   margin-bottom: 2rem; }
 
-.page-template-special-needs-dogs #page header,
-.post-type-archive-incsub_event #page header {
+.page-template-special-needs-dogs #page header {
   border-bottom: none;
   margin-bottom: 0; }
 
@@ -8665,6 +8711,20 @@ body#tinymce {
   font-size: 1.5rem;
   line-height: 1.3;
   margin: 0; }
+
+.post-type-archive-incsub_event .event {
+  margin-bottom: 2rem; }
+  .post-type-archive-incsub_event .event:last-of-type hr {
+    display: none !important; }
+
+.post-type-archive-incsub_event .wpmudevevents-date,
+.post-type-archive-incsub_event .wpmudevevents-location,
+.post-type-archive-incsub_event .wpmudevevents-list .wpmudevevents-buttons {
+  float: none; }
+
+@media screen and (max-width: 767px) {
+  .post-type-archive-incsub_event .wpmudevevents-viewevent {
+    display: none; } }
 
 #page {
   max-width: 64rem;
