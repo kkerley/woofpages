@@ -113,12 +113,12 @@ function woofpages_remove_adopted_and_special_needs_dogs($query){
 			'relation'      => 'OR',
 			array(
 				'key'       => 'wpcf-adoption-status',
-				'value'     => 'Available',
+				'value'     => 'available',
 				'compare'   => '='
 			),
 			array(
 				'key'       => 'wpcf-adoption-status',
-				'value'     => 'Pending Adoption',
+				'value'     => 'pending-adoption',
 				'compare'   => '='
 			)
 		);

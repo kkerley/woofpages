@@ -27,8 +27,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// It's a good idea to do this, performance-wise. No need to load everything if you're just going to use the grid anyway, you know :)
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/javascript/foundation.js', array('jquery'), '2.9.0', true );
 		wp_enqueue_script( 'slick-js', get_template_directory_uri() . '/assets/javascript/vendor/slick/slick.js', array('jquery'), '1.6.0', true );
-		wp_enqueue_script( 'list-js', '//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js', array('jquery'), '1.5.0', true);
-		wp_enqueue_script( 'app', get_template_directory_uri() . '/assets/javascript/app.js', array('slick-js', 'list-js'), '1.0', true );
+
+		wp_enqueue_script( 'mixitup-js', get_template_directory_uri() . '/assets/javascript/vendor/mixitup.min.js', array('jquery'), '1.5.0', true);
+		wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/javascript/app.js', array('slick-js', 'mixitup-js'), '1.0', true );
 
 		// Add the comment-reply library on pages where it is necessary
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

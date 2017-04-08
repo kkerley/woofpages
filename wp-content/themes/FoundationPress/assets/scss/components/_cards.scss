@@ -34,7 +34,7 @@
       text-transform: uppercase;
     }
 
-    &.Adopted{
+    &.adopted{
 
       .adoption-status{
         display: none;
@@ -62,6 +62,58 @@
         border-left: solid 20px transparent;
         border-right: solid 20px $warning-color;
         border-top: solid 20px $warning-color;
+      }
+    }
+
+    &.available{
+      &::before, &::after {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0.5rem;
+        right: 0.5rem;
+        content: '';
+      }
+      &::before {
+        color: #fff;
+        content: "\f087";
+        font-family: 'FontAwesome';
+        padding: 0.1rem 0 0 1.35rem;
+        z-index: 10;
+      }
+      &::after {
+
+        border-bottom: solid 20px transparent;
+        border-left: solid 20px transparent;
+        border-right: solid 20px $success-color;
+        border-top: solid 20px $success-color;
+      }
+    }
+
+    &.pending-adoption{
+      &::before, &::after {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0.5rem;
+        right: 0.5rem;
+        content: '';
+      }
+      &::before {
+        color: #fff;
+        content: "\f071";
+        font-family: 'FontAwesome';
+        padding: 0 0 0 1.35rem;
+        z-index: 10;
+      }
+      &::after {
+
+        border-bottom: solid 20px transparent;
+        border-left: solid 20px transparent;
+        border-right: solid 20px $alert-color;
+        border-top: solid 20px $alert-color;
       }
     }
   }
@@ -198,14 +250,15 @@
   }
 }
 
-.available{
-  color: darken($success-color, 25%)
-}
+//.available{
+//  color: darken($success-color, 25%)
+//}
 
 .wrapper--dogs,
 .wrapper--volunteers{
   display: flex;
   flex-flow: row wrap;
+  min-height: 21rem;
 
   .card{
     width: calc(50% - 0.5rem);

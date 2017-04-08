@@ -85,4 +85,26 @@
       color: #fff;
     }
   }
+
+  &.male{
+    background-color: darken($primary-color, 10%);
+
+    &:hover{
+      background-color: darken($primary-color, 20%);
+    }
+  }
+
+  &.female{
+    background-color: $pink;
+
+    &:hover{
+      background-color: darken($pink, 10%);
+    }
+  }
+
+  &.mixitup-control-active{
+    background-color: #fff !important;
+    border: 1px solid $secondary-color !important;
+    color: $black !important;
+  }
 }

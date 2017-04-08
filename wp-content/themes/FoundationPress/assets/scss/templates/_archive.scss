@@ -76,3 +76,39 @@
     }
   }
 }
+
+.no-matching-dogs{
+  display: none;
+  font-weight: bold;
+  padding: 10rem 0;
+  text-align: center;
+  width: 100%;
+
+  .mixitup-container-failed &{
+    display: block;
+  }
+}
+
+.filter-controls--header{
+  // border: 1px solid #eee;
+  font-size: 80%;
+  font-style: italic;
+  // margin-bottom: 0.25rem;
+  // padding: 0.125rem 0.5rem;
+  text-align: center;
+
+  //p{
+  //  margin: 0;
+  //}
+}
+
+.filter-controls{
+  // border: 1px solid #eee;
+  margin-bottom: 2rem;
+  // padding: 0.5rem;
+  text-align: center;
+
+  .button{
+    margin-bottom: 0;
+  }
+}

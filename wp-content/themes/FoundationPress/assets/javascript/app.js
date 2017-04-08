@@ -9,47 +9,43 @@ jQuery(document).ready(function($){
 
     });
 
-   $('.carousel--dog-detail-page_primary').slick({
-       arrows: true,
-       infinite: true,
-       slidesToShow: 1,
-       slidesToScroll: 1,
-       adaptiveHeight: true,
-   });
+    $('.carousel--dog-detail-page_primary').slick({
+        arrows: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+    });
 
-   $('.jump-link').on('click', function(e){
-      e.preventDefault();
-      var jumpTarget = $(this).data('jump-to');
+    $('.jump-link').on('click', function(e){
+        e.preventDefault();
+        var jumpTarget = $(this).data('jump-to');
 
-       if($(this).hasClass('single-dog-page-application')){
-           $root.animate({
-               scrollTop: $('#' + jumpTarget ).offset().top - 270
-           }, 500);
-       } else{
-           $root.animate({
-               scrollTop: $('#' + jumpTarget ).offset().top - 41
-           }, 500);
-       }
-   });
+        if($(this).hasClass('single-dog-page-application')){
+            $root.animate({
+                scrollTop: $('#' + jumpTarget ).offset().top - 270
+            }, 500);
+        } else{
+            $root.animate({
+                scrollTop: $('#' + jumpTarget ).offset().top - 41
+            }, 500);
+        }
+    });
 
-   $('.kk-modal-trigger').on('click', function(){
-       var $this = $(this);
-       var modalToOpen = '.' + $this.data('target-modal');
+    $('.kk-modal-trigger').on('click', function(){
+        var $this = $(this);
+        var modalToOpen = '.' + $this.data('target-modal');
 
-       $(modalToOpen).toggleClass('is-showing');
-   });
+        $(modalToOpen).toggleClass('is-showing');
+    });
 
-   // List.js filtering
-   var dogOptions = {
-       valueName: ['dog-age', 'dog-body-size', 'dog-breed', 'dog-characteristic', 'dog-sex', 'dog-weight']
-   };
+    // Mix It Up
+    var dog_mixer = mixitup('.wrapper--dogs', {
+        controls: {
+            toggleLogic: 'and'
+        }
+    });
 
-   var dogList = new List('dog-list', dogOptions);
-
-   $('#search-field').on('keyup', function(){
-       var searchString = $(this).val();
-       dogList.search(searchString);
-   });
-   // end of List.js filtering
+    // End of Mix It Up
 
 });

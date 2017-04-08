@@ -7777,6 +7777,21 @@ body#tinymce {
   background-color: #DB4437;
   color: #fff; }
 
+.button.male {
+  background-color: #2585d5; }
+  .button.male:hover {
+    background-color: #1e6aa9; }
+
+.button.female {
+  background-color: #FF69B4; }
+  .button.female:hover {
+    background-color: #ff369b; }
+
+.button.mixitup-control-active {
+  background-color: #fff !important;
+  border: 1px solid #666666 !important;
+  color: #0a0a0a !important; }
+
 .card {
   -webkit-box-shadow: 0 5px 16px -6px rgba(0, 0, 0, 0.7);
           box-shadow: 0 5px 16px -6px rgba(0, 0, 0, 0.7);
@@ -7813,9 +7828,9 @@ body#tinymce {
       top: 0.5rem;
       right: 0.5rem;
       text-transform: uppercase; }
-    .card .card-image.Adopted .adoption-status {
+    .card .card-image.adopted .adoption-status {
       display: none; }
-    .card .card-image.Adopted::before, .card .card-image.Adopted::after {
+    .card .card-image.adopted::before, .card .card-image.adopted::after {
       display: block;
       position: absolute;
       width: 40px;
@@ -7823,17 +7838,55 @@ body#tinymce {
       top: 0.5rem;
       right: 0.5rem;
       content: ''; }
-    .card .card-image.Adopted::before {
+    .card .card-image.adopted::before {
       color: #fff;
       content: "\f05d";
       font-family: 'FontAwesome';
       padding: 0.125rem 0 0 1.25rem;
       z-index: 10; }
-    .card .card-image.Adopted::after {
+    .card .card-image.adopted::after {
       border-bottom: solid 20px transparent;
       border-left: solid 20px transparent;
       border-right: solid 20px #ED6A5A;
       border-top: solid 20px #ED6A5A; }
+    .card .card-image.available::before, .card .card-image.available::after {
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 0.5rem;
+      right: 0.5rem;
+      content: ''; }
+    .card .card-image.available::before {
+      color: #fff;
+      content: "\f087";
+      font-family: 'FontAwesome';
+      padding: 0.1rem 0 0 1.35rem;
+      z-index: 10; }
+    .card .card-image.available::after {
+      border-bottom: solid 20px transparent;
+      border-left: solid 20px transparent;
+      border-right: solid 20px #87D68D;
+      border-top: solid 20px #87D68D; }
+    .card .card-image.pending-adoption::before, .card .card-image.pending-adoption::after {
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 0.5rem;
+      right: 0.5rem;
+      content: ''; }
+    .card .card-image.pending-adoption::before {
+      color: #fff;
+      content: "\f071";
+      font-family: 'FontAwesome';
+      padding: 0 0 0 1.35rem;
+      z-index: 10; }
+    .card .card-image.pending-adoption::after {
+      border-bottom: solid 20px transparent;
+      border-left: solid 20px transparent;
+      border-right: solid 20px #F7DD72;
+      border-top: solid 20px #F7DD72; }
   .card .card-content {
     border-radius: 1rem;
     display: -webkit-box;
@@ -7903,9 +7956,6 @@ body#tinymce {
       padding-bottom: 1rem;
       border-bottom: 1px solid #ddd; }
 
-.available {
-  color: #38a541; }
-
 .wrapper--dogs,
 .wrapper--volunteers {
   display: -webkit-box;
@@ -7916,7 +7966,8 @@ body#tinymce {
   -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+          flex-flow: row wrap;
+  min-height: 21rem; }
   .wrapper--dogs .card,
   .wrapper--volunteers .card {
     width: calc(50% - 0.5rem); }
@@ -8725,6 +8776,26 @@ body#tinymce {
 @media screen and (max-width: 767px) {
   .post-type-archive-incsub_event .wpmudevevents-viewevent {
     display: none; } }
+
+.no-matching-dogs {
+  display: none;
+  font-weight: bold;
+  padding: 10rem 0;
+  text-align: center;
+  width: 100%; }
+  .mixitup-container-failed .no-matching-dogs {
+    display: block; }
+
+.filter-controls--header {
+  font-size: 80%;
+  font-style: italic;
+  text-align: center; }
+
+.filter-controls {
+  margin-bottom: 2rem;
+  text-align: center; }
+  .filter-controls .button {
+    margin-bottom: 0; }
 
 #page {
   max-width: 64rem;

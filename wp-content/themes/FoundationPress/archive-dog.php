@@ -21,23 +21,33 @@ get_header(); ?>
 		<article class="main-content">
 			<header>
 				<h1>Dogs available for adoption</h1>
-
-
-                <div id="search-controls">
-                    <input class="search-field" />
-                    <span class="sort" data-sort="dog-age">Sort by age</span>
-                    <span class="sort" data-sort="dog-weight">Sort by weight</span>
-                </div>
+                <p>All available dogs and dogs pending adoption are listed below. We may also have <a href="/how-to-help/special-needs-dogs/">special
+                    needs dogs</a> looking for someone with a big heart to give them a loving forever home.</p>
 			</header>
 
-			<?php if ( have_posts() ) : ?>
-				<div class="wrapper--dogs vertical" id="dog-list">
+            <div class="filter-controls--header">
+                <p>Filter dogs based on size, sex, and availability&mdash;filters combiine.</p>
+            </div>
+            <div class="filter-controls">
+                <button type="button" class="button secondary tiny" data-toggle=".small-bodied"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                <button type="button" class="button secondary small" data-toggle=".medium-bodied"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <button type="button" class="button secondary medium" data-toggle=".large-bodied"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+                <button type="button" class="button female" data-toggle=".female"><i class="fa fa-venus" aria-hidden="true"></i></button>
+                <button type="button" class="button male" data-toggle=".male"><i class="fa fa-mars" aria-hidden="true"></i></button>
+                <button type="button" class="button success" data-toggle=".available"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+                <button type="button" class="button alert" data-toggle=".pending-adoption"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></button>
+            </div>
 
+			<?php if ( have_posts() ) : ?>
+				<div class="wrapper--dogs vertical">
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'template-parts/woofpages/_card_dog'); ?>
 					<?php endwhile; ?>
 
+                    <div class="no-matching-dogs">
+                        <p>Sorry, no dogs match the filtered criteria.</p>
+                    </div>
 				</div>
 			<?php else : ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>

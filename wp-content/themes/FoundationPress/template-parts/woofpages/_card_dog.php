@@ -1,7 +1,24 @@
-<?php $adoption_status = get_post_meta(get_the_ID(), 'wpcf-adoption-status'); ?>
+<?php
+    $adoption_status = types_render_field('adoption-status', array('raw'=>'true'));
+    $filter_classes = '';
+    $filter_classes .= $adoption_status . ' ';
 
-<article class="card dog">
-	<div class="card-image <?php echo $adoption_status[0]; ?>">
+    // creating a list of attributes to filter by
+    if(!empty(types_render_field('sex'))):
+	    $filter_classes .= types_render_field('sex', array('raw'=>'true'));
+        $filter_classes .= ' ';
+    endif;
+
+    if(!empty(types_render_field('body-size'))):
+	    $filter_classes .= types_render_field('body-size', array('raw'=>'true'));
+	    $filter_classes .= ' ';
+    endif;
+    // end of creating a list of attributes to filter by
+?>
+
+
+<article class="mix card dog<?php if($filter_classes){ echo ' ' . $filter_classes; } ?>">
+	<div class="card-image <?php echo $adoption_status; ?>">
 		<?php the_post_thumbnail('fp-small'); ?>
 	</div>
 
