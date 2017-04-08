@@ -137,17 +137,16 @@
 
 .wrapper--headline{
   @include grid-col-row();
-
-  @include breakpoint(small only){
-    float: none !important;
-  }
 }
 
 .latest-dogs--inner{
-
   float: none !important;
   margin-bottom: 2rem;
   text-align: center;
+
+  .wrapper--headline{
+    float: none !important;
+  }
 
   .latest-dogs{
     display: flex;

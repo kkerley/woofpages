@@ -8467,14 +8467,13 @@ body#tinymce {
     float: right; }
   .wrapper--headline, .wrapper--headline:last-child {
     float: none; }
-  @media screen and (max-width: 39.9375em) {
-    .wrapper--headline {
-      float: none !important; } }
 
 .latest-dogs--inner {
   float: none !important;
   margin-bottom: 2rem;
   text-align: center; }
+  .latest-dogs--inner .wrapper--headline {
+    float: none !important; }
   .latest-dogs--inner .latest-dogs {
     display: -webkit-box;
     display: -webkit-flex;

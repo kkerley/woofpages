@@ -8,10 +8,10 @@ get_header(); ?>
     $featured_dogs_args = array(
         'post_type'         => 'dog',
         'post_status'       => 'publish',
-        'posts_per_page'    => 4,
+        'posts_per_page'    => 3,
         'orderby'           => 'date' ,
         'order'             => 'DESC' ,
-        'numberposts'       =>  4,
+        'numberposts'       =>  3,
         'meta_query'        => array(
             'relation'      => 'AND',
             array(
