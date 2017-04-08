@@ -137,35 +137,48 @@
 
 .wrapper--headline{
   @include grid-col-row();
+
+  @include breakpoint(small only){
+    float: none !important;
+  }
 }
 
 .latest-dogs--inner{
-  @include grid-col-row();
+
   float: none !important;
   margin-bottom: 2rem;
   text-align: center;
 
   .latest-dogs{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    justify-content: center;
     margin-bottom: 2rem;
 
+    @include breakpoint(medium only){
+      padding: 0 0.9375rem;
+    }
+
     @include breakpoint(small only){
-      flex-flow: column nowrap;
+      padding: 0 0.9375rem;
     }
 
     .card{
       // @include grid-column(1 of 4, 0);
       max-width: calc(341.3333px - 1rem);
-      margin-bottom: 1rem;
+      margin: 0 0.5rem 1rem;
       text-align: left;
 
-      &:nth-of-type(2n){
-        margin-left: 0.5rem;
-      }
+      //&:first-of-type{
+      //  margin-left: 0;
+      //}
+      //
+      //&:last-of-type{
+      //  margin-right: 0;
+      //}
 
-      &:nth-of-type(2n+1) {
-        margin-right: 0.5rem;
+      @include breakpoint(medium only){
+        max-width: calc(50% - 1rem);
       }
 
       @include breakpoint(small only){

@@ -26,16 +26,16 @@ get_header(); ?>
 			</header>
 
             <div class="filter-controls--header">
-                <p>Filter dogs based on size, sex, and availability&mdash;filters combiine.</p>
+                <p>Filter dogs based on size, sex, and availability&mdash;filters stack.</p>
             </div>
             <div class="filter-controls">
-                <button type="button" class="button secondary tiny" data-toggle=".small-bodied"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
-                <button type="button" class="button secondary small" data-toggle=".medium-bodied"><i class="fa fa-minus" aria-hidden="true"></i></button>
-                <button type="button" class="button secondary medium" data-toggle=".large-bodied"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-                <button type="button" class="button female" data-toggle=".female"><i class="fa fa-venus" aria-hidden="true"></i></button>
-                <button type="button" class="button male" data-toggle=".male"><i class="fa fa-mars" aria-hidden="true"></i></button>
-                <button type="button" class="button success" data-toggle=".available"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
-                <button type="button" class="button alert" data-toggle=".pending-adoption"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></button>
+                <button type="button" class="button secondary tiny" data-toggle=".small-bodied" title="Small bodied"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                <button type="button" class="button secondary small" data-toggle=".medium-bodied" title="Medium bodied"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <button type="button" class="button secondary medium" data-toggle=".large-bodied" title="Large bodied"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+                <button type="button" class="button female" data-toggle=".female" title="Female"><i class="fa fa-venus" aria-hidden="true"></i></button>
+                <button type="button" class="button male" data-toggle=".male" title="Male"><i class="fa fa-mars" aria-hidden="true"></i></button>
+                <button type="button" class="button success" data-toggle=".available" title="Available"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+                <button type="button" class="button alert" data-toggle=".pending-adoption" title="Pending adoption"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></button>
             </div>
 
 			<?php if ( have_posts() ) : ?>

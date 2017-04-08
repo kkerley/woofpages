@@ -43,6 +43,9 @@ jQuery(document).ready(function($){
     var dog_mixer = mixitup('.wrapper--dogs', {
         controls: {
             toggleLogic: 'and'
+        },
+        animation: {
+            effects: 'fade translateZ(-100px)',
         }
     });
 

@@ -110,5 +110,10 @@
 
   .button{
     margin-bottom: 0;
+
+    &.secondary.medium,
+    &.male{
+      margin-right: 1rem;
+    }
   }
 }
