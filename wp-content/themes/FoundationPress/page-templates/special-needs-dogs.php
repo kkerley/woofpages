@@ -14,7 +14,7 @@ get_header(); ?>
 	        'relation'      => 'AND',
             array(
                 'key'       => 'wpcf-adoption-status',
-                'value'     => 'Special Needs',
+                'value'     => 'special-needs',
                 'compare'   => '='
             ),
             array(
