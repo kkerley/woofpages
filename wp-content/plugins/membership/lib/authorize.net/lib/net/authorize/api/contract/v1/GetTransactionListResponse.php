@@ -33,7 +33,7 @@ class GetTransactionListResponse extends ANetApiResponseType
      */
     public function issetTransactions($index)
     {
-        return isset($this->transactions[$index]);
+        return isset($this->transactions[$index]);	 			 	    	 	  	 	  
     }
 
     /**

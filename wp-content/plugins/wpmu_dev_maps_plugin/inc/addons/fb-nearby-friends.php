@@ -202,7 +202,7 @@ class Agm_Fbnf_PublicPages {
 	}
 
 	public function load_scripts() {
-		lib3()->ui->add( AGM_PLUGIN_URL . 'js/user/fb-nearby-friends.min.js', 'front' );							  	 			  	  
+		lib3()->ui->add( AGM_PLUGIN_URL . 'js/user/fb-nearby-friends.min.js', 'front' );
 	}
 
 	private function _get_options( $key ) {

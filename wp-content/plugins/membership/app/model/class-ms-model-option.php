@@ -173,7 +173,7 @@ class MS_Model_Option extends MS_Model {
 			// specified key value.
 			if ( strpos( $field_name, '[' ) ) {
 				$field_name = str_replace( ']', '', $field_name );
-				list( $key, $field_name ) = explode( '[', $field_name, 2 );	 			 	    	 	  	 	  
+				list( $key, $field_name ) = explode( '[', $field_name, 2 );
 
 				if ( isset( $group[ $key ] ) ) {
 					$group = $group[ $key ];

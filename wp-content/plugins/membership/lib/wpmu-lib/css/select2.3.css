@@ -284,7 +284,7 @@
   color: #333;
 }
 
-.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {	 			 	    	 	  	 	  
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {
   float: right;
 }
 
@@ -634,4 +634,4 @@
 }
 
 
-/* 520716-1490663752-ai */
+/* 520716-1491999289-au */

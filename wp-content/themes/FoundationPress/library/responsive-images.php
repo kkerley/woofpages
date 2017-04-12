@@ -24,6 +24,8 @@ add_image_size( 'fp-xlarge', 1920 );
 add_image_size( 'dog-carousel-primary', 900, 1350, true);
 add_image_size( 'dog-carousel-thumb', 400, 200, true);
 add_image_size( 'dog-square-400', 400, 400, true);
+add_image_size( 'logo-in-nav', 400, 64, false);
+add_image_size( 'logo-in-nav-sticky', 9999, 24, false);
 
 // Register the new image sizes for use in the add media modal in wp-admin
 function foundationpress_custom_sizes( $sizes ) {

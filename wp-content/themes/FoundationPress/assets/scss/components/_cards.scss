@@ -258,18 +258,13 @@
 .wrapper--volunteers{
   display: flex;
   flex-flow: row wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
   min-height: 21rem;
 
   .card{
-    width: calc(50% - 0.5rem);
-
-    &:nth-of-type(2n){
-      margin-left: 0.5rem;
-    }
-
-    &:nth-of-type(2n+1){
-      margin-right: 0.5rem;
-    }
+    margin: 0.5rem;
+    width: calc(50% - 1rem);
   }
 
   @include breakpoint(small only){

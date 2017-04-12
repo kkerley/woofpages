@@ -122,8 +122,9 @@
 
   .kk-off-canvas-trigger{
     margin: 0 1rem 0 auto;
+    z-index: 10000;
 
-    span{
+    button{
       padding: 0.9rem 1rem;
       font-size: 0.75rem;
       color: $darker-gray;
@@ -143,6 +144,23 @@
 
   .sticky-site-title{
     display: none;
+    transition: all 0.2s ease;
+
+    .logo--sticky{
+      display: none;
+    }
+
+    .theme--top-level & {
+      display: block;
+
+      a, a:hover{
+        background-color: transparent;
+      }
+
+      img{
+        transition: all 0.2s ease;
+      }
+    }
   }
 
   &.is-stuck{
@@ -150,8 +168,29 @@
     box-shadow: 0 3px 3px -3px #000;
     margin-top: 0 !important;
 
+
     .sticky-site-title{
       display: block;
+      flex: 2 0 auto;
+
+      > a > img{
+        display: none;
+      }
+
+      .logo--sticky{
+        display: block;
+      }
+
+      .theme--top-level & {
+        a{
+          padding: 0.5rem;
+        }
+
+        img{
+          height: 1.25rem;
+          width: auto;
+        }
+      }
     }
 
     .logged-in &{

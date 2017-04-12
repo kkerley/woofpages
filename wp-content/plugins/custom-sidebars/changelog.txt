@@ -1,11 +1,22 @@
 Plugin Name: Custom Sidebars Pro
 Author: Javier Marquez (Incsub), Philipp Stracker (Incsub), Marcin Pietrzak (Incsub)
-Buildtime: 2017-03-21T09:22:19.405Z
+Buildtime: BUILDTIME
 
 Change Log:
 ----------------------------------------------------------------------
 
-3.0.2.0 ( 2017-03-21 )
+3.0.4 ( 2017-04-11 )
+- Improved "Create a custom sidebar to get started." box.
+- Upgraded "WPMU Dev code library" to version 3.0.3.
+- Fixed a problem with empty taxonomies, now we can see all taxonomies, including empty.
+- Fixed fetching posts.
+- Fixed a problem on the Customizer page - removed clone option.
+- Fixed Widgets Screen for Right to Left languages.
+
+3.0.3 ( 2017-03-22 )
+- Removed WP Checkup banner.
+
+3.0.2 ( 2017-03-21 )
 - Fixed compatibility issue with uBlock Origin and AdBlock Plus.
 - Fixed getting started box not appearing.
 
@@ -329,4 +340,4 @@ Change Log:
 - Initial release
 
 
-520716-1490663818-ai
+520716-1491999278-au

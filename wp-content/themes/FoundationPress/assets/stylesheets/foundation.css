@@ -7450,8 +7450,9 @@ a.thumbnail {
       .primary-nav .kk-off-canvas-trigger a:focus {
         outline: none; }
   .primary-nav .kk-off-canvas-trigger {
-    margin: 0 1rem 0 auto; }
-    .primary-nav .kk-off-canvas-trigger span {
+    margin: 0 1rem 0 auto;
+    z-index: 10000; }
+    .primary-nav .kk-off-canvas-trigger button {
       padding: 0.9rem 1rem;
       font-size: 0.75rem;
       color: #555555;
@@ -7461,18 +7462,42 @@ a.thumbnail {
       outline: none;
       -webkit-transition: all .35s ease-in-out;
       transition: all .35s ease-in-out; }
-      .primary-nav .kk-off-canvas-trigger span:hover {
+      .primary-nav .kk-off-canvas-trigger button:hover {
         background: rgba(10, 10, 10, 0.4);
         color: #fff; }
   .primary-nav .sticky-site-title {
-    display: none; }
+    display: none;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .primary-nav .sticky-site-title .logo--sticky {
+      display: none; }
+    .theme--top-level .primary-nav .sticky-site-title {
+      display: block; }
+      .theme--top-level .primary-nav .sticky-site-title a, .theme--top-level .primary-nav .sticky-site-title a:hover {
+        background-color: transparent; }
+      .theme--top-level .primary-nav .sticky-site-title img {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
   .primary-nav.is-stuck {
     background: #f7f7f7;
     -webkit-box-shadow: 0 3px 3px -3px #000;
             box-shadow: 0 3px 3px -3px #000;
     margin-top: 0 !important; }
     .primary-nav.is-stuck .sticky-site-title {
-      display: block; }
+      display: block;
+      -webkit-box-flex: 2;
+      -webkit-flex: 2 0 auto;
+          -ms-flex: 2 0 auto;
+              flex: 2 0 auto; }
+      .primary-nav.is-stuck .sticky-site-title > a > img {
+        display: none; }
+      .primary-nav.is-stuck .sticky-site-title .logo--sticky {
+        display: block; }
+      .theme--top-level .primary-nav.is-stuck .sticky-site-title a {
+        padding: 0.5rem; }
+      .theme--top-level .primary-nav.is-stuck .sticky-site-title img {
+        height: 1.25rem;
+        width: auto; }
     .logged-in .primary-nav.is-stuck {
       margin-top: 2rem !important; }
       @media screen and (max-width: 800px) {
@@ -7967,16 +7992,13 @@ body#tinymce {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
   min-height: 21rem; }
   .wrapper--dogs .card,
   .wrapper--volunteers .card {
-    width: calc(50% - 0.5rem); }
-    .wrapper--dogs .card:nth-of-type(2n),
-    .wrapper--volunteers .card:nth-of-type(2n) {
-      margin-left: 0.5rem; }
-    .wrapper--dogs .card:nth-of-type(2n+1),
-    .wrapper--volunteers .card:nth-of-type(2n+1) {
-      margin-right: 0.5rem; }
+    margin: 0.5rem;
+    width: calc(50% - 1rem); }
   @media screen and (max-width: 39.9375em) {
     .wrapper--dogs .card,
     .wrapper--volunteers .card {
@@ -8509,6 +8531,16 @@ body#tinymce {
   .latest-dogs--inner .card {
     width: 100%; }
 
+.wrapper--sites-in-the-network {
+  background-color: #c7e0f5;
+  padding: 4rem 0.9375rem 6rem; }
+  .wrapper--sites-in-the-network .wrapper--headline {
+    margin-bottom: 2rem;
+    text-align: center; }
+  .wrapper--sites-in-the-network .card {
+    margin: 0.5rem;
+    padding: 1rem; }
+
 .wrapper--announcements-and-posts {
   background-color: #efefef;
   padding: 6rem 0; }
@@ -8710,15 +8742,8 @@ body#tinymce {
   .post-type-archive-dog .js-wpv-view-layout .card,
   .tax-breed .js-wpv-view-layout .card,
   .tax-characteristic .js-wpv-view-layout .card {
-    max-width: calc(50% - 0.5rem); }
-    .post-type-archive-dog .js-wpv-view-layout .card:nth-of-type(2n+1),
-    .tax-breed .js-wpv-view-layout .card:nth-of-type(2n+1),
-    .tax-characteristic .js-wpv-view-layout .card:nth-of-type(2n+1) {
-      margin-right: 0.5rem; }
-    .post-type-archive-dog .js-wpv-view-layout .card:nth-of-type(2n),
-    .tax-breed .js-wpv-view-layout .card:nth-of-type(2n),
-    .tax-characteristic .js-wpv-view-layout .card:nth-of-type(2n) {
-      margin-left: 0.5rem; }
+    margin: 0.5rem;
+    max-width: calc(50% - 1rem); }
 
 #page header {
   border-bottom: 1px solid #ccc;

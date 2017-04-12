@@ -40,15 +40,16 @@ jQuery(document).ready(function($){
     });
 
     // Mix It Up
-    var dog_mixer = mixitup('.wrapper--dogs', {
-        controls: {
-            toggleLogic: 'and'
-        },
-        animation: {
-            effects: 'fade translateZ(-100px)',
-        }
-    });
-
+    if($('.post-type-archive-dog .wrapper--dogs').length){
+        var dog_mixer = mixitup('.post-type-archive-dog .wrapper--dogs', {
+            controls: {
+                toggleLogic: 'and'
+            },
+            animation: {
+                effects: 'fade translateZ(-100px)',
+            }
+        });
+    }
     // End of Mix It Up
 
 });

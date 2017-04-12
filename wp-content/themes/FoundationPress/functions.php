@@ -53,6 +53,9 @@ require_once( 'library/responsive-images.php' );
 // Including custom Rescue Settings Panel code
 include 'library/woofpages/woofpages_settings_panel.php';
 
+// Custom script to find attachment ID by URL (helpful for the settings panel above since the image URL is all that's returned
+include 'library/woofpages/woofpages_attachment_id_by_url.php';
+
 
 add_filter( 'get_nav_search_box_form', function( $current_form, $item, $depth, $args ){
 	$new_form = '<form role="search" method="get" id="searchform" action="' . get_site_url();

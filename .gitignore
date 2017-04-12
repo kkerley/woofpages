@@ -2,3 +2,5 @@ wp-config.php
 
 *.log
 .idea/*
+
+.DS_store

@@ -193,6 +193,21 @@
   }
 }
 
+.wrapper--sites-in-the-network{
+  background-color: lighten($primary-color, 28%);
+  padding: 4rem 0.9375rem 6rem;
+
+  .wrapper--headline{
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .card{
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+}
+
 .wrapper--announcements-and-posts{
   // background-color: #e7e7e7;
   background-color: #efefef;
