@@ -1003,6 +1003,10 @@ table.widefat.prosites-premium-plugins tbody tr th p {
     color: #888;
 }
 
+.feature-table .text-item {
+    min-height: 70px;
+}
+
 #module-comparison-table .feature-table th,
 #module-comparison-table .feature-table td {
     border-left: 1px solid #f1f1f1;
@@ -1252,4 +1256,4 @@ table.widefat.prosites-premium-plugins tbody tr th p {
 }
 
 
-/* 520716-1490663775-ai */
+/* 520716-1492083079-au */

@@ -50,7 +50,7 @@ table#psts_checkout_grid {
 	text-shadow: 1px 1px 2px #364D5E;
 	background: #FEBF01;
 	background: -moz-linear-gradient(top, #FEBF01 1%, #E87502 3%, #E87502 36%, #E87802 56%, #C05C02 99%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#FEBF01), color-stop(5%,#E87502), color-stop(36%,#E87502), color-stop(56%,#E87802), color-stop(99%,#C05C02));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#FEBF01), color-stop(5%,#E87502), color-stop(36%,#E87502), color-stop(56%,#E87802), color-stop(99%,#C05C02));							  	   				 	
 	background: -webkit-linear-gradient(top, #FEBF01 1%,#E87502 5%,#E87502 36%,#E87802 56%,#C05C02 99%);
 	background: -o-linear-gradient(top, #FEBF01 1%,#E87502 5%,#E87502 36%,#E87802 56%,#C05C02 99%);
 	background: -ms-linear-gradient(top, #FEBF01 1%,#E87502 5%,#E87502 36%,#E87802 56%,#C05C02 99%);
@@ -565,8 +565,13 @@ ul.pricing-column li, .pricing-column ul li {
 }
 
 .feature-content .feature-name {
-    /*font-size: 17px;*/
     text-align: center;
+    font-weight: 600;
+}
+
+.feature-content .feature-description {
+    text-align: center;
+    font-size: 13px;
 }
 
 li.summary {
@@ -1408,4 +1413,4 @@ ul.pricing-column.chosen-plan {
 }
 
 
-/* 520716-1490663775-ai */
+/* 520716-1492083079-au */

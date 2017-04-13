@@ -6,7 +6,7 @@ class Twocheckout_Payment extends Twocheckout {
 		$request   = new Twocheckout_Api_Requester();
 		$urlSuffix = '/api/acct/list_payments';
 		$result    = $request->doCall( $urlSuffix );
-		$response  = Twocheckout_Util::returnResponse( $result );
+		$response  = Twocheckout_Util::returnResponse( $result );							  	   				 	
 
 		return $response;
 	}
