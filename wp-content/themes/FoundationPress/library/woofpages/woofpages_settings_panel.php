@@ -29,9 +29,15 @@ add_action( 'after_setup_theme', 'woofpages_options_init' );
 //	return $translated_text;
 //}
 function woofpages_admin_scripts(){
+    $current_screen = get_current_screen();
 
-	if( 'toplevel_page_woofpages_settings_panel' === get_current_screen()->id):
+	if( 'toplevel_page_woofpages_settings_panel' === $current_screen->id):
 		wp_enqueue_script('woofpages-uploads', get_template_directory_uri() . '/library/woofpages/js/woofpages-uploads.js', array('jquery','media-upload','thickbox'));
+	endif;
+
+	// if( ($current_screen->action == 'add' && $current_screen->post_type == 'dog') || ($current_screen->action == 'edit' && $current_screen->post_type == 'dog') ):
+	if( $current_screen->post_type == 'dog'):
+        wp_enqueue_style('woofpages-admin-css', get_template_directory_uri() . '/library/woofpages/css/woofpages-admin.css', array(), '1.0.0', 'all' );
 	endif;
 }
 

@@ -32,7 +32,8 @@ jQuery(document).ready(function($){
         }
     });
 
-    $('.kk-modal-trigger').on('click', function(){
+    $('.kk-modal-trigger').on('click', function(e){
+        e.preventDefault();
         var $this = $(this);
         var modalToOpen = '.' + $this.data('target-modal');
 

@@ -21,7 +21,7 @@ $featured_dogs_args = array(
 
 		array(
 			'key'       => 'wpcf-adoption-status',
-			'value'     => "Available",
+			'value'     => "available",
 		)
 	)
 

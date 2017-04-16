@@ -124,11 +124,13 @@
 }
 
 .wrapper--latest-dogs{
-  background-color: lighten($primary-color, 28%);
+  // background-color: lighten($primary-color, 28%);
+  background-color: $primary-color;
   margin: 0;
   padding: 2rem 0;
 
   h2{
+    color: #fff;
     margin: 0 0 2rem;
     padding: 0 0.9375rem;
     text-align: center;

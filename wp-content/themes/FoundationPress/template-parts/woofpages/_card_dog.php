@@ -18,7 +18,7 @@
 
 
 <article class="mix card dog<?php if($filter_classes){ echo ' ' . $filter_classes; } ?>">
-	<div class="card-image <?php echo $adoption_status; ?>">
+	<div class="card-image <?php echo $adoption_status[0]; ?>">
 		<?php the_post_thumbnail('fp-small'); ?>
 	</div>
 

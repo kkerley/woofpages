@@ -24,11 +24,24 @@ get_header(); ?>
 				<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
+
 				</div>
 			</div>
 		</div>
 	</section>
 <?php endwhile;?>
+
+<section class="wrapper--latest-dogs">
+    <div class="wrapper--headline">
+        <h2>Latest dogs</h2>
+    </div>
+
+    <div class="latest-dogs--inner">
+        <div class="latest-dogs vertical">
+            <?php echo do_shortcode('[globalrecentdogs]'); ?>
+        </div>
+    </div>
+</section>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
 <?php get_footer();

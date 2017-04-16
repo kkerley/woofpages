@@ -1,0 +1,5 @@
+div[data-wpt-id="wpcf-location-city"],
+div[data-wpt-id="wpcf-location-state"],
+div[data-wpt-id="wpcf-location-zip"]{
+    display: none;
+}

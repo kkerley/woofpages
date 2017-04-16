@@ -8449,10 +8449,11 @@ body#tinymce {
       float: right; }
 
 .wrapper--latest-dogs {
-  background-color: #ffd6a8;
+  background-color: #ff9219;
   margin: 0;
   padding: 2rem 0; }
   .wrapper--latest-dogs h2 {
+    color: #fff;
     margin: 0 0 2rem;
     padding: 0 0.9375rem;
     text-align: center; }

@@ -56,6 +56,9 @@ include 'library/woofpages/woofpages_settings_panel.php';
 // Custom script to find attachment ID by URL (helpful for the settings panel above since the image URL is all that's returned
 include 'library/woofpages/woofpages_attachment_id_by_url.php';
 
+// Custom script to add the city, state, and zip code to each dog after save
+include 'library/woofpages/woofpages_update_dog_location_after_save.php';
+
 
 add_filter( 'get_nav_search_box_form', function( $current_form, $item, $depth, $args ){
 	$new_form = '<form role="search" method="get" id="searchform" action="' . get_site_url();
@@ -138,6 +141,7 @@ function woofpages_current_dog_breeds($dog_id){
 	$breeds = get_the_terms($dog_id, 'breed');
 
 	foreach($breeds as $breed):
+
 		$output .= '<a href="' . get_term_link($breed->slug, 'breed') . '" class="dog-breed">';
 		$output .= $breed->name;
 		$output .= '</a>';
@@ -152,7 +156,7 @@ function woofpages_current_dog_breeds($dog_id){
 }
 
 function woofpages_current_dog_characteristics($dog_id){
-	$characteristics = get_the_terms(get_the_ID(), 'characteristic');
+	$characteristics = get_the_terms($dog_id, 'characteristic');
 	$char_output = "";
 
 	foreach($characteristics as $characteristic):
