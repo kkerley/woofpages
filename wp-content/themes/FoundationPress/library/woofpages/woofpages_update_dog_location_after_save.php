@@ -19,14 +19,9 @@ function save_dog_meta( $post_id, $post, $update ) {
 	if ( "dog" != $post_type ) return;
 
 	// - Update the post's metadata.
-
-
 	update_post_meta( $post_id, 'wpcf-location-city',$city );
-
 	update_post_meta( $post_id, 'wpcf-location-state',$state );
-
 	update_post_meta( $post_id, 'wpcf-location-zip',$zip );
-
-
 }
-add_action( 'save_post', 'save_dog_meta', 10, 3 );
+
+add_action( 'save_post', 'save_dog_meta', 9999, 1 );

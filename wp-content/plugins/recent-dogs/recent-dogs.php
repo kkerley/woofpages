@@ -93,6 +93,7 @@ class recentdogsshortcode {
 				switch_to_blog($n_post->BLOG_ID);
 
 				$blog_name = get_bloginfo('name');
+				$blog_url = get_bloginfo('wpurl');
 				$the_title = network_get_the_title();
 				$adoption_status = get_post_meta(network_get_the_ID(), 'wpcf-adoption-status', true);
 				$filter_classes = '';
@@ -137,8 +138,8 @@ class recentdogsshortcode {
                             endif;
                         $html .= '</p>';
 
-                        $html .= '<p>' . $blog_name . '</p>';
-                        $html .= '<p>' . get_post_meta(network_get_the_ID(), 'wpcf-location-city', true) . ', ' . get_post_meta(network_get_the_ID(), 'wpcf-location-state', true) . ' ' . get_post_meta(network_get_the_ID(), 'wpcf-location-zip', true) . '</p>';
+                        $html .= '<p><a href="' . $blog_url . '" target="_blank">' . $blog_name . ' <i class="fa fa-external-link-square"></i></a></p>';
+                        $html .= '<p><i class="fa fa-globe"></i> ' . get_post_meta(network_get_the_ID(), 'wpcf-location-city', true) . ', ' . get_post_meta(network_get_the_ID(), 'wpcf-location-state', true) . ' ' . get_post_meta(network_get_the_ID(), 'wpcf-location-zip', true) . '</p>';
 
 //                    $html .= '<div class="wrapper--characteristics">';
 //                        $html .= woofpages_current_dog_characteristics(network_get_the_ID());
@@ -179,8 +180,8 @@ class recentdogsshortcode {
 							'title_after'	=>	'',
 							'global_before'	=>	'',
 							'global_after'	=>	'',
-//							'before'	=>	'<div class="card dog">',
-//							'after'	=>	'</div>',
+							'before'	=>	'',
+							'after'	=>	'',
 							'title_link' => 'yes',
 							'show_avatars' => 'no',
 							'avatar_size' => 16,
