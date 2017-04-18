@@ -118,15 +118,16 @@ class recentdogsshortcode {
 				    $html .= '<div class="card-content">';
 					    $html .= '<h4><a href="' . network_get_permalink() . '" >' . substr($the_title,0,$tmp_title_characters) . '</a></h4>';
 					    // $html .= '<p>' . get_the_date() .'</p>';
-					    $html .= '<p>' . woofpages_current_dog_breeds(network_get_the_ID());
+					    $html .= '<p>' . woofpages_current_dog_breeds(network_get_the_ID()) . '</p>';
+						$html .= '<p>';
                             if(!empty(get_post_meta(network_get_the_ID(), 'wpcf-sex', true))):
-                                $html .= '<span class="dog-sex">' . get_post_meta(network_get_the_ID(), 'wpcf-sex', true) . '</span>';
+                                $html .= '<span class="dog-sex label">' . get_post_meta(network_get_the_ID(), 'wpcf-sex', true) . '</span> ';
                             endif;
 
                             if(!empty(get_post_meta(network_get_the_ID(), 'wpcf-age', true))):
-                                $html .= ' | <span class="dog-age">' . get_post_meta(network_get_the_ID(), 'wpcf-age', true) . ' year';
+                                $html .= '<span class="dog-age label">' . get_post_meta(network_get_the_ID(), 'wpcf-age', true) . ' year';
                                 $html .= (int)str_replace(' ', '', get_post_meta(network_get_the_ID(), 'wpcf-age', true)) > 1 ? 's ' : '';
-                                $html .= ' old</span>';
+                                $html .= ' old</span> ';
                             endif;
 
 //                            if(!empty(get_post_meta(network_get_the_ID(), 'wpcf-body-size', true))):
@@ -134,7 +135,7 @@ class recentdogsshortcode {
 //                            endif;
 
                             if(!empty(get_post_meta(network_get_the_ID(), 'wpcf-weight', true))):
-                                $html .= ' | <span class="dog-weight">' . get_post_meta(network_get_the_ID(), 'wpcf-weight', true) . ' lbs</span>';
+                                $html .= ' <span class="dog-weight label">' . get_post_meta(network_get_the_ID(), 'wpcf-weight', true) . ' lbs</span> ';
                             endif;
                         $html .= '</p>';
 

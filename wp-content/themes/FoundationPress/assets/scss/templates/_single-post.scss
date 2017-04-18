@@ -52,8 +52,17 @@
     // margin-bottom: 1rem; // for use when the title, details, and characteristics are in the featured image
     margin-bottom: 2rem;
 
+    h1{
+      margin-bottom: 0;
+    }
+
     p{
       margin-bottom: 1rem;
+
+      &.dog-breeds{
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
     }
   }
 

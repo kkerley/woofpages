@@ -8990,8 +8990,13 @@ body#tinymce {
 
 .dog-intro header {
   margin-bottom: 2rem; }
+  .dog-intro header h1 {
+    margin-bottom: 0; }
   .dog-intro header p {
     margin-bottom: 1rem; }
+    .dog-intro header p.dog-breeds {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem; }
 
 .dog-featured-image {
   margin-bottom: 1rem;

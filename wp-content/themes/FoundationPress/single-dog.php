@@ -38,9 +38,9 @@ get_header(); ?>
 	            // $characteristics = get_the_terms(get_the_ID(), 'characteristic');
 	            ?>
                 <h1 class="entry-title"><?php the_title(); ?></h1>
-                <p>
-		            <?php echo woofpages_current_dog_breeds(get_the_ID()); ?>
+                <p class="dog-breeds"><?php echo woofpages_current_dog_breeds(get_the_ID()); ?></p>
 
+                <p>
                     <?php if(!empty(types_render_field('sex'))): ?>
 	                    <?php echo types_render_field('sex'); ?>
                     <?php endif; ?>

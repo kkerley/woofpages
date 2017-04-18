@@ -141,17 +141,16 @@ function woofpages_current_dog_breeds($dog_id){
 	$breeds = get_the_terms($dog_id, 'breed');
 
 	foreach($breeds as $breed):
-
-		$output .= '<a href="' . get_term_link($breed->slug, 'breed') . '" class="dog-breed">';
+		// $output .= '<a href="' . get_term_link($breed->slug, 'breed') . '" class="dog-breed">';
 		$output .= $breed->name;
-		$output .= '</a>';
+		// $output .= '</a>';
 		$count++;
 		if($count < count($breeds)):
 			$output .= ' / ';
 		endif;
 	endforeach;
 
-	$output .= " | ";
+	// $output .= " | ";
 	return $output;
 }
 
