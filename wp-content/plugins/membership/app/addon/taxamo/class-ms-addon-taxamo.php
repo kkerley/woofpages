@@ -146,29 +146,29 @@ class MS_Addon_Taxamo extends MS_Addon {
 				'ms_gateway_stripe_credit_card_saved',
 				'stripe_card_profile'
 			);
-
+                        
                         $this->add_filter(
                                 'ms_gateway_paypalsingle_view_prepare_fields',
                                 'apply_tax_on_pp_checkout_form',
                                 99, 2
                         );
-
+                        
                         // Standard gateway doesn't support sales tax for recurring payments
                         /*$this->add_filter(
                                 'ms_gateway_paypalstandard_view_prepare_fields',
                                 'apply_tax_on_pp_checkout_form',
                                 99, 2
                         );*/
-
+                        
                         $this->add_filter(
                                 'ms_gateway_2checkout_view_prepare_fields',
                                 'apply_tax_on_2co_checkout_form',
                                 99, 2
                         );
-
+                        
 		}
 	}
-
+        
         public function apply_tax_on_pp_checkout_form( $fields, $invoice ) {
             // Setting tax info in pp form
             $fields['tax_rate'] = array(
@@ -181,10 +181,10 @@ class MS_Addon_Taxamo extends MS_Addon {
 				'type' => MS_Helper_Html::INPUT_TYPE_HIDDEN,
 				'value' => number_format( ( float ) $invoice->amount, 2, '.', '' ),
 			);
-
+            
             return $fields;
         }
-
+        
         public function apply_tax_on_2co_checkout_form( $fields, $invoice ) {
             // Setting tax info in checkout form
             $fields['type2'] = array(
@@ -202,7 +202,7 @@ class MS_Addon_Taxamo extends MS_Addon {
                     'id' => 'li_1_price',
                     'value' => $invoice->amount / 100 * $invoice->tax_rate
             );
-
+            
             // Changing price with tax to price without tax,
             // as we are applying tax in a separate field above.
             $fields['price'] = array(
@@ -210,7 +210,7 @@ class MS_Addon_Taxamo extends MS_Addon {
                     'id' => 'li_0_price',
                     'value' => $invoice->amount,
             );
-
+            
             return $fields;
         }
 

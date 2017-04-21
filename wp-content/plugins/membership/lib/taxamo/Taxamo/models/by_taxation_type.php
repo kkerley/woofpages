@@ -43,3 +43,4 @@ class By_taxation_type {
   */
   public $transactions_count; // number
   }
+

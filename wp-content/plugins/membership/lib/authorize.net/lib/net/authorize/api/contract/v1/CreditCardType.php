@@ -94,3 +94,4 @@ class CreditCardType extends CreditCardSimpleType
 
 
 }
+

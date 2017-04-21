@@ -33,3 +33,4 @@ class VerifySMSTokenOut {
   */
   public $country_code; // string
   }
+

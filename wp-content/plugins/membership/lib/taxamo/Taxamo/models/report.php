@@ -63,3 +63,4 @@ class Report {
   */
   public $currency_code; // string
   }
+

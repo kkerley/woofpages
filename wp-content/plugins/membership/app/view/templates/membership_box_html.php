@@ -16,7 +16,7 @@
                 if ( is_ms_single_box_action_pay() ) {
                     echo get_ms_single_box_payment_btn();
                 }
-
+                
                 echo get_ms_single_box_hidden_fields();
 
                 /**

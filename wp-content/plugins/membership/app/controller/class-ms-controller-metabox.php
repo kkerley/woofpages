@@ -79,9 +79,7 @@ class MS_Controller_Metabox extends MS_Controller {
 
 		$extra = array();
 
-
-		$extra = MS_Rule_CptGroup_Model::get_custom_post_types();
-
+		
 
 		$post_types = array_merge(
 			array( 'page', 'post', 'attachment' ),
@@ -163,17 +161,10 @@ class MS_Controller_Metabox extends MS_Controller {
 	 * @since  1.0.0
 	 */
 	public function add_meta_boxes() {
-
-                // Disable meta box for non-M2 admin
-                $user_id = get_current_user_id();
-                if( ! MS_Model_Member::is_admin_user( $user_id ) ) return;
-
 		if ( defined( 'MS_CPT_ENABLE_ACCESS_BOX' ) && MS_CPT_ENABLE_ACCESS_BOX ) {
 			$extra = array();
 
-
-			$extra = MS_Rule_CptGroup_Model::get_custom_post_types();
-
+			
 
 			$post_types = array_merge(
 				array( 'page', 'post', 'attachment' ),
@@ -284,15 +275,7 @@ class MS_Controller_Metabox extends MS_Controller {
 			default:
 				$rule = $membership->get_rule( $post_type );
 
-
-				if ( in_array( $post_type, MS_Rule_CptGroup_Model::get_custom_post_types() ) ) {
-					if ( MS_Model_Addon::is_enabled( MS_Model_Addon::ADDON_CPT_POST_BY_POST ) ) {
-						$rule = $membership->get_rule( MS_Rule_CptItem::RULE_ID );
-					} else {
-						$rule = $membership->get_rule( MS_Rule_CptGroup::RULE_ID );
-					}
-				}
-
+				
 				break;
 		}
 
@@ -378,14 +361,7 @@ class MS_Controller_Metabox extends MS_Controller {
 			$read_only = true;
 		} elseif ( 'attachment' == $post_type ) {
 			$read_only = true;
-
-		} elseif ( in_array( $post_type, MS_Rule_CptGroup_Model::get_custom_post_types() ) ) {
-			if ( MS_Model_Addon::is_enabled( MS_Model_Addon::ADDON_CPT_POST_BY_POST ) ) {
-				$read_only = false;
-			} else {
-				$read_only = true;
-			}
-
+			
 		} else {
 			$read_only = false;
 		}

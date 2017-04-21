@@ -33,3 +33,4 @@ class CalculateSimpleTaxOut {
   */
   public $transaction; // transaction
   }
+

@@ -43,3 +43,4 @@ class LocateGivenIPOut {
   */
   public $country; // country
   }
+

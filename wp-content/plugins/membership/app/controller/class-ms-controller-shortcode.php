@@ -17,8 +17,6 @@ class MS_Controller_Shortcode extends MS_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->run_action( 'init', 'init' );
-                // Enqueue scripts.
-		$this->add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 	}
 
 	/**
@@ -290,7 +288,7 @@ class MS_Controller_Shortcode extends MS_Controller {
 			null,
 			$exclude
 		);
-
+                
                 if ( ! $member->is_valid() || ! $member->has_membership() ) {
                     foreach( $memberships as $key => $membership ) {
                         if( isset( $membership->update_denied['guest'] ) && lib3()->is_true( $membership->update_denied['guest'] ) ) {
@@ -298,7 +296,7 @@ class MS_Controller_Shortcode extends MS_Controller {
                         }
                     }
                 }
-
+                
 
 		$data['memberships'] = $memberships;
 		$move_from_ids = array();
@@ -482,12 +480,6 @@ class MS_Controller_Shortcode extends MS_Controller {
 
 		if ( ! empty( $id ) ) {
 			$membership = MS_Factory::load( 'MS_Model_Membership', $id );
-
-                        if ( ! $membership->active )
-                        {
-                            return __( 'Sorry! The membership you are trying to register is not active.', 'membership2' );
-                        }
-
 			$data['action'] = MS_Helper_Membership::MEMBERSHIP_ACTION_SIGNUP;
 			$data['step'] = MS_Controller_Frontend::STEP_PAYMENT_TABLE;
 
@@ -578,7 +570,7 @@ class MS_Controller_Shortcode extends MS_Controller {
 
 		$setting = MS_Plugin::instance()->settings;
 		$member = MS_Model_Member::get_current_member();
-
+                
                 if( defined( 'MS_PROTECTED_MESSAGE_REVERSE_RULE' ) && MS_PROTECTED_MESSAGE_REVERSE_RULE && isset( $_REQUEST['membership_id'] ) ) {
                     $protection_msg = $setting->get_protection_message(
                             MS_Model_Settings::PROTECTION_MSG_CONTENT,
@@ -591,36 +583,6 @@ class MS_Controller_Shortcode extends MS_Controller {
                                     MS_Model_Settings::PROTECTION_MSG_CONTENT,
                                     $sub->membership_id
                             );
-							if ( MS_Model_Pages::is_membership_page( $post->ID ) ){
-
-                            	$post_id = url_to_postid( $_GET['redirect_to'] );
-
-                            	$All_Memberships = MS_Model_Membership::get_memberships();
-
-                            	foreach ( $All_Memberships as $membership ) {
-
-                            		if( $setting->membership_has_protection_type( MS_Model_Settings::PROTECTION_MSG_CONTENT, $membership ) ){
-
-                            			foreach ( $membership->rule_values as $post_type => $protected_items ) {
-
-											if( in_array( $post_id, $protected_items ) ){
-
-												$raw_message = $setting->get_protection_message(
-			                                        MS_Model_Settings::PROTECTION_MSG_CONTENT,
-			                                        $membership->id
-				                                );
-
-				                                $protection_msg .= apply_filters( 'ms_protection_msg_content/membership_msg', wpautop( $raw_message ), $membership );
-
-											}
-
-										}
-
-                            		}
-
-								}
-
-                            }
                     } else {
                             $protection_msg = $setting->get_protection_message(
                                     MS_Model_Settings::PROTECTION_MSG_CONTENT
@@ -807,26 +769,24 @@ class MS_Controller_Shortcode extends MS_Controller {
 		$data['limit_invoices'] = absint( $data['limit_invoices'] );
 		$data['limit_activities'] = absint( $data['limit_activities'] );
 
-		if( $data['member']->id != '' ){
-			$data['member'] = MS_Model_Member::get_current_member();
-			$data['membership'] = array();
+		$data['member'] = MS_Model_Member::get_current_member();
+		$data['membership'] = array();
 
-			$subscriptions = MS_Model_Relationship::get_subscriptions(
-				array(
-					'user_id' => $data['member']->id,
-					'status' => 'all',
-				)
-			);
-			if ( is_array( $subscriptions ) && !empty( $subscriptions ) ) {
-				foreach ( $subscriptions as $subscription ) {
-					// Do not display system-memberships in Account
-					if ( $subscription->is_system() ) { continue; }
+		$subscriptions = MS_Model_Relationship::get_subscriptions(
+			array(
+				'user_id' => $data['member']->id,
+				'status' => 'all',
+			)
+		);
+		if ( is_array( $subscriptions ) ) {
+			foreach ( $subscriptions as $subscription ) {
+				// Do not display system-memberships in Account
+				if ( $subscription->is_system() ) { continue; }
 
-					// Do not display deactivated memberships in Account
-					if ( $subscription->get_status() == MS_Model_Relationship::STATUS_DEACTIVATED ) { continue; }
+				// Do not display deactivated memberships in Account
+				if ( $subscription->get_status() == MS_Model_Relationship::STATUS_DEACTIVATED ) { continue; }
 
-					$data['subscription'][] = $subscription;
-				}
+				$data['subscription'][] = $subscription;
 			}
 		}
 
@@ -1266,11 +1226,5 @@ class MS_Controller_Shortcode extends MS_Controller {
 	public function hide_shortcode( $atts, $content = '' ) {
 		return do_shortcode( $content );
 	}
-
-        public function enqueue_scripts()
-        {
-            $data['ms_init'][] = 'frontend_register';
-	    lib3()->ui->data( 'ms_data', $data );
-        }
 
 }

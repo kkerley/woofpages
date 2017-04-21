@@ -25,11 +25,11 @@ class MS_View_Shortcode_MembershipSignup extends MS_View {
 						'MS_Model_Membership',
 						$subscription->membership_id
 					);
-
+                                        
                                         $membership->_move_from = $member->cancel_ids_on_subscription(
                                                 $membership->id
                                         );
-
+                                        
 					switch ( $subscription->status ) {
 						case MS_Model_Relationship::STATUS_CANCELED:
 							$this->membership_box_html(
@@ -64,13 +64,13 @@ class MS_View_Shortcode_MembershipSignup extends MS_View {
 							if ( $membership->is_free() ) {
 								$memberships[] = $membership;
 							} else {
-
+                                                            
                                                                 if ( ! empty( $membership->_move_from ) ) {
                                                                         $m_action = MS_Helper_Membership::MEMBERSHIP_ACTION_MOVE;
                                                                 } else {
                                                                         $m_action = MS_Helper_Membership::MEMBERSHIP_ACTION_PAY;
                                                                 }
-
+                                                            
 								$this->membership_box_html(
 									$membership,
 									$m_action,
@@ -301,14 +301,14 @@ class MS_View_Shortcode_MembershipSignup extends MS_View {
 			'ms-status-' . ( $subscription ? $subscription->status : 'none' ),
 			'ms-subscription-' . ($subscription ? $subscription->id : 'none' ),
 		);
-
+                
                 $action_url = esc_url( $url );
                 $membership_id = esc_attr( $membership->id );
                 $membership_wrapper_classes = esc_attr( implode( ' ', $classes ) );
                 $membership_name = esc_html( $membership->name );
                 $membership_description = $membership->get_description();
                 $membership_price = esc_html( $price );
-
+                
                 $class = apply_filters(
                         'ms_view_shortcode_membershipsignup_form_button_class',
                         'ms-signup-button ' . esc_attr( $action )
@@ -338,7 +338,7 @@ class MS_View_Shortcode_MembershipSignup extends MS_View {
                         $membership,
                         $subscription
                 );
-
+                
                 if ( MS_Helper_Membership::MEMBERSHIP_ACTION_CANCEL === $action ) {
                         /**
                          * PayPal Standard Gateway uses a special Cancel button.
@@ -366,16 +366,16 @@ class MS_View_Shortcode_MembershipSignup extends MS_View {
                                 'class' => 'ms-cancel-button button',
                                 'value' => esc_html( $this->data[ "{$cancel_action}_text" ] ),
                         );
-
+                        
                 }
-
+                
                 /**
                  * If membership is not active, we won't allow to renew
                  */
                 if( ! $membership->active ) {
                     $button = '';
                 }
-
+                
                 $template_data = array(
                                     'membership_id' => $membership_id,
                                     'membership_wrapper_classes' => $membership_wrapper_classes,
@@ -390,12 +390,12 @@ class MS_View_Shortcode_MembershipSignup extends MS_View {
                                     'm2_obj' => $this
                                 );
                 MS_Helper_Template::$ms_single_box = $template_data;
-
+                
                 ?>
                 <form action="<?php echo $action_url; ?>" class="ms-membership-form" method="post">
                     <?php
                         wp_nonce_field( $fields['action']['value'] );
-
+                        
                         if( $path = MS_Helper_Template::template_exists( 'membership_box_html.php' ) ) {
                             require $path;
                         }

@@ -1,0 +1,72 @@
+=== Plugin Name ===
+Contributors: nateallen
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=email%40nateallen%2ecom
+Tags: nate allen,add,bulk,mass,multiple,create,term,terms,taxonomy,taxonomies,categories,tags,generator,creator,keywords,slug
+Requires at least: 3.1
+Tested up to: 4.7.1
+Stable tag: 1.3.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Easily add terms to taxonomies in bulk
+
+== Description ==
+
+If you have a lot of terms that you need to add to tags, categories, or custom taxonomies... don't waste time doing it by hand! Bulk Term Generator makes it easy to do it all at once.
+
+For example, let's say you have a custom taxonomy called Animal Types and you need to import every animal type known to man. To make matters worse, there's a hierarchy, so each animal (like "Dogs") have hundreds of breeds under it. Yikes.
+
+Submitting each one individually (and waiting for the page to load each time) could take you forever.
+
+Now there's a better way...
+
+1. After installing the plugin, you choose which taxonomy you want to import terms to.
+2. Copy/paste a list of terms you want to create. You can even specify the slug and description for each.
+3. If you are dealing with a hierachy, continue to paste terms for each one, choosing which parent it belongs to.
+4. You can see which terms will be added before they are generated. This gives you a chance to make any changes before the final step.
+5. When you're ready, just hit the "Generate Terms" button, and you're done!
+
+= Localization =
+Bulk Term Generator developed ready for translation.
+
+This plugin has been translated to the following languages:
+
+* English
+* Spanish (Mexico)
+
+Please let me know if you're interested in providing translations!
+
+== Installation ==
+
+1. Upload the folder `bulk-term-generator` to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Go to Tools > Bulk Term Generator
+
+== Frequently Asked Questions ==
+
+Q. I need to add a comma to my description, but this breaks things!
+A. You can escape commas by adding backslash before it, like this: Boston\, MA
+
+== Screenshots ==
+
+1. Adding a big list of terms to a custom taxonomy, one per line. Optional: Specify the slug and/or description.
+2. Preview the terms before they're generated.
+3. Watch the terms being created in real time. Pause or Cancel at any point.
+4. Adding or editing the slug and/or description before generating the terms is easy.
+
+== Changelog ==
+
+= 1.3.0 =
+* Added link to 'Add terms in bulk' to the default taxonomy edit screen
+
+= 1.2.0 =
+* Added ability to escape commas
+
+= 1.1.0 =
+* Disabled line wrapping in the main text area
+
+= 1.0.2 =
+* Added screenshots
+
+= 1.0.1 =
+* Initial release

@@ -368,7 +368,7 @@ class MS_Model_Plugin extends MS_Model {
 	 */
 	public function protect_current_page() {
 		do_action( 'ms_model_plugin_protect_current_page_before', $this );
-
+                
                 if( defined( 'MS_PROTECTED_MESSAGE_REVERSE_RULE' ) && MS_PROTECTED_MESSAGE_REVERSE_RULE ) {
                     $allowed_memberships = array();
                     $memberships = MS_Model_Membership::get_membership_ids();
@@ -512,25 +512,6 @@ class MS_Model_Plugin extends MS_Model {
 
 		do_action( 'ms_setup_protection', $this );
 
-		// If multi membership addon is active and member has at least one membership with allow access then no need to protect content
-		$disable_protection = false;
-		if ( ! $this->member->is_normal_admin() && MS_Model_Addon::is_enabled( MS_Model_Addon::ADDON_MULTI_MEMBERSHIPS ) ) {
-
-			foreach ( $this->member->subscriptions as $subscription ) {
-				// Verify status of the membership.
-				// Only active, trial or canceled (until it expires) status memberships.
-				if ( ! $this->member->has_membership( $subscription->membership_id ) ) {
-					continue;
-				}
-
-				$membership = $subscription->get_membership();
-				$membership->initialize( $subscription );
-
-				$disable_protection = $disable_protection || $membership->has_access_to_content( MS_Rule_Content_Model::MORE_LIMIT );
-			}
-
-		}
-
 		// Search permissions through all memberships joined.
 		foreach ( $this->member->subscriptions as $subscription ) {
 			// Verify status of the membership.
@@ -543,7 +524,7 @@ class MS_Model_Plugin extends MS_Model {
 			$membership->initialize( $subscription );
 
 			// Protection is not applied for Admin users.
-			if ( ! $this->member->is_normal_admin() && ! $disable_protection ) {
+			if ( ! $this->member->is_normal_admin() ) {
 				$membership->protect_content();
 			}
 		}
@@ -718,14 +699,14 @@ class MS_Model_Plugin extends MS_Model {
 			wp_clear_scheduled_hook( $hook );
 			$this->setup_cron_services( $hook );
 		}
-
+                
                 $_SESSION['m2_status_check'] = 'inv';
 
 		// Perform the actual status checks!
 		foreach ( $subscriptions as $subscription ) {
 			$subscription->check_membership_status();
 		}
-
+                
 		do_action( 'ms_model_plugin_check_membership_status_after', $this );
 	}
 

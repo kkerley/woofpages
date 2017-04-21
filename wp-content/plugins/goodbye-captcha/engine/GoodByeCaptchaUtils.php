@@ -513,12 +513,12 @@ final class GoodByeCaptchaUtils
 		);
 	}
 
-	
+
 	public static function isPostRequestForWPStandardLogin()
 	{
 		return !empty($_POST) && function_exists('login_header') && !MchGdbcWpUtils::isAjaxRequest();
 	}
-	
+
 	public static function isLoginAttemptEntity(GdbcAttemptEntity $attemptEntity)
 	{
 		foreach(self::getAllPossibleLoginAttemptEntities() as $loginAttemptEntity)
@@ -549,6 +549,14 @@ final class GoodByeCaptchaUtils
 
 				case GdbcModulesController::MODULE_ULTIMATE_MEMBER :
 					$loginEntitiesList[] = new GdbcAttemptEntity(GdbcModulesController::getModuleIdByName($moduleName), GdbcUltimateMemberAdminModule::OPTION_ULTIMATE_MEMBER_LOGIN_FORM);
+					break;
+
+				case GdbcModulesController::MODULE_ULTRA_COMMUNITY :
+					$loginEntitiesList[] = new GdbcAttemptEntity(GdbcModulesController::getModuleIdByName($moduleName), GdbcUltraCommunityAdminModule::OPTION_LOGIN_FORM_PROTECTION_ACTIVATED);
+					break;
+
+				case GdbcModulesController::MODULE_WP_MEMBERS :
+					$loginEntitiesList[] = new GdbcAttemptEntity(GdbcModulesController::getModuleIdByName($moduleName), GdbcWPMembersAdminModule::OPTION_LOGIN_FORM_PROTECTION_ACTIVATED);
 					break;
 
 				case GdbcModulesController::MODULE_WOOCOMMERCE :

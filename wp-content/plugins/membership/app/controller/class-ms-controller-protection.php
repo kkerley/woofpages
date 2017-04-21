@@ -210,10 +210,7 @@ class MS_Controller_Protection extends MS_Controller {
 				MS_Rule_Page::RULE_ID => true,
 				MS_Rule_Post::RULE_ID => true,
 				MS_Rule_Category::RULE_ID => true,
-
-				MS_Rule_CptItem::RULE_ID => true,
-				MS_Rule_CptGroup::RULE_ID => true,
-
+				
 				MS_Rule_Content::RULE_ID => true,
 				MS_Rule_Media::RULE_ID => true,
 				MS_Rule_MenuItem::RULE_ID => true,
@@ -222,9 +219,7 @@ class MS_Controller_Protection extends MS_Controller {
 				MS_Rule_Shortcode::RULE_ID => true,
 				MS_Rule_Url::RULE_ID => true,
 				MS_Rule_Special::RULE_ID => true,
-
-				MS_Rule_Adminside::RULE_ID => true,
-
+				
 				MS_Rule_MemberCaps::RULE_ID => true,
 				MS_Rule_MemberRoles::RULE_ID => true,
 			);
@@ -246,14 +241,7 @@ class MS_Controller_Protection extends MS_Controller {
 				$tabs[ MS_Rule_Media::RULE_ID ] = false;
 			}
 
-
-			// Either "CPT Group" or "CPT Posts"
-			if ( MS_Model_Addon::is_enabled( MS_Model_Addon::ADDON_CPT_POST_BY_POST ) ) {
-				$tabs[ MS_Rule_CptGroup::RULE_ID ] = false;
-			} else {
-				$tabs[ MS_Rule_CptItem::RULE_ID ] = false;
-			}
-
+			
 
 			// Either "Menu Item" or "Menus" or "Menu Location"
 			switch ( $settings->menu_protection ) {
@@ -289,12 +277,7 @@ class MS_Controller_Protection extends MS_Controller {
 				$tabs[ MS_Rule_Shortcode::RULE_ID ] = false;
 			}
 
-
-			// Maybe "Admin-Side"
-			if ( ! MS_Model_Addon::is_enabled( MS_Model_Addon::ADDON_ADMINSIDE ) ) {
-				$tabs[ MS_Rule_Adminside::RULE_ID ] = false;
-			}
-
+			
 
 			// Maybe "Membercaps"
 			if ( MS_Model_Addon::is_enabled( MS_Model_Addon::ADDON_MEMBERCAPS ) ) {

@@ -7467,6 +7467,8 @@ a.thumbnail {
         color: #fff; }
   .primary-nav .sticky-site-title {
     display: none; }
+    .primary-nav .sticky-site-title > a {
+      padding: 0.25rem; }
     .primary-nav .sticky-site-title .logo--sticky {
       display: none; }
     .theme--top-level .primary-nav .sticky-site-title {

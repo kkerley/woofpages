@@ -33,3 +33,4 @@ class GetSettlementStatsByTaxationTypeOut {
   */
   public $by_taxation_type; // by_taxation_type
   }
+

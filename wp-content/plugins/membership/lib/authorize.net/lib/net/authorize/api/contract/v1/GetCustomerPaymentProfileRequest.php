@@ -64,3 +64,4 @@ class GetCustomerPaymentProfileRequest extends ANetApiRequestType
 
 
 }
+

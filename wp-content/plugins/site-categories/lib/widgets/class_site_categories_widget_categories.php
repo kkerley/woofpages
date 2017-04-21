@@ -4,9 +4,9 @@
  */
 class Bcat_WidgetCategories extends WP_Widget {
 
-	function Bcat_WidgetCategories () {
+	function __construct () {
 		$widget_ops = array('classname' => __CLASS__, 'description' => __('Shows a list of all site categories.', SITE_CATEGORIES_I18N_DOMAIN));
-		parent::WP_Widget(__CLASS__, __('Site Categories', SITE_CATEGORIES_I18N_DOMAIN), $widget_ops);
+		parent::__construct(__CLASS__, __('Site Categories', SITE_CATEGORIES_I18N_DOMAIN), $widget_ops);
 	}
 
 	function form($instance) {
@@ -409,7 +409,7 @@ function process_categories_widget_list_display($content, $data, $args) {
 				$content .=	'<li><a href="'. $output_url .'" '. $link_target .' '. $disabled .'>';
 
 				if ( ($args['icon_show'] == true) && (isset($category->icon_image_src))) {
-					$content .= '<img class="site-category-icon" width="'. $args['icon_size'] .'" height="'. $args['icon_size'] .'" alt="'. $category->name .'" src="'. $category->icon_image_src .'" />';	  	  	  				     	  
+					$content .= '<img class="site-category-icon" width="'. $args['icon_size'] .'" height="'. $args['icon_size'] .'" alt="'. $category->name .'" src="'. $category->icon_image_src .'" />';
 				}
 				$content .= '<span class="site-category-title">'. $category->name .'</span>';
 				$content .= '</a>';

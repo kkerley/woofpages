@@ -71,3 +71,4 @@ class GetSettledBatchListResponse extends ANetApiResponseType
 
 
 }
+

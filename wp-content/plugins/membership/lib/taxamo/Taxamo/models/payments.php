@@ -43,3 +43,4 @@ class Payments {
   */
   public $payment_information; // string
   }
+

@@ -67,3 +67,4 @@ class MS_Rule_Media extends MS_Controller {
 	}
 
 }
+

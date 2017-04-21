@@ -38,3 +38,4 @@ class CreateSMSTokenIn {
   */
   public $recipient; // string
   }
+

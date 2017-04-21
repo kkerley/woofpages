@@ -468,3 +468,4 @@ class M2_Mailchimp_Folder_Not_Found_Exception extends M2_Mailchimp_Error {}
  */
 class M2_Mailchimp_Folder_Exists_Exception extends M2_Mailchimp_Error {}
 
+

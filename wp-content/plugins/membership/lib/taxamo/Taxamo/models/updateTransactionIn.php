@@ -33,3 +33,4 @@ class UpdateTransactionIn {
   */
   public $transaction; // transaction
   }
+

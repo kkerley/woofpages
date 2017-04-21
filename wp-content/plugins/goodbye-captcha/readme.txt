@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: captcha, antispam, anti-spam, spam, mailpoet, antispambot, brute force, comment spam, jetpack contact form, contact form 7, ninja forms, formidable forms, wp bruiser
 Requires at least: 3.5
 Tested up to: 4.7
-Stable tag: 3.1.5
+Stable tag: 3.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -223,13 +223,11 @@ A plugin vulnerability reported by Wordfence team. This update is highly recomme
 Refreshed Country IPs, WebAttackers IPs and Proxy IPs
 
 == Changelog ==
+* Added integration with [Ultra Community](https://wordpress.org/plugins/ultra-community/) Membership plugin
 
-= 3.1.5 =
+= 3.1.6 =
 **Improvements**
-- Refreshed Country IPs
-- Refreshed WebAttackers IPs
-- Refreshed Proxy IPs
-
+* Added integration with [Ultra Community](https://wordpress.org/plugins/ultra-community/) Membership plugin
 
 
 **Fixes**

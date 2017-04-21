@@ -33,3 +33,4 @@ class ListPaymentsOut {
   */
   public $payments; // array[payments]
   }
+

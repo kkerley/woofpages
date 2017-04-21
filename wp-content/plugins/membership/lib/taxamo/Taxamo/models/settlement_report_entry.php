@@ -73,3 +73,4 @@ class Settlement_report_entry {
   */
   public $currency_code; // string
   }
+

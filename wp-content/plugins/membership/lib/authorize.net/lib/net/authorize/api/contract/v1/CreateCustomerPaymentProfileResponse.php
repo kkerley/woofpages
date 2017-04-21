@@ -64,3 +64,4 @@ class CreateCustomerPaymentProfileResponse extends ANetApiResponseType
 
 
 }
+

@@ -33,3 +33,4 @@ class ConfirmTransactionOut {
   */
   public $transaction; // transaction
   }
+

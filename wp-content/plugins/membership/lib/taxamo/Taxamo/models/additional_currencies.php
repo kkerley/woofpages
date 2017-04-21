@@ -33,3 +33,4 @@ class Additional_currencies {
   */
   public $invoice; // additional_currency
   }
+

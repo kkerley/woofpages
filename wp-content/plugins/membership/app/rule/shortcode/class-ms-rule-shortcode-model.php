@@ -179,7 +179,7 @@ class MS_Rule_Shortcode_Model extends MS_Rule {
                                 }else{
                                     $membership_id = apply_filters( 'ms_detect_membership_id', 0 );
                                 }
-
+                                
 				$msg = $settings->get_protection_message(
 					MS_Model_Settings::PROTECTION_MSG_SHORTCODE,
 					$membership_id

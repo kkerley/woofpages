@@ -38,3 +38,4 @@ class CreateTransactionIn {
   */
   public $transaction; // input_transaction
   }
+

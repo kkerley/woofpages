@@ -65,3 +65,4 @@ class MS_Rule_Shortcode extends MS_Controller {
 	}
 
 }
+

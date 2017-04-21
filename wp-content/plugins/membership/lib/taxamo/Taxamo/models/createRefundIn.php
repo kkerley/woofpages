@@ -48,3 +48,4 @@ class CreateRefundIn {
   */
   public $total_amount; // number
   }
+

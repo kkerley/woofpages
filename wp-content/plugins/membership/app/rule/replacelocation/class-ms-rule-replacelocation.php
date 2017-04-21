@@ -67,3 +67,4 @@ class MS_Rule_ReplaceLocation extends MS_Controller {
 	}
 
 }
+

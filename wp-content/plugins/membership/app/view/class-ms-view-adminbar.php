@@ -401,7 +401,7 @@ class MS_View_Adminbar extends MS_View {
 			margin-top: 0;
 			background: rgba(255,255,255,0.75);
 		}
-
+                
                 .ms-sim-info.collapsed h4.toggle-wrap {
 		    height: 28px;
 		    line-height: 20px;
@@ -411,7 +411,7 @@ class MS_View_Adminbar extends MS_View {
 		    width: 160px;
                     font-size: 12px;
 		}
-
+                
 		.ms-sim-info.collapsed {
 			bottom: auto;
 		}

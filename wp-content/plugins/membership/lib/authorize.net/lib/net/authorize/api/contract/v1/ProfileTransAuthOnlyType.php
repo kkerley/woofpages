@@ -13,3 +13,4 @@ class ProfileTransAuthOnlyType extends ProfileTransOrderType
 
 
 }
+

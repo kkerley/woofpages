@@ -122,3 +122,4 @@ class CustomerPaymentProfileMaskedType extends CustomerPaymentProfileBaseType
 
 
 }
+

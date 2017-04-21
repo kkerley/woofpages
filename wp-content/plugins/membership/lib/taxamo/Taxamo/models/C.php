@@ -48,3 +48,4 @@ class C {
   */
   public $day; // string
   }
+

@@ -233,3 +233,4 @@ class Transactions {
   */
   public $key; // string
   }
+

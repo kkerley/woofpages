@@ -28,7 +28,7 @@ class MS_View_Membership_List extends MS_View {
 			'value' => __( 'Create New Membership', 'membership2' ),
 			'class' => 'button',
 		);
-
+                
                 $delete_button = array(
 			'id' => 'delete_ms_button',
 			'type' => MS_Helper_Html::TYPE_HTML_LINK,

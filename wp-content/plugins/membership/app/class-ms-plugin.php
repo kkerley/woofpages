@@ -490,23 +490,7 @@ class MS_Plugin {
 	 *         True means that memberships are shared among all network sites.
 	 */
 	public static function is_network_wide() {
-
-		static $Networkwide = null;
-
-		if ( null === $Networkwide ) {
-			if ( ! defined( 'MS_PROTECT_NETWORK' ) ) {
-				define( 'MS_PROTECT_NETWORK', false );
-			}
-
-			if ( MS_PROTECT_NETWORK && is_multisite() ) {
-				$Networkwide = true;
-			} else {
-				$Networkwide = false;
-			}
-		}
-
-		return $Networkwide;
-
+		
 
 		// Free plugin always returns false (this is a pro feature).
 		return false;
@@ -584,18 +568,5 @@ class MS_Plugin {
 		if ( property_exists( $this, $property ) ) {
 			return $this->$property;
 		}
-	}
-
-	/**
-	 * Check if property isset.
-	 *
-	 * @since  1.0.0
-	 * @internal
-	 *
-	 * @param string $property The name of a property.
-	 * @return mixed Returns true/false.
-	 */
-	public function __isset( $property ) {
-		return isset($this->$property);
 	}
 };

@@ -68,3 +68,4 @@ class Invoice_address {
   */
   public $country; // string
   }
+

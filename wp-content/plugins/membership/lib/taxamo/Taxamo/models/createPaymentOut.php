@@ -33,3 +33,4 @@ class CreatePaymentOut {
   */
   public $success; // bool
   }
+

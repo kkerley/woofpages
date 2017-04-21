@@ -65,7 +65,7 @@ class Transaction_lines {
   */
   public $deducted_tax_amount; // number
   /**
-  * Product type, according to dictionary /dictionaries/product_types.
+  * Product type, according to dictionary /dictionaries/product_types. 
   */
   public $product_type; // string
   /**
@@ -133,3 +133,4 @@ class Transaction_lines {
   */
   public $tax_name; // string
   }
+

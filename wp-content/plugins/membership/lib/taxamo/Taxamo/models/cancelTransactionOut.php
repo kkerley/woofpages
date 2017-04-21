@@ -33,3 +33,4 @@ class CancelTransactionOut {
   */
   public $success; // bool
   }
+

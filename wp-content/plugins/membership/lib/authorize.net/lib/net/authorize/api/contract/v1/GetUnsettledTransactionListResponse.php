@@ -71,3 +71,4 @@ class GetUnsettledTransactionListResponse extends ANetApiResponseType
 
 
 }
+

@@ -1,12 +1,14 @@
 <div class="ms-account-wrapper">
         <?php if ( ms_is_user_logged_in() ) : ?>
 
-                <?php if( ms_show_users_membership() ) : ?>
+                <?php
+                // ================================================= MEMBERSHIPS
+                if ( ms_is_user_logged_in() ) : ?>
                 <div id="account-membership">
                 <h2>
                         <?php
                         echo get_ms_ac_title();
-
+                        
                         if ( show_membership_change_link() ) {
                                 echo get_ms_ac_signup_modified_url();
                         }
@@ -70,8 +72,9 @@
                 do_action( 'ms_view_account_memberships_bottom', get_ms_ac_member_obj(), get_ms_ac_account_obj() );
                 ?>
                 </div>
-                <?php endif; ?>
-
+                <?php
+                endif;
+                ?>
 
                 <?php
                 // ===================================================== PROFILE
@@ -105,8 +108,8 @@
                 </table>
                 <?php
                 do_action( 'ms_view_account_profile_before_card', get_ms_ac_member_obj(), get_ms_ac_account_obj() );
-
-
+                
+                
                 do_action( 'ms_view_shortcode_account_card_info', get_ms_ac_data() );
 
                 /**
@@ -254,7 +257,7 @@
                 ?>
 
         <?php else :
-
+                
                 if ( ! has_ms_ac_login_form() ) {
                         echo get_ms_ac_login_form();
                 }

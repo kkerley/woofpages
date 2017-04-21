@@ -33,3 +33,4 @@ class ListTransactionsOut {
   */
   public $transactions; // array[transactions]
   }
+

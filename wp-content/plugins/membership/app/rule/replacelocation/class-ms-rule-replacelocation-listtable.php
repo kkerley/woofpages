@@ -25,7 +25,7 @@ class MS_Rule_ReplaceLocation_ListTable extends MS_Helper_ListTable_RuleMatching
 			'ms_helper_listtable_' . $this->id . '_columns',
 			array( $this, 'customize_columns' )
 		);
-
+                
                 add_filter(
                     'bulk_actions-membership-2_page_membership2-protection',
                     array( $this, 'replace_location_disable_bulk_action' )
@@ -43,7 +43,7 @@ class MS_Rule_ReplaceLocation_ListTable extends MS_Helper_ListTable_RuleMatching
 		$columns['access'] = true;
 		return $columns;
 	}
-
+        
         /**
 	 * Remove bulk action feature
 	 *

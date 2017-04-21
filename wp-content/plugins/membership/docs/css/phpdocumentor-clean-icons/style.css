@@ -46,6 +46,3 @@ you can use the generic selector below, but it's slower:
 .icon-class:before {
 	content: "\e002";
 }
-
-
-/* 520716-1491999289-au */

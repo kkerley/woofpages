@@ -43,3 +43,4 @@ class CreatePaymentIn {
   */
   public $payment_information; // string
   }
+

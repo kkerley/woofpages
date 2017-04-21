@@ -38,3 +38,4 @@ class CreateRefundOut {
   */
   public $tax_amount; // number
   }
+

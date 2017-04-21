@@ -748,7 +748,7 @@ class MS_Factory {
 				$wpdb->set_blog_id( $GLOBALS['blog_id'] );
 				$GLOBALS['table_prefix'] = $wpdb->get_blog_prefix();
 			}*/
-
+                        
                         restore_current_blog();
 		}
 	}

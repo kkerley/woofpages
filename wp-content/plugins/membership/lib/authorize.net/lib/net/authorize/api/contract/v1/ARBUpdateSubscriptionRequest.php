@@ -64,3 +64,4 @@ class ARBUpdateSubscriptionRequest extends ANetApiRequestType
 
 
 }
+

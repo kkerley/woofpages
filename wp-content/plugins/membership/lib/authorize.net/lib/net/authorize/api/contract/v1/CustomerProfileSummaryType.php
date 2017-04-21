@@ -67,3 +67,4 @@ class CustomerProfileSummaryType extends SearchCriteriaCustomerProfileType
 
 
 }
+

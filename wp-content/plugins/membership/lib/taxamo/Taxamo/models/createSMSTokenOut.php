@@ -33,3 +33,4 @@ class CreateSMSTokenOut {
   */
   public $success; // bool
   }
+

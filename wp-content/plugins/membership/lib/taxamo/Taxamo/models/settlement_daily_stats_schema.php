@@ -58,3 +58,4 @@ class Settlement_daily_stats_schema {
   */
   public $day; // string
   }
+

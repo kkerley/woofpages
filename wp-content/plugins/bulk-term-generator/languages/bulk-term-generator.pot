@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-05-16 21:45-0500\n"
+"PO-Revision-Date: 2015-05-16 21:45-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../views/admin/templates/generate_terms_page.php:3
+#: ../views/admin/templates/settings_page_default.php:3
+msgid "Bulk Term Generator"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:13
+#, php-format
+msgid "On this page you can add terms to the %s taxonomy in bulk."
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:15
+msgid "Your Terms:"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:21
+msgid "No terms yet. Add some below!"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:25
+msgid "Add Terms"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:28
+msgid "Enter each term below <span>on its own line</span>."
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:31
+msgid "Optional:"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:31
+msgid ""
+"You can specify the \"slug\" and \"description\" for each term by seperating "
+"them with commas."
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:32
+msgid "(ie: United States, united_states, Population is 317 Million)"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:39
+msgid "Parent"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:44
+msgid "(Sorry, this taxonomy isn't hierarchical)"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:54
+msgid "Add Terms to Queue"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:55
+msgid "Generate Terms"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:74
+msgid "About"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:76
+msgid ""
+"<strong>Bulk Term Generator</strong> was developed by Nate Allen, Senior Web "
+"Developer at <a href=\"http://fireflypartners.com\">Firefly Partners</a>."
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:82
+msgid "Support"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:84
+msgid ""
+"If need help, check out the support page for the plugin. I will do my best "
+"to answer questions or patch bugs. Please be patient; this is a free plugin "
+"and I have a full-time job. :)"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:90
+msgid "Feedback"
+msgstr ""
+
+#: ../views/admin/templates/generate_terms_page.php:92
+msgid ""
+"Do you have an idea for an improvement? <a href=\"mailto:email@ncallen.com"
+"\">Email me</a> and I'll see what I can do. Or better yet, <a href=\"https://"
+"github.com/nate-allen/bulk-term-generator\">contribute code to the Github "
+"repository</a>!"
+msgstr ""
+
+#: ../views/admin/templates/settings_page_default.php:11
+msgid "First, choose a taxonomy you'd like to add terms to:"
+msgstr ""
+
+#: ../views/admin/templates/settings_page_default.php:19
+msgid "Taxonomy"
+msgstr ""
+
+#: ../views/admin/templates/settings_page_default.php:29
+msgid "Select Taxonomy"
+msgstr ""

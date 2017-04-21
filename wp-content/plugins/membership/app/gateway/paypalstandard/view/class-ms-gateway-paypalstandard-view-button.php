@@ -274,7 +274,7 @@ class MS_Gateway_Paypalstandard_View_Button extends MS_View {
 					'type' => MS_Helper_Html::INPUT_TYPE_HIDDEN,
 					'value' => $period_type,
 				);
-
+                                
                                 $custom_period_type = isset( $period_type ) ? $period_type : '';
                                 $custom_period_value = isset( $period_value ) ? $period_value : '';
 
@@ -308,7 +308,7 @@ class MS_Gateway_Paypalstandard_View_Button extends MS_View {
 					'type' => MS_Helper_Html::INPUT_TYPE_HIDDEN,
 					'value' => $period_type,
 				);
-
+                                
                                 $custom_period_type = isset( $period_type ) ? $period_type : '';
                                 $custom_period_value = isset( $period_value ) ? $period_value : '';
 				break;
@@ -334,7 +334,7 @@ class MS_Gateway_Paypalstandard_View_Button extends MS_View {
 					'type' => MS_Helper_Html::INPUT_TYPE_HIDDEN,
 					'value' => 'D',
 				);
-
+                                
                                 $custom_period_type = isset( $period_type ) ? $period_type : '';
                                 $custom_period_value = isset( $period_value ) ? $period_value : '';
 				break;
@@ -361,7 +361,7 @@ class MS_Gateway_Paypalstandard_View_Button extends MS_View {
 					'type' => MS_Helper_Html::INPUT_TYPE_HIDDEN,
 					'value' => 'Y',
 				);
-
+                                
                                 $custom_period_type = isset( $period_type ) ? $period_type : '';
                                 $custom_period_value = isset( $period_value ) ? $period_value : '';
 				break;
@@ -407,10 +407,10 @@ class MS_Gateway_Paypalstandard_View_Button extends MS_View {
 			'type' => MS_Helper_Html::INPUT_TYPE_HIDDEN,
 			'value' => $modify ? 2 : 0,
 		);
-
+                
                 $custom_interval = $fields['p3']['value'] . $fields['t3']['value'];
                 $custom_invoice_date = date( 'Y-m-d H:i:s' );
-
+                
                 $fields['custom'] = array(
                         'id' => 'custom',
 			'type' => MS_Helper_Html::INPUT_TYPE_HIDDEN,
@@ -423,7 +423,7 @@ class MS_Gateway_Paypalstandard_View_Button extends MS_View {
                             $membership->id
                         )
                 );
-
+                
                 // Added to return in correct URL
                 $fields['rm'] = array(
 			'id' => 'rm',

@@ -33,3 +33,4 @@ class ConfirmTransactionIn {
   */
   public $transaction; // input_transaction_update
   }
+

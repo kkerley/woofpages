@@ -145,6 +145,9 @@
   .sticky-site-title{
     display: none;
     // transition: all 0.2s ease;
+    > a{
+      padding: 0.25rem;
+    }
 
     .logo--sticky{
       display: none;

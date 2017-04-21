@@ -38,11 +38,11 @@ class MS_Helper_ListTable_Membership extends MS_Helper_ListTable {
 			$columns
 		);
 	}
-
+        
         public function column_cb( $item ) {
             return sprintf(
                 '<input class="del_membership_ids" type="checkbox" name="memberships[]" value="%s" />', $item->id
-            );
+            );    
         }
 
 	public function get_hidden_columns() {

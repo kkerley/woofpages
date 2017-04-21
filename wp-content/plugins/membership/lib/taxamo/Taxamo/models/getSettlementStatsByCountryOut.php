@@ -33,3 +33,4 @@ class GetSettlementStatsByCountryOut {
   */
   public $by_country; // array[by_country]
   }
+

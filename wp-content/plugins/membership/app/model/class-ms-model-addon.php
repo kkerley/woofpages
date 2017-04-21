@@ -214,10 +214,7 @@ class MS_Model_Addon extends MS_Model_Option {
 		$plugin_dir = substr( MS_Plugin::instance()->dir, strlen( $content_dir ) );
 
 		$addon_dirs = array();
-
-		// Sequence is important: First Premium!
-		$addon_dirs[] = $plugin_dir . 'premium/addon/';
-
+		
 
 		$addon_dirs[] = $plugin_dir . 'app/addon/';
 

@@ -40,3 +40,4 @@ class ProfileTransCaptureOnlyType extends ProfileTransOrderType
 
 
 }
+

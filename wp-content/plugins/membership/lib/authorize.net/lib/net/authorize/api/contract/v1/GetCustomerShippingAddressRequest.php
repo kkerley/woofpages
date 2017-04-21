@@ -64,3 +64,4 @@ class GetCustomerShippingAddressRequest extends ANetApiRequestType
 
 
 }
+

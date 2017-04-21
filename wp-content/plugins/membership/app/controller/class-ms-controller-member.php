@@ -105,14 +105,11 @@ class MS_Controller_Member extends MS_Controller {
 			self::AJAX_ACTION_SEARCH,
 			'ajax_action_search'
 		);
-
-		$this->add_action(
-			'delete_user',
-			'remove_membership_from_user'
-		);
-
-		$this->add_filter( 'set-screen-option', array($this, 'members_admin_page_set_screen_option') , 10, 3);
-
+                
+                $this->add_action(
+                    'delete_user',
+                    'remove_membership_from_user'
+                );
 	}
 
 	/**
@@ -125,8 +122,6 @@ class MS_Controller_Member extends MS_Controller {
 			'list' => MS_Controller_Plugin::admin_page_hook( 'members' ),
 			'editor' => MS_Controller_Plugin::admin_page_hook( 'add-member' ),
 		);
-
-		$this->add_action( 'load-' . $hooks['list'], 'members_admin_page_screen_option' );
 
 		foreach ( $hooks as $key => $hook ) {
 			$this->run_action( 'load-' . $hook, 'members_admin_page_process_' . $key );
@@ -152,7 +147,7 @@ class MS_Controller_Member extends MS_Controller {
 		$member->is_member = true;
 		$member->save();
 	}
-
+        
         /**
          * Remove membership for an user
          *
@@ -162,7 +157,7 @@ class MS_Controller_Member extends MS_Controller {
         {
             $member = MS_Factory::load( 'MS_Model_Member', $user_id );
             $memberships_ids = ( array ) $member->get_membership_ids();
-
+            
             if( ! empty( $memberships_ids ) )
             {
                 foreach( $memberships_ids as $memberships_id )
@@ -171,32 +166,6 @@ class MS_Controller_Member extends MS_Controller {
                 }
             }
         }
-
-		/**
-		* Add pagination members screen option
-		*
-		* @since 1.0.3
-		*/
-		function members_admin_page_screen_option() {
-			$option = 'per_page';
-			$args   = array(
-				'label'   => 'Members',
-				'default' => 20,
-				'option'  => 'members_per_page'
-			);
-
-			add_screen_option( $option, $args );
-		}
-
-		/**
-		* Set pagination members screen option
-		*
-		* @since 1.0.3
-		*/
-		public static function members_admin_page_set_screen_option( $status, $option, $value ) {
-			return $value;
-		}
-
 
 	/**
 	 * Manages membership actions.
@@ -626,7 +595,7 @@ class MS_Controller_Member extends MS_Controller {
 		echo json_encode( $res );
 		exit;
 	}
-
+        
         public function compare_objects( $obj_a, $obj_b ) {
             return $obj_a->ID - $obj_b->ID;
         }

@@ -160,9 +160,10 @@ class MS_Rule_Url_Model extends MS_Rule {
 
 			$url = strtolower( $url );
 			foreach ( $check_list as $check ) {
-				if (false === empty($check) && 1 === preg_match( '@' . trim($check) . '@',  $url) ) {
+				if ( $match ) { break; }
+
+				if ( false !== strpos( $url, $check ) ) {
 					$match = true;
-					break;
 				}
 			}
 		}

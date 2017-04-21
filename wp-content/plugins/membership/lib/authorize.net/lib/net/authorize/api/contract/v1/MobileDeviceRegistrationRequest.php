@@ -37,3 +37,4 @@ class MobileDeviceRegistrationRequest extends ANetApiRequestType
 
 
 }
+

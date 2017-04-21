@@ -1,6 +1,6 @@
 <?php
 
-abstract class Incsub_Support_Shortcode {
+abstract class Incsub_Support_Shortcode{
 	public abstract function render( $atts );
 
 	public function end() {
@@ -8,9 +8,8 @@ abstract class Incsub_Support_Shortcode {
 		return ob_get_clean();
 	}
 
-	public function start() {
+	public function start(){
 		echo '<div id="support-system">';
 		ob_start();
 	}
-
 }

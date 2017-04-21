@@ -37,3 +37,4 @@ class ValidateCustomerPaymentProfileResponse extends ANetApiResponseType
 
 
 }
+

@@ -40,3 +40,4 @@ class EmailSettingsType extends ArrayOfSettingType
 
 
 }
+

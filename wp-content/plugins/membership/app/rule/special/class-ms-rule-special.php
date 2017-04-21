@@ -67,3 +67,4 @@ class MS_Rule_Special extends MS_Controller {
 	}
 
 }
+

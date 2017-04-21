@@ -160,7 +160,7 @@ class MS_Controller_Dialog extends MS_Controller {
 				$enforce
                             );
                         }
-
+			
 		}
 
 		$this->respond( $resp );

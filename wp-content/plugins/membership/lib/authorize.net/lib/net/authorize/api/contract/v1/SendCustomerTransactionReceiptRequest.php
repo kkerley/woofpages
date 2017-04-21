@@ -91,3 +91,4 @@ class SendCustomerTransactionReceiptRequest extends ANetApiRequestType
 
 
 }
+

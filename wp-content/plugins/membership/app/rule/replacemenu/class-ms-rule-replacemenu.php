@@ -67,3 +67,4 @@ class MS_Rule_ReplaceMenu extends MS_Controller {
 	}
 
 }
+

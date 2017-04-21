@@ -33,3 +33,4 @@ class GetCurrenciesDictOut {
   */
   public $dictionary; // array[currency_schema]
   }
+

@@ -38,7 +38,7 @@ get_header(); ?>
 
     <div class="latest-dogs--inner">
         <div class="latest-dogs vertical">
-            <?php echo do_shortcode('[globalrecentdogs]'); ?>
+            <?php echo do_shortcode('[globalrecentdogs number="12"]'); ?>
         </div>
     </div>
 </section>

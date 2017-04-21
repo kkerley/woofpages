@@ -193,7 +193,7 @@ class MS_Controller_Api extends MS_Hooker {
 
 		return $member;
 	}
-
+        
         /**
          * Returns if the member is admin or not
          *
@@ -206,7 +206,7 @@ class MS_Controller_Api extends MS_Hooker {
             if( $user_id == null ) {
                 $user_id = get_current_user_id();
             }
-
+            
             return MS_Model_Member::is_admin_user( $user_id );
         }
 

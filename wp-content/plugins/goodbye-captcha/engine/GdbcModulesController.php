@@ -44,6 +44,9 @@ final class GdbcModulesController
 
 
 	CONST MODULE_ULTIMATE_MEMBER  = 'UltimateMember';
+	CONST MODULE_ULTRA_COMMUNITY  = 'UltraCommunity';
+	CONST MODULE_WP_MEMBERS       = 'WPMembers';
+
 	CONST MODULE_USER_PRO         = 'UserPro';
 	CONST MODULE_UPME             = 'UPME';
 	CONST MODULE_BUDDY_PRESS      = 'BuddyPress';
@@ -434,6 +437,28 @@ final class GdbcModulesController
 					'classes' => array(
 							'GdbcProxyHeadersAdminModule'  => '/modules/proxy-headers/GdbcProxyHeadersAdminModule.php',
 							'GdbcProxyHeadersPublicModule' => '/modules/proxy-headers/GdbcProxyHeadersPublicModule.php',
+					)
+			),
+
+			self::MODULE_WP_MEMBERS => array(
+					'info'    => array(
+							'ModuleId' => 34,
+							'IsLicensed' => false,
+					),
+					'classes' => array(
+							'GdbcWPMembersAdminModule'  => '/modules/wp-members/GdbcWPMembersAdminModule.php',
+							'GdbcWPMembersPublicModule' => '/modules/wp-members/GdbcWPMembersPublicModule.php',
+					)
+			),
+
+			self::MODULE_ULTRA_COMMUNITY => array(
+					'info'    => array(
+							'ModuleId' => 35,
+							'IsLicensed' => false,
+					),
+					'classes' => array(
+							'GdbcUltraCommunityAdminModule'  => '/modules/ultra-community/GdbcUltraCommunityAdminModule.php',
+							'GdbcUltraCommunityPublicModule' => '/modules/ultra-community/GdbcUltraCommunityPublicModule.php',
 					)
 			),
 

@@ -67,3 +67,4 @@ class CreateTransactionResponse extends ANetApiResponseType
 
 
 }
+

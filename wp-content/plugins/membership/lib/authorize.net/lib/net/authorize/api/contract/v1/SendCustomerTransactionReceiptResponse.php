@@ -10,3 +10,4 @@ class SendCustomerTransactionReceiptResponse extends ANetApiResponseType
 
 
 }
+

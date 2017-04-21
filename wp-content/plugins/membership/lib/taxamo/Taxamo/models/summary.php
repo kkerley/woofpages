@@ -58,3 +58,4 @@ class Summary {
   */
   public $tax_entity_name; // string
   }
+

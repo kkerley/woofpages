@@ -33,3 +33,4 @@ class GetTransactionsStatsOut {
   */
   public $by_status; // by_status
   }
+

@@ -145,3 +145,4 @@ class ValidateCustomerPaymentProfileRequest extends ANetApiRequestType
 
 
 }
+

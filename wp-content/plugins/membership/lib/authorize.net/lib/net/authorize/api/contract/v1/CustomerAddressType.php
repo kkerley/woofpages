@@ -94,3 +94,4 @@ class CustomerAddressType extends NameAndAddressType
 
 
 }
+
