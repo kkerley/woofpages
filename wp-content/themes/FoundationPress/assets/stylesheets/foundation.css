@@ -5103,7 +5103,7 @@ select {
   left: 100%;
   z-index: 1;
   display: none;
-  min-width: 200px;
+  min-width: 250px;
   border: 1px solid #e6e6e6;
   background: #fefefe; }
   .is-dropdown-submenu .is-dropdown-submenu-parent > a::after {
@@ -7427,6 +7427,8 @@ a.thumbnail {
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
   width: 100%; }
+  .primary-nav .is-dropdown-submenu {
+    text-align: left; }
   .primary-nav .sticky-site-title,
   .primary-nav .kk-off-canvas-trigger {
     line-height: 1;

@@ -33,7 +33,7 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 				    echo $output;
 				    ?>
 
-				    <?php echo types_render_field('sex'); ?> |
+				    <?php if(types_render_field('sex') === 'm'): echo 'Male'; else: echo 'Female'; endif; ?> |
 				    <?php echo types_render_field('age'); ?> year(s) old |
                     <strong><?php echo types_render_field('adoption-status'); ?></strong>
                 </p>

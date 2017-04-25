@@ -30,7 +30,7 @@
                                 <h4><?php bloginfo( 'name' ); ?></h4>
 
                                 <p class="rescue-contact-info--street-address">
-                                    <i class="fa fa-map-marker"></i> <?php echo $street_address; ?><br />
+                                    <i class="fa fa-map-marker"></i> <?php if($street_address): echo $street_address . '<br />'; endif; ?>
 					                <?php echo $city; ?>, <?php echo $state; ?> <?php echo $zip; ?>
                                 </p>
 			                <?php endif; ?>

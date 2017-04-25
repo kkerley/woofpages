@@ -121,7 +121,13 @@ class recentdogsshortcode {
 					    $html .= '<p>' . woofpages_current_dog_breeds(network_get_the_ID()) . '</p>';
 						$html .= '<p>';
                             if(!empty(get_post_meta(network_get_the_ID(), 'wpcf-sex', true))):
-                                $html .= '<span class="dog-sex label">' . get_post_meta(network_get_the_ID(), 'wpcf-sex', true) . '</span> ';
+	                            $html .= '<span class="dog-sex label">';
+                                if(get_post_meta(network_get_the_ID(), 'wpcf-sex', true) === 'f'):
+	                                $html .= 'Female';
+                                else:
+	                                $html .= 'Male';
+                                endif;
+	                            $html .= '</span> ';
                             endif;
 
                             if(!empty(get_post_meta(network_get_the_ID(), 'wpcf-age', true))):
