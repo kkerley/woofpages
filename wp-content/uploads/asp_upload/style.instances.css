@@ -928,7 +928,7 @@ div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic .results .item {
     #ajaxsearchprores1_1.isotopic .results .item .asp_content,
     #ajaxsearchprores1_2.isotopic .results .item .asp_content,
 div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic .results .item .asp_content {
-    background: rgba(0, 0, 0, 0.28);;
+    background: rgba(255, 255, 255, 0.55);
 }
 
 /* Isotopic navigation */
@@ -988,4 +988,4 @@ div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic nav.asp_navigation ul li:ho
 div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic nav.asp_navigation ul li span {
     color:  rgb(126, 126, 126);;
 }.wpdreams_asp_sc-1, .asp-try-1 {display: block; max-height: none; overflow: visible;}
-/* Generated at: 2017-04-23 12:48:22 */
+/* Generated at: 2017-04-25 13:43:22 */
