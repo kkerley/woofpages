@@ -7,7 +7,7 @@
   The Foundation framework is built by Zurb
   Licensed under MIT Open Source
 */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Raleway:600");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Raleway:600");
 /**
  * Foundation for Sites by ZURB
  * Version 6.3.1
@@ -2591,7 +2591,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #555555;
@@ -8230,7 +8230,7 @@ body#tinymce {
     margin: 2rem 0 0; }
 
 .single-incsub_event #wpmudevevents-wrapper {
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .single-incsub_event .wpmudevevents-contentmeta {
   background-color: #fae9a2;
@@ -8310,7 +8310,7 @@ body#tinymce {
   position: relative;
   text-align: left; }
   #front-hero .tagline {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.55);
     margin: 6rem 1rem;
     padding: 2rem;
     position: relative;

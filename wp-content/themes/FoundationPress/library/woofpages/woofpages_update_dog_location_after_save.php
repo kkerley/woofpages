@@ -17,11 +17,13 @@ function save_dog_meta( $post_id ) {
 	$city               = $woofpages_options['woofpages_rescue_location_city'];
 	$state              = $woofpages_options['woofpages_rescue_location_state'];
 	$zip                = $woofpages_options['woofpages_rescue_location_zip_code'];
+	$rescue_name        = get_bloginfo('name');
 
 	// - Update the post's metadata.
 	update_post_meta( $post_id, 'wpcf-location-city',$city );
 	update_post_meta( $post_id, 'wpcf-location-state',$state );
 	update_post_meta( $post_id, 'wpcf-location-zip',$zip );
+	update_post_meta( $post_id, 'wpcf-location-rescue-name',$rescue_name );
 }
 
 add_action( 'save_post', 'save_dog_meta', 9999, 1 );
