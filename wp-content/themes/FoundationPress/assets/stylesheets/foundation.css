@@ -7902,6 +7902,12 @@ body#tinymce {
   border: none;
   margin-top: 2rem; }
 
+.button.original-blue {
+  background-color: #4D9DE0;
+  color: #fff; }
+  .button.original-blue:hover {
+    background-color: #2585d5; }
+
 .button.social-media {
   background-color: transparent;
   color: #555555;
@@ -8500,7 +8506,7 @@ body#tinymce {
 
 .intro {
   background-color: #ff9219;
-  padding: 4rem 0; }
+  padding: 3rem 0.9375rem; }
   .intro .fp-intro {
     margin: 2rem 0; }
     .intro .fp-intro h2 {
@@ -8847,13 +8853,37 @@ body#tinymce {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
+  @media screen and (max-width: 900px) {
+    .three-across {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column nowrap;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap; } }
 
 .three-across--item {
   background-color: #fefefe;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 5px 16px -6px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 5px 16px -6px rgba(0, 0, 0, 0.7);
   margin: 0.9375rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-align: center;
   width: calc(100% / 3 - 0.9375rem * 2); }
+  @media screen and (max-width: 900px) {
+    .three-across--item {
+      width: calc(100% - 0.9375rem * 2); } }
+  .three-across--item .icon {
+    font-size: 3rem; }
+  .three-across--item h3 {
+    color: #ff9219;
+    font-size: 1.5rem; }
+  .three-across--item .content {
+    margin: 0 0 1.5rem; }
+  .three-across--item .button {
+    margin: 0; }
+  .three-across--item.for-rescues h3 {
+    color: #4D9DE0; }
 
 .post-type-archive-dog .js-wpv-view-layout,
 .tax-breed .js-wpv-view-layout,

@@ -9,6 +9,16 @@
 }
 
 .button{
+
+  &.original-blue{
+    background-color: $original-blue;
+    color: #fff;
+
+    &:hover{
+      background-color: darken($original-blue, 10%);
+    }
+  }
+
   &.social-media{
     background-color: transparent;
     color: $darker-gray;

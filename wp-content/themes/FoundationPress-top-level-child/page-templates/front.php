@@ -23,33 +23,44 @@ get_header(); ?>
 
             <section class="three-across">
                 <article class="three-across--item">
-                    <div class="icon">
+                    <div class="icon"><i class="fa fa-file-text-o" aria-hidden="true"></i></div>
 
+                    <h3>One Application</h3>
+
+                    <div class="content">
+                        <p>Fill out a single application and adopt any dog from any rescue that's part of our network!</p>
                     </div>
 
-                    <h3>Three-Across Title</h3>
-
+                    <p><a href="/adoption-application/" class="button warning">Apply now! <i class="fa fa-chevron-right"></i></a></p>
 
                 </article>
 
                 <article class="three-across--item">
-                    <div class="icon">
+                    <div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div>
 
+                    <h3>Global Search</h3>
+
+                    <div class="content">
+                        <p>Find dogs from any rescue in the network based on sex, body size, location, and breed using our powerful, fast global search! </p>
                     </div>
 
-                    <h3>Three-Across Title</h3>
+                    <p><a href="/dog-search/" class="button warning">Find your dog now! <i class="fa fa-chevron-right"></i></a></p>
 
 
                 </article>
 
-                <article class="three-across--item">
+                <article class="three-across--item for-rescues">
                     <div class="icon">
-
+                        <i class="fa fa-sitemap" aria-hidden="true"></i>
                     </div>
 
-                    <h3>Three-Across Title</h3>
+                    <h3>Join Our Network</h3>
 
+                    <div class="content">
+                        <p>Do you run a rescue? We provide the platform, you provide the dogs. Let us take care of your website needs...for free!</p>
+                    </div>
 
+                    <p><a href="/join/" class="button original-blue">Become a member now! <i class="fa fa-chevron-right"></i></a></p>
                 </article>
 
             </section>

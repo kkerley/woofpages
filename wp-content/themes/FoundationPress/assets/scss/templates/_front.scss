@@ -80,7 +80,7 @@
 // Intro
 .intro {
   background-color: $primary-color;
-  padding: 4rem 0;
+  padding: 3rem 0.9375rem;
 
   .fp-intro{
     margin: 2rem 0;
@@ -343,12 +343,47 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+
+  @media screen and (max-width: 900px){
+    flex-flow: column nowrap;
+  }
 }
 
 .three-across--item{
   background-color: $white;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 16px -6px rgba(0, 0, 0, 0.7);
   margin: 0.9375rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   text-align: center;
   width: calc(100% / 3 - 0.9375rem * 2);
+
+  @media screen and (max-width: 900px){
+    width: calc(100% - 0.9375rem * 2);
+  }
+
+  .icon{
+    font-size: 3rem;
+  }
+
+  h3{
+    color: $primary-color;
+    font-size: 1.5rem;
+  }
+
+  .content{
+    margin: 0 0 1.5rem;
+  }
+
+  .button{
+    margin: 0;
+  }
+
+  &.for-rescues{
+    h3{
+      color: $original-blue;
+    }
+
+
+  }
 }
