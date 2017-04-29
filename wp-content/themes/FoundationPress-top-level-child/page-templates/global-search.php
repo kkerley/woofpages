@@ -24,11 +24,11 @@ get_header(); ?>
 
        <section class="wrapper--global-dog-search">
            <header>
-	           <?php echo do_shortcode('[wpdreams_ajaxsearchpro_results id="1" element="div"]'); ?>
+	           <?php echo do_shortcode('[wd_asp id="1"]'); ?>
            </header>
 
            <footer>
-	           <?php echo do_shortcode('[wd_asp id="1"]'); ?>
+	           <?php echo do_shortcode('[wpdreams_ajaxsearchpro_results id="1" element="div"]'); ?>
            </footer>
        </section>
 

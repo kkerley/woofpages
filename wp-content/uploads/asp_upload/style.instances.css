@@ -767,58 +767,28 @@ div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings  {
             background-image: -ms-linear-gradient(185deg, rgb(70, 142, 190) 0%, rgb(70, 142, 190) 100%);
             background-image: linear-gradient(185deg, rgb(70, 142, 190), rgb(70, 142, 190));
           box-shadow:0px 0px 0px 0px rgb(0, 0, 0) ;;
-  max-width: 208px;
+  max-width: 168px;
   z-index: 2;
 }
 
     #ajaxsearchprobsettings1_1.searchsettings,
     #ajaxsearchprobsettings1_2.searchsettings,
 div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings {
-  max-width: 608px;
+  max-width: 648px;
 }
 
     div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form,
     div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form,
 div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form {
-  display: block;
-    -moz-column-width: 200px;
-    -moz-column-fill: balance;
-    -moz-column-gap: 0px;
-    -webkit-column-width: 200px;
-    -webkit-column-gap: 0;
-    column-width: 200px;
-    column-gap: 0;
-    column-fill: balance;
+  display: flex;
 }
 
     div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form,
     div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form,
 div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form {
-  display: block;
-    -moz-column-width: 200px;
-    -moz-column-fill: balance;
-    -moz-column-gap: 0px;
-    -webkit-column-width: 200px;
-    -webkit-column-gap: 0;
-    column-width: 200px;
-    column-gap: 0;
-    column-fill: balance;
+  display: flex;
 }
 
-            div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form>fieldset,
-        div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form>fieldset,
-        div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form>fieldset {
-      display: inline-block;
-      vertical-align: top;
-      float: none;
-    }
-            div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form>fieldset,
-        div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form>fieldset,
-        div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form>fieldset {
-      display: inline-block;
-      vertical-align: top;
-      float: none;
-    }
 
     #ajaxsearchprosettings1_1.searchsettings .label,
     #ajaxsearchprosettings1_2.searchsettings .label,
@@ -874,16 +844,16 @@ div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings .asp_sett_scrol
     #ajaxsearchprosettings1_1.searchsettings fieldset,
     #ajaxsearchprosettings1_2.searchsettings fieldset,
 div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings fieldset {
-  width: 200px;
-  min-width: 200px;
+  width: 160px;
+  min-width: 160px;
   max-width: 10000px;
 }
 
     #ajaxsearchprobsettings1_1.searchsettings fieldset,
     #ajaxsearchprobsettings1_2.searchsettings fieldset,
 div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings fieldset {
-  width: 200px;
-  min-width: 200px;
+  width: 160px;
+  min-width: 160px;
   max-width: 10000px;
 }
 
@@ -988,4 +958,4 @@ div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic nav.asp_navigation ul li:ho
 div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic nav.asp_navigation ul li span {
     color:  rgb(255, 255, 255);
 }.wpdreams_asp_sc-1, .asp-try-1 {display: block; max-height: none; overflow: visible;}
-/* Generated at: 2017-04-27 16:48:18 */
+/* Generated at: 2017-04-29 03:42:32 */

@@ -8029,18 +8029,9 @@ body#tinymce {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 8rem 1rem;
+  padding: 10rem 1rem;
   position: relative;
   text-align: center; }
-  #featured-hero::after {
-    content: '';
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1; }
   #featured-hero h1, #featured-hero p, #featured-hero .wrapper--characteristics {
     position: relative;
     z-index: 2; }
