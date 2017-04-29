@@ -11,6 +11,14 @@
   position: relative;
   text-align: center;
 
+  @include breakpoint(medium only){
+    padding: 6rem 1rem;
+  }
+
+  @include breakpoint(small only){
+    padding: 4rem 1rem;
+  }
+
   //&::after{
   //  content: '';
   //  background-color: rgba(#000, 0.5);

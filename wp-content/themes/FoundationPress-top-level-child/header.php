@@ -54,7 +54,7 @@
 
 	                <?php foundationpress_top_bar_r(); ?>
 
-                    <div class="kk-off-canvas-trigger show-for-small-only">
+                    <div class="kk-off-canvas-trigger">
                         <button data-open="mobile-menu"><i class="fa fa-bars"></i></button>
                     </div>
                 </div>

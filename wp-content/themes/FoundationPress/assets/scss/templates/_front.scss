@@ -24,6 +24,10 @@
     position: relative;
     text-align: center;
     z-index: 3;
+
+    @include breakpoint(small only){
+      margin: 2rem 1rem;
+    }
   }
 
   .marketing {
@@ -49,12 +53,9 @@
   }
 
   @include breakpoint(small) {
-    // background: url('../images/brock-2.20.jpg') bottom center;
-    //background: url('../images/top_level_hero_alt_lrg.jpg') bottom center;
     background-position: center center;
     background-size: cover;
-    padding: rem-calc(65%) 0;
-    // margin: 0 0 rem-calc(32);
+    padding: 0;
     margin: 0;
     height: auto;
     position: relative;
@@ -78,39 +79,58 @@
 
 // Intro
 .intro {
-  @include grid-row();
+  background-color: $primary-color;
+  padding: 4rem 0;
 
   .fp-intro{
     margin: 2rem 0;
 
-    > div{
-      display: flex;
-      flex-flow: row nowrap;
+    h2 {
+      font-weight: 300;
+      margin-bottom: 1.5rem;
     }
 
-
-    @include breakpoint(small) {
-      @include grid-column(12);
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #777;
+      margin-bottom: 2rem;
     }
 
-    @include breakpoint(medium) {
-      @include grid-column(12);
-
-
-      h2 {
-        font-weight: 300;
-        margin-bottom: 1.5rem;
-      }
-
-      h4 {
-        font-size: 1.125rem;
-        line-height: 1.6;
-        color: #777;
-        margin-bottom: 2rem;
-      }
-    }
   }
 }
+
+//$marketing-site-three-up-width: 900px;
+
+.marketing-site-three-up {
+  text-align: center;
+  padding: 2rem 0;
+
+  //.row {
+  //  max-width: $marketing-site-three-up-width;
+  //}
+
+  .columns {
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 40em) {
+      margin-bottom: 0;
+    }
+  }
+
+  .fa {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+}
+
+.marketing-site-three-up-headline {
+  margin-bottom: 2rem;
+  font-size: 24px;
+}
+
+
 
 // Section divider
 .section-divider {
@@ -125,12 +145,12 @@
 
 .wrapper--latest-dogs{
   // background-color: lighten($primary-color, 28%);
-  background-color: $primary-color;
+  background-color: #eee;
   margin: 0;
   padding: 2rem 0;
 
   h2{
-    color: #fff;
+    // color: #fff;
     margin: 0 0 2rem;
     padding: 0 0.9375rem;
     text-align: center;
@@ -317,4 +337,18 @@
       @include grid-col(12);
     }
   }
+}
+
+.three-across{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.three-across--item{
+  background-color: $white;
+  margin: 0.9375rem;
+  padding: 1rem;
+  text-align: center;
+  width: calc(100% / 3 - 0.9375rem * 2);
 }

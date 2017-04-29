@@ -10,7 +10,7 @@ get_header(); ?>
 			<h1><?php echo types_render_field( 'mission-statement-headline' ); ?></h1>
 			<?php echo types_render_field( 'mission-statement-content' ); ?>
 			<?php if(!empty(types_render_field('mission-statement-cta-url'))): ?>
-				<a role="button" class="primary large button sites-button" href="<?php echo types_render_field('mission-statement-cta-url'); ?>"><?php echo types_render_field('mission-statement-cta-text') ?></a>
+				<a role="button" class="success large button sites-button" href="<?php echo types_render_field('mission-statement-cta-url'); ?>"><?php echo types_render_field('mission-statement-cta-text') ?></a>
 			<?php endif; ?>
 		</div>
 	</div>
@@ -20,14 +20,42 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<section class="intro" role="main">
 		<div class="fp-intro">
-			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-				<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
-				<div class="entry-content">
-					<?php the_content(); ?>
 
-				</div>
-			</div>
-		</div>
+            <section class="three-across">
+                <article class="three-across--item">
+                    <div class="icon">
+
+                    </div>
+
+                    <h3>Three-Across Title</h3>
+
+
+                </article>
+
+                <article class="three-across--item">
+                    <div class="icon">
+
+                    </div>
+
+                    <h3>Three-Across Title</h3>
+
+
+                </article>
+
+                <article class="three-across--item">
+                    <div class="icon">
+
+                    </div>
+
+                    <h3>Three-Across Title</h3>
+
+
+                </article>
+
+            </section>
+
+
+        </div>
 	</section>
 <?php endwhile;?>
 

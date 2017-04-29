@@ -125,12 +125,13 @@
   }
 
   .kk-off-canvas-trigger{
-    margin: 0 1rem 0 auto;
+    @include hide-for(large);
+    margin: 0 0 0 auto;
     z-index: 10000;
 
     button{
       padding: 0.9rem 1rem;
-      font-size: 0.75rem;
+      font-size: 1rem;
       color: $darker-gray;
       text-transform: uppercase;
       display: block;
@@ -148,13 +149,25 @@
 
   .sticky-site-title{
     display: none;
+    text-align: left;
     // transition: all 0.2s ease;
+
+    img{
+      max-height: 40px;
+      width: auto;
+    }
+
+    @include breakpoint(small only){
+      max-width: 256px;
+    }
+
     > a{
       padding: 0.25rem;
     }
 
     .logo--sticky{
       display: none;
+
     }
 
     .theme--top-level & {
@@ -179,6 +192,7 @@
     .sticky-site-title{
       display: block;
       flex: 2 0 auto;
+      text-align: left;
 
       > a > img{
         display: none;
@@ -215,6 +229,10 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+
+  @include breakpoint(small only){
+    padding: 0;
+  }
 }
 
 .desktop-menu{
