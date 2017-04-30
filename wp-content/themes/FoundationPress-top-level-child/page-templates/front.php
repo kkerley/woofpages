@@ -20,6 +20,9 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<section class="intro" role="main">
 		<div class="fp-intro">
+            <div class="wrapper--headline">
+                <h2>Benefits</h2>
+            </div>
 
             <section class="three-across">
                 <article class="three-across--item">
@@ -31,7 +34,7 @@ get_header(); ?>
                         <p>Fill out a single application and adopt any dog from any rescue that's part of our network!</p>
                     </div>
 
-                    <p><a href="/adoption-application/" class="button warning">Apply now! <i class="fa fa-chevron-right"></i></a></p>
+                    <p><a href="/adoption-application/" class="success button sites-button">Apply now! <i class="fa fa-chevron-right"></i></a></p>
 
                 </article>
 
@@ -44,7 +47,7 @@ get_header(); ?>
                         <p>Find dogs from any rescue in the network based on sex, body size, location, and breed using our powerful, fast global search! </p>
                     </div>
 
-                    <p><a href="/dog-search/" class="button warning">Find your dog now! <i class="fa fa-chevron-right"></i></a></p>
+                    <p><a href="/dog-search/" class="success button sites-button">Find your dog now! <i class="fa fa-chevron-right"></i></a></p>
 
 
                 </article>
@@ -60,12 +63,10 @@ get_header(); ?>
                         <p>Do you run a rescue? We provide the platform, you provide the dogs. Let us take care of your website needs...for free!</p>
                     </div>
 
-                    <p><a href="/join/" class="button original-blue">Become a member now! <i class="fa fa-chevron-right"></i></a></p>
+                    <p><a href="/join/" class="button sites-button original-blue">Become a member now! <i class="fa fa-chevron-right"></i></a></p>
                 </article>
 
             </section>
-
-
         </div>
 	</section>
 <?php endwhile;?>

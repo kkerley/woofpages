@@ -112,14 +112,14 @@ class recentdogsshortcode {
 				endif;
 
 				$html .= '<div class="card dog'. $filter_classes . '">';
-				    $html .= '<div class="card-image">';
+				    $html .= '<div class="card-image"><a href="' . network_get_permalink() . '" >';
 				    $html .= get_the_post_thumbnail( $n_post->ID ) ? get_the_post_thumbnail( $n_post->ID, 'dog-square-400' ) : '<img src="http://placehold.it/400x400?text=Need+image" />';
-				    $html .= '</div>';
+				    $html .= '</a></div>';
 				    $html .= '<div class="card-content">';
 					    $html .= '<h4><a href="' . network_get_permalink() . '" >' . substr($the_title,0,$tmp_title_characters) . '</a></h4>';
 					    // $html .= '<p>' . get_the_date() .'</p>';
-					    $html .= '<p>' . woofpages_current_dog_breeds(network_get_the_ID()) . '</p>';
-						$html .= '<p>';
+					    $html .= '<p class="dog-breed">' . woofpages_current_dog_breeds(network_get_the_ID()) . '</p>';
+						$html .= '<p class="dog-meta">';
                             if(!empty(get_post_meta(network_get_the_ID(), 'wpcf-sex', true))):
 	                            $html .= '<span class="dog-sex label">';
                                 if(get_post_meta(network_get_the_ID(), 'wpcf-sex', true) === 'f'):
@@ -145,17 +145,18 @@ class recentdogsshortcode {
                             endif;
                         $html .= '</p>';
 
-                        $html .= '<p><a href="' . $blog_url . '" target="_blank">' . $blog_name . ' <i class="fa fa-external-link-square"></i></a></p>';
-                        $html .= '<p><i class="fa fa-globe"></i> ' . get_post_meta(network_get_the_ID(), 'wpcf-location-city', true) . ', ' . get_post_meta(network_get_the_ID(), 'wpcf-location-state', true) . ' ' . get_post_meta(network_get_the_ID(), 'wpcf-location-zip', true) . '</p>';
+                        $html .= '<p class="dog-rescue-name"><a href="' . $blog_url . '" target="_blank">' . $blog_name . ' <i class="fa fa-external-link-square"></i></a></p>';
+                        $html .= '<p class="dog-location"><i class="fa fa-globe"></i> ' . get_post_meta(network_get_the_ID(), 'wpcf-location-city', true) . ', ' . get_post_meta(network_get_the_ID(), 'wpcf-location-state', true) . ' ' . get_post_meta(network_get_the_ID(), 'wpcf-location-zip', true) . '</p>';
 
-//                    $html .= '<div class="wrapper--characteristics">';
-//                        $html .= woofpages_current_dog_characteristics(network_get_the_ID());
-//                    $html .= '</div>';
+	//                    $html .= '<div class="wrapper--characteristics">';
+	//                        $html .= woofpages_current_dog_characteristics(network_get_the_ID());
+	//                    $html .= '</div>';
+					$html .= '</div>'; // end of .card-content
 
                     $html .= '<div class="wrapper--cta">';
                         $html .= '<a href="' . network_get_permalink() . '" class="button primary expanded"><i class="fa fa-info-circle"></i> Meet ' . $the_title . '</a>';
 				    $html .= '</div>';
-				$html .= '</div>';
+
 				// $html .= $tmp_title_content_divider;
 
 				if ( $tmp_content_characters > 0 ) {

@@ -7327,6 +7327,7 @@ a.thumbnail {
   padding: 1rem; }
   .off-canvas ul.menu a {
     color: #fefefe;
+    font-weight: 700;
     font-size: 1rem;
     outline: none; }
     .off-canvas ul.menu a:focus {
@@ -8114,13 +8115,11 @@ body#tinymce {
           -ms-flex: 2 1 auto;
               flex: 2 1 auto; }
     .vertical .card .wrapper--cta {
-      margin: auto 0 0; }
+      margin: 0; }
+      .vertical .card .wrapper--cta .button {
+        margin: 0; }
   .card.dog .card-content p {
     margin-bottom: 0.5rem; }
-    .card.dog .card-content p:last-of-type {
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #ddd; }
 
 .wrapper--dogs,
 .wrapper--volunteers {
@@ -8184,7 +8183,7 @@ body#tinymce {
     position: relative;
     z-index: 2; }
 
-.dotted, .section-divider hr {
+.dotted {
   border-style: dashed;
   margin: 2rem 0; }
 
@@ -8506,64 +8505,21 @@ body#tinymce {
 
 .intro {
   background-color: #ff9219;
-  padding: 3rem 0.9375rem; }
+  padding: 3rem 0.9375rem 6rem; }
   .intro .fp-intro {
     margin: 2rem 0; }
     .intro .fp-intro h2 {
+      color: #fff;
       font-weight: 300;
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.5rem;
+      text-align: center; }
     .intro .fp-intro h4 {
       font-size: 1.125rem;
       line-height: 1.6;
       color: #777;
       margin-bottom: 2rem; }
-
-.marketing-site-three-up {
-  text-align: center;
-  padding: 2rem 0; }
-  .marketing-site-three-up .columns {
-    margin-bottom: 1rem; }
-    @media screen and (min-width: 40em) {
-      .marketing-site-three-up .columns {
-        margin-bottom: 0; } }
-  .marketing-site-three-up .fa {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #ff9219; }
-
-.marketing-site-three-up-headline {
-  margin-bottom: 2rem;
-  font-size: 24px; }
-
-.section-divider {
-  max-width: 64rem;
-  margin-right: auto;
-  margin-left: auto; }
-  .section-divider::before, .section-divider::after {
-    display: table;
-    content: ' ';
-    -webkit-flex-basis: 0;
-        -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1; }
-  .section-divider::after {
-    clear: both; }
-  .section-divider hr {
-    width: 100%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-    @media print, screen and (min-width: 40em) {
-      .section-divider hr {
-        padding-right: 0.9375rem;
-        padding-left: 0.9375rem; } }
-    .section-divider hr:last-child:not(:first-child) {
-      float: right; }
+    .intro .fp-intro .button {
+      font-weight: 700; }
 
 .wrapper--latest-dogs {
   background-color: #eee;
@@ -8634,13 +8590,103 @@ body#tinymce {
       max-width: calc(341.3333px - 1rem);
       margin: 0 0.5rem 1rem;
       text-align: left; }
-      @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      @media screen and (max-width: 767px) {
         .latest-dogs--inner .latest-dogs .card {
-          max-width: calc(50% - 1rem); } }
-      @media screen and (max-width: 39.9375em) {
-        .latest-dogs--inner .latest-dogs .card {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-flow: row nowrap;
+              -ms-flex-flow: row nowrap;
+                  flex-flow: row nowrap;
           margin: 0 0 1rem !important;
-          max-width: 100%; } }
+          max-width: 100%;
+          width: 100%; }
+          .latest-dogs--inner .latest-dogs .card .card-image {
+            height: auto;
+            width: 100px; }
+            .latest-dogs--inner .latest-dogs .card .card-image img {
+              margin: 0; }
+          .latest-dogs--inner .latest-dogs .card .card-content {
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-flow: row wrap;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            padding: 0.5rem 1rem;
+            position: relative;
+            text-align: left;
+            width: calc(100% - 260px); }
+            .latest-dogs--inner .latest-dogs .card .card-content h4, .latest-dogs--inner .latest-dogs .card .card-content p, .latest-dogs--inner .latest-dogs .card .card-content .wrapper--cta {
+              line-height: 1.3;
+              margin: 0; }
+            .latest-dogs--inner .latest-dogs .card .card-content h4 {
+              font-size: 1rem;
+              width: 100%; }
+            .latest-dogs--inner .latest-dogs .card .card-content p, .latest-dogs--inner .latest-dogs .card .card-content .label {
+              font-size: 0.8rem; }
+            .latest-dogs--inner .latest-dogs .card .card-content .dog-meta,
+            .latest-dogs--inner .latest-dogs .card .card-content .dog-location {
+              display: none; }
+            .latest-dogs--inner .latest-dogs .card .card-content .dog-breed {
+              margin-bottom: 0;
+              width: 100%; }
+          .latest-dogs--inner .latest-dogs .card .wrapper--cta {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-flow: row nowrap;
+                -ms-flex-flow: row nowrap;
+                    flex-flow: row nowrap;
+            height: 100%;
+            width: 160px; }
+            .latest-dogs--inner .latest-dogs .card .wrapper--cta .button {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+              -webkit-flex-flow: row nowrap;
+                  -ms-flex-flow: row nowrap;
+                      flex-flow: row nowrap;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+                  -ms-flex-pack: center;
+                      justify-content: center;
+              -webkit-box-align: center;
+              -webkit-align-items: center;
+                  -ms-flex-align: center;
+                      align-items: center; }
+              .latest-dogs--inner .latest-dogs .card .wrapper--cta .button i.fa {
+                margin-right: 0.25rem; } }
+      @media screen and (max-width: 550px) {
+        .latest-dogs--inner .latest-dogs .card {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-flow: row wrap;
+              -ms-flex-flow: row wrap;
+                  flex-flow: row wrap;
+          margin-bottom: 1.5rem !important; }
+          .latest-dogs--inner .latest-dogs .card .card-content {
+            width: calc(100% - 100px); }
+          .latest-dogs--inner .latest-dogs .card .wrapper--cta {
+            width: 100%; }
+            .latest-dogs--inner .latest-dogs .card .wrapper--cta .button {
+              display: block; } }
   .latest-dogs--inner .card {
     width: 100%; }
 
@@ -8872,7 +8918,12 @@ body#tinymce {
   width: calc(100% / 3 - 0.9375rem * 2); }
   @media screen and (max-width: 900px) {
     .three-across--item {
-      width: calc(100% - 0.9375rem * 2); } }
+      width: calc(100% - 0.9375rem * 2);
+      margin: calc(0.9375rem * 2) 0.9375rem; }
+      .three-across--item:first-of-type {
+        margin-top: 0.9375rem; }
+      .three-across--item:last-of-type {
+        margin-bottom: 0; } }
   .three-across--item .icon {
     font-size: 3rem; }
   .three-across--item h3 {
