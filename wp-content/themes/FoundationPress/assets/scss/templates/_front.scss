@@ -121,6 +121,14 @@
     padding: 0 0.9375rem;
     text-align: center;
   }
+
+  .wrapper--cta{
+    text-align: center;
+
+    .button{
+      margin-top: 0;
+    }
+  }
 }
 
 .wrapper--headline{
@@ -157,9 +165,9 @@
 
       @media screen and (max-width: 767px){
         flex-flow: row nowrap;
-        margin: 0 0 1rem !important;
+        margin: 0 0.5rem 1rem !important;
         max-width: 100%;
-        width: 100%;
+        width: calc(50% - 1rem);
 
         .card-image{
           height: auto;
@@ -171,17 +179,18 @@
         }
 
         .card-content{
-          align-items: center;
+          align-items: flex-start;
           display: flex;
           flex-flow: row wrap;
           justify-content: flex-start;
           padding: 0.5rem 1rem;
           position: relative;
           text-align: left;
-          width: calc(100% - 260px);
+          //width: calc(100% - 260px);
+          width: calc(100% - 100px);
 
           h4, p, .wrapper--cta{
-            line-height: 1.3;
+            line-height: 1.4;
             margin: 0;
           }
 
@@ -206,39 +215,43 @@
         }
 
         .wrapper--cta{
-          display: flex;
-          flex-flow: row nowrap;
-          height: 100%;
-          width: 160px;
-
-          .button{
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-
-            i.fa{
-              margin-right: 0.25rem;
-            }
-          }
+        //  display: flex;
+        //  flex-flow: column nowrap;
+        //  justify-content: flex-start;
+        //  height: 100%;
+        //  width: 160px;
+        //
+        //  .button{
+        //    display: flex;
+        //    flex-flow: row nowrap;
+        //    justify-content: center;
+        //    align-items: center;
+        //
+        //    i.fa{
+        //      margin-right: 0.25rem;
+        //    }
+        //  }
+          display: none;
         }
+
       } // end of @media screen and (max-width: 767px)
 
-      @media screen and (max-width: 550px){
+      @media screen and (max-width: 640px){
         flex-flow: row wrap;
-        margin-bottom: 1.5rem !important;
+        margin: 0 0 1.5rem !important;
+        width: 100%;
 
-        .card-content{
-          width: calc(100% - 100px);
-        }
+        //.card-content{
+        //  width: calc(100% - 100px);
+        //}
 
-        .wrapper--cta{
-          width: 100%;
-
-          .button{
-            display: block;
-          }
-        }
+        //.wrapper--cta{
+        //  width: 100%;
+        //
+        //  .button{
+        //    display: block;
+        //  }
+        //}
       }
     }
   }
@@ -411,7 +424,7 @@
   }
 
   h3{
-    color: $primary-color;
+    color: $success-color;
     font-size: 1.5rem;
   }
 

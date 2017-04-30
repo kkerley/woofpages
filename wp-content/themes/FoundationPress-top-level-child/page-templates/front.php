@@ -57,13 +57,13 @@ get_header(); ?>
                         <i class="fa fa-sitemap" aria-hidden="true"></i>
                     </div>
 
-                    <h3>Join Our Network</h3>
+                    <h3>Free Website</h3>
 
                     <div class="content">
-                        <p>Do you run a rescue? We provide the platform, you provide the dogs. Let us take care of your website needs...for free!</p>
+                        <p>We provide the platform, you provide the dogs. Do you run a rescue? If so, let us take care of your website needs...for free!</p>
                     </div>
 
-                    <p><a href="/join/" class="button sites-button original-blue">Become a member now! <i class="fa fa-chevron-right"></i></a></p>
+                    <p><a href="/join/" class="button sites-button original-blue">Join Our Network! <i class="fa fa-chevron-right"></i></a></p>
                 </article>
 
             </section>
@@ -80,6 +80,10 @@ get_header(); ?>
         <div class="latest-dogs vertical">
             <?php echo do_shortcode('[globalrecentdogs number="12"]'); ?>
         </div>
+    </div>
+
+    <div class="wrapper--cta">
+        <a class="button success sites-button" href="/dog-search">Search for dogs! <i class="fa fa-chevron-right"></i></a>
     </div>
 </section>
 <?php do_action( 'foundationpress_after_content' ); ?>

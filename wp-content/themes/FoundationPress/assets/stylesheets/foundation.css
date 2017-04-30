@@ -8529,6 +8529,10 @@ body#tinymce {
     margin: 0 0 2rem;
     padding: 0 0.9375rem;
     text-align: center; }
+  .wrapper--latest-dogs .wrapper--cta {
+    text-align: center; }
+    .wrapper--latest-dogs .wrapper--cta .button {
+      margin-top: 0; }
 
 .wrapper--headline {
   max-width: 64rem;
@@ -8597,19 +8601,19 @@ body#tinymce {
           -webkit-flex-flow: row nowrap;
               -ms-flex-flow: row nowrap;
                   flex-flow: row nowrap;
-          margin: 0 0 1rem !important;
+          margin: 0 0.5rem 1rem !important;
           max-width: 100%;
-          width: 100%; }
+          width: calc(50% - 1rem); }
           .latest-dogs--inner .latest-dogs .card .card-image {
             height: auto;
             width: 100px; }
             .latest-dogs--inner .latest-dogs .card .card-image img {
               margin: 0; }
           .latest-dogs--inner .latest-dogs .card .card-content {
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-                -ms-flex-align: center;
-                    align-items: center;
+            -webkit-box-align: start;
+            -webkit-align-items: flex-start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
@@ -8626,9 +8630,9 @@ body#tinymce {
             padding: 0.5rem 1rem;
             position: relative;
             text-align: left;
-            width: calc(100% - 260px); }
+            width: calc(100% - 100px); }
             .latest-dogs--inner .latest-dogs .card .card-content h4, .latest-dogs--inner .latest-dogs .card .card-content p, .latest-dogs--inner .latest-dogs .card .card-content .wrapper--cta {
-              line-height: 1.3;
+              line-height: 1.4;
               margin: 0; }
             .latest-dogs--inner .latest-dogs .card .card-content h4 {
               font-size: 1rem;
@@ -8642,51 +8646,16 @@ body#tinymce {
               margin-bottom: 0;
               width: 100%; }
           .latest-dogs--inner .latest-dogs .card .wrapper--cta {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -webkit-flex-flow: row nowrap;
-                -ms-flex-flow: row nowrap;
-                    flex-flow: row nowrap;
-            height: 100%;
-            width: 160px; }
-            .latest-dogs--inner .latest-dogs .card .wrapper--cta .button {
-              display: -webkit-box;
-              display: -webkit-flex;
-              display: -ms-flexbox;
-              display: flex;
-              -webkit-box-orient: horizontal;
-              -webkit-box-direction: normal;
-              -webkit-flex-flow: row nowrap;
-                  -ms-flex-flow: row nowrap;
-                      flex-flow: row nowrap;
-              -webkit-box-pack: center;
-              -webkit-justify-content: center;
-                  -ms-flex-pack: center;
-                      justify-content: center;
-              -webkit-box-align: center;
-              -webkit-align-items: center;
-                  -ms-flex-align: center;
-                      align-items: center; }
-              .latest-dogs--inner .latest-dogs .card .wrapper--cta .button i.fa {
-                margin-right: 0.25rem; } }
-      @media screen and (max-width: 550px) {
+            display: none; } }
+      @media screen and (max-width: 640px) {
         .latest-dogs--inner .latest-dogs .card {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
           -webkit-flex-flow: row wrap;
               -ms-flex-flow: row wrap;
                   flex-flow: row wrap;
-          margin-bottom: 1.5rem !important; }
-          .latest-dogs--inner .latest-dogs .card .card-content {
-            width: calc(100% - 100px); }
-          .latest-dogs--inner .latest-dogs .card .wrapper--cta {
-            width: 100%; }
-            .latest-dogs--inner .latest-dogs .card .wrapper--cta .button {
-              display: block; } }
+          margin: 0 0 1.5rem !important;
+          width: 100%; } }
   .latest-dogs--inner .card {
     width: 100%; }
 
@@ -8927,7 +8896,7 @@ body#tinymce {
   .three-across--item .icon {
     font-size: 3rem; }
   .three-across--item h3 {
-    color: #ff9219;
+    color: #87D68D;
     font-size: 1.5rem; }
   .three-across--item .content {
     margin: 0 0 1.5rem; }
