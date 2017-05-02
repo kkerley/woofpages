@@ -9243,4 +9243,23 @@ body#tinymce {
 .taxonomy-slug {
   text-transform: capitalize; }
 
+.page-template-adoption-application .gform_wrapper h2.gsection_title {
+  font-size: 2.25rem;
+  margin-top: 5rem !important; }
+
+.page-template-adoption-application .gform_wrapper [type='file'], .page-template-adoption-application .gform_wrapper [type='checkbox'], .page-template-adoption-application .gform_wrapper [type='radio'] {
+  margin-bottom: 0; }
+
+.page-template-adoption-application .gform_wrapper .gfield_radio li label,
+.page-template-adoption-application .gform_wrapper .gfield_checkbox li label {
+  margin: 0.4rem 0 0 0.5rem; }
+
+.page-template-adoption-application .gform_wrapper .gfield_radio li input[type=radio] + input[type=text],
+.page-template-adoption-application .gform_wrapper .gfield_checkbox li input[type=radio] + input[type=text] {
+  display: inline-block; }
+
+.page-template-adoption-application .gsection_description:last-of-type {
+  color: #f00;
+  font-size: 1rem; }
+
 /*# sourceMappingURL=foundation.css.map */

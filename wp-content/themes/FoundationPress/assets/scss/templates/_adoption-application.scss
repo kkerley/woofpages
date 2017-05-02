@@ -1,0 +1,34 @@
+.page-template-adoption-application{
+
+  .gform_wrapper{
+
+    h2.gsection_title{
+      font-size: 2.25rem;
+      margin-top: 5rem !important;
+    }
+
+    [type='file'], [type='checkbox'], [type='radio']{
+      margin-bottom: 0;
+    }
+
+    .gfield_radio,
+    .gfield_checkbox{
+      li{
+        label{
+          margin: 0.4rem 0 0 0.5rem;
+        }
+
+        input[type=radio]+input[type=text]{
+          display: inline-block;
+        }
+      }
+    } // end of .gfield_radio
+  }
+
+  .gsection_description{
+    &:last-of-type{
+      color: #f00;
+      font-size: 1rem;
+    }
+  }
+}
