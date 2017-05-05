@@ -10,6 +10,7 @@
 register_nav_menus(array(
 	'primary-navigation'  => 'Primary Navigation',
 	'mobile-nav' => 'Mobile',
+	'footer-nav' => 'Footer'
 ));
 
 

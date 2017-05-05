@@ -1,6 +1,6 @@
 // Page header
 #front-hero {
-  color: #fff;
+  color: $white;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -86,7 +86,7 @@
     margin: 2rem 0;
 
     h2{
-      color: #fff;
+      color: $white;
       font-weight: 300;
       margin-bottom: 1.5rem;
       text-align: center;
@@ -116,7 +116,7 @@
   padding: 2rem 0;
 
   h2{
-    // color: #fff;
+    // color: $white;
     margin: 0 0 2rem;
     padding: 0 0.9375rem;
     text-align: center;

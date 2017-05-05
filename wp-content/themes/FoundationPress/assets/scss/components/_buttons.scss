@@ -12,7 +12,7 @@
 
   &.original-blue{
     background-color: $original-blue;
-    color: #fff;
+    color: $white;
 
     &:hover{
       background-color: darken($original-blue, 10%);
@@ -42,7 +42,7 @@
     &:hover{
       // background-color: darken($facebook-blue, 14%);
       background-color: $facebook-blue;
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -52,7 +52,7 @@
     &:hover{
       // background-color: darken($twitter-blue, 14%);
       background-color: $twitter-blue;
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -62,7 +62,7 @@
     &:hover{
       // background-color: darken($linkedin-blue, 14%);
       background-color: $linkedin-blue;
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -72,7 +72,7 @@
     &:hover{
       // background-color: darken($youtube-red, 14%);
       background-color: $youtube-red;
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -82,7 +82,7 @@
     &:hover{
       // background-color: darken($pinterest-red, 14%);
       background-color: $pinterest-red;
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -92,7 +92,7 @@
     &:hover{
       // background-color: darken($google-plus-red, 14%);
       background-color: $google-plus-red;
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -113,7 +113,7 @@
   }
 
   &.mixitup-control-active{
-    background-color: #fff !important;
+    background-color: $white !important;
     border: 1px solid $secondary-color !important;
     color: $black !important;
   }

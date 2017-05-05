@@ -1,6 +1,3 @@
-// #utility{
-//   background-color: darken(#fff, 1%);
-// }
 .utility--inner{
   @include grid-col-row();
   padding: 0.25rem 0 0.5rem;
@@ -35,11 +32,11 @@
   }
 
   .headline {
-    color: #fff;
+    color: $white;
     text-align: left;
 
     a, a:hover, a:visited{
-      color: #fff;
+      color: $white;
       text-decoration: none;
     }
 
@@ -82,7 +79,7 @@
 }
 
 .primary-nav{
-  background-color: #fff;
+  background-color: $white;
   // background: $secondary-color;
   text-align: center;
   transition: all .25s ease;
@@ -115,7 +112,7 @@
 
       &:hover{
         background: rgba($black, 0.4);
-        color: #fff;
+        color: $white;
       }
 
       &:focus{
@@ -142,7 +139,7 @@
 
       &:hover{
         background: rgba($black, 0.4);
-        color: #fff;
+        color: $white;
       }
     }
   }
@@ -153,7 +150,7 @@
     // transition: all 0.2s ease;
 
     img{
-      max-height: 40px;
+      max-height: 32px;
       width: auto;
     }
 
@@ -184,7 +181,7 @@
   }
 
   &.is-stuck{
-    background: darken(#fff, 3%);
+    background: $white;
     box-shadow: 0 3px 3px -3px #000;
     margin-top: 0 !important;
 
@@ -239,7 +236,7 @@
   position: relative;
   text-align: center;
   margin: 0 0 0 auto;
-  // width: 100%;
+  width: auto;
 
   li {
     float: none;
@@ -258,7 +255,7 @@
 
       &:hover{
         background: rgba($black, 0.4);
-        color: #fff;
+        color: $white;
       }
 
       &:focus{
@@ -269,7 +266,7 @@
     &.current-menu-item{
       > a{
         background: rgba($black, 0.55);
-        color: #fff;
+        color: $white;
       }
     }
   }

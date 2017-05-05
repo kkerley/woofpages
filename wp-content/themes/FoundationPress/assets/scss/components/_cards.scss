@@ -22,7 +22,7 @@
     }
 
     .adoption-status{
-      background-color: #fff;
+      background-color: $white;
       // box-shadow: -9px 8px 7px -5px #000;
       color: $black;
       font-size: 0.8rem;
@@ -50,7 +50,7 @@
         content: '';
       }
       &::before {
-        color: #fff;
+        color: $white;
         content: "\f05d";
         font-family: 'FontAwesome';
         padding: 0.125rem 0 0 1.25rem;
@@ -76,7 +76,7 @@
         content: '';
       }
       &::before {
-        color: #fff;
+        color: $white;
         content: "\f087";
         font-family: 'FontAwesome';
         padding: 0.1rem 0 0 1.35rem;
@@ -102,7 +102,7 @@
         content: '';
       }
       &::before {
-        color: #fff;
+        color: $white;
         content: "\f071";
         font-family: 'FontAwesome';
         padding: 0 0 0 1.35rem;
@@ -131,7 +131,7 @@
     transition: all 0.2s ease;
 
     &:hover{
-      background-color: rgba(#fff, 0.8);
+      background-color: rgba($white, 0.8);
     }
 
     h4{
@@ -162,7 +162,7 @@
     //
     //    &::after{
     //      content: '';
-    //      background: linear-gradient(to right,rgba(255,255,255,0) 0%,#fff 100%);
+    //      background: linear-gradient(to right,rgba(255,255,255,0) 0%,$white 100%);
     //      bottom: 0;
     //      display: block;
     //      height: 1.2rem;
@@ -178,7 +178,7 @@
 
       a{
         background-color: $secondary-color;
-        color: #fff;
+        color: $white;
         display: inline-block;
         font-size: 0.9rem;
         margin: 0.25rem;
@@ -186,7 +186,7 @@
         transition: all 0.2s ease;
 
         &:hover{
-          background-color: darken(#fff, 5%);
+          background-color: $white;
           color: $dark-gray;
         }
       }
@@ -199,7 +199,7 @@
   }
 
   //.slide-up-content{
-  //  background-color: rgba(#fff, 0.9);
+  //  background-color: rgba($white, 0.9);
   //  border-radius: 0;
   //  position: absolute;
   //  height: 100%;

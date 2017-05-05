@@ -154,7 +154,7 @@ class recentdogsshortcode {
 					$html .= '</div>'; // end of .card-content
 
                     $html .= '<div class="wrapper--cta">';
-                        $html .= '<a href="' . network_get_permalink() . '" class="button primary expanded"><i class="fa fa-info-circle"></i> Meet ' . $the_title . '</a>';
+                        $html .= '<a href="' . network_get_permalink() . '" class="button warning expanded"><i class="fa fa-info-circle"></i> Meet ' . $the_title . '</a>';
 				    $html .= '</div>';
 
 				// $html .= $tmp_title_content_divider;

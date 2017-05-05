@@ -52,20 +52,20 @@ $global-font-size: 100%;
 $global-width: rem-calc(1024);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #ff9219,
+  primary: #058ED9,
   // primary: #f71159,
   // secondary: #963484,
   secondary: #666666,
-  success: #87D68D,
-  warning: #ED6A5A,
+  success: #4bc653,
+  warning: #fe4a49,
   alert: #F7DD72,
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $darker-gray: #555555;
-$black: #0a0a0a;
-$white: #fefefe;
+$black: #424242;
+$white: #fafaff;
 $outer-space: #2c3840;
 $original-blue: #4D9DE0;
 $facebook-blue: #3B5998;
@@ -74,6 +74,7 @@ $linkedin-blue: #0077B5;
 $youtube-red: #CC181E;
 $pinterest-red: #BD081C;
 $google-plus-red: #DB4437;
+$orange: #ff9219;
 $pink: #FF69B4;
 $purple: #D300FF;
 $body-background: $white;

@@ -289,27 +289,27 @@ div.ajaxsearchpro[id*="ajaxsearchpro1_"] {
   height: auto;
   border-radius: 5px;
   background: #d1eaff;
-                background-image: -moz-radial-gradient(center, ellipse cover,  rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: -webkit-radial-gradient(center, ellipse cover,  rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: -o-radial-gradient(center, ellipse cover,  rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: -ms-radial-gradient(center, ellipse cover,  rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: radial-gradient(ellipse at center,  rgb(92, 183, 225), rgb(92, 183, 225));
+                background-image: -moz-radial-gradient(center, ellipse cover,  rgba(255, 146, 25, 1), rgba(250, 160, 60, 1));
+            background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, rgba(255, 146, 25, 1), rgba(250, 160, 60, 1));
+            background-image: -webkit-radial-gradient(center, ellipse cover,  rgba(255, 146, 25, 1), rgba(250, 160, 60, 1));
+            background-image: -o-radial-gradient(center, ellipse cover,  rgba(255, 146, 25, 1), rgba(250, 160, 60, 1));
+            background-image: -ms-radial-gradient(center, ellipse cover,  rgba(255, 146, 25, 1), rgba(250, 160, 60, 1));
+            background-image: radial-gradient(ellipse at center,  rgba(255, 146, 25, 1), rgba(250, 160, 60, 1));
           overflow: hidden;
-  border:0px none rgb(141, 213, 239);border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px #000000 ;}
+  border:0px none #fdb25f;border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px #000000 ;}
 
     #ajaxsearchpro1_1 .probox,
     #ajaxsearchpro1_2 .probox,
 div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox {
   margin: 0px;
   height: 34px;
-              background-image: -moz-radial-gradient(center, ellipse cover,  rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: -webkit-radial-gradient(center, ellipse cover,  rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: -o-radial-gradient(center, ellipse cover,  rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: -ms-radial-gradient(center, ellipse cover,  rgb(92, 183, 225), rgb(92, 183, 225));
-            background-image: radial-gradient(ellipse at center,  rgb(92, 183, 225), rgb(92, 183, 225));
-          border:0px solid rgb(104, 174, 199);border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px rgb(181, 181, 181) inset;}
+              background-image: -moz-radial-gradient(center, ellipse cover,  rgba(250, 168, 78, 1), rgba(255, 146, 25, 1));
+            background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, rgba(250, 168, 78, 1), rgba(255, 146, 25, 1));
+            background-image: -webkit-radial-gradient(center, ellipse cover,  rgba(250, 168, 78, 1), rgba(255, 146, 25, 1));
+            background-image: -o-radial-gradient(center, ellipse cover,  rgba(250, 168, 78, 1), rgba(255, 146, 25, 1));
+            background-image: -ms-radial-gradient(center, ellipse cover,  rgba(250, 168, 78, 1), rgba(255, 146, 25, 1));
+            background-image: radial-gradient(ellipse at center,  rgba(250, 168, 78, 1), rgba(255, 146, 25, 1));
+          border:0px solid #ff9219;border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px rgb(181, 181, 181) inset;}
 
 
 
@@ -522,11 +522,11 @@ div.ajaxsearchpro[id*="ajaxsearchpro1_"].asp_msie .probox .proloading {
 div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .promagnifier {
         width: 34px;
     height: 34px;
-              background-image: -webkit-linear-gradient(180deg, rgb(70, 142, 190), rgb(70, 142, 190));
-            background-image: -moz-linear-gradient(180deg, rgb(70, 142, 190), rgb(70, 142, 190));
-            background-image: -o-linear-gradient(180deg, rgb(70, 142, 190), rgb(70, 142, 190));
-            background-image: -ms-linear-gradient(180deg, rgb(70, 142, 190) 0%, rgb(70, 142, 190) 100%);
-            background-image: linear-gradient(180deg, rgb(70, 142, 190), rgb(70, 142, 190));
+              background-image: -webkit-linear-gradient(180deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
+            background-image: -moz-linear-gradient(180deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
+            background-image: -o-linear-gradient(180deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
+            background-image: -ms-linear-gradient(180deg, rgba(255, 146, 25, 1) 0%, rgba(255, 157, 48, 1) 100%);
+            background-image: linear-gradient(180deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
           background-position:center center;
   background-repeat: no-repeat;
 
@@ -549,18 +549,18 @@ div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .promagnifier {
 div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .prosettings {
   width: 34px;
   height: 34px;
-              background-image: -webkit-linear-gradient(185deg, rgb(70, 142, 190), rgb(70, 142, 190));
-            background-image: -moz-linear-gradient(185deg, rgb(70, 142, 190), rgb(70, 142, 190));
-            background-image: -o-linear-gradient(185deg, rgb(70, 142, 190), rgb(70, 142, 190));
-            background-image: -ms-linear-gradient(185deg, rgb(70, 142, 190) 0%, rgb(70, 142, 190) 100%);
-            background-image: linear-gradient(185deg, rgb(70, 142, 190), rgb(70, 142, 190));
+              background-image: -webkit-linear-gradient(185deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
+            background-image: -moz-linear-gradient(185deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
+            background-image: -o-linear-gradient(185deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
+            background-image: -ms-linear-gradient(185deg, rgba(255, 146, 25, 1) 0%, rgba(255, 157, 48, 1) 100%);
+            background-image: linear-gradient(185deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
           background-position:center center;
   background-repeat: no-repeat;
   order: 10;
   /* Ipad and stuff fix*/
   -webkit-order: 10;
   float: right; /* IE9, no flexbox */
-  border:0px solid rgb(104, 174, 199);border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 0.63) ;  cursor: pointer;
+  border:0px solid #ff8600;border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 0.63) ;  cursor: pointer;
   background-size: 100% 100%;
   align-self: flex-end;
 }
@@ -578,7 +578,7 @@ div.ajaxsearchpro[id*="ajaxsearchprores1_"] {
 div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .asp_nores .asp_keyword {
     padding: 0 6px;
     cursor: pointer;
-    font-weight:normal;font-family:'Open Sans';color:rgba(238, 238, 238, 1);font-size:0.8rem;line-height:1.3rem;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    font-weight: bold;
+    font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:0.8rem;line-height:1.3rem;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    font-weight: bold;
 }
 
     #ajaxsearchprores1_1 .results .item,
@@ -681,14 +681,14 @@ div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .etc .asp_date {
 div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item p.desc {
   margin: 2px 0px;
   padding: 0;
-  font-weight:normal;font-family:'Open Sans';color:rgba(238, 238, 238, 1);font-size:0.8rem;line-height:1.3rem;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+  font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:0.8rem;line-height:1.3rem;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
 
     #ajaxsearchprores1_1 .results .item div.asp_content,
     #ajaxsearchprores1_2 .results .item div.asp_content,
 div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item div.asp_content {
     margin: 0px;
     padding: 0;
-    font-weight:normal;font-family:'Open Sans';color:rgba(238, 238, 238, 1);font-size:0.8rem;line-height:1.3rem;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+    font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:0.8rem;line-height:1.3rem;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
 
     #ajaxsearchprores1_1 span.highlighted,
     #ajaxsearchprores1_2 span.highlighted,
@@ -761,11 +761,11 @@ div.ajaxsearchpro[id*="ajaxsearchprores1_"] .asp_res_loader .asp_loader {
 div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings  {
   direction: ltr;
   padding: 0;
-              background-image: -webkit-linear-gradient(185deg, rgb(70, 142, 190), rgb(70, 142, 190));
-            background-image: -moz-linear-gradient(185deg, rgb(70, 142, 190), rgb(70, 142, 190));
-            background-image: -o-linear-gradient(185deg, rgb(70, 142, 190), rgb(70, 142, 190));
-            background-image: -ms-linear-gradient(185deg, rgb(70, 142, 190) 0%, rgb(70, 142, 190) 100%);
-            background-image: linear-gradient(185deg, rgb(70, 142, 190), rgb(70, 142, 190));
+              background-image: -webkit-linear-gradient(185deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
+            background-image: -moz-linear-gradient(185deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
+            background-image: -o-linear-gradient(185deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
+            background-image: -ms-linear-gradient(185deg, rgba(255, 146, 25, 1) 0%, rgba(255, 157, 48, 1) 100%);
+            background-image: linear-gradient(185deg, rgba(255, 146, 25, 1), rgba(255, 157, 48, 1));
           box-shadow:0px 0px 0px 0px rgb(0, 0, 0) ;;
   max-width: 168px;
   z-index: 2;
@@ -898,7 +898,7 @@ div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic .results .item {
     #ajaxsearchprores1_1.isotopic .results .item .asp_content,
     #ajaxsearchprores1_2.isotopic .results .item .asp_content,
 div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic .results .item .asp_content {
-    background: rgba(70, 142, 190, 0.87);
+    background: rgba(255, 146, 25, 0.87);
 }
 
 /* Isotopic navigation */
@@ -958,4 +958,4 @@ div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic nav.asp_navigation ul li:ho
 div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic nav.asp_navigation ul li span {
     color:  rgb(255, 255, 255);
 }.wpdreams_asp_sc-1, .asp-try-1 {display: block; max-height: none; overflow: visible;}
-/* Generated at: 2017-04-29 03:42:32 */
+/* Generated at: 2017-05-05 13:43:26 */

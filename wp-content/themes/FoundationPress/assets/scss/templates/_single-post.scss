@@ -84,11 +84,11 @@
       content: '';
     }
     &::before {
-      //border-top: solid 20px #fff;
-      //border-right: solid 20px #fff;
+      //border-top: solid 20px $white;
+      //border-right: solid 20px $white;
       //border-left: solid 20px transparent;
       //border-bottom: solid 20px transparent;
-      color: #fff;
+      color: $white;
       content: "\f05d";
       font-family: 'FontAwesome';
       padding: 0.125rem 0 0 1.25rem;
@@ -143,13 +143,13 @@
 
   .label{
     background-color: $secondary-color;
-    color: #fff;
+    color: $white;
     cursor: pointer;
     margin: 0.125rem 0;
     transition: all 0.2s ease;
 
     &:hover{
-      background-color: darken(#fff, 5%);
+      background-color: $white;
       color: $darker-gray;
     }
   }
@@ -166,7 +166,7 @@
 }
 
 //#page{
-//  background-color: #fff;
+//  background-color: $white;
 //  margin-top: -18rem;
 //  position: relative;
 //  z-index: 100;

@@ -39,7 +39,7 @@
 
   .today{
     background-color: $primary-color;
-    color: #fff;
+    color: $white;
   }
 
   .eab-has_events{
@@ -50,7 +50,7 @@
       background-color: $success-color;
 
       a{
-        color: #fff;
+        color: $white;
         text-decoration: underline;
       }
     }
@@ -64,7 +64,7 @@
         background-color: #666666;
 
         a{
-          color: #fff;
+          color: $white;
           transition: all 0.2s ease;
 
           &:hover{

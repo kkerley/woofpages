@@ -4,3 +4,5 @@ wp-config.php
 .idea/*
 
 .DS_store
+
+wp-content/uploads/snapshots

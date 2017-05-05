@@ -15,6 +15,9 @@
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
                 <article class="large-4 small-12 columns">
+	                <?php wp_nav_menu( array( 'theme_location' => 'footer-nav' ) ); ?>
+                </article>
+                <article class="large-4 small-12 columns">
 	                <?php
 	                $woofpages_options  = get_option('woofpages_settings');
 	                $street_address     = $woofpages_options['woofpages_rescue_location_street_address'];
