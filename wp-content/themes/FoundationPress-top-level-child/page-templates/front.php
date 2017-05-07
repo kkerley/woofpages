@@ -22,6 +22,7 @@ get_header(); ?>
 		<div class="fp-intro">
             <div class="wrapper--headline">
                 <h2>Benefits</h2>
+                <p>Here are just a few reasons you should consider the Save A Rescue Dog Network platform, both as someone searching for a canine companion and as a rescue owner.</p>
             </div>
 
             <section class="three-across">
@@ -74,6 +75,7 @@ get_header(); ?>
 <section class="wrapper--latest-dogs">
     <div class="wrapper--headline">
         <h2>Latest dogs</h2>
+        <p>These dogs were recently added to the network. Take a look and maybe you'll find your next best friend!</p>
     </div>
 
     <div class="latest-dogs--inner">

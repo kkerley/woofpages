@@ -45,21 +45,21 @@
 	    <div class="wrapper--primary-nav" data-sticky-container>
             <nav class="primary-nav" data-sticky data-top-anchor="main_container" data-options="stickyOn: small">
                 <div class="primary-nav--inner">
-
-                    <div class="logo-wrap">
-                        <div class="logo-wrap--inner">
-                            <div class="save">SAVE</div>
-                            <div class="a-heart"><span>A</span></div>
-                            <div class="rescue">RESCUE</div>
-                        </div>
-                        <div class="logo-wrap--inner">
-                            <div class="dog">DOG</div>
-                            <div class="icon">
-                                <object type="image/svg+xml" data="/wp-content/themes/FoundationPress/assets/images/save_a_rescue_dog_logo.svg" ></object>
+                    <a class="logo-wrap-link" href="/">
+                        <div class="logo-wrap">
+                            <div class="logo-wrap--inner">
+                                <div class="save">SAVE</div>
+                                <div class="a-heart"><span>A</span></div>
+                                <div class="rescue">RESCUE</div>
+                            </div>
+                            <div class="logo-wrap--inner">
+                                <div class="dog">DOG</div>
+                                <div class="icon">
+                                    <object type="image/svg+xml" data="/wp-content/themes/FoundationPress/assets/images/save_a_rescue_dog_logo.svg" ></object>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
+                    </a>
 	                <?php
 //	                if($rescue_logo): ?>
 <!---->

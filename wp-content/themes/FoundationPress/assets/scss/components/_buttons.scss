@@ -19,6 +19,15 @@
     }
   }
 
+  &.orange{
+    background-color: $orange;
+    color: #fff;
+
+    &:hover{
+      background-color: darken($orange, 10%);
+    }
+  }
+
   &.social-media{
     background-color: transparent;
     color: $darker-gray;

@@ -17,33 +17,7 @@
                 <article class="large-4 medium-4 small-12 columns">
 	                <?php wp_nav_menu( array( 'theme_location' => 'footer-nav' ) ); ?>
                 </article>
-                <article class="large-4 medium-4 small-12 columns">
-	                <?php
-	                $woofpages_options  = get_option('woofpages_settings');
-	                $street_address     = $woofpages_options['woofpages_rescue_location_street_address'];
-	                $city               = $woofpages_options['woofpages_rescue_location_city'];
-	                $state              = $woofpages_options['woofpages_rescue_location_state'];
-	                $zip                = $woofpages_options['woofpages_rescue_location_zip_code'];
-	                $primary_phone      = $woofpages_options['woofpages_rescue_location_primary_phone'];
-	                ?>
-
-	                <?php if($street_address || $city || $state || $zip || $primary_phone): ?>
-                        <section class="rescue-contact-info">
-			                <?php if($street_address || $city || $state || $zip): ?>
-                                <h4><?php bloginfo( 'name' ); ?></h4>
-
-                                <p class="rescue-contact-info--street-address">
-                                    <i class="fa fa-map-marker"></i> <?php if($street_address): echo $street_address . '<br />'; endif; ?>
-					                <?php echo $city; ?>, <?php echo $state; ?> <?php echo $zip; ?>
-                                </p>
-			                <?php endif; ?>
-
-			                <?php if($primary_phone): ?>
-                                <p class="rescue-contact-info--phone"><i class="fa fa-phone"></i> <?php echo $primary_phone; ?></p>
-			                <?php endif; ?>
-                        </section>
-	                <?php endif; ?>
-                </article>
+                
 
 <!--                <article class="large-4 small-12 columns">-->
 <!--	                --><?php //include 'template-parts/woofpages/_social_media_links.php'; ?>
