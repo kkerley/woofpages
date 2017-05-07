@@ -89,7 +89,7 @@ function woofpages_options_init() {
 //}
 
 function woofpages_add_admin_menu() {
-	add_menu_page( 'Woofpages Settings Panel', 'Woofpages', 'manage_options', 'woofpages_settings_panel', 'woofpages_options_page' );
+	add_menu_page( 'Save A Rescue Settings Panel', 'Save A Rescue Settings', 'manage_options', 'save_a_rescue_settings_panel', 'woofpages_options_page' );
 }
 
 function woofpages_init_rescue_custom_logo_settings(){
@@ -403,7 +403,7 @@ function woofpages_options_page() { ?>
 	<div class="wrap">
 
 		<!-- Add the icon to the page -->
-		<h2>Woofpages Settings Panel</h2>
+		<h2>Save A Rescue Settings Panel</h2>
 
 		<!-- Make a call to the WordPress function for rendering errors when settings are saved. -->
 		<?php settings_errors(); ?>

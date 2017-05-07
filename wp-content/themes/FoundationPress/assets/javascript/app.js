@@ -1,6 +1,17 @@
 jQuery(document).ready(function($){
     var $root = $('html, body');
 
+    // nav transformation on scroll
+    $(window).scroll(function() {
+        var winTop = $(window).scrollTop();
+        if (winTop >= 30) {
+            $("body").addClass("sticky-shrinknav-wrapper");
+        } else{
+            $("body").removeClass("sticky-shrinknav-wrapper");
+        }
+    });
+    // end nav transformation on scroll
+
     $('.featured-dogs--inner').slick({
         slidesToShow: 1,
         slidesToScroll: 1,

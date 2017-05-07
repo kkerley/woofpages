@@ -30,26 +30,42 @@
     <?php
         $woofpages_options      = get_option('woofpages_settings');
         $rescue_logo            = $woofpages_options['woofpages_rescue_custom_logo'];
+        $rescue_abbrev          = $woofpages_options['woofpages_rescue_location_abbreviation'] ? $woofpages_options['woofpages_rescue_location_abbreviation'] : get_bloginfo( 'name' );
         $rescue_logo_id         = '';
         $rescue_logo_small      = '';
+
         if($rescue_logo):
 	        $rescue_logo_id     = get_attachment_id($rescue_logo);
             $rescue_logo_small  = wp_get_attachment_image($rescue_logo_id, 'logo-in-nav');
 	        $rescue_logo_sticky  = wp_get_attachment_image($rescue_logo_id, 'logo-in-nav-sticky');
         endif;
-        $rescue_abbrev          = $woofpages_options['woofpages_rescue_location_abbreviation'] ? $woofpages_options['woofpages_rescue_location_abbreviation'] : get_bloginfo( 'name' );
     ?>
 
     <header class="header<?php echo $rescue_logo ? ' with-logo' : '' ?>">
 	    <div class="wrapper--primary-nav" data-sticky-container>
             <nav class="primary-nav" data-sticky data-top-anchor="main_container" data-options="stickyOn: small">
                 <div class="primary-nav--inner">
-	                <?php
-	                if($rescue_logo): ?>
 
-                        <p class="sticky-site-title"><a href="/"><?php echo $rescue_logo_small; ?> <span class="logo--sticky"><?php echo $rescue_logo_sticky; ?></span></a></p>
-		                <?php
-	                endif;
+                    <div class="logo-wrap">
+                        <div class="logo-wrap--inner">
+                            <div class="save">SAVE</div>
+                            <div class="a-heart"><span>A</span></div>
+                            <div class="rescue">RESCUE</div>
+                        </div>
+                        <div class="logo-wrap--inner">
+                            <div class="dog">DOG</div>
+                            <div class="icon">
+                                <object type="image/svg+xml" data="/wp-content/themes/FoundationPress/assets/images/save_a_rescue_dog_logo.svg" ></object>
+                            </div>
+                        </div>
+                    </div>
+
+	                <?php
+//	                if($rescue_logo): ?>
+<!---->
+<!--                        <p class="sticky-site-title"><a href="/">--><?php //echo $rescue_logo_small; ?><!-- <span class="logo--sticky">--><?php //echo $rescue_logo_sticky; ?><!--</span></a></p>-->
+<!--		                --><?php
+//	                endif;
 	                ?>
 
 	                <?php foundationpress_top_bar_r(); ?>

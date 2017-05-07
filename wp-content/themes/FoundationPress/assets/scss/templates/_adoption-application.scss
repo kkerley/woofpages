@@ -25,10 +25,16 @@
     } // end of .gfield_radio
   }
 
-  .gsection_description{
-    &:last-of-type{
+  #field_1_66{
+    .gsection_description{
       color: #f00;
       font-size: 1rem;
     }
   }
+}
+
+div.ajaxsearchpro[id*='ajaxsearchprosettings'] select,
+div.ajaxsearchpro[id*='ajaxsearchprobsettings'] select{
+  appearance: menulist;
+  height: auto;
 }

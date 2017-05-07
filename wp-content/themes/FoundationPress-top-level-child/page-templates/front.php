@@ -63,7 +63,7 @@ get_header(); ?>
                         <p>We provide the platform, you provide the dogs. Do you run a rescue? If so, let us take care of your website needs...for free!</p>
                     </div>
 
-                    <p><a href="/join/" class="button sites-button original-blue">Join Our Network! <i class="fa fa-chevron-right"></i></a></p>
+                    <p><a href="/join/" class="button orange sites-button">Join Our Network! <i class="fa fa-chevron-right"></i></a></p>
                 </article>
 
             </section>

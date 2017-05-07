@@ -1,3 +1,110 @@
+.logo-wrap{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.logo-wrap--inner{
+  display: flex;
+  flex-flow: row wrap;
+
+  &:first-of-type{
+    width: 130px;
+
+    .sticky-shrinknav-wrapper &{
+      width: auto;
+    }
+  }
+
+  &:last-of-type{
+    flex-flow: row nowrap;
+    width: 332px;
+
+    .sticky-shrinknav-wrapper &{
+      width: auto;
+    }
+  }
+
+  .save, .a-heart, .rescue{
+    font-family: $header-font-family;
+    font-size: 2rem;
+    line-height: 1;
+    //flex: 2 1 auto;
+
+    .sticky-shrinknav-wrapper &{
+      font-size: 1.5rem;
+    }
+  }
+
+  .a-heart{
+    color: #fff;
+    text-align: center;
+    position: relative;
+    margin-left: 0.25rem;
+    width: 45px;
+
+    span{
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before{
+      color: $warning-color;
+      content: '\f004';
+      font-family: 'FontAwesome';
+      font-size: 43px;
+      position: absolute;
+      top: -0.25rem;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    .sticky-shrinknav-wrapper & {
+      margin: 0;
+
+      &::before{
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  .dog{
+    color: $primary-color;
+    font-family: $body-font-family;
+    font-size: rem-calc(80);
+    font-weight: 600;
+    line-height: 1;
+
+    .sticky-shrinknav-wrapper &{
+      font-size: 1.5rem;
+      line-height: 0.9;
+      margin-left: 0.25rem;
+    }
+  }
+
+  .icon{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.25rem;
+
+    object{
+      height: 4rem;
+      width: auto;
+    }
+
+    .sticky-shrinknav-wrapper &{
+      object{
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
 .utility--inner{
   @include grid-col-row();
   padding: 0.25rem 0 0.5rem;
@@ -111,8 +218,9 @@
       transition: all .35s ease-in-out;
 
       &:hover{
-        background: rgba($black, 0.4);
-        color: $white;
+        //background: rgba($black, 0.4);
+        //color: $white;
+        color: $primary-color;
       }
 
       &:focus{
@@ -254,8 +362,9 @@
       transition: all .35s ease-in-out;
 
       &:hover{
-        background: rgba($black, 0.4);
-        color: $white;
+        //background: rgba($black, 0.4);
+        //color: $white;
+        color: $primary-color;
       }
 
       &:focus{
@@ -265,8 +374,9 @@
 
     &.current-menu-item{
       > a{
-        background: rgba($black, 0.55);
-        color: $white;
+        //background: rgba($black, 0.55);
+        //color: $white;
+        color: $primary-color;
       }
     }
   }

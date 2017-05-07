@@ -45,16 +45,16 @@
 	                <?php endif; ?>
                 </article>
 
-                <article class="large-4 small-12 columns">
-	                <?php include 'template-parts/woofpages/_social_media_links.php'; ?>
-                </article>
+<!--                <article class="large-4 small-12 columns">-->
+<!--	                --><?php //include 'template-parts/woofpages/_social_media_links.php'; ?>
+<!--                </article>-->
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
 
             <footer id="copyright">
                 <div class="copyright--inner">
-                    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>, part of the <a href="http://www.woofpages.net">Woof Pages Network</a>.</p>
+                    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>, part of the <a href="http://www.savearescuedog.com">Save A Rescue Dog Network</a>.</p>
                 </div>
             </footer>
 		</div>

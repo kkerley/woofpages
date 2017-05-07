@@ -112,11 +112,11 @@ class recentdogsshortcode {
 				endif;
 
 				$html .= '<div class="card dog'. $filter_classes . '">';
-				    $html .= '<div class="card-image"><a href="' . network_get_permalink() . '" >';
+				    $html .= '<div class="card-image"><a href="' . network_get_permalink() . '" target="_blank">';
 				    $html .= get_the_post_thumbnail( $n_post->ID ) ? get_the_post_thumbnail( $n_post->ID, 'dog-square-400' ) : '<img src="http://placehold.it/400x400?text=Need+image" />';
 				    $html .= '</a></div>';
 				    $html .= '<div class="card-content">';
-					    $html .= '<h4><a href="' . network_get_permalink() . '" >' . substr($the_title,0,$tmp_title_characters) . '</a></h4>';
+					    $html .= '<h4><a href="' . network_get_permalink() . '" target="_blank">' . substr($the_title,0,$tmp_title_characters) . '</a></h4>';
 					    // $html .= '<p>' . get_the_date() .'</p>';
 					    $html .= '<p class="dog-breed">' . woofpages_current_dog_breeds(network_get_the_ID()) . '</p>';
 						$html .= '<p class="dog-meta">';
@@ -154,7 +154,7 @@ class recentdogsshortcode {
 					$html .= '</div>'; // end of .card-content
 
                     $html .= '<div class="wrapper--cta">';
-                        $html .= '<a href="' . network_get_permalink() . '" class="button warning expanded"><i class="fa fa-info-circle"></i> Meet ' . $the_title . '</a>';
+                        $html .= '<a href="' . network_get_permalink() . '" class="button warning expanded" target="_blank"><i class="fa fa-info-circle"></i> Meet ' . $the_title . '</a>';
 				    $html .= '</div>';
 
 				// $html .= $tmp_title_content_divider;
